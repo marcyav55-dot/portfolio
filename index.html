@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Marcus Tshijika Yav — Software engineering student, AI &amp; web</title>
+<meta name="description" content="Software engineering student building web products and exploring AI/ML. Main project: ML TRAIN, a platform to learn AI progressively.">
+<meta name="theme-color" content="#0a1020">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Marcus Tshijika Yav — Building software. Exploring AI.">
+<meta property="og:description" content="Software engineering student building web products and exploring AI/ML.">
+<meta property="og:url" content="https://marcyav.netlify.app/">
+<meta name="twitter:card" content="summary">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E🧠%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#0a1020;--surface:#101a33;--line:#1f2d52;--text:#e8edf8;--muted:#9aa8c7;--blue:#3b73ff;--cyan:#22d3ee;
+--display:'Bricolage Grotesque','Segoe UI',system-ui,sans-serif;--body:'Instrument Sans','Segoe UI',system-ui,sans-serif}
+*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:72px}
+body{margin:0;background:var(--bg);color:var(--text);font:400 1.05rem/1.65 var(--body);overflow-x:hidden}
+a{color:inherit}h1,h2,h3{font-family:var(--display);line-height:1.1;margin:0}
+:focus-visible{outline:2px solid var(--cyan);outline-offset:3px}
+.wrap{width:min(1080px,100% - 2.5rem);margin-inline:auto}
+section{padding:5.5rem 0}
+h2{font-size:clamp(1.8rem,4vw,2.5rem);margin-bottom:2rem;font-weight:700}
+.muted{color:var(--muted)}
+header{position:sticky;top:0;z-index:20;background:rgba(10,16,32,.85);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+nav{display:flex;align-items:center;gap:1.25rem;height:64px}
+.brand{font:700 1.1rem var(--display);text-decoration:none;margin-right:auto}
+nav a.l{color:var(--muted);text-decoration:none;font-size:.95rem}nav a.l:hover{color:var(--text)}
+.lang{background:none;border:1px solid var(--line);color:var(--text);border-radius:8px;padding:.3rem .7rem;cursor:pointer;font:inherit;font-size:.85rem}
+@media(max-width:700px){nav a.l{display:none}}
+.btn{display:inline-block;padding:.75rem 1.4rem;border-radius:10px;font-weight:600;text-decoration:none;border:1px solid var(--line);transition:transform .15s,background .15s}
+.btn:hover{transform:translateY(-2px)}
+.btn.p{background:var(--blue);border-color:var(--blue);color:#fff}.btn.p:hover{background:#5688ff}
+.hero{padding:5rem 0 4rem}
+.hero-grid{display:grid;gap:3rem;grid-template-columns:1.15fr .85fr;align-items:center}
+@media(max-width:860px){.hero-grid{grid-template-columns:1fr}}
+.hero h1{font-size:clamp(2.4rem,7vw,4.4rem);font-weight:700;letter-spacing:-.02em}
+.hero p{max-width:52ch;color:var(--muted);margin:1.5rem 0 2rem}
+.cta{display:flex;flex-wrap:wrap;gap:.8rem}
+.chart{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:1rem}
+.chart svg{width:100%;height:auto;display:block}
+.chart small{display:block;color:var(--muted);font-size:.85rem;padding:.25rem .4rem 0}
+.about{display:grid;gap:2rem;grid-template-columns:240px 1fr;align-items:start}
+.photo{margin:0;aspect-ratio:4/5;border-radius:16px;overflow:hidden;border:1px solid var(--line);background:var(--surface);display:grid;place-items:center;font:700 3rem var(--display);color:var(--blue)}.photo img{width:100%;height:100%;object-fit:cover}
+@media(max-width:760px){.photo{max-width:240px}}
+@media(max-width:760px){.about{grid-template-columns:1fr}}
+.skills{display:grid;gap:1rem;grid-template-columns:repeat(auto-fit,minmax(min(100%,230px),1fr))}
+.box{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:1.25rem}
+.box h3{font-size:1.05rem;margin-bottom:.7rem}
+.tags{display:flex;flex-wrap:wrap;gap:.45rem;padding:0;margin:0;list-style:none}
+.tags li{font-size:.85rem;padding:.2rem .65rem;border-radius:99px;border:1px solid var(--line);color:var(--muted)}
+.skills{grid-template-columns:repeat(auto-fit,minmax(min(100%,310px),1fr));gap:1.25rem}
+.skill{padding:0;overflow:hidden;display:flex;flex-direction:column}
+.skill svg{width:100%;height:auto;display:block;background:#0c1530;border-bottom:1px solid var(--line)}
+.skill .sb{padding:1.25rem;display:flex;flex-direction:column;gap:.8rem}
+.skill h4{margin:0;font-size:.95rem;color:var(--cyan);font-weight:600}
+.skill ul.can{margin:0;padding-left:1.1rem;color:var(--muted);font-size:.95rem}
+.skill ul.can li{margin:.25rem 0}
+.projects{display:grid;gap:1.5rem;grid-template-columns:repeat(auto-fit,minmax(min(100%,320px),1fr))}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:16px;overflow:hidden;display:flex;flex-direction:column;box-shadow:0 8px 24px rgba(0,0,0,.25)}
+.card.main{grid-column:1/-1;border-color:var(--blue)}
+.cover{aspect-ratio:16/9;background:linear-gradient(135deg,#14224a,#0d1630);display:grid;place-items:center;font:700 1.6rem var(--display);color:var(--blue)}
+.cover img{width:100%;height:100%;object-fit:cover}
+.cbody{padding:1.4rem;display:flex;flex-direction:column;gap:.9rem;flex:1}
+.cbody h3{font-size:1.4rem}
+.status{font-size:.85rem;color:var(--cyan)}
+details summary{cursor:pointer;color:var(--muted);font-size:.95rem}
+details ul{margin:.6rem 0 0;padding-left:1.2rem;color:var(--muted);font-size:.95rem}
+.links{display:flex;gap:.7rem;flex-wrap:wrap;margin-top:auto}
+.links a{font-size:.95rem;font-weight:600;color:var(--text);text-decoration:underline;text-decoration-color:var(--blue);text-underline-offset:4px}
+.filters{display:flex;gap:.5rem;flex-wrap:wrap;margin-bottom:1.5rem}
+.filters button{background:none;color:var(--muted);border:1px solid var(--line);border-radius:99px;padding:.35rem 1rem;cursor:pointer;font:inherit;font-size:.9rem}
+.filters button[aria-pressed=true]{background:var(--blue);border-color:var(--blue);color:#fff}
+.gallery{display:grid;gap:1rem;grid-template-columns:repeat(auto-fill,minmax(min(100%,240px),1fr))}
+.gallery button{padding:0;border:1px solid var(--line);background:var(--surface);border-radius:12px;overflow:hidden;cursor:pointer;text-align:left;color:inherit;font:inherit}
+.gallery img{width:100%;aspect-ratio:4/3;object-fit:cover;display:block}
+.gallery span{display:block;padding:.6rem .8rem;font-size:.9rem}
+dialog{border:1px solid var(--line);background:var(--surface);color:var(--text);border-radius:16px;padding:1rem;width:min(960px,94vw);max-height:92vh}
+dialog::backdrop{background:rgba(3,6,15,.85)}
+dialog img{width:100%;max-height:68vh;object-fit:contain;display:block;border-radius:8px}
+.lbbar{display:flex;gap:.6rem;align-items:center;margin-top:.8rem}.lbbar p{margin:0 auto;font-size:.95rem}
+.lbbar button{background:var(--bg);color:var(--text);border:1px solid var(--line);border-radius:8px;padding:.4rem .9rem;cursor:pointer;font:inherit}
+.journey{list-style:none;padding:0;margin:0;display:grid;gap:1rem;max-width:64ch}
+.journey li{padding-left:1.2rem;border-left:2px solid var(--blue)}
+.journey b{font-family:var(--display);font-size:1.1rem;display:block}
+footer{border-top:1px solid var(--line);padding:2rem 0;color:var(--muted);font-size:.9rem}
+@media(prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+<header><nav class="wrap" aria-label="Main">
+<a class="brand" href="#top">Marcus Yav</a>
+<a class="l" href="#about" data-i="nAbout"></a><a class="l" href="#skills" data-i="nSkills"></a><a class="l" href="#projects" data-i="nProjects"></a><a class="l gl" href="#gallery" data-i="nGallery"></a><a class="l" href="#cv" data-i="nCV"></a><a class="l" href="#contact" data-i="nContact"></a>
+<button class="lang" id="lang" aria-label="Switch language">FR</button>
+</nav></header>
+
+<main id="top">
+<section class="hero"><div class="wrap hero-grid">
+<div>
+<h1 data-i="h1"></h1>
+<p data-i="lead"></p>
+<div class="cta"><a class="btn p" href="#projects" data-i="ctaProjects"></a><a class="btn" href="#contact" data-i="ctaContact"></a><a class="btn" id="gh" target="_blank" rel="noopener">GitHub</a></div>
+</div>
+<figure class="chart" style="margin:0" aria-label="Gradient descent animation">
+<svg viewBox="0 0 320 200" role="img" aria-label="A point rolling down a parabola to its minimum">
+<path id="curve" fill="none" stroke="#3b73ff" stroke-width="3"/>
+<line x1="20" y1="180" x2="300" y2="180" stroke="#1f2d52"/>
+<circle id="dot" r="7" fill="#22d3ee"/>
+</svg>
+<small data-i="chartCap"></small>
+</figure>
+</div></section>
+
+<section id="about"><div class="wrap">
+<h2 data-i="nAbout"></h2>
+<div class="about"><figure class="photo" id="photoBox"><img id="photo" alt="Marcus Tshijika Yav"></figure><div><p data-i="about1"></p><p class="muted" data-i="about2"></p></div></div>
+</div></section>
+
+<section id="skills"><div class="wrap">
+<h2 data-i="nSkills"></h2>
+<div class="skills" id="skillsGrid"></div>
+</div></section>
+
+<section id="projects"><div class="wrap">
+<h2 data-i="nProjects"></h2>
+<div class="projects" id="projectsGrid"></div>
+</div></section>
+
+<section id="gallery" hidden><div class="wrap">
+<h2 data-i="nGallery"></h2>
+<div class="filters" id="filters"></div>
+<div class="gallery" id="galleryGrid"></div>
+</div></section>
+
+<section id="journey"><div class="wrap">
+<h2 data-i="nJourney"></h2>
+<ul class="journey" id="journeyList"></ul>
+</div></section>
+
+<section id="cv"><div class="wrap"><h2 data-i="nCV"></h2><p class="muted" style="max-width:56ch;margin-bottom:1.5rem" data-i="cvText"></p><div class="cta"><a class="btn p" id="cvDl" data-i="cvDl"></a><a class="btn" id="cvView" target="_blank" data-i="cvView"></a></div></div></section>
+
+<section id="contact"><div class="wrap">
+<h2 data-i="nContact"></h2>
+<p class="muted" style="max-width:52ch;margin-bottom:1.5rem" data-i="contactText"></p>
+<div class="cta" id="contactLinks"></div>
+</div></section>
+</main>
+<footer><div class="wrap">© <span id="yr"></span> Marcus Tshijika Yav</div></footer>
+
+<dialog id="lb" aria-label="Image viewer">
+<img id="lbImg" alt="">
+<div class="lbbar"><button id="prev" aria-label="Previous image">←</button><p id="lbCap"></p><button id="next" aria-label="Next image">→</button><button id="close" aria-label="Close">✕</button></div>
+</dialog>
+
+<script src="data.js"></script>
+<script>
+const F='fill="none" stroke="#3b73ff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"',C='stroke="#22d3ee"';
+const ART={
+ py:`<svg viewBox="0 0 160 100" aria-hidden="true"><rect x="8" y="8" width="144" height="84" rx="8" fill="#0d1630" stroke="#1f2d52"/><circle cx="20" cy="19" r="3" fill="#3b73ff"/><circle cx="30" cy="19" r="3" fill="#1f2d52"/><path d="M22 40l12 8-12 8" ${F} ${C}/><path d="M44 48h50M44 62h70M44 76h34" ${F}/></svg>`,
+ web:`<svg viewBox="0 0 160 100" aria-hidden="true"><rect x="8" y="8" width="144" height="84" rx="8" fill="#0d1630" stroke="#1f2d52"/><path d="M8 24h144" stroke="#1f2d52"/><circle cx="18" cy="16" r="2.5" fill="#3b73ff"/><rect x="18" y="32" width="38" height="52" rx="4" fill="#14224a"/><rect x="64" y="32" width="78" height="16" rx="4" fill="#3b73ff"/><rect x="64" y="56" width="36" height="28" rx="4" fill="#14224a"/><rect x="106" y="56" width="36" height="28" rx="4" fill="#14224a" stroke="#22d3ee"/></svg>`,
+ api:`<svg viewBox="0 0 160 100" aria-hidden="true"><rect x="10" y="34" width="38" height="32" rx="6" fill="#14224a" stroke="#1f2d52"/><rect x="112" y="34" width="38" height="32" rx="6" fill="#14224a" stroke="#1f2d52"/><path d="M52 44h56M108 44l-7-5m7 5l-7 5" ${F}/><path d="M108 58H52M52 58l7-5m-7 5l7 5" ${F} ${C}/><path d="M72 14l8-6 8 6v10c0 8-8 12-8 12s-8-4-8-12z" fill="#0d1630" stroke="#22d3ee" stroke-width="2"/></svg>`,
+ db:`<svg viewBox="0 0 160 100" aria-hidden="true"><g fill="#14224a" stroke="#3b73ff" stroke-width="2.5"><path d="M45 26v48c0 7 16 12 35 12s35-5 35-12V26"/><ellipse cx="80" cy="26" rx="35" ry="12"/></g><path d="M45 44c0 7 16 12 35 12s35-5 35-12M45 60c0 7 16 12 35 12s35-5 35-12" fill="none" stroke="#22d3ee" stroke-width="2"/></svg>`,
+ ai:`<svg viewBox="0 0 160 100" aria-hidden="true"><g stroke="#1f2d52" stroke-width="2"><path d="M30 25L80 15M30 25L80 50M30 25L80 85M30 75L80 15M30 75L80 50M30 75L80 85M80 15L130 50M80 50L130 50M80 85L130 50"/></g><g fill="#0d1630" stroke="#3b73ff" stroke-width="3"><circle cx="30" cy="25" r="8"/><circle cx="30" cy="75" r="8"/><circle cx="80" cy="15" r="8"/><circle cx="80" cy="50" r="8"/><circle cx="80" cy="85" r="8"/></g><circle cx="130" cy="50" r="10" fill="#22d3ee"/></svg>`,
+ cv:`<svg viewBox="0 0 160 100" aria-hidden="true"><rect x="14" y="10" width="132" height="80" rx="8" fill="#0d1630" stroke="#1f2d52"/><path d="M14 80l34-30 26 22 22-18 50 26" ${F}/><circle cx="116" cy="30" r="8" fill="#14224a" stroke="#3b73ff" stroke-width="2"/><rect x="92" y="14" width="48" height="34" rx="3" fill="none" stroke="#22d3ee" stroke-width="2.5" stroke-dasharray="6 4"/></svg>`,
+ git:`<svg viewBox="0 0 160 100" aria-hidden="true"><path d="M30 20v60M30 50c0-18 50-8 50-26M80 24v0c0 14 50 6 50 26" ${F}/><g fill="#0d1630" stroke="#3b73ff" stroke-width="3"><circle cx="30" cy="20" r="7"/><circle cx="30" cy="80" r="7"/><circle cx="80" cy="24" r="7"/></g><circle cx="130" cy="50" r="8" fill="#22d3ee"/></svg>`
+};
+const I18N = {
+ en:{nAbout:"About",nSkills:"Skills",nProjects:"Projects",nGallery:"Gallery",nJourney:"Learning path",nContact:"Contact",
+  h1:"Building software. Exploring AI. Creating useful products.",
+  lead:"I’m Marcus Tshijika Yav, a software engineering student who builds web products and explores AI and machine learning. My main project is ML TRAIN.",
+  ctaProjects:"See my projects",ctaContact:"Contact me",chartCap:"Gradient descent: the idea behind how models learn.",
+  about1:"I study software engineering and learn by building. My work spans web applications, data and AI, with Python at the center.",
+  about2:"I care about understanding what I build, writing maintainable code and shipping tools that people can actually use.",
+  contactText:"Open to internships, collaborations and conversations about software and AI.",all:"All",view:"View",code:"Code",demo:"Live demo",details:"Details",close:"Close",can:"What I can do",learn:"Currently learning",learnTxt:"Technologies I study and am working toward. Not claimed as mastered.",nCV:"CV",cvText:"An international-style CV with my photo, skills, projects and contact details. Open it, then save it as PDF.",cvView:"View CV",cvDl:"Download CV (PDF)"},
+ fr:{nAbout:"À propos",nSkills:"Compétences",nProjects:"Projets",nGallery:"Galerie",nJourney:"Parcours",nContact:"Contact",
+  h1:"Créer des logiciels. Explorer l’IA. Construire des produits utiles.",
+  lead:"Je suis Marcus Tshijika Yav, étudiant en génie logiciel. Je construis des produits web et j’explore l’IA et le machine learning. Mon projet principal est ML TRAIN.",
+  ctaProjects:"Voir mes projets",ctaContact:"Me contacter",chartCap:"Descente de gradient : l’idée derrière l’apprentissage des modèles.",
+  about1:"J’étudie le génie logiciel et j’apprends en construisant. Mon travail couvre le web, les données et l’IA, avec Python au centre.",
+  about2:"Je tiens à comprendre ce que je construis, à écrire du code maintenable et à livrer des outils réellement utilisables.",
+  contactText:"Ouvert aux stages, collaborations et discussions autour du logiciel et de l’IA.",all:"Tous",view:"Voir",code:"Code",demo:"Démo en ligne",details:"Détails",close:"Fermer",can:"Ce que je peux faire",learn:"En apprentissage",learnTxt:"Technologies que j’étudie et vers lesquelles je progresse. Non présentées comme maîtrisées.",nCV:"CV",cvText:"Un CV de format international avec ma photo, mes compétences, mes projets et mes coordonnées. Ouvre-le, puis enregistre-le en PDF.",cvView:"Voir le CV",cvDl:"Télécharger le CV (PDF)"}
+};
+
+/* ================= App logic ================= */
+const $=s=>document.querySelector(s);
+let lang=(navigator.language||"en").slice(0,2)==="fr"?"fr":"en";
+try{const s=localStorage.getItem("lang");if(s==="fr"||s==="en")lang=s}catch(e){}
+let cat="all",lbList=[],lbIdx=0;
+const t=k=>I18N[lang][k];
+const L=o=>o[lang];
+
+function render(){
+  document.documentElement.lang=lang;
+  document.querySelectorAll("[data-i]").forEach(e=>e.textContent=t(e.dataset.i));
+  $("#lang").textContent=lang==="en"?"FR":"EN";
+  $("#gh").href=SITE.github;$("#cvView").href="cv.html?lang="+lang;$("#cvDl").href="cv.html?lang="+lang+"&download=1";
+  $("#skillsGrid").innerHTML=SKILLS.map(s=>`<article class="box skill">${ART[s.k]}<div class="sb"><h3>${s.n}</h3><p class="muted" style="margin:0">${L(s.d)}</p><h4>${t("can")}</h4><ul class="can">${s.can[lang].map(x=>`<li>${x}</li>`).join("")}</ul><ul class="tags">${s.tags.map(x=>`<li>${x}</li>`).join("")}</ul></div></article>`).join("")+`<article class="box" style="grid-column:1/-1"><h3>${t("learn")}</h3><p class="muted" style="margin:0 0 .8rem">${t("learnTxt")}</p><ul class="tags">${LEARNING[lang].map(x=>`<li>${x}</li>`).join("")}</ul></article>`;
+  $("#projectsGrid").innerHTML=PROJECTS.map(p=>`<article class="card${p.main?" main":""}" id="p-${p.id}">
+    <div class="cover">${p.cover?`<img src="${p.cover}" alt="${p.name}" loading="lazy">`:p.name}</div>
+    <div class="cbody"><span class="status">${L(p.status)}</span><h3>${p.name}</h3><p class="muted" style="margin:0">${L(p.desc)}</p>
+    <ul class="tags">${p.tech.map(x=>`<li>${x}</li>`).join("")}</ul>
+    ${p.details?`<details><summary>${t("details")}</summary><ul>${p.details[lang].map(d=>`<li>${d}</li>`).join("")}</ul></details>`:""}
+    <div class="links">${p.code?`<a href="${p.code}" target="_blank" rel="noopener">${t("code")}</a>`:""}${p.demo?`<a href="${p.demo}" target="_blank" rel="noopener">${t("demo")}</a>`:""}</div></div></article>`).join("");
+  $("#journeyList").innerHTML=JOURNEY.map(j=>`<li><b>${L(j.t)}</b><span class="muted">${L(j.d)}</span></li>`).join("");
+  const c=[`<a class="btn p" href="${SITE.github}" target="_blank" rel="noopener">GitHub</a>`];
+  if(SITE.linkedin)c.push(`<a class="btn" href="${SITE.linkedin}" target="_blank" rel="noopener">LinkedIn</a>`);
+  if(SITE.email)c.push(`<a class="btn" href="mailto:${SITE.email}">Email</a>`);if(SITE.phone)c.push(`<a class="btn" href="tel:${SITE.phone.replace(/\s/g,'')}">${SITE.phone}</a>`);
+  $("#contactLinks").innerHTML=c.join("");
+  renderGallery();
+}
+function renderGallery(){
+  const has=GALLERY.length>0;
+  $("#gallery").hidden=!has;document.querySelectorAll(".gl").forEach(a=>a.style.display=has?"":"none");
+  if(!has)return;
+  const cats=["all",...new Set(GALLERY.map(g=>g.category).filter(Boolean))];
+  $("#filters").innerHTML=cats.map(k=>`<button aria-pressed="${k===cat}" data-c="${k}">${k==="all"?t("all"):k}</button>`).join("");
+  lbList=GALLERY.filter(g=>cat==="all"||g.category===cat);
+  $("#galleryGrid").innerHTML=lbList.map((g,i)=>`<button data-n="${i}"><img src="${g.src}" alt="${L(g.title)}" loading="lazy"><span>${L(g.title)}</span></button>`).join("");
+}
+function showLb(i){
+  lbIdx=(i+lbList.length)%lbList.length;const g=lbList[lbIdx];
+  $("#lbImg").src=g.src;$("#lbImg").alt=L(g.title);
+  const p=PROJECTS.find(x=>x.id===g.project);
+  $("#lbCap").textContent=L(g.title)+(p?" — "+p.name:");
+  if(!$("#lb").open)$("#lb").showModal();
+}
+$("#filters").addEventListener("click",e=>{const b=e.target.closest("button");if(b){cat=b.dataset.c;renderGallery()}});
+$("#galleryGrid").addEventListener("click",e=>{const b=e.target.closest("button");if(b)showLb(+b.dataset.n)});
+$("#prev").onclick=()=>showLb(lbIdx-1);$("#next").onclick=()=>showLb(lbIdx+1);$("#close").onclick=()=>$("#lb").close();
+$("#lb").addEventListener("keydown",e=>{if(e.key==="ArrowLeft")showLb(lbIdx-1);if(e.key==="ArrowRight")showLb(lbIdx+1)});
+$("#lb").addEventListener("click",e=>{if(e.target===$("#lb"))$("#lb").close()});
+$("#lang").onclick=()=>{lang=lang==="en"?"fr":"en";try{localStorage.setItem("lang",lang)}catch(e){}render()};
+$("#yr").textContent=new Date().getFullYear();
+(function(){const i=$("#photo"),b=$("#photoBox");i.onerror=()=>{b.textContent="MY"};if(SITE.photo)i.src=SITE.photo;else b.textContent="MY"})();
+render();
+
+/* Hero: gradient descent on f(w)=(w-3)^2, played once */
+(function(){
+  const X=w=>20+w*(280/6),Y=w=>180-(w-3)**2*(160/9);
+  let d="";for(let w=0;w<=6.001;w+=.1)d+=(d?"L":"M")+X(w).toFixed(1)+" "+Y(w).toFixed(1);
+  $("#curve").setAttribute("d",d);
+  const pts=[0.3];for(let i=0;i<14;i++){const w=pts[i];pts.push(w-0.3*2*(w-3))}
+  const dot=$("#dot"),place=w=>{dot.setAttribute("cx",X(w));dot.setAttribute("cy",Y(w))};
+  if(matchMedia("(prefers-reduced-motion:reduce)").matches){place(pts[pts.length-1]);return}
+  let i=0;place(pts[0]);(function tick(){if(++i<pts.length){place(pts[i]);setTimeout(tick,260)}})();
+})();
+</script>
+</body>
+</html>
