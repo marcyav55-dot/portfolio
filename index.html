@@ -225,7 +225,7 @@ function showLb(i){
   lbIdx=(i+lbList.length)%lbList.length;const g=lbList[lbIdx];
   $("#lbImg").src=g.src;$("#lbImg").alt=L(g.title);
   const p=PROJECTS.find(x=>x.id===g.project);
-  $("#lbCap").textContent=L(g.title)+(p?" — "+p.name:");
+  $("#lbCap").textContent=L(g.title)+(p?" — "+p.name:"");
   if(!$("#lb").open)$("#lb").showModal();
 }
 $("#filters").addEventListener("click",e=>{const b=e.target.closest("button");if(b){cat=b.dataset.c;renderGallery()}});
