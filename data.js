@@ -10,7 +10,7 @@ const SITE = {
   email: "",      // e.g. "you@domain.com"
   phone: "",      // e.g. "+243 ..."
   location: "Lualaba, DR Congo",
-  photo: "images/profile.jpg"   // put your photo in /images (portrait, ~800x1000)
+  photo: "profile.jpg"   // put your photo in /images (portrait, ~800x1000)
 };
 const NAME = "Marcus Tshijika Yav";
 const TITLE = {en:"Software engineering student — Web & AI",fr:"Étudiant en génie logiciel — Web & IA"};
