@@ -13,10 +13,10 @@ const SITE = {
   photo: "profile.jpg"   // photo personnelle du fondateur
 };
 const NAME = "Marcus Tshijika Yav";
-const TITLE = {en:"Founder · YAV Digital Solutions",fr:"Fondateur · YAV Digital Solutions"};
+const TITLE = {en:"Founder · TYM Services",fr:"Fondateur · TYM Services"};
 const SUMMARY = {
-  en:"Founder of YAV Digital Solutions, a digital studio helping schools, healthcare organisations, shops and businesses improve their online presence, manage information and build useful digital tools.",
-  fr:"Fondateur de YAV Digital Solutions, un studio numérique qui accompagne les écoles, structures de santé, commerces et entreprises dans leur présence en ligne, la gestion de leurs informations et la création d’outils numériques utiles."
+  en:"Founder of TYM Services, a digital studio helping schools, healthcare organisations, shops and businesses improve their online presence, manage information and build useful digital tools.",
+  fr:"Fondateur de TYM Services, un studio numérique qui accompagne les écoles, structures de santé, commerces et entreprises dans leur présence en ligne, la gestion de leurs informations et la création d’outils numériques utiles."
 };
 /* Shown on the CV only when filled. Real data only. */
 const EDUCATION = [
