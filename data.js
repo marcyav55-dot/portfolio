@@ -7,8 +7,8 @@
 const SITE = {
   github: "https://github.com/marcyav55-dot",
   linkedin: "",   // e.g. "https://www.linkedin.com/in/your-handle"
-  email: "",      // e.g. "you@domain.com"
-  phone: "",      // e.g. "+243 ..."
+  email: "Tym@gmail.com",
+  phone: "0904376310",
   location: "Lualaba, DR Congo",
   photo: "profile.jpg"   // photo personnelle du fondateur
 };
@@ -35,7 +35,7 @@ const PROJECTS = [
   { id:"grace-divine", name:"Grace Divine Multiservices", status:{en:"Deployed · public access to confirm",fr:"Déployé · accès public à confirmer"},
     desc:{en:"A full-stack multiservices website for a local business, combining service presentation, a product shop and customer order flows.",fr:"Un site web full-stack pour une entreprise multiservices, réunissant la présentation des prestations, une boutique de produits et le parcours de commande des clients."},
     tech:["React","Vite","Django REST Framework","PostgreSQL / Supabase","JWT"],
-    cover:"https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=1200&q=85",
+    cover:"https://images.unsplash.com/photo-1551650975-87deedd944c3?w=1200&q=85",
     code:"https://github.com/marcyav55-dot/Grace_Divine",
     demo:"https://grace-divine-rust.vercel.app",
     details:{en:["Responsive React frontend with service and information pages","Product catalogue, categories, product search and shopping cart components","Customer registration/login and JWT-based authentication","Django REST API with PostgreSQL/Supabase data models for products, services and orders","A visual asset from the actual Grace Divine website is used as the project cover"],fr:["Frontend React responsive avec pages de présentation et d’informations","Catalogue de produits, catégories, recherche et composants de panier","Inscription/connexion des clients et authentification JWT","API Django REST avec modèles PostgreSQL/Supabase pour les produits, services et commandes","L’image de couverture provient des ressources visuelles utilisées par le site Grâce Divine"]}},
@@ -56,13 +56,13 @@ const GALLERY = [
   // { src:"images/ml-train-dashboard.png", title:{en:"ML TRAIN dashboard",fr:"Tableau de bord ML TRAIN"}, category:"web", project:"ml-train" }
 ];
 const SKILLS = [
- {k:"web",n:{en:"Professional websites",fr:"Sites web professionnels"},tags:["Web design","Responsive","SEO basics","React"], image:"https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=1000&q=85", 
+ {k:"web",n:{en:"Professional websites",fr:"Sites web professionnels"},tags:["Web design","Responsive","SEO basics","React"], image:"https://images.unsplash.com/photo-1551650975-87deedd944c3?w=1200&q=85", 
   d:{en:"Give your school, clinic, shop or organisation a clear, modern website that works on phones and computers.",fr:"Donnez à votre école, centre de santé, commerce ou organisation un site moderne, clair et adapté aux téléphones comme aux ordinateurs."},
   can:{en:["Create a presentation website for your organisation","Show your services, activities, news, contact details and location","Build pages that adapt to mobile phones, tablets and computers","Prepare the site for publication on the internet"],fr:["Créer un site de présentation pour votre établissement","Présenter vos services, activités, actualités, contacts et localisation","Adapter le site aux téléphones, tablettes et ordinateurs","Préparer sa mise en ligne sur Internet"]}},
- {k:"api",n:{en:"School, clinic & business management tools",fr:"Applications de gestion pour écoles, centres de santé et entreprises"},tags:["Custom applications","Forms","User accounts"], image:"https://images.unsplash.com/photo-1523050854058-8df90110c9f1?w=1000&q=85", 
+ {k:"api",n:{en:"School, clinic & business management tools",fr:"Applications de gestion pour écoles, centres de santé et entreprises"},tags:["Custom applications","Forms","User accounts"], image:"https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=1200&q=85", 
   d:{en:"Replace scattered notebooks and spreadsheets with a tool organised around the way your team works.",fr:"Remplacez les cahiers dispersés et les fichiers difficiles à suivre par un outil organisé selon le fonctionnement de votre équipe."},
   can:{en:["Plan school tools for student records, attendance, classes and payments","Create business tools for customers, stock, appointments and reports","Design clinic workflows around appointments and administrative records, with privacy requirements defined before development","Adapt features to the organisation's real needs"],fr:["Concevoir des outils scolaires pour les élèves, présences, classes et paiements","Créer des outils d’entreprise pour les clients, stocks, rendez-vous et rapports","Étudier les besoins administratifs d’un centre de santé, en définissant les exigences de confidentialité avant le développement","Adapter les fonctionnalités au fonctionnement réel de l’établissement"]}},
- {k:"py",n:{en:"Custom web applications",fr:"Applications web sur mesure"},tags:["Python","Django","JavaScript"], image:"https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=1000&q=85", 
+ {k:"py",n:{en:"Custom web applications",fr:"Applications web sur mesure"},tags:["Python","Django","JavaScript"], image:"https://images.unsplash.com/photo-1551650975-87deedd944c3?w=1200&q=85", 
   d:{en:"Build an interactive application that does more than display information: it can collect, organise and process data.",fr:"Créez une application interactive qui ne se limite pas à afficher des informations : elle peut collecter, organiser et traiter des données."},
   can:{en:["Build forms, dashboards and user spaces","Automate repetitive tasks and simple workflows","Connect the application to a database","Explain the solution and help users get started"],fr:["Créer des formulaires, tableaux de bord et espaces utilisateurs","Automatiser des tâches répétitives et des opérations simples","Relier l’application à une base de données","Expliquer la solution et accompagner les premiers utilisateurs"]}},
  {k:"db",n:{en:"Data organisation & databases",fr:"Organisation des données et bases de données"},tags:["PostgreSQL","SQL","Supabase"], image:"https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1000&q=85", 
