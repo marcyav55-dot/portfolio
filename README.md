@@ -9,7 +9,7 @@ Static site (HTML/CSS/JS, no build step).
 - `profile.jpg` — profile photo used in the About section and CV (portrait, ~800x1000)
 
 ## Agency positioning
-The site presents **YAV Digital Solutions**, a digital studio founded by Marcus Tshijika Yav. Services are explained in client-friendly language and illustrated with photographic cards:
+The site presents **TYM Services**, a digital studio founded by Marcus Tshijika Yav. Services are explained in client-friendly language and illustrated with photographic cards:
 - Professional websites and online visibility
 - School, clinic and business management applications
 - Custom web applications
