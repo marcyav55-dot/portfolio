@@ -13,10 +13,11 @@ const SITE = {
   photo: "profile.jpg"   // put your photo in /images (portrait, ~800x1000)
 };
 const NAME = "Marcus Tshijika Yav";
-const TITLE = {en:"Software engineering student — Web & AI",fr:"Étudiant en génie logiciel — Web & IA"};
+const TITLE = {en:"Web developer & digital solutions builder",fr:"Développeur web et créateur de solutions numériques"};
 const SUMMARY = {
-  en:"Software engineering student building web products and exploring AI and machine learning. Main project: ML TRAIN, a platform that teaches AI step by step.",
-  fr:"Étudiant en génie logiciel, je construis des produits web et j’explore l’IA et le machine learning. Projet principal : ML TRAIN, une plateforme qui enseigne l’IA pas à pas."};
+  en:"I help schools, clinics, small businesses and organisations build a useful online presence and practical digital tools: professional websites, custom management applications, maintenance and essential security improvements. I am a software engineering student who builds and improves real projects.",
+  fr:"J’accompagne les écoles, centres de santé, petites entreprises et organisations dans leur présence en ligne et leur transformation numérique : sites web professionnels, applications de gestion adaptées, maintenance et renforcement essentiel de la sécurité. Je suis étudiant en génie logiciel et je développe des projets concrets."
+};
 /* Shown on the CV only when filled. Real data only. */
 const EDUCATION = [ // add { school:"", degree:{en:"",fr:""}, period:"2022 – present" } when you have them
   { school:"", degree:{en:"Software engineering (student)",fr:"Génie logiciel (étudiant)"}, period:"" },
@@ -52,34 +53,27 @@ const GALLERY = [
   // { src:"images/ml-train-dashboard.png", title:{en:"ML TRAIN dashboard",fr:"Tableau de bord ML TRAIN"}, category:"web", project:"ml-train" }
 ];
 const SKILLS = [
- {k:"py",n:"Python",tags:["Python","Django","Scripts"],
-  d:{en:"My main language for backends, automation and data work.",fr:"Mon langage principal pour les backends, l’automatisation et les données."},
-  can:{en:["Build backends and REST APIs with Django REST","Write scripts that automate repetitive tasks","Structure projects with virtual environments and packages"],
-       fr:["Construire des backends et des API REST avec Django REST","Écrire des scripts qui automatisent des tâches répétitives","Structurer des projets avec environnements virtuels et paquets"]}},
- {k:"web",n:"Web frontend",tags:["React","TypeScript","Vite","JavaScript"],
-  d:{en:"Responsive interfaces that talk to real APIs.",fr:"Des interfaces responsives qui communiquent avec de vraies API."},
-  can:{en:["Build React interfaces in TypeScript","Handle forms, auth state and API calls","Make layouts work from phones to large screens","Deploy a frontend to a hosting platform"],
-       fr:["Construire des interfaces React en TypeScript","Gérer formulaires, état d’authentification et appels API","Adapter les mises en page du téléphone au grand écran","Déployer un frontend sur une plateforme d’hébergement"]}},
- {k:"api",n:"APIs & security basics",tags:["Node.js","Express","Django REST","JWT"],
-  d:{en:"Backends that are organised and protected from the start.",fr:"Des backends organisés et protégés dès le départ."},
-  can:{en:["Design REST endpoints with validation (Express, Django REST)","Implement JWT authentication","Add rate limiting and security headers","Keep secrets in environment variables, not in code"],
-       fr:["Concevoir des endpoints REST avec validation (Express, Django REST)","Mettre en place l’authentification JWT","Ajouter limitation de débit et en-têtes de sécurité","Garder les secrets dans des variables d’environnement, pas dans le code"]}},
- {k:"db",n:"Databases",tags:["PostgreSQL","Supabase","SQL"],
-  d:{en:"Data models that stay consistent as a product grows.",fr:"Des modèles de données qui restent cohérents quand le produit grandit."},
-  can:{en:["Design relational schemas with keys and constraints","Write SQL migrations and queries","Use Supabase for storage and hosted PostgreSQL"],
-       fr:["Concevoir des schémas relationnels avec clés et contraintes","Écrire des migrations et des requêtes SQL","Utiliser Supabase pour le stockage et PostgreSQL hébergé"]}},
- {k:"ai",n:"AI & Machine Learning",tags:["Machine Learning","LLM APIs","Python"],
-  d:{en:"Learning how models work, and turning it into a product.",fr:"Comprendre le fonctionnement des modèles et en faire un produit."},
-  can:{en:["Explain core ideas like loss and gradient descent","Plan a progressive AI curriculum (ML TRAIN)","Integrate language-model APIs into an application"],
-       fr:["Expliquer les idées clés comme la perte et la descente de gradient","Concevoir un parcours d’apprentissage progressif en IA (ML TRAIN)","Intégrer des API de modèles de langage dans une application"]}},
- {k:"cv",n:"Computer vision",tags:["OpenCV","Python"],
-  d:{en:"Hands-on image processing experiments.",fr:"Des expérimentations concrètes de traitement d’images."},
-  can:{en:["Read, transform and analyse images with OpenCV","Prototype vision ideas quickly in Python"],
-       fr:["Lire, transformer et analyser des images avec OpenCV","Prototyper rapidement des idées de vision en Python"]}},
- {k:"git",n:"Git & workflow",tags:["Git","GitHub"],
-  d:{en:"Clean history and a reproducible way of working.",fr:"Un historique propre et une façon de travailler reproductible."},
-  can:{en:["Use branches, commits and remote repositories","Keep private data out of public repos","Document how to run and deploy a project"],
-       fr:["Utiliser branches, commits et dépôts distants","Garder les données privées hors des dépôts publics","Documenter comment lancer et déployer un projet"]}}
+ {k:"web",n:{en:"Professional websites",fr:"Sites web professionnels"},tags:["Web design","Responsive","SEO basics","React"], 
+  d:{en:"Give your school, clinic, shop or organisation a clear, modern website that works on phones and computers.",fr:"Donnez à votre école, centre de santé, commerce ou organisation un site moderne, clair et adapté aux téléphones comme aux ordinateurs."},
+  can:{en:["Create a presentation website for your organisation","Show your services, activities, news, contact details and location","Build pages that adapt to mobile phones, tablets and computers","Prepare the site for publication on the internet"],fr:["Créer un site de présentation pour votre établissement","Présenter vos services, activités, actualités, contacts et localisation","Adapter le site aux téléphones, tablettes et ordinateurs","Préparer sa mise en ligne sur Internet"]}},
+ {k:"api",n:{en:"School, clinic & business management tools",fr:"Applications de gestion pour écoles, centres de santé et entreprises"},tags:["Custom applications","Forms","User accounts"], 
+  d:{en:"Replace scattered notebooks and spreadsheets with a tool organised around the way your team works.",fr:"Remplacez les cahiers dispersés et les fichiers difficiles à suivre par un outil organisé selon le fonctionnement de votre équipe."},
+  can:{en:["Plan school tools for student records, attendance, classes and payments","Create business tools for customers, stock, appointments and reports","Design clinic workflows around appointments and administrative records, with privacy requirements defined before development","Adapt features to the organisation's real needs"],fr:["Concevoir des outils scolaires pour les élèves, présences, classes et paiements","Créer des outils d’entreprise pour les clients, stocks, rendez-vous et rapports","Étudier les besoins administratifs d’un centre de santé, en définissant les exigences de confidentialité avant le développement","Adapter les fonctionnalités au fonctionnement réel de l’établissement"]}},
+ {k:"py",n:{en:"Custom web applications",fr:"Applications web sur mesure"},tags:["Python","Django","JavaScript"], 
+  d:{en:"Build an interactive application that does more than display information: it can collect, organise and process data.",fr:"Créez une application interactive qui ne se limite pas à afficher des informations : elle peut collecter, organiser et traiter des données."},
+  can:{en:["Build forms, dashboards and user spaces","Automate repetitive tasks and simple workflows","Connect the application to a database","Explain the solution and help users get started"],fr:["Créer des formulaires, tableaux de bord et espaces utilisateurs","Automatiser des tâches répétitives et des opérations simples","Relier l’application à une base de données","Expliquer la solution et accompagner les premiers utilisateurs"]}},
+ {k:"db",n:{en:"Data organisation & databases",fr:"Organisation des données et bases de données"},tags:["PostgreSQL","SQL","Supabase"], 
+  d:{en:"Keep important information structured, searchable and easier to manage.",fr:"Gardez les informations importantes bien organisées, faciles à retrouver et à gérer."},
+  can:{en:["Structure records for students, customers, products or services","Create search, filtering and reporting features","Import and organise existing data after reviewing its quality"],fr:["Organiser les dossiers des élèves, clients, produits ou services","Créer des fonctions de recherche, de filtrage et de rapports","Importer et organiser des données existantes après vérification de leur qualité"]}},
+ {k:"git",n:{en:"Website maintenance & essential security",fr:"Maintenance de sites et sécurité essentielle"},tags:["Updates","Backups","Access control","HTTPS"], 
+  d:{en:"Keep a website or application maintained, reduce common risks and make access easier to manage.",fr:"Entretenez votre site ou application, réduisez les risques courants et gérez mieux les accès."},
+  can:{en:["Review common configuration and access-control issues","Apply updates and basic protective settings","Set up backup routines where supported","Help fix display issues and keep pages working"],fr:["Vérifier les problèmes courants de configuration et de gestion des accès","Appliquer les mises à jour et les protections de base","Mettre en place des sauvegardes lorsque la plateforme le permet","Corriger les problèmes d’affichage et maintenir les pages fonctionnelles"]}},
+ {k:"ai",n:{en:"AI features & workflow automation",fr:"Fonctionnalités d’IA et automatisation"},tags:["AI APIs","Python","Automation"], 
+  d:{en:"Add useful AI-powered features to a website or internal tool when they solve a real problem.",fr:"Ajoutez des fonctions utilisant l’intelligence artificielle à un site ou à un outil interne lorsqu’elles répondent à un vrai besoin."},
+  can:{en:["Connect an application to an AI service or assistant","Create simple question-answer or text-processing workflows","Automate repetitive digital tasks"],fr:["Connecter une application à un service ou assistant d’IA","Créer des fonctions simples de questions-réponses ou de traitement de texte","Automatiser des tâches numériques répétitives"]}},
+ {k:"cv",n:{en:"Technical advice & project support",fr:"Conseil technique et accompagnement de projet"},tags:["Planning","Documentation","GitHub"], 
+  d:{en:"Turn an idea into a clear project plan and explain technical choices in everyday language.",fr:"Transformez une idée en plan de projet clair et comprenez les choix techniques avec des mots simples."},
+  can:{en:["Clarify the problem and define the useful features","Recommend a suitable technical approach and realistic next steps","Document how to use and maintain the delivered solution"],fr:["Clarifier le problème et définir les fonctionnalités utiles","Proposer une approche technique adaptée et des étapes réalistes","Documenter l’utilisation et la maintenance de la solution"]}}
 ];
 const JOURNEY = [
   { t:{en:"Software engineering student",fr:"Étudiant en génie logiciel"}, d:{en:"Building real projects alongside my studies to understand what I ship.",fr:"Je construis de vrais projets en parallèle de mes études pour comprendre ce que je livre."} },
