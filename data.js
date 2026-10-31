@@ -32,7 +32,7 @@ const PROJECTS = [
     tech:["React","TypeScript","Node.js","Express","PostgreSQL","Supabase"], cover:"", code:"", demo:"",
     details:{en:["Structured curriculum: levels, courses, modules, lessons, concepts","Learning path, challenges and dashboard built","Custom JWT authentication: access token in memory, refresh token in an HttpOnly cookie","Code is not public yet"],
              fr:["Curriculum structuré : niveaux, cours, modules, leçons, concepts","Parcours d’apprentissage, défis et tableau de bord réalisés","Authentification JWT personnalisée : jeton d’accès en mémoire, jeton de renouvellement en cookie HttpOnly","Code pas encore public"]}},
-  { id:"grace-divine", name:"Grace Divine Multiservices", status:{en:"Deployed",fr:"Déployé"},
+  { id:"grace-divine", name:"Grace Divine Multiservices", status:{en:"Deployed · public access to confirm",fr:"Déployé · accès public à confirmer"},
     desc:{en:"A full-stack multiservices website for a local business, combining service presentation, a product shop and customer order flows.",fr:"Un site web full-stack pour une entreprise multiservices, réunissant la présentation des prestations, une boutique de produits et le parcours de commande des clients."},
     tech:["React","Vite","Django REST Framework","PostgreSQL / Supabase","JWT"],
     cover:"https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=1200&q=85",
