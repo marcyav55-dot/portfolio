@@ -7,8 +7,9 @@
 const SITE = {
   github: "https://github.com/marcyav55-dot",
   linkedin: "",   // e.g. "https://www.linkedin.com/in/your-handle"
-  email: "Tym@gmail.com",
-  phone: "0904376310",
+  email: "marcyav55@gmail.com",
+  phone: "080 83 73 717",
+  whatsapp: "https://wa.me/243808373717",
   location: "Lualaba, DR Congo",
   photo: "profile.jpg"   // photo personnelle du fondateur
 };
