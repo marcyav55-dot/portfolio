@@ -234,7 +234,9 @@ function render(){
   $("#journeyList").innerHTML=JOURNEY.map(j=>`<li><b>${L(j.t)}</b><span class="muted">${L(j.d)}</span></li>`).join("");
   const c=[`<a class="btn p" href="${SITE.github}" target="_blank" rel="noopener">GitHub</a>`];
   if(SITE.linkedin)c.push(`<a class="btn" href="${SITE.linkedin}" target="_blank" rel="noopener">LinkedIn</a>`);
-  if(SITE.email)c.push(`<a class="btn" href="mailto:${SITE.email}">Email</a>`);if(SITE.phone)c.push(`<a class="btn" href="tel:${SITE.phone.replace(/\s/g,'')}">${SITE.phone}</a>`);
+  if(SITE.email)c.push(`<a class="btn" href="mailto:${SITE.email}">Email · ${SITE.email}</a>`);
+  if(SITE.phone)c.push(`<a class="btn" href="tel:+243808373717">Appeler · ${SITE.phone}</a>`);
+  if(SITE.whatsapp)c.push(`<a class="btn p" href="${SITE.whatsapp}?text=Bonjour%20TYM%20Services%2C%20je%20souhaite%20discuter%20d%E2%80%99un%20projet." target="_blank" rel="noopener noreferrer">WhatsApp · Message direct</a>`);
   $("#contactLinks").innerHTML=c.join("");
   renderGallery();
 }
