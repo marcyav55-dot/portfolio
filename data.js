@@ -19,8 +19,8 @@ const SUMMARY = {
   fr:"J’accompagne les écoles, centres de santé, petites entreprises et organisations dans leur présence en ligne et leur transformation numérique : sites web professionnels, applications de gestion adaptées, maintenance et renforcement essentiel de la sécurité. Je suis étudiant en génie logiciel et je développe des projets concrets."
 };
 /* Shown on the CV only when filled. Real data only. */
-const EDUCATION = [ // add { school:"", degree:{en:"",fr:""}, period:"2022 – present" } when you have them
-  { school:"", degree:{en:"Software engineering (student)",fr:"Génie logiciel (étudiant)"}, period:"" },
+const EDUCATION = [
+  { school:"Université de Kolwezi", degree:{en:"Software engineering — Year 2 (Bac 2)",fr:"Génie logiciel — Bac 2"}, period:"In progress / En cours" },
   { school:"", degree:{en:"General electricity (training)",fr:"Électricité générale (formation)"}, period:"" }
 ];
 const LANGUAGES = [ // { n:{en:"French",fr:"Français"}, level:{en:"Native",fr:"Langue maternelle"} }
