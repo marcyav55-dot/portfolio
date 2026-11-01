@@ -21,7 +21,7 @@ const SUMMARY = {
 };
 /* Shown on the CV only when filled. Real data only. */
 const EDUCATION = [
-  { school:"Université de Kolwezi", degree:{en:"Software engineering — Year 3 (Bac 3)",fr:"Génie logiciel — Bac 3"}, period:"In progress / En cours" },
+  { school:"Université de Kolwezi", degree:{en:"Software engineering — Year 2 (Bac 2)",fr:"Génie logiciel — Bac 2"}, period:"In progress / En cours" },
   { school:"", degree:{en:"State Diploma — General Electricity",fr:"Diplôme d’État — Électricité générale"}, period:"" }
 ];
 const LANGUAGES = [
