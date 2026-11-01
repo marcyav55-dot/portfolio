@@ -118,7 +118,7 @@ footer{border-top:1px solid var(--line);padding:2rem 0;color:var(--muted);font-s
 <body>
 <header><nav class="wrap" aria-label="Main">
 <a class="brand" href="#top"><img class="brand-logo" src="assets/tym-services-logo.png" alt="Logo TYM Services"><span>TYM <span style="color:var(--cyan)">SERVICES</span></span></a>
-<a class="l" href="#about" data-i="nAbout"></a><a class="l" href="#skills" data-i="nSkills"></a><a class="l" href="#projects" data-i="nProjects"></a><a class="l gl" href="#gallery" data-i="nGallery"></a><a class="l" href="#cv" data-i="nCV"></a><a class="l" href="#contact" data-i="nContact"></a>
+<a class="l" href="#about" data-i="nAbout"></a><a class="l" href="#skills" data-i="nSkills"></a><a class="l" href="#projects" data-i="nProjects"></a><a class="l" href="#process">Notre méthode</a><a class="l gl" href="#gallery" data-i="nGallery"></a><a class="l" href="#cv" data-i="nCV"></a><a class="l" href="#contact" data-i="nContact"></a>
 <button class="lang" id="lang" aria-label="Switch language">FR</button>
 </nav></header>
 
@@ -243,7 +243,7 @@ function render(){
   document.documentElement.lang=lang;
   document.querySelectorAll("[data-i]").forEach(e=>e.textContent=t(e.dataset.i));
   $("#lang").textContent=lang==="en"?"FR":"EN";
-  $("#gh").href=SITE.github;$("#cvView").href="cv.html?lang="+lang;$("#cvDl").href="cv.html?lang="+lang+"&download=1";
+  $("#cvView").href="cv.html?lang="+lang;$("#cvDl").href="cv.html?lang="+lang+"&download=1";
   $("#skillsGrid").innerHTML=SKILLS.map(s=>`<article class="box skill">${s.image?`<img class="skill-photo" src="${s.image}" alt="${s.n[lang]}" loading="lazy" decoding="async">`:ART[s.k]}<div class="sb"><h3>${s.n[lang]}</h3><p class="muted" style="margin:0">${L(s.d)}</p><h4>${t("can")}</h4><ul class="can">${s.can[lang].map(x=>`<li>${x}</li>`).join("")}</ul><ul class="tags">${s.tags.map(x=>`<li>${x}</li>`).join("")}</ul></div></article>`).join("")+`<article class="box" style="grid-column:1/-1"><h3>${t("learn")}</h3><p class="muted" style="margin:0 0 .8rem">${t("learnTxt")}</p><ul class="tags">${LEARNING[lang].map(x=>`<li>${x}</li>`).join("")}</ul></article>`;
   $("#projectsGrid").innerHTML=PROJECTS.map(p=>`<article class="card${p.main?" main":""}" id="p-${p.id}">
     <div class="cover">${p.cover?`<img src="${p.cover}" alt="${p.name}" loading="lazy">`:p.name}</div>
