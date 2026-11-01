@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Dashboard — TYM Services</title>
+<style>
+:root{color-scheme:dark;--bg:#081225;--panel:#101e38;--line:#263b60;--text:#f2f6ff;--muted:#a9b8d2;--blue:#397bff;--cyan:#38d9e8}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--text);font:16px/1.6 system-ui,sans-serif}.wrap{width:min(1100px,calc(100% - 32px));margin:36px auto}.top{display:flex;justify-content:space-between;gap:16px;align-items:center;flex-wrap:wrap}h1,h2{line-height:1.15}h1{font-size:clamp(1.8rem,4vw,2.7rem);margin:0}h2{font-size:1.2rem;margin:0 0 12px}.muted,small{color:var(--muted)}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:14px;margin:24px 0}.panel,.metric{background:var(--panel);border:1px solid var(--line);border-radius:15px;padding:18px}.metric strong{display:block;font-size:2rem;color:var(--cyan)}.metric span{color:var(--muted);font-size:.9rem}.row{display:flex;gap:10px;flex-wrap:wrap;margin:14px 0}button,a.btn{border:1px solid var(--line);background:#14284a;color:var(--text);padding:10px 15px;border-radius:9px;text-decoration:none;cursor:pointer;font:inherit}button.primary{background:var(--blue);border-color:var(--blue)}button:disabled{opacity:.5;cursor:not-allowed}textarea{width:100%;min-height:420px;background:#071020;color:#dce8ff;border:1px solid var(--line);border-radius:10px;padding:14px;font:13px/1.55 ui-monospace,monospace;resize:vertical}.notice{border-left:3px solid var(--cyan);padding:10px 14px;background:#0b1b32;color:var(--muted);border-radius:5px}.status{min-height:24px;color:var(--cyan)}.danger{border-left-color:#f0ad4e}.back{color:var(--cyan)}@media(max-width:600px){.wrap{margin:22px auto}.panel{padding:14px}}
+</style>
+</head>
+<body><main class="wrap">
+<header class="top"><div><p class="muted">ESPACE DE GESTION LOCAL</p><h1>Tableau de bord</h1><p class="muted">Portfolio personnel · TYM Services</p></div><a class="back" href="./">← Voir le portfolio</a></header>
+<section class="grid" aria-label="Statistiques locales">
+<div class="metric"><strong id="views">0</strong><span>Visites enregistrées sur cet appareil</span></div>
+<div class="metric"><strong id="cv">0</strong><span>Clics CV sur cet appareil</span></div>
+<div class="metric"><strong id="projects">0</strong><span>Clics projets sur cet appareil</span></div>
+<div class="metric"><strong id="days">0</strong><span>Jours avec activité sur cet appareil</span></div>
+</section>
+<div class="notice danger"><strong>À savoir :</strong> ces statistiques sont stockées uniquement dans le navigateur et sur l’appareil utilisé. Elles ne représentent pas le trafic global du site et ne sont pas partagées entre visiteurs. Aucun compte externe ni Supabase n’est utilisé.</div>
+<section class="panel" style="margin-top:22px">
+<h2>Gestion du contenu du portfolio</h2>
+<p class="muted">Modifie le fichier de configuration <code>data.js</code>. Tu peux charger la version publiée, enregistrer un brouillon sur cet appareil ou télécharger le fichier modifié. Pour publier les changements pour tous les visiteurs, remplace ensuite <code>data.js</code> dans le dépôt GitHub et redéploie.</p>
+<div class="row"><button id="load" class="primary">Charger la version publiée</button><button id="save">Enregistrer le brouillon ici</button><button id="download">Télécharger data.js modifié</button><button id="reset">Effacer le brouillon</button></div>
+<label for="editor"><strong>Contenu de data.js</strong></label>
+<textarea id="editor" spellcheck="false" aria-label="Éditeur du fichier data.js" placeholder="Clique sur « Charger la version publiée » pour commencer…"></textarea>
+<p class="status" id="status" role="status" aria-live="polite"></p>
+</section>
+<section class="panel" style="margin-top:18px"><h2>Ce tableau de bord fait quoi ?</h2><ul class="muted"><li>Affiche les événements enregistrés localement sur cet appareil.</li><li>Permet de modifier le profil, les projets, les compétences et les informations de contenu dans data.js.</li><li>Exporte le fichier modifié sans toucher directement au site public.</li><li>Ne modifie jamais automatiquement le site en ligne.</li></ul></section>
+</main>
+<script>
+const $=id=>document.getElementById(id);
+const KEY="tym_portfolio_analytics_v1",DRAFT="tym_portfolio_data_draft_v1";
+function readStats(){try{return JSON.parse(localStorage.getItem(KEY))||{views:0,cv:0,projects:0,days:[]}}catch{return{views:0,cv:0,projects:0,days:[]}}}
+function paint(){const s=readStats();$("views").textContent=s.views||0;$("cv").textContent=s.cv||0;$("projects").textContent=s.projects||0;$("days").textContent=(s.days||[]).length}
+paint();
+$("load").onclick=async()=>{ $("status").textContent="Chargement…";try{const r=await fetch("./data.js",{cache:"no-store"});if(!r.ok)throw Error("HTTP "+r.status);$("editor").value=await r.text();$("status").textContent="Version publiée chargée. Modifie le texte puis télécharge le fichier."}catch(e){$("status").textContent="Impossible de charger data.js : "+e.message}};
+$("save").onclick=()=>{try{localStorage.setItem(DRAFT,$("editor").value);$("status").textContent="Brouillon enregistré sur cet appareil."}catch{$("status").textContent="Stockage indisponible ou saturé."}};
+$("reset").onclick=()=>{localStorage.removeItem(DRAFT);$("editor").value="";$("status").textContent="Brouillon local effacé."};
+$("download").onclick=()=>{const text=$("editor").value;if(!text.trim()){$("status").textContent="Charge ou colle d’abord le contenu de data.js.";return}const blob=new Blob([text],{type:"text/javascript;charset=utf-8"});const url=URL.createObjectURL(blob);const a=document.createElement("a");a.href=url;a.download="data.js";a.click();URL.revokeObjectURL(url);$("status").textContent="Fichier data.js téléchargé."};
+try{const draft=localStorage.getItem(DRAFT);if(draft){$("editor").value=draft;$("status").textContent="Brouillon local restauré."}}catch{}
+</script></body></html>
