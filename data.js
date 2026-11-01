@@ -43,10 +43,22 @@ const PROJECTS = [
     tech:["Python","OpenCV"],cover:"",code:"https://github.com/marcyav55-dot/Opencv",demo:"",details:null}
 ];
 const SKILLS = [
- {n:{en:"Web development",fr:"Développement web"},level:{en:"Project practice",fr:"Pratique en projet"},rank:4},
- {n:{en:"Python development",fr:"Développement Python"},level:{en:"Project practice",fr:"Pratique et expérimentation"},rank:3},
- {n:{en:"Backend & databases",fr:"Backend et bases de données"},level:{en:"Project practice",fr:"Pratique en projet"},rank:3},
- {n:{en:"Artificial intelligence",fr:"Intelligence artificielle"},level:{en:"Developing",fr:"En développement"},rank:2},
- {n:{en:"Machine Learning & Data Science",fr:"Machine Learning & Data Science"},level:{en:"Learning",fr:"En apprentissage"},rank:2}
+ {k:"web",n:{en:"Web development",fr:"Développement web"},d:{en:"Responsive websites and web platforms.",fr:"Sites web et plateformes responsives."},can:{en:["Responsive interfaces","Business websites"],fr:["Interfaces responsives","Sites professionnels"]},tags:["HTML","CSS","JavaScript","React","TypeScript"]},
+ {k:"api",n:{en:"Backend development",fr:"Développement backend"},d:{en:"Application logic and APIs.",fr:"Logique applicative et API."},can:{en:["REST APIs","Authentication"],fr:["API REST","Authentification"]},tags:["Node.js","Express","Django REST","JWT"]},
+ {k:"db",n:{en:"Databases & dashboards",fr:"Bases de données et tableaux de bord"},d:{en:"Structured data and management tools.",fr:"Données structurées et outils de gestion."},can:{en:["Data models","CRUD systems"],fr:["Modèles de données","Systèmes CRUD"]},tags:["PostgreSQL","SQL","Supabase"]},
+ {k:"ai",n:{en:"AI & Machine Learning",fr:"IA et Machine Learning"},d:{en:"Learning and experimenting with intelligent software.",fr:"Apprentissage et expérimentation de logiciels intelligents."},can:{en:["Python experiments","Computer vision"],fr:["Expériences Python","Vision par ordinateur"]},tags:["Python","OpenCV","Machine Learning"]},
+ {k:"git",n:{en:"Technical delivery",fr:"Livraison technique"},d:{en:"Version control, deployment and maintenance.",fr:"Gestion de versions, déploiement et maintenance."},can:{en:["Git workflows","Deployment"],fr:["Flux Git","Déploiement"]},tags:["Git","GitHub","Vercel"]}
+];
+const LEARNING={en:["Data Science","Deep Learning","Cloud deployment"],fr:["Data Science","Deep Learning","Déploiement cloud"]};
+const JOURNEY=[
+ {t:{en:"Understand the need",fr:"Comprendre le besoin"},d:{en:"Clarify goals, users and constraints.",fr:"Clarifier les objectifs, utilisateurs et contraintes."}},
+ {t:{en:"Plan the solution",fr:"Planifier la solution"},d:{en:"Define useful features and delivery steps.",fr:"Définir les fonctionnalités et les étapes."}},
+ {t:{en:"Build and test",fr:"Développer et tester"},d:{en:"Implement progressively and verify the result.",fr:"Développer progressivement et vérifier le résultat."}},
+ {t:{en:"Deliver and support",fr:"Livrer et accompagner"},d:{en:"Present the result and agree on follow-up.",fr:"Présenter le résultat et convenir du suivi."}}
+];
+const GALLERY=[
+ {src:"1793541020227.jpg",title:{en:"TYM Services — digital solutions",fr:"TYM Services — solutions numériques"},category:"Studio"},
+ {src:"profile.jpg",title:{en:"Founder profile",fr:"Profil du fondateur"},category:"Studio"},
+ {src:"ca6336e2e2ebed43c0e74030f340c8df.jpg",title:{en:"Project visual",fr:"Visuel de projet"},category:"Projects"}
 ];
 const PROGRAMMING = ["Python","JavaScript","TypeScript","SQL","HTML / CSS"];
