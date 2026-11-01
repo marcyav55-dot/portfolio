@@ -126,8 +126,8 @@ footer{border-top:1px solid var(--line);padding:2rem 0;color:var(--muted);font-s
 #skills{overflow:hidden;background:linear-gradient(180deg,rgba(16,30,56,.42),transparent 85%)}
 .services-intro{max-width:62ch;color:var(--muted);margin:-.9rem 0 1.7rem}
 .services-viewport{overflow:hidden;position:relative;padding:8px 0 22px;mask-image:linear-gradient(90deg,transparent,#000 3%,#000 97%,transparent)}
-.skills{display:flex;gap:1.1rem;width:max-content;animation:services-left 48s linear infinite;will-change:transform}
-.skills.track-reverse{animation-name:services-left;animation-duration:48s}
+.skills{direction:ltr;display:flex;gap:1.1rem;width:max-content;animation:services-right-to-left 48s linear infinite;will-change:transform}
+.skills.track-reverse{animation-name:services-right-to-left;animation-duration:48s}
 .services-viewport:hover .skills,.services-viewport:focus-within .skills{animation-play-state:paused}
 .skill{width:min(340px,82vw);flex:0 0 min(340px,82vw);border-radius:18px;background:linear-gradient(160deg,#142644,#0d192f);border:1px solid #2a426b;box-shadow:0 14px 34px rgba(0,0,0,.22);transition:transform .25s,border-color .25s}
 .skill:hover{transform:translateY(-7px);border-color:var(--cyan)}
@@ -140,8 +140,18 @@ footer{border-top:1px solid var(--line);padding:2rem 0;color:var(--muted);font-s
 .skill .tags li{font-size:.75rem;background:rgba(255,255,255,.025)}
 .skills-learning{margin-top:1.2rem;background:rgba(16,30,56,.8);border:1px solid var(--line);border-radius:16px;padding:1.25rem}
 .skills-learning h3{font-size:1.05rem;margin-bottom:.6rem}
-@keyframes services-left{from{transform:translateX(0)}to{transform:translateX(-50%)}}
-@keyframes services-right{from{transform:translateX(-50%)}to{transform:translateX(0)}}
+#impact{background:linear-gradient(180deg,rgba(16,30,56,.5),transparent)}
+.impact-intro{max-width:65ch;color:var(--muted);margin:-.8rem 0 1.6rem}
+.impact-stats{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1rem}
+.impact-stat{padding:1.5rem;border:1px solid var(--line);border-radius:16px;background:linear-gradient(145deg,#142644,#0d192f);display:grid;gap:.4rem}
+.impact-stat strong{font:700 clamp(2rem,5vw,3.2rem) var(--display);color:var(--cyan)}
+.impact-stat span{color:var(--muted)}
+.testimonials{margin-top:2rem;padding:1.4rem;border:1px solid var(--line);border-radius:16px;background:rgba(16,30,56,.65)}
+.testimonials h3{font-size:1.25rem;margin-bottom:.7rem}
+.reviews-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,250px),1fr));gap:1rem}
+.review-card{padding:1rem;border:1px solid var(--line);border-radius:12px;background:#0d192f}
+@media(max-width:520px){.impact-stats{grid-template-columns:1fr}}
+@keyframes services-right-to-left{from{transform:translateX(0)}to{transform:translateX(-50%)}}
 @media(max-width:700px){.services-viewport{mask-image:none}.skills{animation-duration:58s}.skills.track-reverse{animation-duration:58s}.skill{width:82vw;flex-basis:82vw}}
 @media(prefers-reduced-motion:reduce){.skills,.skills.track-reverse{animation:none!important;overflow-x:auto}.services-viewport{overflow-x:auto;mask-image:none}}
 </style>
@@ -176,7 +186,21 @@ footer{border-top:1px solid var(--line);padding:2rem 0;color:var(--muted);font-s
 <p class="services-intro" data-i="servicesIntro"></p><div class="services-viewport" aria-label="Carrousel de nos domaines de service"><div class="skills" id="skillsGrid"></div></div><div class="skills-learning" id="learningBox"></div>
 </div></section>
 
-<section id="projects"><div class="wrap">
+<section id="impact"><div class="wrap">
+<h2 data-i="impactTitle">Ils nous font confiance</h2>
+<p class="impact-intro" data-i="impactIntro">Nous publions uniquement des chiffres confirmés et des avis partagés avec autorisation.</p>
+<div class="impact-stats" aria-live="polite">
+<article class="impact-stat"><strong id="peopleCount">0</strong><span data-i="peopleHelped">Personnes accompagnées</span></article>
+<article class="impact-stat"><strong id="satisfiedCount">0</strong><span data-i="satisfiedPeople">Personnes satisfaites</span></article>
+</div>
+<div class="testimonials">
+<h3 data-i="reviewsTitle">Avis de nos clients</h3>
+<p class="muted" id="reviewsEmpty" data-i="reviewsEmpty">Les premiers témoignages seront affichés ici après validation et accord de publication.</p>
+<div id="reviewsGrid" class="reviews-grid"></div>
+</div>
+</div></section>
+
+<section id="projects"><div class="wrap>
 <h2 data-i="nProjects"></h2>
 <div class="projects" id="projectsGrid"></div>
 </div></section>
@@ -246,14 +270,14 @@ const ART={
  git:`<svg viewBox="0 0 160 100" aria-hidden="true"><path d="M30 20v60M30 50c0-18 50-8 50-26M80 24v0c0 14 50 6 50 26" ${F}/><g fill="#0d1630" stroke="#3b73ff" stroke-width="3"><circle cx="30" cy="20" r="7"/><circle cx="30" cy="80" r="7"/><circle cx="80" cy="24" r="7"/></g><circle cx="130" cy="50" r="8" fill="#22d3ee"/></svg>`
 };
 const I18N = {
- en:{impactTitle:"Our impact & testimonials",demoBadge:"Visual simulation",impactIntro:"A preview of the counter that can later be connected to verified records.",peopleHelped:"People supported",impactDisclaimer:"Illustrative demo figure only; it does not represent actual beneficiaries.",reviewsDisclaimer:"Sample demo reviews — replace with genuine testimonials published with each person’s permission.",nAbout:"About the studio",nSkills:"Our services",servicesIntro:"Explore the services we can build and deliver for your organisation.",nProjects:"Selected work",nGallery:"Gallery",nJourney:"Our approach",nContact:"Contact",
+ en:{impactTitle:"Our impact & testimonials",demoBadge:"Verified figures",impactIntro:"We publish only confirmed figures and testimonials shared with permission.",peopleHelped:"People supported",satisfiedPeople:"Satisfied people",reviewsTitle:"Client feedback",reviewsEmpty:"The first testimonials will appear here once approved for publication.",impactDisclaimer:"Only confirmed figures are displayed.",reviewsDisclaimer:"Testimonials are published with permission.",nAbout:"About the studio",nSkills:"Our services",servicesIntro:"Explore the services we can build and deliver for your organisation.",nProjects:"Selected work",nGallery:"Gallery",nJourney:"Our approach",nContact:"Contact",
   h1:"Digital solutions that move your organisation forward.",
   lead:"TYM Services helps schools, healthcare organisations, shops and businesses build a professional online presence, organise their data and simplify everyday work with useful digital tools.",
   ctaProjects:"Explore our work",ctaContact:"Request a consultation",chartCap:"Websites, applications and digital systems designed around real needs.",
   about1:"TYM Services is a digital studio founded by Marcus Tshijika Yav. We work with organisations that want to modernise how they communicate, manage information and serve their customers.",
   about2:"From the first discussion to delivery, the focus stays on your needs: clear proposals, practical solutions, accessible explanations and realistic project scope. Specialist security or regulated healthcare requirements are assessed before work begins.",
   contactText:"Tell us what is slowing your organisation down or what you want to launch. We will discuss a practical digital solution and the next steps.",contactAsideTitle:"Let’s talk about your project",contactAsideText:"Describe what you need. TYM Services will reply by email to discuss the next steps.",fName:"Full name",fEmail:"Email address",fOrg:"Organisation (optional)",fService:"Service needed",fChoose:"Choose a service",fMessage:"Tell us about your project",fSend:"Send my request",all:"All",view:"View",code:"Code",demo:"Live demo",details:"Details",close:"Close",can:"What I can do",learn:"Currently learning",learnTxt:"Technologies I study and am working toward. Not claimed as mastered.",nCV:"CV",cvText:"An international-style CV with my photo, skills, projects and contact details. Open it, then save it as PDF.",cvView:"View CV",cvDl:"Download CV (PDF)"},
- fr:{impactTitle:"Notre impact et les témoignages",demoBadge:"Simulation visuelle",impactIntro:"Aperçu du compteur qui pourra ensuite être relié à des données vérifiées.",peopleHelped:"Personnes accompagnées",impactDisclaimer:"Chiffre fictif de démonstration ; il ne représente pas des bénéficiaires réels.",reviewsDisclaimer:"Avis fictifs de démonstration — à remplacer par des témoignages authentiques publiés avec l’accord des personnes concernées.",nAbout:"À propos du studio",nSkills:"Nos domaines d’expertise",servicesIntro:"Découvrez les solutions numériques que nous pouvons concevoir et réaliser pour votre organisation.",nProjects:"Réalisations",nGallery:"Galerie",nJourney:"Notre approche",nContact:"Contact",
+ fr:{impactTitle:"Notre impact et vos témoignages",demoBadge:"Chiffres confirmés",impactIntro:"Nous affichons uniquement des chiffres confirmés et des témoignages publiés avec autorisation.",peopleHelped:"Personnes accompagnées",satisfiedPeople:"Personnes satisfaites",reviewsTitle:"Les avis de nos clients",reviewsEmpty:"Les premiers témoignages apparaîtront ici après validation et accord de publication.",impactDisclaimer:"Seuls les chiffres confirmés sont affichés.",reviewsDisclaimer:"Les témoignages sont publiés avec autorisation.",nAbout:"À propos du studio",nSkills:"Nos domaines d’expertise",servicesIntro:"Découvrez les solutions numériques que nous pouvons concevoir et réaliser pour votre organisation.",nProjects:"Réalisations",nGallery:"Galerie",nJourney:"Notre approche",nContact:"Contact",
   h1:"Des solutions numériques qui font avancer votre organisation.",
   lead:"TYM Services accompagne les écoles, structures de santé, commerces et entreprises pour développer leur présence en ligne, organiser leurs données et simplifier leur travail quotidien grâce à des outils numériques utiles.",
   ctaProjects:"Découvrir nos réalisations",ctaContact:"Demander un devis",chartCap:"Sites web, applications et systèmes numériques conçus pour vos besoins réels.",
@@ -289,6 +313,11 @@ function render(){
   const c=[`<a class="btn p contact-action" href="${SITE.whatsapp}" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.5 11.8a8.5 8.5 0 0 1-12.6 7.4L3 20.5l1.4-4.7A8.5 8.5 0 1 1 20.5 11.8Z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="M8.3 7.7c.3-.5.6-.5.9-.5h.4c.2 0 .4.1.5.4l.8 1.8c.1.2.1.4-.1.6l-.6.7c-.2.2-.2.4-.1.6.5.9 1.2 1.6 2.1 2.1.2.1.4.1.6-.1l.7-.7c.2-.2.4-.2.6-.1l1.7.8c.3.1.4.3.4.5 0 .3-.2.9-.6 1.2-.4.4-1 .6-1.6.5-1-.1-2.3-.7-3.7-1.9-1.2-1.1-2-2.5-2.2-3.5-.2-.9.1-1.8.5-2.4Z" fill="currentColor"/></svg><span>${lang==="fr"?"WhatsApp":"WhatsApp"}</span></a>`,
 `<a class="btn contact-action" href="tel:+243808373717"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.6 3.8 9.3 3c.6-.2 1.2.1 1.4.7l1.2 3c.2.5.1 1-.3 1.4l-1.5 1.2a15 15 0 0 0 4.6 4.6l1.2-1.5c.4-.4.9-.5 1.4-.3l3 1.2c.6.2.9.8.7 1.4l-.8 2.7c-.2.6-.8 1-1.4 1C10.5 18.4 5.6 13.5 5.6 7.2c0-.6.4-1.2 1-1.4Z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><span>${lang==="fr"?"Appel téléphonique":"Phone call"}</span></a>`];
   $("#contactLinks").innerHTML=c.join("");
+  const impactData={people:0,satisfied:0,reviews:[]};
+  $("#peopleCount").textContent=impactData.people.toLocaleString(lang==="fr"?"fr-FR":"en-US");
+  $("#satisfiedCount").textContent=impactData.satisfied.toLocaleString(lang==="fr"?"fr-FR":"en-US");
+  $("#reviewsGrid").innerHTML=impactData.reviews.map(r=>`<article class="review-card"><p>${r.text[lang]}</p><strong>${r.author}</strong></article>`).join("");
+  $("#reviewsEmpty").hidden=impactData.reviews.length>0;
   renderGallery();
 }
 function renderGallery(){
