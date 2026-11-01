@@ -50,3 +50,14 @@ const SKILLS = [
  {k:"git",image:"https://images.unsplash.com/photo-1581092921461-eab62e97a780?w=900&q=85",n:{en:"IT support & maintenance",fr:"Assistance informatique & maintenance"},d:{en:"Technical assistance to keep websites, applications and connected work tools running reliably.",fr:"Une assistance technique pour maintenir vos sites, applications et outils numériques en bon fonctionnement."},can:{en:["Website updates and maintenance","Technical troubleshooting","IT setup and digital guidance"],fr:["Mise à jour et maintenance de sites","Diagnostic des problèmes techniques","Configuration informatique et accompagnement"]},tags:["Maintenance","IT support","Troubleshooting"]}
 ];
 const PROGRAMMING = ["Python","JavaScript","TypeScript","SQL","HTML / CSS"];
+
+const LEARNING = {
+ en:["Machine Learning","Data Science","Deep Learning","AI-assisted workflows"],
+ fr:["Machine Learning","Data Science","Deep Learning","Automatisation avec l’IA"]
+};
+const JOURNEY = [
+ {t:{en:"Understand the real need",fr:"Comprendre le besoin réel"},d:{en:"Every project starts by listening to the organisation, its users and its constraints.",fr:"Chaque projet commence par l’écoute de l’organisation, de ses utilisateurs et de ses contraintes."}},
+ {t:{en:"Build a practical solution",fr:"Construire une solution pratique"},d:{en:"The scope and tools are chosen to fit the problem rather than adding unnecessary complexity.",fr:"Le périmètre et les outils sont choisis selon le problème, sans complexité inutile."}},
+ {t:{en:"Keep improving",fr:"Faire évoluer la solution"},d:{en:"Clear handover and agreed follow-up help the digital tool remain useful over time.",fr:"Une livraison claire et un suivi convenu permettent à l’outil numérique de rester utile dans le temps."}}
+];
+const GALLERY = [];
