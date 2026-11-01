@@ -118,6 +118,32 @@ footer{border-top:1px solid var(--line);padding:2rem 0;color:var(--muted);font-s
 .cta{display:flex;flex-wrap:wrap;gap:.8rem;align-items:center}
 .cta .btn{min-height:46px;display:inline-flex;align-items:center;justify-content:center}
 .hero-actions .btn{min-width:150px}
+
+/* TYM Services visual service carousel */
+:root{--bg:#081225;--surface:#101e38;--line:#263b60;--text:#f2f6ff;--muted:#a9b8d2;--blue:#397bff;--cyan:#38d9e8;--accent:#8daeff}
+.hero{background:radial-gradient(ellipse at 82% 18%,rgba(57,123,255,.16),transparent 42%),radial-gradient(ellipse at 5% 85%,rgba(56,217,232,.08),transparent 35%)}
+.hero-photo{box-shadow:0 24px 70px rgba(0,0,0,.28)}
+#skills{overflow:hidden;background:linear-gradient(180deg,rgba(16,30,56,.42),transparent 85%)}
+.services-intro{max-width:62ch;color:var(--muted);margin:-.9rem 0 1.7rem}
+.services-viewport{overflow:hidden;position:relative;padding:8px 0 22px;mask-image:linear-gradient(90deg,transparent,#000 3%,#000 97%,transparent)}
+.skills{display:flex;gap:1.1rem;width:max-content;animation:services-left 48s linear infinite;will-change:transform}
+.skills.track-reverse{animation-name:services-right;animation-duration:54s}
+.services-viewport:hover .skills,.services-viewport:focus-within .skills{animation-play-state:paused}
+.skill{width:min(340px,82vw);flex:0 0 min(340px,82vw);border-radius:18px;background:linear-gradient(160deg,#142644,#0d192f);border:1px solid #2a426b;box-shadow:0 14px 34px rgba(0,0,0,.22);transition:transform .25s,border-color .25s}
+.skill:hover{transform:translateY(-7px);border-color:var(--cyan)}
+.skill-photo{height:190px;object-fit:cover;border:0}
+.skill .sb{padding:1.2rem 1.25rem 1.35rem;gap:.7rem}
+.skill h3{font-size:1.16rem;line-height:1.2}
+.skill .muted{font-size:.94rem;line-height:1.55}
+.skill h4{letter-spacing:.04em;text-transform:uppercase;font-size:.73rem}
+.skill ul.can{font-size:.88rem;min-height:92px}
+.skill .tags li{font-size:.75rem;background:rgba(255,255,255,.025)}
+.skills-learning{margin-top:1.2rem;background:rgba(16,30,56,.8);border:1px solid var(--line);border-radius:16px;padding:1.25rem}
+.skills-learning h3{font-size:1.05rem;margin-bottom:.6rem}
+@keyframes services-left{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+@keyframes services-right{from{transform:translateX(-50%)}to{transform:translateX(0)}}
+@media(max-width:700px){.services-viewport{mask-image:none}.skills{animation-duration:58s}.skills.track-reverse{animation-duration:62s}.skill{width:82vw;flex-basis:82vw}}
+@media(prefers-reduced-motion:reduce){.skills,.skills.track-reverse{animation:none!important;overflow-x:auto}.services-viewport{overflow-x:auto;mask-image:none}}
 </style>
 </head>
 <body>
@@ -147,7 +173,7 @@ footer{border-top:1px solid var(--line);padding:2rem 0;color:var(--muted);font-s
 
 <section id="skills"><div class="wrap">
 <h2 data-i="nSkills"></h2>
-<div class="skills" id="skillsGrid"></div>
+<p class="services-intro" data-i="servicesIntro"></p><div class="services-viewport" aria-label="Carrousel de nos domaines de service"><div class="skills" id="skillsGrid"></div></div><div class="skills-learning" id="learningBox"></div>
 </div></section>
 
 <section id="projects"><div class="wrap">
@@ -220,14 +246,14 @@ const ART={
  git:`<svg viewBox="0 0 160 100" aria-hidden="true"><path d="M30 20v60M30 50c0-18 50-8 50-26M80 24v0c0 14 50 6 50 26" ${F}/><g fill="#0d1630" stroke="#3b73ff" stroke-width="3"><circle cx="30" cy="20" r="7"/><circle cx="30" cy="80" r="7"/><circle cx="80" cy="24" r="7"/></g><circle cx="130" cy="50" r="8" fill="#22d3ee"/></svg>`
 };
 const I18N = {
- en:{impactTitle:"Our impact & testimonials",demoBadge:"Visual simulation",impactIntro:"A preview of the counter that can later be connected to verified records.",peopleHelped:"People supported",impactDisclaimer:"Illustrative demo figure only; it does not represent actual beneficiaries.",reviewsDisclaimer:"Sample demo reviews — replace with genuine testimonials published with each person’s permission.",nAbout:"About the studio",nSkills:"Our services",nProjects:"Selected work",nGallery:"Gallery",nJourney:"Our approach",nContact:"Contact",
+ en:{impactTitle:"Our impact & testimonials",demoBadge:"Visual simulation",impactIntro:"A preview of the counter that can later be connected to verified records.",peopleHelped:"People supported",impactDisclaimer:"Illustrative demo figure only; it does not represent actual beneficiaries.",reviewsDisclaimer:"Sample demo reviews — replace with genuine testimonials published with each person’s permission.",nAbout:"About the studio",nSkills:"Our services",servicesIntro:"Explore the services we can build and deliver for your organisation.",nProjects:"Selected work",nGallery:"Gallery",nJourney:"Our approach",nContact:"Contact",
   h1:"Digital solutions that move your organisation forward.",
   lead:"TYM Services helps schools, healthcare organisations, shops and businesses build a professional online presence, organise their data and simplify everyday work with useful digital tools.",
   ctaProjects:"Explore our work",ctaContact:"Request a consultation",chartCap:"Websites, applications and digital systems designed around real needs.",
   about1:"TYM Services is a digital studio founded by Marcus Tshijika Yav. We work with organisations that want to modernise how they communicate, manage information and serve their customers.",
   about2:"From the first discussion to delivery, the focus stays on your needs: clear proposals, practical solutions, accessible explanations and realistic project scope. Specialist security or regulated healthcare requirements are assessed before work begins.",
   contactText:"Tell us what is slowing your organisation down or what you want to launch. We will discuss a practical digital solution and the next steps.",contactAsideTitle:"Let’s talk about your project",contactAsideText:"Describe what you need. TYM Services will reply by email to discuss the next steps.",fName:"Full name",fEmail:"Email address",fOrg:"Organisation (optional)",fService:"Service needed",fChoose:"Choose a service",fMessage:"Tell us about your project",fSend:"Send my request",all:"All",view:"View",code:"Code",demo:"Live demo",details:"Details",close:"Close",can:"What I can do",learn:"Currently learning",learnTxt:"Technologies I study and am working toward. Not claimed as mastered.",nCV:"CV",cvText:"An international-style CV with my photo, skills, projects and contact details. Open it, then save it as PDF.",cvView:"View CV",cvDl:"Download CV (PDF)"},
- fr:{impactTitle:"Notre impact et les témoignages",demoBadge:"Simulation visuelle",impactIntro:"Aperçu du compteur qui pourra ensuite être relié à des données vérifiées.",peopleHelped:"Personnes accompagnées",impactDisclaimer:"Chiffre fictif de démonstration ; il ne représente pas des bénéficiaires réels.",reviewsDisclaimer:"Avis fictifs de démonstration — à remplacer par des témoignages authentiques publiés avec l’accord des personnes concernées.",nAbout:"À propos du studio",nSkills:"Nos services",nProjects:"Réalisations",nGallery:"Galerie",nJourney:"Notre approche",nContact:"Contact",
+ fr:{impactTitle:"Notre impact et les témoignages",demoBadge:"Simulation visuelle",impactIntro:"Aperçu du compteur qui pourra ensuite être relié à des données vérifiées.",peopleHelped:"Personnes accompagnées",impactDisclaimer:"Chiffre fictif de démonstration ; il ne représente pas des bénéficiaires réels.",reviewsDisclaimer:"Avis fictifs de démonstration — à remplacer par des témoignages authentiques publiés avec l’accord des personnes concernées.",nAbout:"À propos du studio",nSkills:"Nos domaines d’expertise",servicesIntro:"Découvrez les solutions numériques que nous pouvons concevoir et réaliser pour votre organisation.",nProjects:"Réalisations",nGallery:"Galerie",nJourney:"Notre approche",nContact:"Contact",
   h1:"Des solutions numériques qui font avancer votre organisation.",
   lead:"TYM Services accompagne les écoles, structures de santé, commerces et entreprises pour développer leur présence en ligne, organiser leurs données et simplifier leur travail quotidien grâce à des outils numériques utiles.",
   ctaProjects:"Découvrir nos réalisations",ctaContact:"Demander un devis",chartCap:"Sites web, applications et systèmes numériques conçus pour vos besoins réels.",
@@ -249,7 +275,10 @@ function render(){
   document.querySelectorAll("[data-i]").forEach(e=>e.textContent=t(e.dataset.i));
   $("#lang").textContent=lang==="en"?"FR":"EN";
   $("#cvView").href="cv.html?lang="+lang;$("#cvDl").href="cv.html?lang="+lang+"&download=1";
-  $("#skillsGrid").innerHTML=SKILLS.map(s=>`<article class="box skill">${s.image?`<img class="skill-photo" src="${s.image}" alt="${s.n[lang]}" loading="lazy" decoding="async">`:ART[s.k]}<div class="sb"><h3>${s.n[lang]}</h3><p class="muted" style="margin:0">${L(s.d)}</p><h4>${t("can")}</h4><ul class="can">${s.can[lang].map(x=>`<li>${x}</li>`).join("")}</ul><ul class="tags">${s.tags.map(x=>`<li>${x}</li>`).join("")}</ul></div></article>`).join("")+`<article class="box" style="grid-column:1/-1"><h3>${t("learn")}</h3><p class="muted" style="margin:0 0 .8rem">${t("learnTxt")}</p><ul class="tags">${LEARNING[lang].map(x=>`<li>${x}</li>`).join("")}</ul></article>`;
+  const serviceCards=SKILLS.map(s=>`<article class="box skill"><img class="skill-photo" src="${s.image}" alt="${s.n[lang]}" loading="lazy" decoding="async"><div class="sb"><h3>${s.n[lang]}</h3><p class="muted" style="margin:0">${L(s.d)}</p><h4>${t("can")}</h4><ul class="can">${s.can[lang].map(x=>`<li>${x}</li>`).join("")}</ul><ul class="tags">${s.tags.map(x=>`<li>${x}</li>`).join("")}</ul></div></article>`).join("");
+  $("#skillsGrid").classList.toggle("track-reverse",lang==="en");
+  $("#skillsGrid").innerHTML=serviceCards+serviceCards;
+  $("#learningBox").innerHTML=`<h3>${t("learn")}</h3><p class="muted" style="margin:0 0 .8rem">${t("learnTxt")}</p><ul class="tags">${LEARNING[lang].map(x=>`<li>${x}</li>`).join("")}</ul>`;
   $("#projectsGrid").innerHTML=PROJECTS.map(p=>`<article class="card${p.main?" main":""}" id="p-${p.id}">
     <div class="cover">${p.cover?`<img src="${p.cover}" alt="${p.name}" loading="lazy">`:p.name}</div>
     <div class="cbody"><span class="status">${L(p.status)}</span><h3>${p.name}</h3><p class="muted" style="margin:0">${L(p.desc)}</p>
