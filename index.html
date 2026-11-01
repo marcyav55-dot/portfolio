@@ -98,19 +98,13 @@ dialog img{width:100%;max-height:68vh;object-fit:contain;display:block;border-ra
 .lbbar{display:flex;gap:.6rem;align-items:center;margin-top:.8rem}.lbbar p{margin:0 auto;font-size:.95rem}
 .lbbar button{background:var(--bg);color:var(--text);border:1px solid var(--line);border-radius:8px;padding:.4rem .9rem;cursor:pointer;font:inherit}
 
-.impact-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:1.25rem;align-items:stretch}
-.impact-count,.review-card{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:1.4rem}
-.impact-count{display:flex;flex-direction:column;justify-content:center;min-height:230px}
-.impact-number{font:700 clamp(2.8rem,7vw,4.5rem)/1 var(--display);letter-spacing:-.04em;color:var(--cyan);margin:.7rem 0}
-.demo-label{display:inline-flex;align-self:flex-start;border:1px solid #80652d;color:#f5cc72;border-radius:99px;padding:.2rem .65rem;font-size:.75rem;font-weight:600}
-.impact-note{font-size:.85rem;color:var(--muted);margin:.8rem 0 0}
-.reviews{display:grid;gap:.8rem;grid-template-columns:repeat(3,minmax(0,1fr))}
-.review-card{padding:1.1rem}
-.review-stars{color:#f5cc72;letter-spacing:.12em;font-size:.95rem}
-.review-card blockquote{margin:.7rem 0;color:var(--text);font-size:.95rem}
-.review-card cite{font-style:normal;color:var(--muted);font-size:.82rem}
-@media(max-width:800px){.impact-grid{grid-template-columns:1fr}.reviews{grid-template-columns:1fr}}
-
+.process-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:1rem}
+.process-card{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:1.2rem}
+.process-card>span{display:inline-grid;place-items:center;width:2.2rem;height:2.2rem;border-radius:50%;background:rgba(59,115,255,.16);color:var(--cyan);font-weight:700;margin-bottom:.8rem}
+.process-card h3{font-size:1.05rem;margin-bottom:.55rem}
+.process-card p{margin:0;color:var(--muted);font-size:.94rem}
+@media(max-width:800px){.process-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:480px){.process-grid{grid-template-columns:1fr}}
 .journey{list-style:none;padding:0;margin:0;display:grid;gap:1rem;max-width:64ch}
 .journey li{padding-left:1.2rem;border-left:2px solid var(--blue)}
 .journey b{font-family:var(--display);font-size:1.1rem;display:block}
@@ -130,7 +124,7 @@ footer{border-top:1px solid var(--line);padding:2rem 0;color:var(--muted);font-s
 <div>
 <h1 data-i="h1"></h1>
 <p data-i="lead"></p>
-<div class="cta"><a class="btn p" href="#projects" data-i="ctaProjects"></a><a class="btn" href="#contact" data-i="ctaContact"></a><a class="btn" id="gh" target="_blank" rel="noopener">GitHub</a></div>
+<div class="cta hero-actions"><a class="btn p" href="https://wa.me/243808373717" target="_blank" rel="noopener noreferrer">Discuter sur WhatsApp</a><a class="btn" href="tel:+243808373717">Appeler</a><a class="btn" href="#projects">Découvrir nos réalisations</a></div>
 </div>
 <figure class="chart hero-photo" style="margin:0" aria-label="Digital work and website development">
 <img src="https://images.unsplash.com/photo-1551650975-87deedd944c3?w=1400&q=90" alt="Environnement de travail consacré à la conception de solutions numériques" fetchpriority="high">
@@ -159,22 +153,14 @@ footer{border-top:1px solid var(--line);padding:2rem 0;color:var(--muted);font-s
 <div class="gallery" id="galleryGrid"></div>
 </div></section>
 
-<section id="impact"><div class="wrap">
-<h2 data-i="impactTitle">Impact et témoignages</h2>
-<div class="impact-grid">
-<article class="impact-count">
-<span class="demo-label" data-i="demoBadge">Simulation visuelle</span>
-<p class="muted" data-i="impactIntro">Un aperçu du compteur qui pourra être relié aux données réelles.</p>
-<div class="impact-number" id="peopleCount" aria-live="off">0+</div>
-<strong data-i="peopleHelped">Personnes accompagnées</strong>
-<p class="impact-note" data-i="impactDisclaimer">Chiffre fictif de démonstration, il ne représente pas encore des bénéficiaires réels.</p>
-</article>
-<div>
-<div class="reviews" id="reviewsGrid"></div>
-<p class="impact-note" data-i="reviewsDisclaimer">Avis fictifs de démonstration — à remplacer par des témoignages authentiques, publiés avec l’accord des personnes concernées.</p>
-</div>
-</div>
-</div></section>
+<section id="process"><div class="wrap">
+<h2>Comment nous travaillons</h2>
+<div class="process-grid">
+<article class="process-card"><span>01</span><h3>Comprendre votre besoin</h3><p>Nous échangeons avec vous pour comprendre votre activité, vos difficultés et vos objectifs.</p></article>
+<article class="process-card"><span>02</span><h3>Proposer une solution</h3><p>Nous définissons une approche adaptée, les fonctionnalités utiles et les étapes du projet.</p></article>
+<article class="process-card"><span>03</span><h3>Concevoir et tester</h3><p>Nous développons progressivement et vérifions le fonctionnement sur les appareils concernés.</p></article>
+<article class="process-card"><span>04</span><h3>Livrer et accompagner</h3><p>Nous présentons le résultat et convenons des modalités de suivi et de maintenance.</p></article>
+</div></div></section>
 
 <section id="journey"><div class="wrap">
 <h2 data-i="nJourney"></h2>
@@ -215,6 +201,9 @@ footer{border-top:1px solid var(--line);padding:2rem 0;color:var(--muted);font-s
 
 <script src="data.js"></script>
 <script>
+.cta{display:flex;flex-wrap:wrap;gap:.8rem;align-items:center}
+.cta .btn{min-height:46px;display:inline-flex;align-items:center;justify-content:center}
+.hero-actions .btn{min-width:150px}
 const F='fill="none" stroke="#3b73ff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"',C='stroke="#22d3ee"';
 const ART={
  py:`<svg viewBox="0 0 160 100" aria-hidden="true"><rect x="8" y="8" width="144" height="84" rx="8" fill="#0d1630" stroke="#1f2d52"/><circle cx="20" cy="19" r="3" fill="#3b73ff"/><circle cx="30" cy="19" r="3" fill="#1f2d52"/><path d="M22 40l12 8-12 8" ${F} ${C}/><path d="M44 48h50M44 62h70M44 76h34" ${F}/></svg>`,
@@ -250,33 +239,6 @@ let cat="all",lbList=[],lbIdx=0;
 const t=k=>I18N[lang][k];
 const L=o=>o[lang];
 
-const DEMO_REVIEWS={
- fr:[
-  {quote:"L’accompagnement nous a aidés à mieux comprendre les possibilités d’une solution numérique.",author:"Exemple de témoignage",context:"Organisation cliente — exemple fictif"},
-  {quote:"Une approche claire, avec des explications simples et des étapes bien définies.",author:"Exemple de témoignage",context:"Responsable de projet — exemple fictif"},
-  {quote:"La présentation du projet nous a permis de mieux structurer nos besoins.",author:"Exemple de témoignage",context:"Utilisateur — exemple fictif"}
- ],
- en:[
-  {quote:"The guidance helped us better understand what a digital solution could do for our organisation.",author:"Sample testimonial",context:"Client organisation — fictional example"},
-  {quote:"A clear approach, with simple explanations and well-defined steps.",author:"Sample testimonial",context:"Project lead — fictional example"},
-  {quote:"The project discussion helped us organise our needs more clearly.",author:"Sample testimonial",context:"User — fictional example"}
- ]
-};
-function renderImpact(){
- const count=$("#peopleCount");
- if(count){
-  const target=128; // illustrative demo value, not a real beneficiary count
-  const duration=1400,started=performance.now();
-  const tick=now=>{
-   const progress=Math.min(1,(now-started)/duration);
-   count.textContent=Math.round(target*(1-Math.pow(1-progress,3))).toLocaleString(lang==="fr"?"fr-FR":"en-US")+"+";
-   if(progress<1)requestAnimationFrame(tick);
-  };
-  requestAnimationFrame(tick);
- }
- const grid=$("#reviewsGrid");
- if(grid)grid.innerHTML=DEMO_REVIEWS[lang].map(r=>`<article class="review-card"><div class="review-stars" aria-label="5 étoiles">★★★★★</div><blockquote>“${r.quote}”</blockquote><cite><strong>${r.author}</strong><br>${r.context}</cite></article>`).join("");
-}
 function render(){
   document.documentElement.lang=lang;
   document.querySelectorAll("[data-i]").forEach(e=>e.textContent=t(e.dataset.i));
@@ -290,14 +252,9 @@ function render(){
     ${p.details?`<details><summary>${t("details")}</summary><ul>${p.details[lang].map(d=>`<li>${d}</li>`).join("")}</ul></details>`:""}
     <div class="links">${p.code?`<a href="${p.code}" target="_blank" rel="noopener">${t("code")}</a>`:""}${p.demo?`<a href="${p.demo}" target="_blank" rel="noopener">${p.id==="grace-divine"?(lang==="fr"?"Déploiement Vercel (accès à confirmer)":"Vercel deployment (access to confirm)"):t("demo")}</a>`:""}</div></div></article>`).join("");
   $("#journeyList").innerHTML=JOURNEY.map(j=>`<li><b>${L(j.t)}</b><span class="muted">${L(j.d)}</span></li>`).join("");
-  const c=[`<a class="btn p" href="${SITE.github}" target="_blank" rel="noopener">GitHub</a>`];
-  if(SITE.linkedin)c.push(`<a class="btn" href="${SITE.linkedin}" target="_blank" rel="noopener">LinkedIn</a>`);
-  if(SITE.email)c.push(`<a class="btn" href="mailto:${SITE.email}">Email · ${SITE.email}</a>`);
-  if(SITE.phone)c.push(`<a class="btn" href="tel:+243808373717">Appeler · ${SITE.phone}</a>`);
-  if(SITE.whatsapp)c.push(`<a class="btn p" href="${SITE.whatsapp}?text=Bonjour%20TYM%20Services%2C%20je%20souhaite%20discuter%20d%E2%80%99un%20projet." target="_blank" rel="noopener noreferrer">WhatsApp · Message direct</a>`);
+  const c=[`<a class="btn p" href="${SITE.whatsapp}" target="_blank" rel="noopener noreferrer">Discuter sur WhatsApp</a>`,`<a class="btn" href="tel:+243808373717">Appeler</a>`];
   $("#contactLinks").innerHTML=c.join("");
   renderGallery();
-  renderImpact();
 }
 function renderGallery(){
   const has=GALLERY.length>0;
