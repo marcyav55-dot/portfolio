@@ -121,6 +121,19 @@ footer{border-top:1px solid var(--line);padding:2rem 0;color:var(--muted);font-s
 .cta{display:flex;flex-wrap:wrap;gap:.8rem;align-items:center}
 .cta .btn{min-height:46px;display:inline-flex;align-items:center;justify-content:center}
 .hero-actions .btn{min-width:150px}
+
+.service-showcase{padding:4rem 0;background:#0c152b;border-block:1px solid var(--line)}
+.service-head{display:flex;justify-content:space-between;gap:1rem;align-items:end;margin-bottom:1.5rem}.service-head p{max-width:54ch;margin:0;color:var(--muted)}
+.service-controls{display:flex;gap:.5rem;flex:none}.service-controls button{width:42px;height:42px;border-radius:50%;border:1px solid var(--line);background:var(--surface);color:var(--text);font-size:1.2rem;cursor:pointer}
+.service-track{display:flex;gap:1rem;overflow-x:auto;scroll-snap-type:x mandatory;scroll-behavior:smooth;padding:.25rem .1rem 1rem;scrollbar-width:thin}
+.service-card{flex:0 0 min(300px,82vw);scroll-snap-align:start;background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:1.35rem;min-height:180px}
+.service-no{color:var(--cyan);font-weight:700;font-size:.85rem}.service-card h3{margin:.75rem 0;font-size:1.2rem}.service-card p{color:var(--muted);margin:0;font-size:.95rem}
+.impact{background:linear-gradient(135deg,#101d3d,#0b1428);border-block:1px solid var(--line)}.impact-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1rem}
+.impact-card{padding:1.5rem;border:1px solid var(--line);border-radius:16px;background:rgba(10,16,32,.45)}
+.impact-number{font:700 clamp(2.4rem,6vw,3.6rem)/1 var(--display);color:var(--cyan);display:block;margin-bottom:.65rem}
+.impact-card p{color:var(--muted);margin:0}.testimonial-note{padding:1.3rem;border:1px dashed var(--line);border-radius:14px;color:var(--muted);max-width:70ch}
+@media(max-width:600px){.service-head{align-items:start}.impact-grid{grid-template-columns:1fr}.service-controls button{width:38px;height:38px}}
+@media(prefers-reduced-motion:reduce){.service-track{scroll-behavior:auto}}
 </style>
 </head>
 <body>
@@ -153,7 +166,14 @@ footer{border-top:1px solid var(--line);padding:2rem 0;color:var(--muted);font-s
 <div class="skills" id="skillsGrid"></div>
 </div></section>
 
-<section id="projects"><div class="wrap">
+<section class="service-showcase" id="service-carousel"><div class="wrap"><div class="service-head"><div><h2>Nos domaines d’intervention</h2><p>Des solutions numériques adaptées aux besoins réels des organisations.</p></div><div class="service-controls"><button type="button" id="servicePrev" aria-label="Précédent">←</button><button type="button" id="serviceNext" aria-label="Suivant">→</button></div></div><div class="service-track" id="serviceTrack">
+<article class="service-card"><span class="service-no">01 / WEB</span><h3>Sites web professionnels</h3><p>Sites vitrines, pages professionnelles et plateformes responsives.</p></article>
+<article class="service-card"><span class="service-no">02 / APP</span><h3>Applications web et mobiles</h3><p>Applications utiles pour simplifier les opérations quotidiennes.</p></article>
+<article class="service-card"><span class="service-no">03 / DATA</span><h3>Gestion des données</h3><p>Bases de données, tableaux de bord et outils de suivi.</p></article>
+<article class="service-card"><span class="service-no">04 / IA</span><h3>Intelligence artificielle</h3><p>Automatisation et intégration de fonctionnalités intelligentes.</p></article>
+<article class="service-card"><span class="service-no">05 / E-COMMERCE</span><h3>Commerce et paiements en ligne</h3><p>Catalogues, commandes et parcours de transaction en ligne.</p></article>
+<article class="service-card"><span class="service-no">06 / SUPPORT</span><h3>Maintenance et assistance</h3><p>Améliorations, corrections et accompagnement technique.</p></article>
+</div></div></section><section id="projects"><div class="wrap">
 <h2 data-i="nProjects"></h2>
 <div class="projects" id="projectsGrid"></div>
 </div></section>
@@ -173,7 +193,7 @@ footer{border-top:1px solid var(--line);padding:2rem 0;color:var(--muted);font-s
 <article class="process-card"><span>04</span><h3>Livrer et accompagner</h3><p>Nous présentons le résultat et convenons des modalités de suivi et de maintenance.</p></article>
 </div></div></section>
 
-<section id="journey"><div class="wrap">
+<section class="impact" id="impact"><div class="wrap"><h2>Notre impact</h2><p class="muted">Quelques chiffres clés de notre accompagnement.</p><div class="impact-grid"><article class="impact-card"><span class="impact-number" data-count="110">+110</span><p>Personnes accompagnées</p></article><article class="impact-card"><span class="impact-number" data-count="50">+50</span><p>Personnes satisfaites</p></article></div><p class="muted" style="font-size:.82rem;margin-top:1rem">Chiffres communiqués par TYM Services.</p></div></section><section id="testimonials"><div class="wrap"><h2>Témoignages</h2><p class="testimonial-note">Les témoignages clients seront publiés ici après réception et avec l’autorisation des personnes concernées.</p></div></section><section id="journey"><div class="wrap">
 <h2 data-i="nJourney"></h2>
 <ul class="journey" id="journeyList"></ul>
 </div></section>
@@ -252,7 +272,7 @@ function render(){
   document.querySelectorAll("[data-i]").forEach(e=>e.textContent=t(e.dataset.i));
   $("#lang").textContent=lang==="en"?"FR":"EN";
   $("#cvView").href="cv.html?lang="+lang;$("#cvDl").href="cv.html?lang="+lang+"&download=1";
-  $("#skillsGrid").innerHTML=SKILLS.map(s=>`<article class="box skill">${s.image?`<img class="skill-photo" src="${s.image}" alt="${s.n[lang]}" loading="lazy" decoding="async">`:ART[s.k]}<div class="sb"><h3>${s.n[lang]}</h3><p class="muted" style="margin:0">${L(s.d)}</p><h4>${t("can")}</h4><ul class="can">${s.can[lang].map(x=>`<li>${x}</li>`).join("")}</ul><ul class="tags">${s.tags.map(x=>`<li>${x}</li>`).join("")}</ul></div></article>`).join("")+`<article class="box" style="grid-column:1/-1"><h3>${t("learn")}</h3><p class="muted" style="margin:0 0 .8rem">${t("learnTxt")}</p><ul class="tags">${LEARNING[lang].map(x=>`<li>${x}</li>`).join("")}</ul></article>`;
+  $("#skillsGrid").innerHTML=SKILLS.map(s=>`<article class="box skill">${s.image?`<img class="skill-photo" src="${s.image}" alt="${s.n[lang]}" loading="lazy" decoding="async">`:(ART[s.k]||ART.web)}<div class="sb"><h3>${s.n[lang]}</h3><p class="muted" style="margin:0">${L(s.d)}</p><h4>${t("can")}</h4><ul class="can">${s.can[lang].map(x=>`<li>${x}</li>`).join("")}</ul><ul class="tags">${s.tags.map(x=>`<li>${x}</li>`).join("")}</ul></div></article>`).join("")+`<article class="box" style="grid-column:1/-1"><h3>${t("learn")}</h3><p class="muted" style="margin:0 0 .8rem">${t("learnTxt")}</p><ul class="tags">${LEARNING[lang].map(x=>`<li>${x}</li>`).join("")}</ul></article>`;
   $("#projectsGrid").innerHTML=PROJECTS.map(p=>`<article class="card${p.main?" main":""}" id="p-${p.id}">
     <div class="cover">${p.cover?`<img src="${p.cover}" alt="${p.name}" loading="lazy">`:p.name}</div>
     <div class="cbody"><span class="status">${L(p.status)}</span><h3>${p.name}</h3><p class="muted" style="margin:0">${L(p.desc)}</p>
@@ -260,6 +280,7 @@ function render(){
     ${p.details?`<details><summary>${t("details")}</summary><ul>${p.details[lang].map(d=>`<li>${d}</li>`).join("")}</ul></details>`:""}
     <div class="links">${p.code?`<a href="${p.code}" target="_blank" rel="noopener">${t("code")}</a>`:""}${p.demo?`<a href="${p.demo}" target="_blank" rel="noopener">${p.id==="grace-divine"?(lang==="fr"?"Déploiement Vercel (accès à confirmer)":"Vercel deployment (access to confirm)"):t("demo")}</a>`:""}</div></div></article>`).join("");
   $("#journeyList").innerHTML=JOURNEY.map(j=>`<li><b>${L(j.t)}</b><span class="muted">${L(j.d)}</span></li>`).join("");
+  document.querySelectorAll("[data-count]").forEach(el=>{el.textContent="+"+Number(el.dataset.count).toLocaleString(lang==="fr"?"fr-FR":"en-US")});
   const c=[`<a class="btn p" href="${SITE.whatsapp}" target="_blank" rel="noopener noreferrer">Discuter sur WhatsApp</a>`,`<a class="btn" href="tel:+243808373717">Appeler</a>`];
   $("#contactLinks").innerHTML=c.join("");
   renderGallery();
@@ -287,6 +308,8 @@ $("#lb").addEventListener("keydown",e=>{if(e.key==="ArrowLeft")showLb(lbIdx-1);i
 $("#lb").addEventListener("click",e=>{if(e.target===$("#lb"))$("#lb").close()});
 $("#lang").onclick=()=>{lang=lang==="en"?"fr":"en";try{localStorage.setItem("lang",lang)}catch(e){}render()};
 $("#yr").textContent=new Date().getFullYear();
+const serviceTrack=$("#serviceTrack");$("#servicePrev").onclick=()=>serviceTrack.scrollBy({left:-320,behavior:"smooth"});$("#serviceNext").onclick=()=>serviceTrack.scrollBy({left:320,behavior:"smooth"});
+let serviceTimer=setInterval(()=>{if(serviceTrack.scrollLeft+serviceTrack.clientWidth>=serviceTrack.scrollWidth-8)serviceTrack.scrollTo({left:0,behavior:"smooth"});else serviceTrack.scrollBy({left:320,behavior:"smooth"})},4200);serviceTrack.addEventListener("mouseenter",()=>clearInterval(serviceTimer));serviceTrack.addEventListener("touchstart",()=>clearInterval(serviceTimer),{passive:true});
 (function(){const i=$("#photo"),b=$("#photoBox");i.onerror=()=>{b.textContent="MY"};if(SITE.photo)i.src=SITE.photo;else b.textContent="MY"})();
 render();
 (function(){
