@@ -25,11 +25,8 @@ const T={en:{sum:"Profile",sk:"Skills",ln:"Currently learning",pr:"Projects",ed:
          fr:{sum:"Profil",sk:"Compétences",ln:"En apprentissage",pr:"Projets",ed:"Formation",lg:"Langues",dl:"Télécharger en PDF",sw:"English"}}[lang];
 const u=x=>x.replace(/^https?:\/\/(www\.)?/,"").replace(/\/$/,"");
 const ct=[];
-if(SITE.email)ct.push(`<a href="mailto:${SITE.email}">${SITE.email}</a>`);
-if(SITE.phone)ct.push(`<a href="tel:+243808373717">${SITE.phone}</a>`);
-if(SITE.location)ct.push(SITE.location);
-if(SITE.linkedin)ct.push(`<a href="${SITE.linkedin}">${u(SITE.linkedin)}</a>`);
-ct.push(`<a href="${SITE.github}">${u(SITE.github)}</a>`);
+if(SITE.whatsapp)ct.push(`<a href="${SITE.whatsapp}" target="_blank" rel="noopener">WhatsApp</a>`);
+ct.push(`<a href="${SITE.github}" target="_blank" rel="noopener">GitHub</a>`);
 const sec=(h,b)=>b?`<h2>${h}</h2>${b}`:"";
 document.getElementById("cv").innerHTML=`<header><div class="ph">${SITE.photo?`<img src="${SITE.photo}" alt="" onerror="this.parentNode.textContent='MY'">`:"MY"}</div>
 <div><h1>${NAME}</h1><p class="t">${TITLE[lang]}</p><div class="ct">${ct.map(c=>`<span>${c}</span>`).join("")}</div></div></header>
