@@ -21,6 +21,7 @@ button.secondary{background:#fff;color:var(--navy);border:1px solid #ccd6e4}
 .hero-main{padding:8mm 9mm 6mm;display:flex;flex-direction:column;justify-content:center}
 .eyebrow{font-size:7pt;letter-spacing:2px;text-transform:uppercase;color:var(--blue);font-weight:800;margin-bottom:4px}
 h1{margin:0;color:var(--navy);font-size:24pt;line-height:1.02;letter-spacing:.1px;text-transform:uppercase}
+.alias{margin:4px 0 0;color:#53647c;font-size:8pt;font-weight:650}
 .role{margin:7px 0 11px;color:var(--navy2);font-size:10pt;font-weight:800;letter-spacing:.55px}
 .rule{width:21mm;height:3px;background:var(--blue);margin:0 0 10px}
 .contacts{display:grid;grid-template-columns:1fr 1fr;gap:6px 14px;font-size:7.4pt;font-weight:650;color:#30425e}
@@ -85,7 +86,7 @@ const safeLink=(url,label)=>url?'<a href="'+url+'" target="_blank" rel="noopener
 const skills=SKILLS.map(s=>'<div class="skill"><div class="skill-head"><span>'+s.n[lang]+'</span><small>'+s.level[lang]+'</small></div><div class="bar"><div class="fill" style="width:'+(s.rank*20)+'%"></div></div></div>').join("");
 const projects=PROJECTS.map(p=>'<article class="entry"><div class="entry-head"><span class="entry-title">'+p.name+'</span><span class="entry-date">'+(p.status[lang]||T.project)+'</span></div><div class="entry-place">'+T.project+'</div><p>'+p.desc[lang]+'</p><div class="tech">'+p.tech.join(" · ")+'</div></article>').join("");
 document.getElementById("cv").innerHTML=
-'<header class="hero"><div class="hero-mark"><div class="monogram">MY</div></div><div class="hero-main"><div class="eyebrow">'+T.eyebrow+'</div><h1>'+NAME+'</h1><div class="role">'+T.role+'</div><div class="rule"></div><div class="contacts"><div class="contact"><span class="icon">☎</span>'+safeLink(SITE.whatsapp,"+243 808 373 717")+'</div><div class="contact"><span class="icon">in</span>'+safeLink(SITE.linkedin,"linkedin.com/in/marc-yav")+'</div><div class="contact"><span class="icon">⌖</span><span>'+T.location+'</span></div><div class="contact"><span class="icon">GH</span>'+safeLink(SITE.github,"github.com/marcyav55-dot")+'</div></div></div></header>'+
+'<header class="hero"><div class="hero-mark"><div class="monogram">MY</div></div><div class="hero-main"><div class="eyebrow">'+T.eyebrow+'</div><h1>'+NAME+'</h1><div class="alias">'+(lang==="fr"?"Souvent connu sous le nom de ":"Also known as ")+KNOWN_AS+'</div><div class="role">'+T.role+'</div><div class="rule"></div><div class="contacts"><div class="contact"><span class="icon">☎</span>'+safeLink(SITE.whatsapp,"+243 808 373 717")+'</div><div class="contact"><span class="icon">in</span>'+safeLink(SITE.linkedin,"linkedin.com/in/marc-yav")+'</div><div class="contact"><span class="icon">⌖</span><span>'+T.location+'</span></div><div class="contact"><span class="icon">GH</span>'+safeLink(SITE.github,"github.com/marcyav55-dot")+'</div></div></div></header>'+
 '<aside><section><h2>'+T.profile+'</h2><p class="profile">'+T.profileText+'</p><div class="focus">'+T.focus+'</div></section>'+
 '<section><h2>'+T.languages+'</h2>'+LANGUAGES.map(l=>'<div class="lang"><span>'+l.n[lang]+'</span><small>'+l.level[lang]+'</small></div>').join("")+'</section>'+
 '<section><h2>'+T.skills+'</h2>'+skills+'</section>'+

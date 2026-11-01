@@ -13,7 +13,8 @@ const SITE = {
   location: "Kolwezi, Lualaba, RDC",
   photo: "profile.jpg"
 };
-const NAME = "Marcus Tshijika Yav";
+const NAME = "TSHIJIKA YAV MARC";
+const KNOWN_AS = "Marcus Yav";
 const TITLE = {en:"Software Developer · AI & Machine Learning Enthusiast",fr:"Développeur logiciel · Passionné d’IA & Machine Learning"};
 const SUMMARY = {
   en:"Software engineering student and founder of TYM Services, building web applications and exploring artificial intelligence, Machine Learning and Data Science.",
