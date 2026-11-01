@@ -97,6 +97,20 @@ dialog::backdrop{background:rgba(3,6,15,.85)}
 dialog img{width:100%;max-height:68vh;object-fit:contain;display:block;border-radius:8px}
 .lbbar{display:flex;gap:.6rem;align-items:center;margin-top:.8rem}.lbbar p{margin:0 auto;font-size:.95rem}
 .lbbar button{background:var(--bg);color:var(--text);border:1px solid var(--line);border-radius:8px;padding:.4rem .9rem;cursor:pointer;font:inherit}
+
+.impact-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:1.25rem;align-items:stretch}
+.impact-count,.review-card{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:1.4rem}
+.impact-count{display:flex;flex-direction:column;justify-content:center;min-height:230px}
+.impact-number{font:700 clamp(2.8rem,7vw,4.5rem)/1 var(--display);letter-spacing:-.04em;color:var(--cyan);margin:.7rem 0}
+.demo-label{display:inline-flex;align-self:flex-start;border:1px solid #80652d;color:#f5cc72;border-radius:99px;padding:.2rem .65rem;font-size:.75rem;font-weight:600}
+.impact-note{font-size:.85rem;color:var(--muted);margin:.8rem 0 0}
+.reviews{display:grid;gap:.8rem;grid-template-columns:repeat(3,minmax(0,1fr))}
+.review-card{padding:1.1rem}
+.review-stars{color:#f5cc72;letter-spacing:.12em;font-size:.95rem}
+.review-card blockquote{margin:.7rem 0;color:var(--text);font-size:.95rem}
+.review-card cite{font-style:normal;color:var(--muted);font-size:.82rem}
+@media(max-width:800px){.impact-grid{grid-template-columns:1fr}.reviews{grid-template-columns:1fr}}
+
 .journey{list-style:none;padding:0;margin:0;display:grid;gap:1rem;max-width:64ch}
 .journey li{padding-left:1.2rem;border-left:2px solid var(--blue)}
 .journey b{font-family:var(--display);font-size:1.1rem;display:block}
@@ -143,6 +157,23 @@ footer{border-top:1px solid var(--line);padding:2rem 0;color:var(--muted);font-s
 <h2 data-i="nGallery"></h2>
 <div class="filters" id="filters"></div>
 <div class="gallery" id="galleryGrid"></div>
+</div></section>
+
+<section id="impact"><div class="wrap">
+<h2 data-i="impactTitle">Impact et témoignages</h2>
+<div class="impact-grid">
+<article class="impact-count">
+<span class="demo-label" data-i="demoBadge">Simulation visuelle</span>
+<p class="muted" data-i="impactIntro">Un aperçu du compteur qui pourra être relié aux données réelles.</p>
+<div class="impact-number" id="peopleCount" aria-live="off">0+</div>
+<strong data-i="peopleHelped">Personnes accompagnées</strong>
+<p class="impact-note" data-i="impactDisclaimer">Chiffre fictif de démonstration, il ne représente pas encore des bénéficiaires réels.</p>
+</article>
+<div>
+<div class="reviews" id="reviewsGrid"></div>
+<p class="impact-note" data-i="reviewsDisclaimer">Avis fictifs de démonstration — à remplacer par des témoignages authentiques, publiés avec l’accord des personnes concernées.</p>
+</div>
+</div>
 </div></section>
 
 <section id="journey"><div class="wrap">
@@ -195,14 +226,14 @@ const ART={
  git:`<svg viewBox="0 0 160 100" aria-hidden="true"><path d="M30 20v60M30 50c0-18 50-8 50-26M80 24v0c0 14 50 6 50 26" ${F}/><g fill="#0d1630" stroke="#3b73ff" stroke-width="3"><circle cx="30" cy="20" r="7"/><circle cx="30" cy="80" r="7"/><circle cx="80" cy="24" r="7"/></g><circle cx="130" cy="50" r="8" fill="#22d3ee"/></svg>`
 };
 const I18N = {
- en:{nAbout:"About the studio",nSkills:"Our services",nProjects:"Selected work",nGallery:"Gallery",nJourney:"Our approach",nContact:"Contact",
+ en:{impactTitle:"Our impact & testimonials",demoBadge:"Visual simulation",impactIntro:"A preview of the counter that can later be connected to verified records.",peopleHelped:"People supported",impactDisclaimer:"Illustrative demo figure only; it does not represent actual beneficiaries.",reviewsDisclaimer:"Sample demo reviews — replace with genuine testimonials published with each person’s permission.",nAbout:"About the studio",nSkills:"Our services",nProjects:"Selected work",nGallery:"Gallery",nJourney:"Our approach",nContact:"Contact",
   h1:"Digital solutions that move your organisation forward.",
   lead:"TYM Services helps schools, healthcare organisations, shops and businesses build a professional online presence, organise their data and simplify everyday work with useful digital tools.",
   ctaProjects:"Explore our work",ctaContact:"Request a consultation",chartCap:"Websites, applications and digital systems designed around real needs.",
   about1:"TYM Services is a digital studio founded by Marcus Tshijika Yav. We work with organisations that want to modernise how they communicate, manage information and serve their customers.",
   about2:"From the first discussion to delivery, the focus stays on your needs: clear proposals, practical solutions, accessible explanations and realistic project scope. Specialist security or regulated healthcare requirements are assessed before work begins.",
   contactText:"Tell us what is slowing your organisation down or what you want to launch. We will discuss a practical digital solution and the next steps.",contactAsideTitle:"Let’s talk about your project",contactAsideText:"Describe what you need. TYM Services will reply by email to discuss the next steps.",fName:"Full name",fEmail:"Email address",fOrg:"Organisation (optional)",fService:"Service needed",fChoose:"Choose a service",fMessage:"Tell us about your project",fSend:"Send my request",all:"All",view:"View",code:"Code",demo:"Live demo",details:"Details",close:"Close",can:"What I can do",learn:"Currently learning",learnTxt:"Technologies I study and am working toward. Not claimed as mastered.",nCV:"CV",cvText:"An international-style CV with my photo, skills, projects and contact details. Open it, then save it as PDF.",cvView:"View CV",cvDl:"Download CV (PDF)"},
- fr:{nAbout:"À propos du studio",nSkills:"Nos services",nProjects:"Réalisations",nGallery:"Galerie",nJourney:"Notre approche",nContact:"Contact",
+ fr:{impactTitle:"Notre impact et les témoignages",demoBadge:"Simulation visuelle",impactIntro:"Aperçu du compteur qui pourra ensuite être relié à des données vérifiées.",peopleHelped:"Personnes accompagnées",impactDisclaimer:"Chiffre fictif de démonstration ; il ne représente pas des bénéficiaires réels.",reviewsDisclaimer:"Avis fictifs de démonstration — à remplacer par des témoignages authentiques publiés avec l’accord des personnes concernées.",nAbout:"À propos du studio",nSkills:"Nos services",nProjects:"Réalisations",nGallery:"Galerie",nJourney:"Notre approche",nContact:"Contact",
   h1:"Des solutions numériques qui font avancer votre organisation.",
   lead:"TYM Services accompagne les écoles, structures de santé, commerces et entreprises pour développer leur présence en ligne, organiser leurs données et simplifier leur travail quotidien grâce à des outils numériques utiles.",
   ctaProjects:"Découvrir nos réalisations",ctaContact:"Demander un devis",chartCap:"Sites web, applications et systèmes numériques conçus pour vos besoins réels.",
@@ -219,6 +250,33 @@ let cat="all",lbList=[],lbIdx=0;
 const t=k=>I18N[lang][k];
 const L=o=>o[lang];
 
+const DEMO_REVIEWS={
+ fr:[
+  {quote:"L’accompagnement nous a aidés à mieux comprendre les possibilités d’une solution numérique.",author:"Exemple de témoignage",context:"Organisation cliente — exemple fictif"},
+  {quote:"Une approche claire, avec des explications simples et des étapes bien définies.",author:"Exemple de témoignage",context:"Responsable de projet — exemple fictif"},
+  {quote:"La présentation du projet nous a permis de mieux structurer nos besoins.",author:"Exemple de témoignage",context:"Utilisateur — exemple fictif"}
+ ],
+ en:[
+  {quote:"The guidance helped us better understand what a digital solution could do for our organisation.",author:"Sample testimonial",context:"Client organisation — fictional example"},
+  {quote:"A clear approach, with simple explanations and well-defined steps.",author:"Sample testimonial",context:"Project lead — fictional example"},
+  {quote:"The project discussion helped us organise our needs more clearly.",author:"Sample testimonial",context:"User — fictional example"}
+ ]
+};
+function renderImpact(){
+ const count=$("#peopleCount");
+ if(count){
+  const target=128; // illustrative demo value, not a real beneficiary count
+  const duration=1400,started=performance.now();
+  const tick=now=>{
+   const progress=Math.min(1,(now-started)/duration);
+   count.textContent=Math.round(target*(1-Math.pow(1-progress,3))).toLocaleString(lang==="fr"?"fr-FR":"en-US")+"+";
+   if(progress<1)requestAnimationFrame(tick);
+  };
+  requestAnimationFrame(tick);
+ }
+ const grid=$("#reviewsGrid");
+ if(grid)grid.innerHTML=DEMO_REVIEWS[lang].map(r=>`<article class="review-card"><div class="review-stars" aria-label="5 étoiles">★★★★★</div><blockquote>“${r.quote}”</blockquote><cite><strong>${r.author}</strong><br>${r.context}</cite></article>`).join("");
+}
 function render(){
   document.documentElement.lang=lang;
   document.querySelectorAll("[data-i]").forEach(e=>e.textContent=t(e.dataset.i));
@@ -239,6 +297,7 @@ function render(){
   if(SITE.whatsapp)c.push(`<a class="btn p" href="${SITE.whatsapp}?text=Bonjour%20TYM%20Services%2C%20je%20souhaite%20discuter%20d%E2%80%99un%20projet." target="_blank" rel="noopener noreferrer">WhatsApp · Message direct</a>`);
   $("#contactLinks").innerHTML=c.join("");
   renderGallery();
+  renderImpact();
 }
 function renderGallery(){
   const has=GALLERY.length>0;
