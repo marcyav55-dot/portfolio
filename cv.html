@@ -1,46 +1,102 @@
 <!DOCTYPE html>
-<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<html lang="fr">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="CV de Marcus Tshijika Yav — Full-Stack Machine Learning Developer">
 <title>CV — Marcus Tshijika Yav</title>
 <style>
-@page{size:A4;margin:12mm}
-*{box-sizing:border-box}body{margin:0;background:#e9edf5;font:10.5pt/1.5 'Segoe UI',Arial,sans-serif;color:#1a2233}
-.bar{display:flex;gap:.6rem;justify-content:center;flex-wrap:wrap;padding:.8rem}
-.bar button{padding:.55rem 1.1rem;border-radius:8px;border:1px solid #3b73ff;background:#3b73ff;color:#fff;font:inherit;cursor:pointer}.bar button.s{background:#fff;color:#1a2233;border-color:#c5cee0}
-.page{width:210mm;max-width:100%;margin:0 auto 2rem;background:#fff;padding:14mm;box-shadow:0 4px 20px rgba(0,0,0,.15)}
-header{display:flex;gap:1.2rem;align-items:center;border-bottom:2px solid #3b73ff;padding-bottom:.9rem}
-.ph{width:30mm;height:38mm;flex:none;border-radius:4px;overflow:hidden;background:#e9edf5;display:grid;place-items:center;font:700 22pt Arial;color:#3b73ff}.ph img{width:100%;height:100%;object-fit:cover}
-h1{margin:0;font-size:21pt;line-height:1.15}.t{margin:.2rem 0 .5rem;color:#3b73ff;font-weight:600}
-.ct{display:flex;flex-wrap:wrap;gap:.2rem 1rem;font-size:9.5pt}.ct a{color:inherit;text-decoration:none}
-h2{font-size:11pt;color:#3b73ff;border-bottom:1px solid #d5dcea;padding-bottom:.15rem;margin:1.1rem 0 .5rem}
-.row{margin:0 0 .45rem;break-inside:avoid}.row b{display:block}.m{color:#5b6680;font-size:9.5pt}
-@media(max-width:600px){header{flex-direction:column;align-items:flex-start}}
-@media print{body{background:#fff}.bar{display:none}.page{box-shadow:none;margin:0;padding:0;width:auto}}
-</style></head><body>
-<div class="bar"><button id="dl"></button><button class="s" id="sw"></button></div>
-<main class="page" id="cv"></main>
+@page{size:A4;margin:0}
+:root{--navy:#142b50;--navy2:#1d3c6d;--blue:#3975cf;--ink:#17243a;--muted:#5c6a7f;--line:#dbe3ee;--pale:#f2f5fa}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0}
+body{background:#e9edf3;color:var(--ink);font:8.4pt/1.36 "Inter","Segoe UI",Arial,sans-serif;-webkit-font-smoothing:antialiased}
+.toolbar{display:flex;justify-content:center;gap:10px;padding:14px}
+button{border:0;border-radius:7px;padding:10px 17px;background:var(--navy);color:#fff;font-weight:700;cursor:pointer}
+button.secondary{background:#fff;color:var(--navy);border:1px solid #ccd6e4}
+.sheet{width:210mm;height:297mm;margin:0 auto 24px;background:#fff;box-shadow:0 10px 35px #142b5020;display:grid;grid-template-columns:68mm 1fr;grid-template-rows:58mm 1fr;overflow:hidden}
+.hero{grid-column:1/-1;display:grid;grid-template-columns:68mm 1fr;background:#f5f7fb;border-bottom:1px solid var(--line)}
+.hero-mark{background:linear-gradient(145deg,var(--navy),#244b83);display:flex;align-items:center;justify-content:center;position:relative}
+.hero-mark:after{content:"";position:absolute;width:45mm;height:45mm;border:1px solid #ffffff24;border-radius:50%}
+.monogram{width:29mm;height:29mm;border:1.5px solid #a9c5ef;border-radius:10px;display:flex;align-items:center;justify-content:center;color:#fff;font-size:24pt;font-weight:800;letter-spacing:1px;z-index:1}
+.hero-main{padding:8mm 9mm 6mm;display:flex;flex-direction:column;justify-content:center}
+.eyebrow{font-size:7pt;letter-spacing:2px;text-transform:uppercase;color:var(--blue);font-weight:800;margin-bottom:4px}
+h1{margin:0;color:var(--navy);font-size:24pt;line-height:1.02;letter-spacing:.1px;text-transform:uppercase}
+.role{margin:7px 0 11px;color:var(--navy2);font-size:10pt;font-weight:800;letter-spacing:.55px}
+.rule{width:21mm;height:3px;background:var(--blue);margin:0 0 10px}
+.contacts{display:grid;grid-template-columns:1fr 1fr;gap:6px 14px;font-size:7.4pt;font-weight:650;color:#30425e}
+.contact{display:flex;align-items:center;gap:6px;min-width:0}
+.contact a{color:inherit;text-decoration:none;overflow-wrap:anywhere}
+.icon{width:16px;height:16px;flex:0 0 16px;border-radius:5px;background:#e2eaf6;color:var(--navy);display:inline-flex;align-items:center;justify-content:center;font-size:7.5pt;font-weight:900}
+aside{background:var(--navy);color:#fff;padding:7mm 7mm 8mm}
+main{padding:7mm 8mm 7mm 8mm;background:#fff}
+section{margin:0 0 5mm;break-inside:avoid}
+h2{font-size:9.2pt;letter-spacing:1.25px;text-transform:uppercase;margin:0 0 7px;padding-bottom:5px;border-bottom:1px solid #8ca3c5}
+aside h2{color:#fff;border-color:#607da9}
+main h2{color:var(--navy);border-color:var(--line)}
+.profile{font-size:8pt;line-height:1.48;color:#e7edf7;margin:0}
+.focus{margin-top:8px;padding:7px 8px;border-left:3px solid #8fb5f0;background:#ffffff0d;color:#eaf1fb;font-size:7.5pt;line-height:1.4}
+.lang{margin:6px 0;display:flex;justify-content:space-between;gap:5px;font-size:7.8pt}
+.lang small{color:#bdcce3;font-size:7.2pt}
+.skill{margin:0 0 9px}
+.skill-head{display:flex;justify-content:space-between;gap:4px;font-size:7.5pt;font-weight:650;margin-bottom:4px}
+.skill-head small{color:#c8d5e8;font-size:6.9pt;white-space:nowrap}
+.bar{height:6px;border-radius:8px;background:#ffffff25;overflow:hidden}
+.fill{height:100%;border-radius:8px;background:linear-gradient(90deg,#6d9be5,#b7d0f6)}
+.programs{display:grid;grid-template-columns:1fr 1fr;gap:5px}
+.program{padding:6px 5px;text-align:center;background:#244777;border:1px solid #45699d;border-radius:5px;font-size:7.2pt;font-weight:750}
+.aside-foot{margin-top:8px;padding-top:7px;border-top:1px solid #607da9;color:#c5d3e8;font-size:7pt;letter-spacing:.4px}
+.intro{font-size:8.1pt;color:#46556b;line-height:1.48;margin:0 0 5mm}
+.timeline{position:relative;padding-left:13px;border-left:2px solid #d4dfed;margin-left:5px}
+.entry{position:relative;margin:0 0 4.2mm;break-inside:avoid}
+.entry:before{content:"";position:absolute;left:-18px;top:4px;width:8px;height:8px;border-radius:50%;background:var(--blue);border:2px solid #fff;box-shadow:0 0 0 1px #a9bdd9}
+.entry-head{display:flex;justify-content:space-between;align-items:center;gap:7px;margin-bottom:4px}
+.entry-title{display:inline-block;background:var(--navy);color:white;border-radius:4px;padding:4px 7px;font-weight:800;font-size:7.6pt;letter-spacing:.15px}
+.entry-date{font-size:7pt;font-weight:750;color:#63738b;text-align:right}
+.entry-place{font-weight:800;color:#1d3459;font-size:8pt;margin:2px 0}
+.entry p{font-size:7.65pt;color:#4b596e;line-height:1.42;margin:0}
+.tech{font-size:7pt;color:#2f66b5;font-weight:750;margin-top:4px;line-height:1.4}
+.edu-entry{margin:0 0 4mm;break-inside:avoid}
+.edu-title{font-size:8pt;font-weight:800;color:#1d3459}
+.edu-place{font-size:7.5pt;color:#59677c;margin-top:2px}
+.edu-date{font-size:7pt;color:#6c7b90;font-weight:700}
+.bottom-note{margin-top:4mm;padding:8px 10px;background:var(--pale);border-left:3px solid var(--blue);font-size:7.5pt;color:#40516a;line-height:1.45}
+@media(max-width:700px){.sheet{width:100%;height:auto;min-height:0;display:block;overflow:visible}.hero{grid-template-columns:25% 75%;min-height:190px}.hero-main{padding:15px}h1{font-size:19pt}.contacts{grid-template-columns:1fr}aside,main{padding:22px}}
+@media print{
+ html,body{width:210mm;height:297mm;background:#fff}
+ body{-webkit-print-color-adjust:exact!important;print-color-adjust:exact!important}
+ .toolbar{display:none!important}
+ .sheet{width:210mm;height:297mm;min-height:297mm;margin:0;box-shadow:none;overflow:hidden;break-after:avoid;page-break-after:avoid}
+ .hero-mark,aside,.icon,.entry-title,.program,.fill,.bottom-note{-webkit-print-color-adjust:exact!important;print-color-adjust:exact!important}
+ a{color:inherit!important;text-decoration:none!important}
+}
+</style>
+</head>
+<body>
+<div class="toolbar"><button id="printBtn">Télécharger le CV en PDF</button><button class="secondary" id="langBtn">English version</button></div>
+<div class="sheet" id="cv"></div>
 <script src="data.js"></script>
 <script>
-const q=new URLSearchParams(location.search);const lang=q.get("lang")==="fr"?"fr":"en";
-const T={en:{sum:"Profile",sk:"Skills",ln:"Currently learning",pr:"Projects",ed:"Education",lg:"Languages",dl:"Download PDF",sw:"Français"},
-         fr:{sum:"Profil",sk:"Compétences",ln:"En apprentissage",pr:"Projets",ed:"Formation",lg:"Langues",dl:"Télécharger en PDF",sw:"English"}}[lang];
-const u=x=>x.replace(/^https?:\/\/(www\.)?/,"").replace(/\/$/,"");
-const ct=[];
-if(SITE.email)ct.push(`<a href="mailto:${SITE.email}">${SITE.email}</a>`);
-if(SITE.phone)ct.push(`<a href="tel:${SITE.phone.replace(/\s/g,"")}">${SITE.phone}</a>`);
-if(SITE.location)ct.push(SITE.location);
-if(SITE.linkedin)ct.push(`<a href="${SITE.linkedin}">${u(SITE.linkedin)}</a>`);
-ct.push(`<a href="${SITE.github}">${u(SITE.github)}</a>`);
-const sec=(h,b)=>b?`<h2>${h}</h2>${b}`:"";
-document.getElementById("cv").innerHTML=`<header><div class="ph">${SITE.photo?`<img src="${SITE.photo}" alt="" onerror="this.parentNode.textContent='MY'">`:"MY"}</div>
-<div><h1>${NAME}</h1><p class="t">${TITLE[lang]}</p><div class="ct">${ct.map(c=>`<span>${c}</span>`).join("")}</div></div></header>
-${sec(T.sum,`<p>${SUMMARY[lang]}</p>`)}
-${sec(T.sk,SKILLS.map(s=>`<div class="row"><b>${s.n}</b><span class="m">${s.tags.join(", ")}</span></div>`).join(""))}
-${sec(T.ln,`<span class="m">${LEARNING[lang].join(", ")}</span>`)}
-${sec(T.pr,PROJECTS.map(p=>`<div class="row"><b>${p.name} <span class="m">— ${p.status[lang]}</span></b>${p.desc[lang]}<div class="m">${p.tech.join(", ")}${p.code?" · "+u(p.code):""}</div></div>`).join(""))}
-${sec(T.ed,EDUCATION.map(e=>`<div class="row"><b>${e.degree[lang]}</b>${e.school} <span class="m">${e.period||""}</span></div>`).join(""))}
-${sec(T.lg,LANGUAGES.map(l=>`<div class="row"><b>${l.n[lang]}</b><span class="m">${l.level[lang]}</span></div>`).join(""))}`;
-document.title="CV — "+NAME;document.documentElement.lang=lang;
-dl.textContent=T.dl;dl.onclick=()=>print();
-sw.textContent=T.sw;sw.onclick=()=>location.search="?lang="+(lang==="en"?"fr":"en");
-if(q.has("download"))addEventListener("load",()=>setTimeout(print,500));
-</script></body></html>
+const params=new URLSearchParams(location.search);let lang=params.get("lang")==="en"?"en":"fr";
+const T={
+fr:{eyebrow:"GÉNIE LOGICIEL · DÉVELOPPEMENT IA",role:"FULL-STACK MACHINE LEARNING DEVELOPER",profile:"PROFIL",languages:"LANGUES",skills:"COMPÉTENCES TECHNIQUES",programming:"TECHNOLOGIES",projects:"PROJETS SÉLECTIONNÉS",education:"FORMATION",ongoing:"En cours",project:"Projet personnel",degree:"Bac 3 — Génie logiciel",diploma:"Diplôme d’État — Électricité générale",uni:"Université de Kolwezi",location:"Kolwezi, Lualaba, RDC",profileText:"Étudiant en génie logiciel et fondateur de TYM Services, orienté vers la création de solutions Machine Learning de bout en bout : expérimentation et développement de modèles, puis conception d’applications et d’API pour les intégrer dans des logiciels utiles.",focus:"Objectif : relier modèles intelligents, backend et interfaces pour transformer les idées IA en applications concrètes.",download:"Télécharger le CV en PDF",switch:"English version",inProgress:"V1 en cours",practice:"Pratique en projet",learning:"En apprentissage"},
+en:{eyebrow:"SOFTWARE ENGINEERING · AI DEVELOPMENT",role:"FULL-STACK MACHINE LEARNING DEVELOPER",profile:"PROFILE",languages:"LANGUAGES",skills:"TECHNICAL SKILLS",programming:"TECHNOLOGIES",projects:"SELECTED PROJECTS",education:"EDUCATION",ongoing:"In progress",project:"Personal project",degree:"Year 3 — Software Engineering",diploma:"State Diploma — General Electricity",uni:"University of Kolwezi",location:"Kolwezi, Lualaba, DR Congo",profileText:"Software engineering student and founder of TYM Services, focused on building end-to-end Machine Learning solutions: experimenting with and developing models, then designing applications and APIs that integrate them into useful software.",focus:"Focus: connecting intelligent models, backend systems and user interfaces to turn AI ideas into practical applications.",download:"Download CV as PDF",switch:"Version française",inProgress:"V1 in progress",practice:"Project practice",learning:"Learning"}
+}[lang];
+const safeLink=(url,label)=>url?'<a href="'+url+'" target="_blank" rel="noopener">'+label+'</a>':label;
+const skills=SKILLS.map(s=>'<div class="skill"><div class="skill-head"><span>'+s.n[lang]+'</span><small>'+s.level[lang]+'</small></div><div class="bar"><div class="fill" style="width:'+(s.rank*20)+'%"></div></div></div>').join("");
+const projects=PROJECTS.map(p=>'<article class="entry"><div class="entry-head"><span class="entry-title">'+p.name+'</span><span class="entry-date">'+(p.status[lang]||T.project)+'</span></div><div class="entry-place">'+T.project+'</div><p>'+p.desc[lang]+'</p><div class="tech">'+p.tech.join(" · ")+'</div></article>').join("");
+document.getElementById("cv").innerHTML=
+'<header class="hero"><div class="hero-mark"><div class="monogram">MY</div></div><div class="hero-main"><div class="eyebrow">'+T.eyebrow+'</div><h1>'+NAME+'</h1><div class="role">'+T.role+'</div><div class="rule"></div><div class="contacts"><div class="contact"><span class="icon">☎</span>'+safeLink(SITE.whatsapp,"+243 808 373 717")+'</div><div class="contact"><span class="icon">in</span>'+safeLink(SITE.linkedin,"linkedin.com/in/marc-yav")+'</div><div class="contact"><span class="icon">⌖</span><span>'+T.location+'</span></div><div class="contact"><span class="icon">GH</span>'+safeLink(SITE.github,"github.com/marcyav55-dot")+'</div></div></div></header>'+
+'<aside><section><h2>'+T.profile+'</h2><p class="profile">'+T.profileText+'</p><div class="focus">'+T.focus+'</div></section>'+
+'<section><h2>'+T.languages+'</h2>'+LANGUAGES.map(l=>'<div class="lang"><span>'+l.n[lang]+'</span><small>'+l.level[lang]+'</small></div>').join("")+'</section>'+
+'<section><h2>'+T.skills+'</h2>'+skills+'</section>'+
+'<section><h2>'+T.programming+'</h2><div class="programs">'+PROGRAMMING.map(p=>'<div class="program">'+p+'</div>').join("")+'</div></section>'+
+'<div class="aside-foot">TYM SERVICES · KOLWEZI</div></aside>'+
+'<main><section><h2>'+T.projects+'</h2><p class="intro">'+(lang==="fr"?"Conception d’applications web et exploration pratique de solutions IA/ML, avec une attention portée à l’intégration logicielle.":"Building web applications and exploring practical AI/ML solutions, with a focus on software integration.")+'</p><div class="timeline">'+projects+'</div></section>'+
+'<section><h2>'+T.education+'</h2><div class="edu-entry"><div class="edu-title">'+T.degree+'</div><div class="edu-place">'+T.uni+'</div><div class="edu-date">'+T.ongoing+'</div></div><div class="edu-entry"><div class="edu-title">'+T.diploma+'</div></div></section>'+
+'<div class="bottom-note">'+(lang==="fr"?"Approche : apprendre, expérimenter, construire et intégrer des solutions logicielles utiles.":"Approach: learn, experiment, build and integrate useful software solutions.")+'</div></main>';
+document.documentElement.lang=lang;document.title="CV — "+NAME;
+document.getElementById("printBtn").textContent=T.download;document.getElementById("printBtn").onclick=()=>window.print();
+document.getElementById("langBtn").textContent=T.switch;document.getElementById("langBtn").onclick=()=>location.search="?lang="+(lang==="fr"?"en":"fr");
+if(params.has("download"))addEventListener("load",()=>setTimeout(()=>window.print(),500));
+</script>
+</body></html>

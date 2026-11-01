@@ -1,17 +1,20 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Marcus Tshijika Yav — Software engineering student, AI &amp; web</title>
-<meta name="description" content="Software engineering student building web products and exploring AI/ML. Main project: ML TRAIN, a platform to learn AI progressively.">
+<title>TYM Services — Sites web, applications et gestion des données</title>
+<meta name="description" content="Sites web professionnels, applications de gestion, maintenance et solutions numériques pour écoles, centres de santé et entreprises.">
 <meta name="theme-color" content="#0a1020">
 <meta property="og:type" content="website">
-<meta property="og:title" content="Marcus Tshijika Yav — Building software. Exploring AI.">
-<meta property="og:description" content="Software engineering student building web products and exploring AI/ML.">
-<meta property="og:url" content="https://marcyav.netlify.app/">
-<meta name="twitter:card" content="summary">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E🧠%3C/text%3E%3C/svg%3E">
+<meta property="og:title" content="TYM Services — Sites web et solutions numériques professionnelles">
+<meta property="og:description" content="Sites web professionnels, applications de gestion, bases de données, boutiques en ligne, maintenance et solutions numériques.">
+<meta property="og:url" content="https://mon-portfolio-six-teal.vercel.app/">
+<meta name="twitter:card" content="summary_large_image">
+<meta property="og:image" content="https://mon-portfolio-six-teal.vercel.app/assets/tym-services-logo.png">
+<meta property="og:image:alt" content="Logo officiel de TYM Services">
+<meta name="twitter:image" content="https://mon-portfolio-six-teal.vercel.app/assets/tym-services-logo.png">
+<link rel="icon" type="image/png" href="assets/tym-services-logo.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
@@ -28,7 +31,7 @@ h2{font-size:clamp(1.8rem,4vw,2.5rem);margin-bottom:2rem;font-weight:700}
 .muted{color:var(--muted)}
 header{position:sticky;top:0;z-index:20;background:rgba(10,16,32,.85);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
 nav{display:flex;align-items:center;gap:1.25rem;height:64px}
-.brand{font:700 1.1rem var(--display);text-decoration:none;margin-right:auto}
+.brand{display:flex;align-items:center;gap:.65rem;font:700 1.1rem var(--display);text-decoration:none;margin-right:auto}.brand-logo{width:38px;height:38px;object-fit:contain;background:#fff;border-radius:8px;padding:2px;flex:none}.footer-brand{display:flex;align-items:center;gap:.75rem}.footer-brand img{width:42px;height:42px;object-fit:contain;background:#fff;border-radius:8px;padding:2px}
 nav a.l{color:var(--muted);text-decoration:none;font-size:.95rem}nav a.l:hover{color:var(--text)}
 .lang{background:none;border:1px solid var(--line);color:var(--text);border-radius:8px;padding:.3rem .7rem;cursor:pointer;font:inherit;font-size:.85rem}
 @media(max-width:700px){nav a.l{display:none}}
@@ -42,8 +45,18 @@ nav a.l{color:var(--muted);text-decoration:none;font-size:.95rem}nav a.l:hover{c
 .hero p{max-width:52ch;color:var(--muted);margin:1.5rem 0 2rem}
 .cta{display:flex;flex-wrap:wrap;gap:.8rem}
 .chart{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:1rem}
-.chart svg{width:100%;height:auto;display:block}
+.chart svg{width:100%;height:auto;display:block}.chart img{width:100%;aspect-ratio:4/3;object-fit:cover;display:block;border-radius:10px}.chart figcaption{display:block;color:var(--muted);font-size:.85rem;padding:.55rem .4rem .1rem}.chart img{width:100%;aspect-ratio:4/3;object-fit:cover;display:block;border-radius:10px}.chart figcaption{display:block;color:var(--muted);font-size:.85rem;padding:.55rem .4rem .1rem}
 .chart small{display:block;color:var(--muted);font-size:.85rem;padding:.25rem .4rem 0}
+.contact-layout{display:grid;grid-template-columns:.8fr 1.2fr;gap:1.5rem;align-items:start}
+.contact-panel{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:1.4rem}
+.contact-form{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+.contact-form label{display:grid;gap:.4rem;color:var(--muted);font-size:.92rem}
+.contact-form input,.contact-form select,.contact-form textarea{width:100%;padding:.8rem .9rem;border:1px solid var(--line);border-radius:9px;background:#0b1429;color:var(--text);font:inherit}
+.contact-form textarea{min-height:130px;resize:vertical}
+.contact-form .full{grid-column:1/-1}
+.contact-form button{cursor:pointer;font:inherit}
+.form-status{min-height:1.5rem;margin:0;color:var(--cyan);font-size:.92rem}
+@media(max-width:760px){.contact-layout{grid-template-columns:1fr}.contact-form{grid-template-columns:1fr}.contact-form .full{grid-column:auto}}
 .about{display:grid;gap:2rem;grid-template-columns:240px 1fr;align-items:start}
 .photo{margin:0;aspect-ratio:4/5;border-radius:16px;overflow:hidden;border:1px solid var(--line);background:var(--surface);display:grid;place-items:center;font:700 3rem var(--display);color:var(--blue)}.photo img{width:100%;height:100%;object-fit:cover}
 @media(max-width:760px){.photo{max-width:240px}}
@@ -55,7 +68,7 @@ nav a.l{color:var(--muted);text-decoration:none;font-size:.95rem}nav a.l:hover{c
 .tags li{font-size:.85rem;padding:.2rem .65rem;border-radius:99px;border:1px solid var(--line);color:var(--muted)}
 .skills{grid-template-columns:repeat(auto-fit,minmax(min(100%,310px),1fr));gap:1.25rem}
 .skill{padding:0;overflow:hidden;display:flex;flex-direction:column}
-.skill svg{width:100%;height:auto;display:block;background:#0c1530;border-bottom:1px solid var(--line)}
+.skill svg{width:100%;height:auto;display:block;background:#0c1530;border-bottom:1px solid var(--line)}.skill-photo{width:100%;height:190px;display:block;object-fit:cover;border-bottom:1px solid var(--line)}.skill-photo{width:100%;height:190px;display:block;object-fit:cover;border-bottom:1px solid var(--line)}
 .skill .sb{padding:1.25rem;display:flex;flex-direction:column;gap:.8rem}
 .skill h4{margin:0;font-size:.95rem;color:var(--cyan);font-weight:600}
 .skill ul.can{margin:0;padding-left:1.1rem;color:var(--muted);font-size:.95rem}
@@ -84,17 +97,33 @@ dialog::backdrop{background:rgba(3,6,15,.85)}
 dialog img{width:100%;max-height:68vh;object-fit:contain;display:block;border-radius:8px}
 .lbbar{display:flex;gap:.6rem;align-items:center;margin-top:.8rem}.lbbar p{margin:0 auto;font-size:.95rem}
 .lbbar button{background:var(--bg);color:var(--text);border:1px solid var(--line);border-radius:8px;padding:.4rem .9rem;cursor:pointer;font:inherit}
+
+.process-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:1rem}
+.process-card{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:1.2rem}
+.process-card>span{display:inline-grid;place-items:center;width:2.2rem;height:2.2rem;border-radius:50%;background:rgba(59,115,255,.16);color:var(--cyan);font-weight:700;margin-bottom:.8rem}
+.process-card h3{font-size:1.05rem;margin-bottom:.55rem}
+.process-card p{margin:0;color:var(--muted);font-size:.94rem}
+@media(max-width:800px){.process-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:480px){.process-grid{grid-template-columns:1fr}}
 .journey{list-style:none;padding:0;margin:0;display:grid;gap:1rem;max-width:64ch}
 .journey li{padding-left:1.2rem;border-left:2px solid var(--blue)}
 .journey b{font-family:var(--display);font-size:1.1rem;display:block}
 footer{border-top:1px solid var(--line);padding:2rem 0;color:var(--muted);font-size:.9rem}
-@media(prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+
+/* Subtle scroll-reveal motion */
+.reveal-item{opacity:0;transform:translateY(16px);transition:opacity .55s ease,transform .55s ease}
+.reveal-item.is-visible{opacity:1;transform:translateY(0)}
+@media(prefers-reduced-motion:reduce){.reveal-item{opacity:1;transform:none;transition:none!important}*{scroll-behavior:auto!important}}
+
+.cta{display:flex;flex-wrap:wrap;gap:.8rem;align-items:center}
+.cta .btn{min-height:46px;display:inline-flex;align-items:center;justify-content:center}
+.hero-actions .btn{min-width:150px}
 </style>
 </head>
 <body>
 <header><nav class="wrap" aria-label="Main">
-<a class="brand" href="#top">Marcus Yav</a>
-<a class="l" href="#about" data-i="nAbout"></a><a class="l" href="#skills" data-i="nSkills"></a><a class="l" href="#projects" data-i="nProjects"></a><a class="l gl" href="#gallery" data-i="nGallery"></a><a class="l" href="#cv" data-i="nCV"></a><a class="l" href="#contact" data-i="nContact"></a>
+<a class="brand" href="#top"><img class="brand-logo" src="assets/tym-services-logo.png" alt="Logo TYM Services"><span>TYM <span style="color:var(--cyan)">SERVICES</span></span></a>
+<a class="l" href="#about" data-i="nAbout"></a><a class="l" href="#skills" data-i="nSkills"></a><a class="l" href="#projects" data-i="nProjects"></a><a class="l" href="#process">Notre méthode</a><a class="l gl" href="#gallery" data-i="nGallery"></a><a class="l" href="#cv" data-i="nCV"></a><a class="l" href="#contact" data-i="nContact"></a>
 <button class="lang" id="lang" aria-label="Switch language">FR</button>
 </nav></header>
 
@@ -103,15 +132,11 @@ footer{border-top:1px solid var(--line);padding:2rem 0;color:var(--muted);font-s
 <div>
 <h1 data-i="h1"></h1>
 <p data-i="lead"></p>
-<div class="cta"><a class="btn p" href="#projects" data-i="ctaProjects"></a><a class="btn" href="#contact" data-i="ctaContact"></a><a class="btn" id="gh" target="_blank" rel="noopener">GitHub</a></div>
+<div class="cta hero-actions"><a class="btn p" href="https://wa.me/243808373717" target="_blank" rel="noopener noreferrer">Discuter sur WhatsApp</a><a class="btn" href="tel:+243808373717">Appeler</a><a class="btn" href="#projects">Découvrir nos réalisations</a></div>
 </div>
-<figure class="chart" style="margin:0" aria-label="Gradient descent animation">
-<svg viewBox="0 0 320 200" role="img" aria-label="A point rolling down a parabola to its minimum">
-<path id="curve" fill="none" stroke="#3b73ff" stroke-width="3"/>
-<line x1="20" y1="180" x2="300" y2="180" stroke="#1f2d52"/>
-<circle id="dot" r="7" fill="#22d3ee"/>
-</svg>
-<small data-i="chartCap"></small>
+<figure class="chart hero-photo" style="margin:0" aria-label="Digital work and website development">
+<img src="https://images.unsplash.com/photo-1551650975-87deedd944c3?w=1400&q=90" alt="Environnement de travail consacré à la conception de solutions numériques" fetchpriority="high">
+<figcaption data-i="chartCap"></figcaption>
 </figure>
 </div></section>
 
@@ -136,6 +161,15 @@ footer{border-top:1px solid var(--line);padding:2rem 0;color:var(--muted);font-s
 <div class="gallery" id="galleryGrid"></div>
 </div></section>
 
+<section id="process"><div class="wrap">
+<h2>Comment nous travaillons</h2>
+<div class="process-grid">
+<article class="process-card"><span>01</span><h3>Comprendre votre besoin</h3><p>Nous échangeons avec vous pour comprendre votre activité, vos difficultés et vos objectifs.</p></article>
+<article class="process-card"><span>02</span><h3>Proposer une solution</h3><p>Nous définissons une approche adaptée, les fonctionnalités utiles et les étapes du projet.</p></article>
+<article class="process-card"><span>03</span><h3>Concevoir et tester</h3><p>Nous développons progressivement et vérifions le fonctionnement sur les appareils concernés.</p></article>
+<article class="process-card"><span>04</span><h3>Livrer et accompagner</h3><p>Nous présentons le résultat et convenons des modalités de suivi et de maintenance.</p></article>
+</div></div></section>
+
 <section id="journey"><div class="wrap">
 <h2 data-i="nJourney"></h2>
 <ul class="journey" id="journeyList"></ul>
@@ -145,11 +179,28 @@ footer{border-top:1px solid var(--line);padding:2rem 0;color:var(--muted);font-s
 
 <section id="contact"><div class="wrap">
 <h2 data-i="nContact"></h2>
-<p class="muted" style="max-width:52ch;margin-bottom:1.5rem" data-i="contactText"></p>
+<p class="muted" style="max-width:60ch;margin-bottom:1.5rem" data-i="contactText"></p>
+<div class="contact-layout">
+<div class="contact-panel">
+<h3 data-i="contactAsideTitle">Parlons de votre projet</h3>
+<p class="muted" data-i="contactAsideText">Décrivez votre besoin. TYM Services vous répondra par e-mail pour discuter des prochaines étapes.</p>
 <div class="cta" id="contactLinks"></div>
+</div>
+<div class="contact-panel">
+<form class="contact-form" id="contactForm" action="https://formspree.io/f/xqpadgnd" method="POST">
+<input type="hidden" name="_subject" value="Nouvelle demande de contact — TYM Services">
+<label><span data-i="fName">Nom complet</span><input name="name" autocomplete="name" required maxlength="100" placeholder="Votre nom"></label>
+<label><span data-i="fEmail">Adresse e-mail</span><input type="email" name="email" autocomplete="email" required maxlength="160" placeholder="nom@exemple.com"></label>
+<label><span data-i="fOrg">Organisation (facultatif)</span><input name="organisation" autocomplete="organization" maxlength="140" placeholder="École, entreprise…"></label>
+<label><span data-i="fService">Service souhaité</span><select name="service" required><option value="" data-i="fChoose">Choisir un service</option><option>Site web responsive</option><option>Application de gestion</option><option>Application mobile / web</option><option>Boutique en ligne</option><option>Base de données</option><option>IA et automatisation</option><option>Maintenance et assistance</option><option>Autre demande</option></select></label>
+<label class="full"><span data-i="fMessage">Parlez-nous de votre projet</span><textarea name="message" required minlength="10" maxlength="4000" placeholder="Décrivez brièvement votre besoin…"></textarea></label>
+<div class="full"><button class="btn p" type="submit" data-i="fSend">Envoyer ma demande</button><p class="form-status" id="formStatus" role="status" aria-live="polite"></p></div>
+</form>
+</div>
+</div>
 </div></section>
 </main>
-<footer><div class="wrap">© <span id="yr"></span> Marcus Tshijika Yav</div></footer>
+<footer><div class="wrap footer-brand"><img src="assets/tym-services-logo.png" alt="Logo TYM Services"><span>© <span id="yr"></span> TYM Services · Fondé par Marcus Tshijika Yav</span></div></footer>
 
 <dialog id="lb" aria-label="Image viewer">
 <img id="lbImg" alt="">
@@ -169,20 +220,20 @@ const ART={
  git:`<svg viewBox="0 0 160 100" aria-hidden="true"><path d="M30 20v60M30 50c0-18 50-8 50-26M80 24v0c0 14 50 6 50 26" ${F}/><g fill="#0d1630" stroke="#3b73ff" stroke-width="3"><circle cx="30" cy="20" r="7"/><circle cx="30" cy="80" r="7"/><circle cx="80" cy="24" r="7"/></g><circle cx="130" cy="50" r="8" fill="#22d3ee"/></svg>`
 };
 const I18N = {
- en:{nAbout:"About",nSkills:"Skills",nProjects:"Projects",nGallery:"Gallery",nJourney:"Learning path",nContact:"Contact",
-  h1:"Building software. Exploring AI. Creating useful products.",
-  lead:"I’m Marcus Tshijika Yav, a software engineering student who builds web products and explores AI and machine learning. My main project is ML TRAIN.",
-  ctaProjects:"See my projects",ctaContact:"Contact me",chartCap:"Gradient descent: the idea behind how models learn.",
-  about1:"I study software engineering and learn by building. My work spans web applications, data and AI, with Python at the center.",
-  about2:"I care about understanding what I build, writing maintainable code and shipping tools that people can actually use.",
-  contactText:"Open to internships, collaborations and conversations about software and AI.",all:"All",view:"View",code:"Code",demo:"Live demo",details:"Details",close:"Close",can:"What I can do",learn:"Currently learning",learnTxt:"Technologies I study and am working toward. Not claimed as mastered.",nCV:"CV",cvText:"An international-style CV with my photo, skills, projects and contact details. Open it, then save it as PDF.",cvView:"View CV",cvDl:"Download CV (PDF)"},
- fr:{nAbout:"À propos",nSkills:"Compétences",nProjects:"Projets",nGallery:"Galerie",nJourney:"Parcours",nContact:"Contact",
-  h1:"Créer des logiciels. Explorer l’IA. Construire des produits utiles.",
-  lead:"Je suis Marcus Tshijika Yav, étudiant en génie logiciel. Je construis des produits web et j’explore l’IA et le machine learning. Mon projet principal est ML TRAIN.",
-  ctaProjects:"Voir mes projets",ctaContact:"Me contacter",chartCap:"Descente de gradient : l’idée derrière l’apprentissage des modèles.",
-  about1:"J’étudie le génie logiciel et j’apprends en construisant. Mon travail couvre le web, les données et l’IA, avec Python au centre.",
-  about2:"Je tiens à comprendre ce que je construis, à écrire du code maintenable et à livrer des outils réellement utilisables.",
-  contactText:"Ouvert aux stages, collaborations et discussions autour du logiciel et de l’IA.",all:"Tous",view:"Voir",code:"Code",demo:"Démo en ligne",details:"Détails",close:"Fermer",can:"Ce que je peux faire",learn:"En apprentissage",learnTxt:"Technologies que j’étudie et vers lesquelles je progresse. Non présentées comme maîtrisées.",nCV:"CV",cvText:"Un CV de format international avec ma photo, mes compétences, mes projets et mes coordonnées. Ouvre-le, puis enregistre-le en PDF.",cvView:"Voir le CV",cvDl:"Télécharger le CV (PDF)"}
+ en:{impactTitle:"Our impact & testimonials",demoBadge:"Visual simulation",impactIntro:"A preview of the counter that can later be connected to verified records.",peopleHelped:"People supported",impactDisclaimer:"Illustrative demo figure only; it does not represent actual beneficiaries.",reviewsDisclaimer:"Sample demo reviews — replace with genuine testimonials published with each person’s permission.",nAbout:"About the studio",nSkills:"Our services",nProjects:"Selected work",nGallery:"Gallery",nJourney:"Our approach",nContact:"Contact",
+  h1:"Digital solutions that move your organisation forward.",
+  lead:"TYM Services helps schools, healthcare organisations, shops and businesses build a professional online presence, organise their data and simplify everyday work with useful digital tools.",
+  ctaProjects:"Explore our work",ctaContact:"Request a consultation",chartCap:"Websites, applications and digital systems designed around real needs.",
+  about1:"TYM Services is a digital studio founded by Marcus Tshijika Yav. We work with organisations that want to modernise how they communicate, manage information and serve their customers.",
+  about2:"From the first discussion to delivery, the focus stays on your needs: clear proposals, practical solutions, accessible explanations and realistic project scope. Specialist security or regulated healthcare requirements are assessed before work begins.",
+  contactText:"Tell us what is slowing your organisation down or what you want to launch. We will discuss a practical digital solution and the next steps.",contactAsideTitle:"Let’s talk about your project",contactAsideText:"Describe what you need. TYM Services will reply by email to discuss the next steps.",fName:"Full name",fEmail:"Email address",fOrg:"Organisation (optional)",fService:"Service needed",fChoose:"Choose a service",fMessage:"Tell us about your project",fSend:"Send my request",all:"All",view:"View",code:"Code",demo:"Live demo",details:"Details",close:"Close",can:"What I can do",learn:"Currently learning",learnTxt:"Technologies I study and am working toward. Not claimed as mastered.",nCV:"CV",cvText:"An international-style CV with my photo, skills, projects and contact details. Open it, then save it as PDF.",cvView:"View CV",cvDl:"Download CV (PDF)"},
+ fr:{impactTitle:"Notre impact et les témoignages",demoBadge:"Simulation visuelle",impactIntro:"Aperçu du compteur qui pourra ensuite être relié à des données vérifiées.",peopleHelped:"Personnes accompagnées",impactDisclaimer:"Chiffre fictif de démonstration ; il ne représente pas des bénéficiaires réels.",reviewsDisclaimer:"Avis fictifs de démonstration — à remplacer par des témoignages authentiques publiés avec l’accord des personnes concernées.",nAbout:"À propos du studio",nSkills:"Nos services",nProjects:"Réalisations",nGallery:"Galerie",nJourney:"Notre approche",nContact:"Contact",
+  h1:"Des solutions numériques qui font avancer votre organisation.",
+  lead:"TYM Services accompagne les écoles, structures de santé, commerces et entreprises pour développer leur présence en ligne, organiser leurs données et simplifier leur travail quotidien grâce à des outils numériques utiles.",
+  ctaProjects:"Découvrir nos réalisations",ctaContact:"Demander un devis",chartCap:"Sites web, applications et systèmes numériques conçus pour vos besoins réels.",
+  about1:"TYM Services est un studio numérique fondé par Marcus Tshijika Yav. Nous accompagnons les organisations qui souhaitent moderniser leur communication, mieux gérer leurs informations et servir leurs clients.",
+  about2:"De la première discussion à la livraison, nous partons de vos besoins : propositions claires, solutions pratiques, explications accessibles et périmètre de travail réaliste. Les exigences de sécurité spécialisée ou de santé réglementée sont évaluées avant tout engagement.",
+  contactText:"Expliquez-nous ce qui ralentit votre organisation ou le projet que vous souhaitez lancer. Nous étudierons une solution numérique pratique et les prochaines étapes.",contactAsideTitle:"Parlons de votre projet",contactAsideText:"Décrivez votre besoin. TYM Services vous répondra par e-mail pour discuter des prochaines étapes.",fName:"Nom complet",fEmail:"Adresse e-mail",fOrg:"Organisation (facultatif)",fService:"Service souhaité",fChoose:"Choisir un service",fMessage:"Parlez-nous de votre projet",fSend:"Envoyer ma demande",all:"Tous",view:"Voir",code:"Code",demo:"Démo en ligne",details:"Détails",close:"Fermer",can:"Ce que je peux faire",learn:"En apprentissage",learnTxt:"Technologies que j’étudie et vers lesquelles je progresse. Non présentées comme maîtrisées.",nCV:"CV",cvText:"Un CV de format international avec ma photo, mes compétences, mes projets et mes coordonnées. Ouvre-le, puis enregistre-le en PDF.",cvView:"Voir le CV",cvDl:"Télécharger le CV (PDF)"}
 };
 
 /* ================= App logic ================= */
@@ -197,18 +248,16 @@ function render(){
   document.documentElement.lang=lang;
   document.querySelectorAll("[data-i]").forEach(e=>e.textContent=t(e.dataset.i));
   $("#lang").textContent=lang==="en"?"FR":"EN";
-  $("#gh").href=SITE.github;$("#cvView").href="cv.html?lang="+lang;$("#cvDl").href="cv.html?lang="+lang+"&download=1";
-  $("#skillsGrid").innerHTML=SKILLS.map(s=>`<article class="box skill">${ART[s.k]}<div class="sb"><h3>${s.n}</h3><p class="muted" style="margin:0">${L(s.d)}</p><h4>${t("can")}</h4><ul class="can">${s.can[lang].map(x=>`<li>${x}</li>`).join("")}</ul><ul class="tags">${s.tags.map(x=>`<li>${x}</li>`).join("")}</ul></div></article>`).join("")+`<article class="box" style="grid-column:1/-1"><h3>${t("learn")}</h3><p class="muted" style="margin:0 0 .8rem">${t("learnTxt")}</p><ul class="tags">${LEARNING[lang].map(x=>`<li>${x}</li>`).join("")}</ul></article>`;
+  $("#cvView").href="cv.html?lang="+lang;$("#cvDl").href="cv.html?lang="+lang+"&download=1";
+  $("#skillsGrid").innerHTML=SKILLS.map(s=>`<article class="box skill">${s.image?`<img class="skill-photo" src="${s.image}" alt="${s.n[lang]}" loading="lazy" decoding="async">`:ART[s.k]}<div class="sb"><h3>${s.n[lang]}</h3><p class="muted" style="margin:0">${L(s.d)}</p><h4>${t("can")}</h4><ul class="can">${s.can[lang].map(x=>`<li>${x}</li>`).join("")}</ul><ul class="tags">${s.tags.map(x=>`<li>${x}</li>`).join("")}</ul></div></article>`).join("")+`<article class="box" style="grid-column:1/-1"><h3>${t("learn")}</h3><p class="muted" style="margin:0 0 .8rem">${t("learnTxt")}</p><ul class="tags">${LEARNING[lang].map(x=>`<li>${x}</li>`).join("")}</ul></article>`;
   $("#projectsGrid").innerHTML=PROJECTS.map(p=>`<article class="card${p.main?" main":""}" id="p-${p.id}">
     <div class="cover">${p.cover?`<img src="${p.cover}" alt="${p.name}" loading="lazy">`:p.name}</div>
     <div class="cbody"><span class="status">${L(p.status)}</span><h3>${p.name}</h3><p class="muted" style="margin:0">${L(p.desc)}</p>
     <ul class="tags">${p.tech.map(x=>`<li>${x}</li>`).join("")}</ul>
     ${p.details?`<details><summary>${t("details")}</summary><ul>${p.details[lang].map(d=>`<li>${d}</li>`).join("")}</ul></details>`:""}
-    <div class="links">${p.code?`<a href="${p.code}" target="_blank" rel="noopener">${t("code")}</a>`:""}${p.demo?`<a href="${p.demo}" target="_blank" rel="noopener">${t("demo")}</a>`:""}</div></div></article>`).join("");
+    <div class="links">${p.code?`<a href="${p.code}" target="_blank" rel="noopener">${t("code")}</a>`:""}${p.demo?`<a href="${p.demo}" target="_blank" rel="noopener">${p.id==="grace-divine"?(lang==="fr"?"Déploiement Vercel (accès à confirmer)":"Vercel deployment (access to confirm)"):t("demo")}</a>`:""}</div></div></article>`).join("");
   $("#journeyList").innerHTML=JOURNEY.map(j=>`<li><b>${L(j.t)}</b><span class="muted">${L(j.d)}</span></li>`).join("");
-  const c=[`<a class="btn p" href="${SITE.github}" target="_blank" rel="noopener">GitHub</a>`];
-  if(SITE.linkedin)c.push(`<a class="btn" href="${SITE.linkedin}" target="_blank" rel="noopener">LinkedIn</a>`);
-  if(SITE.email)c.push(`<a class="btn" href="mailto:${SITE.email}">Email</a>`);if(SITE.phone)c.push(`<a class="btn" href="tel:${SITE.phone.replace(/\s/g,'')}">${SITE.phone}</a>`);
+  const c=[`<a class="btn p" href="${SITE.whatsapp}" target="_blank" rel="noopener noreferrer">Discuter sur WhatsApp</a>`,`<a class="btn" href="tel:+243808373717">Appeler</a>`];
   $("#contactLinks").innerHTML=c.join("");
   renderGallery();
 }
@@ -237,17 +286,36 @@ $("#lang").onclick=()=>{lang=lang==="en"?"fr":"en";try{localStorage.setItem("lan
 $("#yr").textContent=new Date().getFullYear();
 (function(){const i=$("#photo"),b=$("#photoBox");i.onerror=()=>{b.textContent="MY"};if(SITE.photo)i.src=SITE.photo;else b.textContent="MY"})();
 render();
-
-/* Hero: gradient descent on f(w)=(w-3)^2, played once */
 (function(){
-  const X=w=>20+w*(280/6),Y=w=>180-(w-3)**2*(160/9);
-  let d="";for(let w=0;w<=6.001;w+=.1)d+=(d?"L":"M")+X(w).toFixed(1)+" "+Y(w).toFixed(1);
-  $("#curve").setAttribute("d",d);
-  const pts=[0.3];for(let i=0;i<14;i++){const w=pts[i];pts.push(w-0.3*2*(w-3))}
-  const dot=$("#dot"),place=w=>{dot.setAttribute("cx",X(w));dot.setAttribute("cy",Y(w))};
-  if(matchMedia("(prefers-reduced-motion:reduce)").matches){place(pts[pts.length-1]);return}
-  let i=0;place(pts[0]);(function tick(){if(++i<pts.length){place(pts[i]);setTimeout(tick,260)}})();
+  const targets=document.querySelectorAll('main section, .skill, .card, .process-card, .journey li');
+  if(!('IntersectionObserver' in window)||window.matchMedia('(prefers-reduced-motion: reduce)').matches)return;
+  const observer=new IntersectionObserver(entries=>{
+    entries.forEach(entry=>{
+      if(entry.isIntersecting){entry.target.classList.add('is-visible');observer.unobserve(entry.target)}
+    });
+  },{threshold:.12,rootMargin:'0px 0px -35px 0px'});
+  targets.forEach((el,i)=>{el.classList.add('reveal-item');el.style.transitionDelay=(i%4)*65+'ms';observer.observe(el)});
 })();
+
+const contactForm=$("#contactForm");
+if(contactForm){
+  contactForm.addEventListener("submit",async event=>{
+    event.preventDefault();
+    const button=contactForm.querySelector('button[type="submit"]');
+    const status=$("#formStatus");
+    button.disabled=true;
+    status.textContent=lang==="fr"?"Envoi en cours…":"Sending…";
+    try{
+      const response=await fetch(contactForm.action,{method:"POST",body:new FormData(contactForm),headers:{Accept:"application/json"}});
+      if(!response.ok) throw new Error("form submission failed");
+      status.textContent=lang==="fr"?"Merci ! Votre demande a bien été envoyée.":"Thank you! Your request has been sent.";
+      contactForm.reset();
+    }catch(error){
+      status.textContent=lang==="fr"?"L’envoi a échoué. Réessayez ou écrivez-nous directement par e-mail.":"Sending failed. Please try again or contact us by email.";
+    }finally{button.disabled=false;}
+  });
+}
+
 </script>
 </body>
 </html>
