@@ -314,7 +314,7 @@ function render(){
   const c=[`<a class="btn p contact-action" href="${SITE.whatsapp}" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.5 11.8a8.5 8.5 0 0 1-12.6 7.4L3 20.5l1.4-4.7A8.5 8.5 0 1 1 20.5 11.8Z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="M8.3 7.7c.3-.5.6-.5.9-.5h.4c.2 0 .4.1.5.4l.8 1.8c.1.2.1.4-.1.6l-.6.7c-.2.2-.2.4-.1.6.5.9 1.2 1.6 2.1 2.1.2.1.4.1.6-.1l.7-.7c.2-.2.4-.2.6-.1l1.7.8c.3.1.4.3.4.5 0 .3-.2.9-.6 1.2-.4.4-1 .6-1.6.5-1-.1-2.3-.7-3.7-1.9-1.2-1.1-2-2.5-2.2-3.5-.2-.9.1-1.8.5-2.4Z" fill="currentColor"/></svg><span>${lang==="fr"?"WhatsApp":"WhatsApp"}</span></a>`,
 `<a class="btn contact-action" href="tel:+243808373717"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.6 3.8 9.3 3c.6-.2 1.2.1 1.4.7l1.2 3c.2.5.1 1-.3 1.4l-1.5 1.2a15 15 0 0 0 4.6 4.6l1.2-1.5c.4-.4.9-.5 1.4-.3l3 1.2c.6.2.9.8.7 1.4l-.8 2.7c-.2.6-.8 1-1.4 1C10.5 18.4 5.6 13.5 5.6 7.2c0-.6.4-1.2 1-1.4Z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><span>${lang==="fr"?"Appel téléphonique":"Phone call"}</span></a>`];
   $("#contactLinks").innerHTML=c.join("");
-  const impactData={people:"50+",satisfied:"50+",reviews:[]};
+  const impactData={people:"+110",satisfied:"+50",reviews:[]};
   $("#peopleCount").textContent=impactData.people;
   $("#satisfiedCount").textContent=impactData.satisfied;
   $("#reviewsGrid").innerHTML=impactData.reviews.map(r=>`<article class="review-card"><p>${r.text[lang]}</p><strong>${r.author}</strong></article>`).join("");
