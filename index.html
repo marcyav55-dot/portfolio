@@ -409,5 +409,29 @@ if(contactForm){
 }
 
 </script>
+
+<script>
+/* Local-only portfolio activity counters. Not a global analytics service. */
+(function(){
+  try{
+    const key="tym_portfolio_analytics_v1";
+    const data=JSON.parse(localStorage.getItem(key)||'{"views":0,"cv":0,"projects":0,"days":[]}');
+    const today=new Date().toISOString().slice(0,10);
+    data.views=(data.views||0)+1;
+    data.cv=data.cv||0;data.projects=data.projects||0;data.days=data.days||[];
+    if(!data.days.includes(today))data.days.push(today);
+    localStorage.setItem(key,JSON.stringify(data));
+    document.addEventListener("click",function(event){
+      const link=event.target.closest("a");
+      if(!link)return;
+      if(/cv\.html/i.test(link.href))data.cv++;
+      else if(link.closest("#projectsGrid")||link.closest(".links"))data.projects++;
+      else return;
+      localStorage.setItem(key,JSON.stringify(data));
+    });
+  }catch(error){/* Analytics must never interrupt the portfolio. */}
+})();
+</script>
+
 </body>
 </html>
