@@ -135,6 +135,20 @@ footer{border-top:1px solid var(--line);padding:2rem 0;color:var(--muted);font-s
 @media(max-width:600px){.service-head{align-items:start}.impact-grid{grid-template-columns:1fr}.service-controls button{width:38px;height:38px}}
 @media(prefers-reduced-motion:reduce){.service-track{scroll-behavior:auto}}
 
+/* Real-world photography and business forecasting showcase */
+.skill-photo{width:100%;height:205px;display:block;object-fit:cover;object-position:center;border-bottom:1px solid var(--line)}
+.forecast{background:linear-gradient(145deg,#0c1730,#101d3b);border-block:1px solid var(--line)}
+.forecast-intro{max-width:72ch;color:var(--muted);margin:-.8rem 0 1.8rem}
+.forecast-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:1.2rem;align-items:stretch}
+.forecast-panel{background:#0b1429;border:1px solid #263858;border-radius:16px;padding:1.2rem;min-width:0}
+.forecast-panel h3{font-size:1.1rem;margin-bottom:.45rem}.forecast-panel p{color:var(--muted);font-size:.92rem;margin:.35rem 0 1rem}
+.forecast-kpis{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:.65rem;margin:1rem 0}
+.forecast-kpi{padding:.8rem;border-radius:10px;background:#121f37;border:1px solid #263858}.forecast-kpi small{display:block;color:var(--muted);font-size:.76rem}.forecast-kpi strong{display:block;color:#7dd3fc;font:700 1.1rem var(--display);margin-top:.25rem}
+.forecast-chart{width:100%;height:auto;display:block;background:#101d35;border-radius:10px}.forecast-legend{display:flex;gap:1rem;flex-wrap:wrap;color:var(--muted);font-size:.8rem;margin-top:.7rem}
+.forecast-legend span:before{content:"";display:inline-block;width:9px;height:9px;border-radius:3px;background:#3b82f6;margin-right:.4rem}.forecast-legend span:last-child:before{background:#22d3ee}
+.forecast-table{width:100%;border-collapse:collapse;font-size:.85rem}.forecast-table th,.forecast-table td{text-align:left;padding:.7rem .45rem;border-bottom:1px solid #263858}.forecast-table th{color:var(--muted);font-weight:500}.forecast-table td:last-child{color:#7dd3fc;font-weight:600}
+.forecast-note{font-size:.8rem!important;color:#aab9d2!important;padding:.8rem;border-left:3px solid var(--cyan);background:#101d35;border-radius:0 8px 8px 0;margin-top:1rem!important}
+@media(max-width:760px){.forecast-grid{grid-template-columns:1fr}.forecast-kpis{grid-template-columns:1fr 1fr}}
 /* Application-like dashboard previews with readable sample data and charts */
 .app-frame{padding:12px;background:linear-gradient(145deg,#0c1428,#111f3b);border-bottom:1px solid var(--line)}
 .app-preview{min-height:210px;border:1px solid #263858;border-radius:11px;background:#0c1529;padding:13px;color:#eaf1ff;font:500 11px/1.4 var(--body);overflow:hidden}
@@ -184,6 +198,16 @@ footer{border-top:1px solid var(--line);padding:2rem 0;color:var(--muted);font-s
 <div class="skills" id="skillsGrid"></div>
 </div></section>
 
+<section class="forecast" id="data-forecast"><div class="wrap">
+<h2>Data Science : anticiper pour mieux décider</h2>
+<p class="forecast-intro">Et si vous pouviez mieux préparer les cinq ou dix prochaines années de votre entreprise ? L’analyse des ventes, des clients, des coûts et du marché aide à repérer les tendances, tester des scénarios et prendre des décisions plus éclairées.</p>
+<div class="forecast-grid">
+<article class="forecast-panel"><h3>Tableau de bord prévisionnel</h3><p>Exemple illustratif : évolution possible du chiffre d’affaires selon les tendances observées.</p>
+<div class="forecast-kpis"><div class="forecast-kpi"><small>Horizon 5 ans</small><strong>Scénario A</strong></div><div class="forecast-kpi"><small>Horizon 10 ans</small><strong>Scénario B</strong></div><div class="forecast-kpi"><small>Indicateurs suivis</small><strong>Ventes · coûts</strong></div></div>
+<svg class="forecast-chart" viewBox="0 0 680 250" role="img" aria-label="Graphique illustratif de projection à cinq et dix ans"><g stroke="#263858" stroke-width="1"><path d="M55 35H650M55 85H650M55 135H650M55 185H650M55 220H650"/></g><g fill="#9aa8c7" font-size="12"><text x="12" y="39">100</text><text x="18" y="89">75</text><text x="18" y="139">50</text><text x="18" y="189">25</text><text x="58" y="241">Aujourd'hui</text><text x="330" y="241">5 ans</text><text x="610" y="241">10 ans</text></g><path d="M65 180 C150 170 230 150 330 125 S520 75 640 45" fill="none" stroke="#3b82f6" stroke-width="4" stroke-linecap="round"/><path d="M65 180 C160 166 235 142 330 112 S520 50 640 22" fill="none" stroke="#22d3ee" stroke-width="4" stroke-linecap="round" stroke-dasharray="8 7"/><g fill="#3b82f6"><circle cx="65" cy="180" r="5"/><circle cx="330" cy="125" r="5"/><circle cx="640" cy="45" r="5"/></g><g fill="#22d3ee"><circle cx="330" cy="112" r="5"/><circle cx="640" cy="22" r="5"/></g></svg>
+<div class="forecast-legend"><span>Scénario prudent</span><span>Scénario de croissance</span></div><p class="forecast-note">Courbes fictives de démonstration : ce ne sont ni une prédiction réelle ni une promesse de croissance.</p></article>
+<article class="forecast-panel"><h3>Les décisions que les données peuvent éclairer</h3><p>Un tableau de bord peut aider un dirigeant à suivre :</p><table class="forecast-table"><thead><tr><th>Indicateur</th><th>Question utile</th></tr></thead><tbody><tr><td>Chiffre d’affaires</td><td>Quelle tendance ?</td></tr><tr><td>Clients</td><td>Qui revient ?</td></tr><tr><td>Stock</td><td>Que faut-il prévoir ?</td></tr><tr><td>Dépenses</td><td>Où réduire les coûts ?</td></tr><tr><td>Demande</td><td>Que préparer demain ?</td></tr></tbody></table><p class="forecast-note">Une projection sérieuse s’appuie sur vos données historiques, leur qualité, des hypothèses explicites et les facteurs externes. Elle présente plusieurs scénarios et leurs limites.</p></article>
+</div></div></section>
 <section class="service-showcase" id="service-carousel"><div class="wrap"><div class="service-head"><div><h2>Nos domaines d’intervention</h2><p>Des solutions numériques adaptées aux besoins réels des organisations.</p></div><div class="service-controls"><button type="button" id="servicePrev" aria-label="Précédent">←</button><button type="button" id="serviceNext" aria-label="Suivant">→</button></div></div><div class="service-track" id="serviceTrack">
 <article class="service-card"><span class="service-no">01 / WEB</span><h3>Sites web professionnels</h3><p>Sites vitrines, pages professionnelles et plateformes responsives.</p></article>
 <article class="service-card"><span class="service-no">02 / APP</span><h3>Applications web et mobiles</h3><p>Applications utiles pour simplifier les opérations quotidiennes.</p></article>
@@ -291,16 +315,16 @@ function render(){
   $("#lang").textContent=lang==="en"?"FR":"EN";
   $("#cvView").href="cv.html?lang="+lang;$("#cvDl").href="cv.html?lang="+lang+"&download=1";
   const preview=s=>{
-const heads={web:"NOVA SHOP",api:"API CONTROL",db:"BUSINESS ANALYTICS",ai:"AI INSIGHTS",data:"MARKET WATCH",git:"DEPLOYMENT CENTER"};
-const body={
-web:'<div class="shop-hero"><small>COLLECTION 2026</small><b>Tout ce qu’il vous faut.</b><span>Découvrir les produits</span></div><div class="product-row"><b>Casque audio<br><small>89,00 $</small></b><b>Montre connectée<br><small>129,00 $</small></b><b>Accessoires<br><small>À découvrir</small></b></div>',
-api:'<div class="api-route"><em>GET</em><b>/api/v1/orders</b><span>200 OK</span></div><div class="metric-row"><b>24 891<br><small>Requêtes aujourd’hui</small></b><b>84 ms<br><small>Temps de réponse</small></b></div><pre>const response = await fetch(\n  "/api/v1/orders"\n);\n✓ JSON response received</pre>',
-db:'<div class="metric-row"><b>12 480 $<small>Chiffre d’affaires</small><em>↗ 12,8 %</em></b><b>384<small>Commandes</small><em>↗ 8,2 %</em></b><b>1 206<small>Clients</small><em>↗ 5,4 %</em></b></div><div class="chart-title">Évolution des ventes · 7 derniers jours</div><svg viewBox="0 0 520 110" preserveAspectRatio="none"><path class="area" d="M0 90 Q50 80 90 65 T180 70 T270 38 T360 48 T450 18 L520 8 L520 110 L0 110Z"/><path class="line" d="M0 90 Q50 80 90 65 T180 70 T270 38 T360 48 T450 18 L520 8"/></svg><small class="disclaimer">Données de démonstration</small>',
-ai:'<div class="question"><small>QUESTION ANALYSÉE</small><b>Quelle sera la demande la semaine prochaine ?</b></div><div class="prediction"><div><small>PRÉVISION</small><strong>+18,6 %</strong><small>Demande estimée</small></div><div><strong>92 %</strong><small>Confiance du modèle</small></div></div><div class="bars"><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div><small class="disclaimer">Résultat illustratif · données de démonstration</small>',
-data:'<div class="coin"><div><small>BITCOIN · BTC</small><strong>67 420,80 $</strong><em>↗ +3,42 % aujourd’hui</em></div><b>₿</b></div><div class="chart-title">Évolution du cours · 24 heures</div><svg viewBox="0 0 520 110" preserveAspectRatio="none"><path class="area crypto-area" d="M0 92 L35 80 70 88 105 61 140 70 175 46 210 59 245 38 280 50 315 26 350 43 385 20 420 34 455 12 490 19 520 5 L520 110 L0 110Z"/><path class="line crypto-line" d="M0 92 L35 80 70 88 105 61 140 70 175 46 210 59 245 38 280 50 315 26 350 43 385 20 420 34 455 12 490 19 520 5"/></svg><div class="coin-list"><span>₿ Bitcoin <b>67 420 $</b><em>+3,42 %</em></span><span>◆ Ethereum <b>3 520 $</b><em>+2,18 %</em></span></div><small class="disclaimer">Cours fictifs · aperçu de démonstration</small>',
-git:'<div class="pipeline"><b>01<br>Code<small>Git push</small></b><i>→</i><b>02<br>Tests<small>Passed ✓</small></b><i>→</i><b>03<br>Build<small>Ready ✓</small></b><i>→</i><b>04<br>En ligne<small>Live ✓</small></b></div><div class="deploy-status">● Production · déploiement réussi</div>'
+const photos={
+web:["https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=1000&q=85","Ordinateur portable affichant un environnement de création web"],
+api:["https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=1000&q=85","Infrastructure de serveurs et services connectés"],
+db:["https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1000&q=85","Tableau de bord avec graphiques et indicateurs d'entreprise"],
+ai:["https://images.unsplash.com/photo-1677442136019-21780ecad995?w=1000&q=85","Visualisation d'une intelligence artificielle"],
+data:["https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1000&q=85","Analyse de données et tableau de bord prévisionnel"],
+git:["https://images.unsplash.com/photo-1518770660439-4636190af475?w=1000&q=85","Technologie et infrastructure numérique"]
 };
-return '<div class="app-frame"><div class="app-preview"><div class="preview-top"><b>'+heads[s.k]+'</b><span>'+(s.k==="data"?"● Marché":s.k==="api"?"● En ligne":s.k==="git"?"● Système sain":"Aperçu")+'</span></div>'+body[s.k]+'</div></div>';
+const p=photos[s.k]||photos.web;
+return '<img class="skill-photo" src="'+p[0]+'" alt="'+p[1]+'" loading="lazy" decoding="async">';
 };
 $("#skillsGrid").innerHTML=SKILLS.map(s=>'<article class="box skill">'+preview(s)+'<div class="sb"><h3>'+s.n[lang]+'</h3><p class="muted" style="margin:0">'+L(s.d)+'</p><h4>'+t("can")+'</h4><ul class="can">'+s.can[lang].map(x=>'<li>'+x+'</li>').join("")+'</ul><ul class="tags">'+s.tags.map(x=>'<li>'+x+'</li>').join("")+'</ul></div></article>').join("")+'<article class="box" style="grid-column:1/-1"><h3>'+t("learn")+'</h3><p class="muted" style="margin:0 0 .8rem">'+t("learnTxt")+'</p><ul class="tags">'+LEARNING[lang].map(x=>'<li>'+x+'</li>').join("")+'</ul></article>';
 
