@@ -58,8 +58,10 @@ const JOURNEY=[
  {t:{en:"Deliver and support",fr:"Livrer et accompagner"},d:{en:"Present the result and agree on follow-up.",fr:"Présenter le résultat et convenir du suivi."}}
 ];
 const GALLERY=[
- {src:"1793541020227.jpg",title:{en:"TYM Services — digital solutions",fr:"TYM Services — solutions numériques"},category:"Studio"},
- {src:"profile.jpg",title:{en:"Founder profile",fr:"Profil du fondateur"},category:"Studio"},
- {src:"ca6336e2e2ebed43c0e74030f340c8df.jpg",title:{en:"Project visual",fr:"Visuel de projet"},category:"Projects"}
+ {src:"https://www.nordiccapital.com/imported-media/1639/capabilities-dashboarding.jpg?bgcolor=ffffff&height=720&quality=90&v=1d89dd5da064af0&width=1440",title:{en:"Business dashboards across laptop, tablet and phone",fr:"Tableaux de bord d’entreprise sur ordinateur, tablette et téléphone"},category:"Dashboards"},
+ {src:"https://www.theurer.com/fileadmin/_processed_/d/b/csm_BI-Mobile-Company-Dashboard-Multi-Devices_a36365d15c.png",title:{en:"Management indicators and business charts",fr:"Indicateurs de gestion et graphiques d’entreprise"},category:"Dashboards"},
+ {src:"https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1400&q=88",title:{en:"Data analysis and visual reporting",fr:"Analyse de données et rapports visuels"},category:"Data Science"},
+ {src:"https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1400&q=88",title:{en:"Digital business analytics",fr:"Analyse numérique de l’activité"},category:"Data Science"},
+ {src:"https://www.ey.com/adobe/dynamicmedia/deliver/dm-aid--dbcc664c-a68d-4db2-9029-a28356b0c709/ey-odi-report-banner.png?preferwebp=true&quality=85&width=1000",title:{en:"A connected world: global digital communication",fr:"Un monde connecté : communication numérique mondiale"},category:"Global reach"}
 ];
 const PROGRAMMING = ["Python","JavaScript","TypeScript","SQL","HTML / CSS"];

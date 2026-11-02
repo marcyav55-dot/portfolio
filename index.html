@@ -166,6 +166,16 @@ footer{border-top:1px solid var(--line);padding:2rem 0;color:var(--muted);font-s
 .pipeline{display:flex;align-items:center;justify-content:space-between;gap:3px;margin:27px 0}.pipeline b{text-align:center;font-size:9px;color:#eaf1ff}.pipeline i{color:#6580a9;font-style:normal}.pipeline small{display:block;font-size:7px;color:#70d6a7;font-weight:400}.deploy-status{padding:10px;background:#121f37;border-radius:6px;color:#70d6a7;font-size:9px}
 @media(max-width:500px){.app-frame{padding:8px}.app-preview{padding:10px}.coin strong{font-size:17px}.pipeline{gap:2px}.pipeline b{font-size:8px}}
 
+.global-reach{position:relative;overflow:hidden;background:linear-gradient(125deg,#08152b,#102b4b);border-block:1px solid var(--line)}
+.global-reach-grid{display:grid;grid-template-columns:1fr 1fr;gap:2rem;align-items:center}
+.global-reach-copy p{max-width:58ch;color:var(--muted);line-height:1.8}
+.global-reach-visual{position:relative;border:1px solid #294568;border-radius:18px;overflow:hidden;box-shadow:0 20px 55px #0006}
+.global-reach-visual img{display:block;width:100%;height:100%;min-height:280px;object-fit:cover}
+.global-reach-tag{display:inline-flex;padding:.45rem .75rem;border:1px solid #3977a5;border-radius:999px;color:#9be7ff;font-size:.8rem;margin-bottom:1rem}
+.global-reach-points{display:flex;gap:.6rem;flex-wrap:wrap;margin-top:1.2rem}
+.global-reach-points span{border:1px solid #294568;border-radius:9px;padding:.55rem .7rem;color:#c5d7ef;font-size:.82rem}
+.gallery button img{width:100%;height:240px;object-fit:cover;display:block}
+@media(max-width:760px){.global-reach-grid{grid-template-columns:1fr}.global-reach-visual img{min-height:210px}}
 </style>
 </head>
 <body>
@@ -220,6 +230,15 @@ footer{border-top:1px solid var(--line);padding:2rem 0;color:var(--muted);font-s
 <div class="projects" id="projectsGrid"></div>
 </div></section>
 
+<section class="global-reach"><div class="wrap global-reach-grid">
+<div class="global-reach-copy">
+<span class="global-reach-tag" data-en="GLOBAL DIGITAL REACH" data-fr="RAYONNEMENT NUMÉRIQUE MONDIAL">RAYONNEMENT NUMÉRIQUE MONDIAL</span>
+<h2 data-en="Your business, connected to the world" data-fr="Votre entreprise, connectée au monde">Votre entreprise, connectée au monde</h2>
+<p data-en="A digital platform can help a company communicate with customers, partners and teams wherever they are. Websites, mobile applications, cloud services and data dashboards bring information and people together." data-fr="Une plateforme numérique peut aider une entreprise à communiquer avec ses clients, partenaires et équipes, où qu’ils se trouvent. Sites web, applications mobiles, services cloud et tableaux de bord rapprochent les informations et les personnes.">Une plateforme numérique peut aider une entreprise à communiquer avec ses clients, partenaires et équipes, où qu’ils se trouvent. Sites web, applications mobiles, services cloud et tableaux de bord rapprochent les informations et les personnes.</p>
+<div class="global-reach-points"><span data-en="Customers" data-fr="Clients">Clients</span><span data-en="Partners" data-fr="Partenaires">Partenaires</span><span data-en="Teams" data-fr="Équipes">Équipes</span><span data-en="Data & services" data-fr="Données et services">Données et services</span></div>
+</div>
+<div class="global-reach-visual"><img src="https://www.ey.com/adobe/dynamicmedia/deliver/dm-aid--dbcc664c-a68d-4db2-9029-a28356b0c709/ey-odi-report-banner.png?preferwebp=true&quality=85&width=1000" alt="Carte du monde illustrant les connexions numériques entre continents" loading="lazy"></div>
+</div></section>
 <section id="gallery" hidden><div class="wrap">
 <h2 data-i="nGallery"></h2>
 <div class="filters" id="filters"></div>
@@ -311,7 +330,7 @@ const L=o=>o[lang];
 
 function render(){
   document.documentElement.lang=lang;
-  document.querySelectorAll("[data-i]").forEach(e=>e.textContent=t(e.dataset.i));
+  document.querySelectorAll("[data-i]").forEach(e=>e.textContent=t(e.dataset.i));\n  document.querySelectorAll("[data-en][data-fr]").forEach(e=>e.textContent=lang==="fr"?e.dataset.fr:e.dataset.en);
   $("#lang").textContent=lang==="en"?"FR":"EN";
   $("#cvView").href="cv.html?lang="+lang;$("#cvDl").href="cv.html?lang="+lang+"&download=1";
   const preview=s=>{
