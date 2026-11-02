@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>TYM Services — Sites web, applications et gestion des données</title>
+<title>Marcus Yav — Full-Stack, Machine Learning & Intelligence artificielle</title>
 <meta name="description" content="Sites web professionnels, applications de gestion, maintenance et solutions numériques pour écoles, centres de santé et entreprises.">
 <meta name="theme-color" content="#0a1020">
 <meta property="og:type" content="website">
@@ -336,19 +336,11 @@ function render(){
   $("#cvView").href="cv.html?lang="+lang;$("#cvDl").href="cv.html?lang="+lang+"&download=1";
   const preview=s=>{
 const photos={
-web:["https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=1000&q=85","Ordinateur portable affichant un environnement de création web"],
-api:["https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=1000&q=85","Infrastructure de serveurs et services connectés"],
-db:["https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1000&q=85","Tableau de bord avec graphiques et indicateurs d'entreprise"],
-ai:["https://images.unsplash.com/photo-1677442136019-21780ecad995?w=1000&q=85","Visualisation d'une intelligence artificielle"],
-data:["https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1000&q=85","Analyse de données et tableau de bord prévisionnel"],
-git:["https://images.unsplash.com/photo-1518770660439-4636190af475?w=1000&q=85","Technologie et infrastructure numérique"],
-cloud:["https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=1000&q=85","Infrastructure cloud et réseau mondial"],
-devops:["https://images.unsplash.com/photo-1667372393119-3d4c48d07fc9?w=1000&q=85","Infrastructure logicielle et déploiement continu"],
-security:["https://images.unsplash.com/photo-1550751827-4bd374c3f58b?w=1000&q=85","Cybersécurité et protection des systèmes"],
-ai-use:["https://images.unsplash.com/photo-1677442136019-21780ecad995?w=1000&q=85","Utilisation d’un assistant d’intelligence artificielle"],
-ai-images:["https://images.unsplash.com/photo-1686191128892-3b7a4f3b3d4b?w=1000&q=85","Création visuelle et images générées par intelligence artificielle"],
-teaching:["https://images.unsplash.com/photo-1524178232363-1fb2b075b655?w=1000&q=85","Formation et accompagnement des apprenants"]
-};
+web:["https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=1000&q=85","Développement Full-Stack et environnement logiciel"],
+data:["https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1000&q=85","Analyse de données et Machine Learning"],
+ai:["https://images.unsplash.com/photo-1677442136019-21780ecad995?w=1000&q=85","Intelligence artificielle et modèles génératifs"]
+}
+const p=photos[s.k]};
 const p=photos[s.k]||photos.web;
 return '<img class="skill-photo" src="'+p[0]+'" alt="'+p[1]+'" loading="lazy" decoding="async">';
 };
