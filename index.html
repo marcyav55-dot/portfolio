@@ -241,13 +241,30 @@ dialog{background:#fff;border-color:#dce4ed}
 @media(max-width:700px){.hero-visual{aspect-ratio:4/3}.service-photo{height:190px}.footer-grid{grid-template-columns:1fr 1fr;gap:1.7rem 1rem}.footer-about,.footer-contact{grid-column:1/-1}.footer-about p,.footer-contact p{max-width:52ch}.footer-bottom{align-items:flex-start;flex-direction:column;gap:.45rem}}
 @media(max-width:420px){.footer-grid{grid-template-columns:1fr}.footer-about,.footer-contact{grid-column:auto}.footer-col{gap:.55rem}}
 
+
+.faq-list{display:grid;gap:.7rem;max-width:900px;margin-top:1.4rem}.faq-list details{padding:1rem 1.15rem;border:1px solid #e1e7ee;border-radius:12px;background:#fff}.faq-list summary{cursor:pointer;font-weight:650;color:#183e70;list-style:none;display:flex;justify-content:space-between;gap:1rem}.faq-list summary::-webkit-details-marker{display:none}.faq-list summary:after{content:"+";font-size:1.2rem;color:#087e83}.faq-list details[open] summary:after{content:"−"}.faq-list details p{color:#65758b;font-size:.92rem;max-width:75ch}.faq-intro{color:#65758b}.contact-quick-links{display:flex;flex-wrap:wrap;gap:.65rem;margin-top:1.1rem}.contact-quick-links a{display:inline-flex;align-items:center;justify-content:center;min-height:42px;padding:.6rem .85rem;border:1px solid #dce4ed;border-radius:9px;color:#174b91;text-decoration:none;font-weight:650;font-size:.86rem}.contact-quick-links a:hover{background:#f2f6fb}
+ /* Final responsive navigation override — keep every primary link visible */
+@media(max-width:700px){
+ header{position:sticky;top:0}
+ nav{min-height:0!important;display:flex!important;flex-wrap:wrap!important;align-items:center;gap:.25rem .85rem!important;padding:.6rem 0!important;overflow:visible}
+ nav .brand{order:1;flex:1 0 calc(100% - 58px)!important;min-width:0;margin:0!important}
+ nav .lang{order:2;display:inline-flex!important;margin:0 0 .2rem auto!important}
+ nav a.l{order:3;display:inline-flex!important;flex:0 0 auto!important;min-height:34px;padding:.2rem 0!important;font-size:.78rem!important;white-space:nowrap}
+ nav .menu-toggle,.menu-toggle{display:none!important}
+ html{scroll-padding-top:116px}
+ main section{scroll-margin-top:116px}
+}
+@media(max-width:390px){
+ nav{column-gap:.62rem!important;row-gap:.1rem!important}
+ nav a.l{font-size:.74rem!important}
+}
 </style>
 </head>
 <body>
 <header><nav class="wrap" aria-label="Navigation principale">
 <a class="brand" href="#top"><img class="brand-logo" src="assets/tym-services-logo.png" alt="Logo TYM Services"><span>TYM <span style="color:var(--blue)">SERVICES</span></span></a>
 
-<a class="l" href="#about" data-i="nAbout">Entreprise</a><a class="l" href="#skills" data-i="nSkills">Expertises</a><a class="l" href="#projects" data-i="nProjects">Réalisations</a><a class="l" href="#process">Notre méthode</a><a class="l" href="#contact" data-i="nContact">Contact</a>
+<a class="l" href="#about" data-i="nAbout">Entreprise</a><a class="l" href="#skills" data-i="nSkills">Expertises</a><a class="l" href="#projects" data-i="nProjects">Réalisations</a><a class="l" href="#process">Notre méthode</a><a class="l" href="#contact" data-i="nContact">Contact</a><a class="l" href="#faq" data-en="FAQ" data-fr="FAQ">FAQ</a>
 <button class="lang" id="lang" aria-label="Changer de langue">FR</button></nav></header>
 
 <main id="top">
@@ -267,12 +284,12 @@ dialog{background:#fff;border-color:#dce4ed}
 </div></section>
 
 <section class="service-showcase" id="service-carousel"><div class="wrap"><div class="service-head"><div><h2>Nos domaines d’intervention</h2><p>Des solutions numériques adaptées aux besoins réels des organisations.</p></div><div class="service-controls"><button type="button" id="servicePrev" aria-label="Précédent">←</button><button type="button" id="serviceNext" aria-label="Suivant">→</button></div></div><div class="service-track" id="serviceTrack">
-<article class="service-card"><div class="service-photo"><img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=1100&q=88" alt="Poste de travail pour développement web" loading="lazy"><span class="service-no">01 / WEB</span><strong>Sites web professionnels</strong></div><div class="service-copy"><h3>Sites web professionnels</h3><p>Sites vitrines, pages professionnelles et plateformes responsives.</p><a href="#contact">Discuter de votre projet <b>→</b></a></div></article>
-<article class="service-card"><div class="service-photo"><img src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9e?w=1100&q=88" alt="Application mobile sur smartphone" loading="lazy"><span class="service-no">02 / APP</span><strong>Applications web et mobiles</strong></div><div class="service-copy"><h3>Applications web et mobiles</h3><p>Applications utiles pour simplifier les opérations quotidiennes.</p><a href="#contact">Discuter de votre projet <b>→</b></a></div></article>
-<article class="service-card"><div class="service-photo"><img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1100&q=88" alt="Tableau de bord et visualisation de données" loading="lazy"><span class="service-no">03 / DATA</span><strong>Gestion des données</strong></div><div class="service-copy"><h3>Gestion des données</h3><p>Bases de données, tableaux de bord et outils de suivi.</p><a href="#contact">Discuter de votre projet <b>→</b></a></div></article>
-<article class="service-card"><div class="service-photo"><img src="https://images.unsplash.com/photo-1677442136019-21780ecad995?w=1100&q=88" alt="Intelligence artificielle et technologie" loading="lazy"><span class="service-no">04 / IA</span><strong>Intelligence artificielle</strong></div><div class="service-copy"><h3>Intelligence artificielle</h3><p>Automatisation et intégration de fonctionnalités intelligentes.</p><a href="#contact">Discuter de votre projet <b>→</b></a></div></article>
-<article class="service-card"><div class="service-photo"><img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=1100&q=88" alt="Paiement et commerce en ligne" loading="lazy"><span class="service-no">05 / E-COMMERCE</span><strong>Commerce et paiements en ligne</strong></div><div class="service-copy"><h3>Commerce et paiements en ligne</h3><p>Catalogues, commandes et parcours de transaction en ligne.</p><a href="#contact">Discuter de votre projet <b>→</b></a></div></article>
-<article class="service-card"><div class="service-photo"><img src="https://images.unsplash.com/photo-1581092160562-40aa08e78837?w=1100&q=88" alt="Assistance technique et maintenance informatique" loading="lazy"><span class="service-no">06 / SUPPORT</span><strong>Maintenance et assistance</strong></div><div class="service-copy"><h3>Maintenance et assistance</h3><p>Améliorations, corrections et accompagnement technique.</p><a href="#contact">Discuter de votre projet <b>→</b></a></div></article>
+<article class="service-card"><div class="service-photo"><img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=1100&q=88" alt="Poste de travail pour développement web" loading="lazy"><span class="service-no">01 / WEB</span><strong data-fr="Sites web professionnels" data-en="Professional websites">Sites web professionnels</strong></div><div class="service-copy"><h3 data-fr="Sites web professionnels" data-en="Professional websites">Sites web professionnels</h3><p data-fr="Sites vitrines, pages professionnelles et plateformes responsives." data-en="Showcase websites, professional pages and responsive platforms.">Sites vitrines, pages professionnelles et plateformes responsives.</p><a href="#contact">Discuter de votre projet <b>→</b></a></div></article>
+<article class="service-card"><div class="service-photo"><img src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9e?w=1100&q=88" alt="Application mobile sur smartphone" loading="lazy"><span class="service-no">02 / APP</span><strong data-fr="Applications web et mobiles" data-en="Web and mobile applications">Applications web et mobiles</strong></div><div class="service-copy"><h3 data-fr="Applications web et mobiles" data-en="Web and mobile applications">Applications web et mobiles</h3><p data-fr="Applications utiles pour simplifier les opérations quotidiennes." data-en="Useful applications that simplify everyday operations.">Applications utiles pour simplifier les opérations quotidiennes.</p><a href="#contact">Discuter de votre projet <b>→</b></a></div></article>
+<article class="service-card"><div class="service-photo"><img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1100&q=88" alt="Tableau de bord et visualisation de données" loading="lazy"><span class="service-no">03 / DATA</span><strong data-fr="Gestion des données" data-en="Data management">Gestion des données</strong></div><div class="service-copy"><h3 data-fr="Gestion des données" data-en="Data management">Gestion des données</h3><p data-fr="Bases de données, tableaux de bord et outils de suivi." data-en="Databases, dashboards and monitoring tools.">Bases de données, tableaux de bord et outils de suivi.</p><a href="#contact">Discuter de votre projet <b>→</b></a></div></article>
+<article class="service-card"><div class="service-photo"><img src="https://images.unsplash.com/photo-1677442136019-21780ecad995?w=1100&q=88" alt="Intelligence artificielle et technologie" loading="lazy"><span class="service-no">04 / IA</span><strong data-fr="Intelligence artificielle" data-en="Artificial intelligence">Intelligence artificielle</strong></div><div class="service-copy"><h3 data-fr="Intelligence artificielle" data-en="Artificial intelligence">Intelligence artificielle</h3><p data-fr="Automatisation et intégration de fonctionnalités intelligentes." data-en="Automation and integration of intelligent features.">Automatisation et intégration de fonctionnalités intelligentes.</p><a href="#contact">Discuter de votre projet <b>→</b></a></div></article>
+<article class="service-card"><div class="service-photo"><img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=1100&q=88" alt="Paiement et commerce en ligne" loading="lazy"><span class="service-no">05 / E-COMMERCE</span><strong data-fr="Commerce et paiements en ligne" data-en="E-commerce and online payments">Commerce et paiements en ligne</strong></div><div class="service-copy"><h3 data-fr="Commerce et paiements en ligne" data-en="E-commerce and online payments">Commerce et paiements en ligne</h3><p data-fr="Catalogues, commandes et parcours de transaction en ligne." data-en="Catalogues, orders and online transaction flows.">Catalogues, commandes et parcours de transaction en ligne.</p><a href="#contact">Discuter de votre projet <b>→</b></a></div></article>
+<article class="service-card"><div class="service-photo"><img src="https://images.unsplash.com/photo-1581092160562-40aa08e78837?w=1100&q=88" alt="Assistance technique et maintenance informatique" loading="lazy"><span class="service-no">06 / SUPPORT</span><strong data-fr="Maintenance et assistance" data-en="Maintenance and support">Maintenance et assistance</strong></div><div class="service-copy"><h3 data-fr="Maintenance et assistance" data-en="Maintenance and support">Maintenance et assistance</h3><p data-fr="Améliorations, corrections et accompagnement technique." data-en="Improvements, fixes and technical support.">Améliorations, corrections et accompagnement technique.</p><a href="#contact">Discuter de votre projet <b>→</b></a></div></article>
 </div></div></section><section id="projects"><div class="wrap">
 <h2 data-i="nProjects"></h2>
 <div class="projects" id="projectsGrid"></div>
@@ -285,12 +302,19 @@ dialog{background:#fff;border-color:#dce4ed}
 </div></section>
 
 <section id="process"><div class="wrap">
-<h2>Comment nous travaillons</h2>
+<h2 data-fr="Comment nous travaillons" data-en="How we work">Comment nous travaillons</h2>
 <div class="process-grid">
-<article class="process-card"><span>01</span><h3>Comprendre votre besoin</h3><p>Nous échangeons avec vous pour comprendre votre activité, vos difficultés et vos objectifs.</p></article>
-<article class="process-card"><span>02</span><h3>Proposer une solution</h3><p>Nous définissons une approche adaptée, les fonctionnalités utiles et les étapes du projet.</p></article>
-<article class="process-card"><span>03</span><h3>Concevoir et tester</h3><p>Nous développons progressivement et vérifions le fonctionnement sur les appareils concernés.</p></article>
-<article class="process-card"><span>04</span><h3>Livrer et accompagner</h3><p>Nous présentons le résultat et convenons des modalités de suivi et de maintenance.</p></article>
+<article class="process-card"><span>01</span><h3>Comprendre votre besoin</h3><p data-fr="Nous échangeons avec vous pour comprendre votre activité, vos difficultés et vos objectifs." data-en="We talk with you to understand your organisation, challenges and goals.">Nous échangeons avec vous pour comprendre votre activité, vos difficultés et vos objectifs.</p></article>
+<article class="process-card"><span>02</span><h3>Proposer une solution</h3><p data-fr="Nous définissons une approche adaptée, les fonctionnalités utiles et les étapes du projet." data-en="We define an appropriate approach, useful features and project steps.">Nous définissons une approche adaptée, les fonctionnalités utiles et les étapes du projet.</p></article>
+<article class="process-card"><span>03</span><h3>Concevoir et tester</h3><p data-fr="Nous développons progressivement et vérifions le fonctionnement sur les appareils concernés." data-en="We build progressively and verify the solution on the relevant devices.">Nous développons progressivement et vérifions le fonctionnement sur les appareils concernés.</p></article>
+<article class="process-card"><span>04</span><h3>Livrer et accompagner</h3><p data-fr="Nous présentons le résultat et convenons des modalités de suivi et de maintenance." data-en="We present the result and agree on support and maintenance.">Nous présentons le résultat et convenons des modalités de suivi et de maintenance.</p></article>
+</div></div></section>
+
+<section id="faq"><div class="wrap"><span class="eyebrow" data-fr="Questions fréquentes" data-en="Frequently asked questions">Questions fréquentes</span><h2 data-fr="Vous avez des questions ?" data-en="Have questions?">Vous avez des questions ?</h2><p class="faq-intro" data-fr="Quelques réponses pour mieux comprendre notre manière de travailler." data-en="A few answers to help you understand how we work.">Quelques réponses pour mieux comprendre notre manière de travailler.</p><div class="faq-list">
+<details><summary data-fr="Quels types de clients accompagnez-vous ?" data-en="What types of clients do you work with?">Quels types de clients accompagnez-vous ?</summary><p data-fr="Nous accompagnons les entreprises, écoles, commerces et organisations qui souhaitent développer ou améliorer leurs outils numériques." data-en="We work with businesses, schools, shops and organisations looking to build or improve their digital tools.">Nous accompagnons les entreprises, écoles, commerces et organisations qui souhaitent développer ou améliorer leurs outils numériques.</p></details>
+<details><summary data-fr="Comment demander un devis ?" data-en="How can I request a quote?">Comment demander un devis ?</summary><p data-fr="Décrivez votre besoin dans le formulaire de contact ou écrivez-nous sur WhatsApp. Nous pourrons ensuite échanger sur le périmètre et les prochaines étapes." data-en="Describe your needs in the contact form or message us on WhatsApp. We can then discuss the scope and next steps.">Décrivez votre besoin dans le formulaire de contact ou écrivez-nous sur WhatsApp. Nous pourrons ensuite échanger sur le périmètre et les prochaines étapes.</p></details>
+<details><summary data-fr="Proposez-vous un accompagnement après livraison ?" data-en="Do you provide support after delivery?">Proposez-vous un accompagnement après livraison ?</summary><p data-fr="Les possibilités de suivi et de maintenance sont définies selon la nature du projet et convenues avec le client." data-en="Follow-up and maintenance options are defined according to the project and agreed with the client.">Les possibilités de suivi et de maintenance sont définies selon la nature du projet et convenues avec le client.</p></details>
+<details><summary data-fr="Travaillez-vous à distance ?" data-en="Do you work remotely?">Travaillez-vous à distance ?</summary><p data-fr="Oui. Les échanges, la planification et le suivi peuvent être organisés à distance selon le projet." data-en="Yes. Discussions, planning and project follow-up can be handled remotely, depending on the project.">Oui. Les échanges, la planification et le suivi peuvent être organisés à distance selon le projet.</p></details>
 </div></div></section>
 
 <section id="contact"><div class="wrap">
@@ -300,7 +324,7 @@ dialog{background:#fff;border-color:#dce4ed}
 <div class="contact-panel">
 <h3 data-i="contactAsideTitle">Parlons de votre projet</h3>
 <p class="muted" data-i="contactAsideText">Décrivez votre besoin. TYM Services vous répondra par e-mail pour discuter des prochaines étapes.</p>
-<div class="cta" id="contactLinks"></div>
+<div class="cta contact-quick-links" id="contactLinks"></div>
 </div>
 <div class="contact-panel">
 <form class="contact-form" id="contactForm" action="https://formspree.io/f/xqpadgnd" method="POST">
@@ -323,14 +347,14 @@ dialog{background:#fff;border-color:#dce4ed}
   <div class="wrap footer-grid">
     <div class="footer-about">
       <a class="footer-brand" href="#top"><img src="assets/tym-services-logo.png" alt="" loading="lazy"><span>TYM <b>SERVICES</b></span></a>
-      <p>Nous accompagnons les entreprises, écoles et organisations dans leurs projets numériques : conception web, applications, données et solutions intelligentes.</p>
-      <span class="footer-note">Des solutions numériques pensées pour vos besoins réels.</span>
+      <p data-fr="Nous accompagnons les entreprises, écoles et organisations dans leurs projets numériques : conception web, applications, données et solutions intelligentes." data-en="We help businesses, schools and organisations with digital projects: web design, applications, data and intelligent solutions.">Nous accompagnons les entreprises, écoles et organisations dans leurs projets numériques : conception web, applications, données et solutions intelligentes.</p>
+      <span class="footer-note" data-fr="Des solutions numériques pensées pour vos besoins réels." data-en="Digital solutions designed around your real needs.">Des solutions numériques pensées pour vos besoins réels.</span>
     </div>
     <div class="footer-col"><h3>Nos services</h3><a href="#service-carousel">Sites web et applications</a><a href="#skills">Ingénierie logicielle</a><a href="#skills">Data Science & IA</a><a href="#projects">Nos réalisations</a></div>
-    <div class="footer-col"><h3>À propos</h3><a href="#about">L’entreprise</a><a href="#process">Notre méthode</a><a href="fondateur.html">Le fondateur</a><a href="#contact">Contact</a></div>
-    <div class="footer-contact"><h3>Nous sommes à votre écoute</h3><p>Une question, une idée ou un projet ? Parlons-en. Notre équipe est disponible pour étudier votre besoin.</p><a class="footer-contact-link" href="https://wa.me/243808373717" target="_blank" rel="noopener noreferrer">Écrire sur WhatsApp <span aria-hidden="true">↗</span></a><a href="mailto:marcyav55@gmail.com">marcyav55@gmail.com</a><a href="tel:+243808373717">+243 808 373 717</a><span>Kolwezi, Lualaba · RDC</span></div>
+    <div class="footer-col"><h3>À propos</h3><a href="#about">L’entreprise</a><a href="#process">Notre méthode</a><a href="#faq">Questions fréquentes</a><a href="fondateur.html">Le fondateur</a><a href="#contact">Contact</a></div>
+    <div class="footer-contact"><h3 data-fr="Nous sommes à votre écoute" data-en="We are here to listen">Nous sommes à votre écoute</h3><p data-fr="Une question, une idée ou un projet ? Parlons-en. Notre équipe est disponible pour étudier votre besoin." data-en="A question, an idea or a project? Let’s talk. We are available to discuss your needs.">Une question, une idée ou un projet ? Parlons-en. Notre équipe est disponible pour étudier votre besoin.</p><a class="footer-contact-link" href="https://wa.me/243808373717" target="_blank" rel="noopener noreferrer"><span data-fr="Écrire sur WhatsApp" data-en="Message us on WhatsApp">Écrire sur WhatsApp</span> <span aria-hidden="true">↗</span></a><a href="mailto:marcyav55@gmail.com">marcyav55@gmail.com</a><a href="tel:+243808373717">+243 808 373 717</a><span>Kolwezi, Lualaba · RDC</span></div>
   </div>
-  <div class="wrap footer-bottom"><span>© 2026 TYM Services. Tous droits réservés.</span><a href="#top">Retour en haut ↑</a></div>
+  <div class="wrap footer-bottom"><span>© <span id="yr">2026</span> TYM Services. Tous droits réservés.</span><a href="#top" data-fr="Retour en haut ↑" data-en="Back to top ↑">Retour en haut ↑</a></div>
 </footer>
 
 <dialog id="lb" aria-label="Image viewer">
@@ -397,7 +421,7 @@ $("#skillsGrid").innerHTML=SKILLS.map(s=>'<article class="box skill">'+preview(s
     <ul class="tags">${p.tech.map(x=>`<li>${x}</li>`).join("")}</ul>
     ${p.details?`<details><summary>${t("details")}</summary><ul>${p.details[lang].map(d=>`<li>${d}</li>`).join("")}</ul></details>`:""}
     <div class="links">${p.code?`<a href="${p.code}" target="_blank" rel="noopener">${t("code")}</a>`:""}${p.demo?`<a href="${p.demo}" target="_blank" rel="noopener">${p.id==="grace-divine"?(lang==="fr"?"Déploiement Vercel (accès à confirmer)":"Vercel deployment (access to confirm)"):t("demo")}</a>`:""}</div></div></article>`).join("");
-  $("#contactLinks").innerHTML="";
+  $("#contactLinks").innerHTML='<a href="https://wa.me/'+SITE.phone.replace(/\\D/g,"")+'" target="_blank" rel="noopener noreferrer">'+(lang==="fr"?"WhatsApp":"WhatsApp")+'</a><a href="mailto:'+SITE.email+'">'+(lang==="fr"?"Envoyer un e-mail":"Send an email")+'</a>';
   const founderWhatsapp=$("#founderWhatsapp");
   if(founderWhatsapp&&SITE.whatsapp){founderWhatsapp.href=SITE.whatsapp;founderWhatsapp.hidden=false;}
   else if(founderWhatsapp){founderWhatsapp.hidden=true;}
@@ -426,7 +450,10 @@ $("#lb").addEventListener("keydown",e=>{if(e.key==="ArrowLeft")showLb(lbIdx-1);i
 $("#lb").addEventListener("click",e=>{if(e.target===$("#lb"))$("#lb").close()});
 $("#lang").onclick=()=>{lang=lang==="en"?"fr":"en";try{localStorage.setItem("lang",lang)}catch(e){}render()};
 const year=$("#yr");if(year)year.textContent=new Date().getFullYear();
-const serviceTrack=$("#serviceTrack");$("#servicePrev").onclick=()=>serviceTrack.scrollBy({left:-320,behavior:"smooth"});$("#serviceNext").onclick=()=>serviceTrack.scrollBy({left:320,behavior:"smooth"});
+const serviceTrack=$("#serviceTrack");
+function moveServices(direction){const card=serviceTrack.querySelector(".service-card");const step=card?card.getBoundingClientRect().width+16:320;serviceTrack.scrollBy({left:direction*step,behavior:"smooth"});}
+$("#servicePrev").addEventListener("click",()=>moveServices(-1));
+$("#serviceNext").addEventListener("click",()=>moveServices(1));
 let serviceTimer=setInterval(()=>{if(serviceTrack.scrollLeft+serviceTrack.clientWidth>=serviceTrack.scrollWidth-8)serviceTrack.scrollTo({left:0,behavior:"smooth"});else serviceTrack.scrollBy({left:320,behavior:"smooth"})},4200);serviceTrack.addEventListener("mouseenter",()=>clearInterval(serviceTimer));serviceTrack.addEventListener("touchstart",()=>clearInterval(serviceTimer),{passive:true});
 render();
 
