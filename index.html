@@ -271,18 +271,36 @@ footer{background:#fbfcff;border-top-color:#e5eaf2;color:#64748b}
 .footer-brand img,.brand-logo{background:#fff;border:1px solid #e5eaf2}
 @media(prefers-reduced-motion:reduce){.service-track{scroll-behavior:auto}}
 
+
+.tagline{
+  display:inline-flex;
+  align-items:center;
+  margin:0 0 1rem;
+  padding:.48rem .82rem;
+  border:1px solid #d9e5f8;
+  border-radius:999px;
+  background:#edf4ff;
+  color:#2459b8;
+  font-size:.82rem;
+  font-weight:700;
+  letter-spacing:.025em;
+}
+.footer-brand{justify-content:center;text-align:center;padding-block:1.2rem}
+.footer-brand span{color:#64748b;font-size:.9rem;font-weight:600;letter-spacing:.02em}
+
 </style>
 </head>
 <body>
 <header><nav class="wrap" aria-label="Main">
 <a class="brand" href="#top"><img class="brand-logo" src="assets/tym-services-logo.png" alt="Logo TYM Services"><span>TYM <span style="color:var(--cyan)">SERVICES</span></span></a>
-<a class="l" href="#about" data-i="nAbout"></a><a class="l" href="#skills" data-i="nSkills"></a><a class="l" href="#projects" data-i="nProjects"></a><a class="l" href="#process">Notre méthode</a><a class="l gl" href="#gallery" data-i="nGallery"></a><a class="l" href="#cv" data-i="nCV"></a><a class="l" href="#contact" data-i="nContact"></a>
+<a class="l" href="#about" data-i="nAbout"></a><a class="l" href="#skills" data-i="nSkills"></a><a class="l" href="#projects" data-i="nProjects"></a><a class="l" href="#process">Notre méthode</a><a class="l gl" href="#gallery" data-i="nGallery"></a><a class="l" href="#contact" data-i="nContact"></a>
 <button class="lang" id="lang" aria-label="Switch language">FR</button>
 </nav></header>
 
 <main id="top">
 <section class="hero"><div class="wrap hero-grid">
 <div>
+<p class="tagline" data-i="tagline"></p>
 <h1 data-i="h1"></h1>
 <p data-i="lead"></p>
 <div class="cta hero-actions"><a class="btn p" href="#contact">Parler de votre projet</a><a class="btn" href="#projects">Découvrir nos réalisations</a></div>
@@ -354,8 +372,6 @@ footer{background:#fbfcff;border-top-color:#e5eaf2;color:#64748b}
 <ul class="journey" id="journeyList"></ul>
 </div></section>
 
-<section id="cv"><div class="wrap"><h2 data-i="nCV"></h2><p class="muted" style="max-width:56ch;margin-bottom:1.5rem" data-i="cvText"></p><div class="cta"><a class="btn p" id="cvDl" data-i="cvDl"></a><a class="btn" id="cvView" target="_blank" data-i="cvView"></a></div></div></section>
-
 <section id="contact"><div class="wrap">
 <h2 data-i="nContact"></h2>
 <p class="muted" style="max-width:60ch;margin-bottom:1.5rem" data-i="contactText"></p>
@@ -379,7 +395,7 @@ footer{background:#fbfcff;border-top-color:#e5eaf2;color:#64748b}
 </div>
 </div></section>
 </main>
-<footer><div class="wrap footer-brand"><img src="assets/tym-services-logo.png" alt="Logo TYM Services"><span>© <span id="yr"></span> TYM Services · Fondé par TSHIJIKA YAV MARC, connu sous le nom de Marcus Yav</span></div></footer>
+<footer><div class="wrap footer-brand"><span>© 2026 TYM Services</span></div></footer>
 
 <dialog id="lb" aria-label="Image viewer">
 <img id="lbImg" alt="">
@@ -399,14 +415,14 @@ const ART={
  git:`<svg viewBox="0 0 160 100" aria-hidden="true"><path d="M30 20v60M30 50c0-18 50-8 50-26M80 24v0c0 14 50 6 50 26" ${F}/><g fill="#0d1630" stroke="#3b73ff" stroke-width="3"><circle cx="30" cy="20" r="7"/><circle cx="30" cy="80" r="7"/><circle cx="80" cy="24" r="7"/></g><circle cx="130" cy="50" r="8" fill="#22d3ee"/></svg>`
 };
 const I18N = {
- en:{impactTitle:"Our impact & testimonials",demoBadge:"Visual simulation",impactIntro:"A preview of the counter that can later be connected to verified records.",peopleHelped:"People supported",impactDisclaimer:"Illustrative demo figure only; it does not represent actual beneficiaries.",reviewsDisclaimer:"Sample demo reviews — replace with genuine testimonials published with each person’s permission.",nAbout:"About TYM Services",nSkills:"Our services",nProjects:"Selected work",nGallery:"Gallery",nJourney:"Our approach",nContact:"Contact",
+ en:{impactTitle:"Our impact & testimonials",demoBadge:"Visual simulation",impactIntro:"A preview of the counter that can later be connected to verified records.",peopleHelped:"People supported",impactDisclaimer:"Illustrative demo figure only; it does not represent actual beneficiaries.",reviewsDisclaimer:"Sample demo reviews — replace with genuine testimonials published with each person’s permission.",nAbout:"About TYM Services",tagline:"Technology for your ambitions.",nSkills:"Our services",nProjects:"Selected work",nGallery:"Gallery",nJourney:"Our approach",nContact:"Contact",
   h1:"Digital solutions that move your organisation forward.",
   lead:"TYM Services helps schools, healthcare organisations, shops and businesses build a professional online presence, organise their data and simplify everyday work with useful digital tools.",
   ctaProjects:"Explore our work",ctaContact:"Request a consultation",chartCap:"Websites, applications and digital systems designed around real needs.",
   about1:"TYM Services is a technology startup founded by TSHIJIKA YAV MARC, also known as Marcus Yav. It designs and develops digital solutions that help organisations modernise their operations, manage information and serve their customers.",
   about2:"From the first discussion to delivery, the focus stays on your needs: clear proposals, practical solutions, accessible explanations and realistic project scope. Specialist security or regulated healthcare requirements are assessed before work begins.",
   contactText:"Tell us what is slowing your organisation down or what you want to launch. We will discuss a practical digital solution and the next steps.",contactAsideTitle:"Let’s talk about your project",contactAsideText:"Use the contact form to describe your project. Our team will review your request and follow up.",fName:"Full name",fEmail:"Email address",fOrg:"Organisation (optional)",fService:"Service needed",fChoose:"Choose a service",fMessage:"Tell us about your project",fSend:"Send my request",all:"All",view:"View",code:"Code",demo:"Live demo",details:"Details",close:"Close",can:"What I can do",nCV:"CV",cvText:"An international-style CV with my photo, skills, projects and contact details. Open it, then save it as PDF.",cvView:"View CV",cvDl:"Download CV (PDF)"},
- fr:{impactTitle:"Notre impact et les témoignages",demoBadge:"Simulation visuelle",impactIntro:"Aperçu du compteur qui pourra ensuite être relié à des données vérifiées.",peopleHelped:"Personnes accompagnées",impactDisclaimer:"Chiffre fictif de démonstration ; il ne représente pas des bénéficiaires réels.",reviewsDisclaimer:"Avis fictifs de démonstration — à remplacer par des témoignages authentiques publiés avec l’accord des personnes concernées.",nAbout:"À propos de TYM Services",nSkills:"Nos services",nProjects:"Réalisations",nGallery:"Galerie",nJourney:"Notre approche",nContact:"Contact",
+ fr:{impactTitle:"Notre impact et les témoignages",demoBadge:"Simulation visuelle",impactIntro:"Aperçu du compteur qui pourra ensuite être relié à des données vérifiées.",peopleHelped:"Personnes accompagnées",impactDisclaimer:"Chiffre fictif de démonstration ; il ne représente pas des bénéficiaires réels.",reviewsDisclaimer:"Avis fictifs de démonstration — à remplacer par des témoignages authentiques publiés avec l’accord des personnes concernées.",nAbout:"À propos de TYM Services",tagline:"La technologie au service de vos ambitions.",nSkills:"Nos services",nProjects:"Réalisations",nGallery:"Galerie",nJourney:"Notre approche",nContact:"Contact",
   h1:"Des solutions numériques qui font avancer votre organisation.",
   lead:"TYM Services accompagne les écoles, structures de santé, commerces et entreprises pour développer leur présence en ligne, organiser leurs données et simplifier leur travail quotidien grâce à des outils numériques utiles.",
   ctaProjects:"Découvrir nos réalisations",ctaContact:"Demander un devis",chartCap:"Sites web, applications et systèmes numériques conçus pour vos besoins réels.",
@@ -428,7 +444,6 @@ function render(){
   document.querySelectorAll("[data-i]").forEach(e=>e.textContent=t(e.dataset.i));
   document.querySelectorAll("[data-en][data-fr]").forEach(e=>e.textContent=lang==="fr"?e.dataset.fr:e.dataset.en);
   $("#lang").textContent=lang==="en"?"FR":"EN";
-  $("#cvView").href="cv.html?lang="+lang;$("#cvDl").href="cv.html?lang="+lang+"&download=1";
   const preview=s=>{
 const photos={
 web:["https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=1000&q=85","Développement Full-Stack et environnement logiciel"],
