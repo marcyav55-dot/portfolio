@@ -45,6 +45,41 @@ dialog{width:min(900px,94vw);padding:0;border:1px solid var(--line);border-radiu
 @media(max-width:420px){.hero-actions,.founder-actions{display:grid;grid-template-columns:1fr}.hero-actions .btn,.founder-actions .btn{width:100%}.process-grid{grid-template-columns:1fr}.hero-capabilities{gap:.5rem}.hero-capability{padding:.7rem}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.reveal-item{opacity:1;transform:none;transition:none}.btn{transition:none}}
 
+
+/* Navigation rebuilt for reliable access on desktop and mobile */
+header{position:sticky;top:0;z-index:50}
+nav{display:flex;align-items:center;gap:1.1rem;min-height:78px;flex-wrap:nowrap}
+nav .brand{flex:0 0 auto;margin-right:auto}
+nav a.l{display:inline-flex!important;align-items:center;min-height:42px;padding:.35rem .1rem;text-decoration:none;white-space:nowrap;color:#435875;font-weight:650}
+nav a.l:hover{color:#087e83}
+nav .lang{display:inline-flex!important;align-items:center;justify-content:center;flex:0 0 auto;min-height:40px}
+.menu-toggle{display:none!important}
+html{scroll-padding-top:105px}
+main section{scroll-margin-top:100px}
+.reveal-item{opacity:1!important;transform:none!important;transition:none!important}
+@media(max-width:900px){
+ nav{gap:.75rem}
+ nav a.l{font-size:.84rem}
+}
+@media(max-width:700px){
+ header{position:sticky}
+ nav{min-height:0;display:flex;flex-wrap:wrap;gap:.25rem .9rem;padding:.65rem 0 .55rem;overflow:visible}
+ nav .brand{order:1;flex:1 1 calc(100% - 65px);min-width:0;margin:0 0 .25rem}
+ nav .lang{order:2;margin:0 0 .25rem auto}
+ nav a.l{order:3;display:inline-flex!important;flex:0 0 auto;min-height:34px;padding:.15rem 0;font-size:.8rem}
+ nav a.l:last-of-type{margin-right:.2rem}
+ html{scroll-padding-top:112px}
+ main section{scroll-margin-top:112px}
+ .hero{padding:3.2rem 0 3rem}
+ section{padding:3.35rem 0}
+ .company-grid,.skills,.projects{gap:.85rem}
+ .service-track{grid-auto-columns:minmax(255px,86%)}
+}
+@media(max-width:380px){
+ nav{column-gap:.65rem}
+ nav a.l{font-size:.76rem}
+}
+
 /* TYM SERVICES — unified premium visual system */
 :root{
  --ink:#172b49;--muted:#65758b;--blue:#174b91;--blue-deep:#0d2850;
@@ -165,12 +200,18 @@ dialog{background:#fff;border-color:#dce4ed}
 @media(max-width:420px){.hero-actions,.founder-actions{display:grid;grid-template-columns:1fr}.hero-actions .btn,.founder-actions .btn{width:100%}.process-grid{grid-template-columns:1fr}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.reveal-item{opacity:1;transform:none;transition:none}.btn,.service-photo img{transition:none}}
 
+
+.whatsapp-float{position:fixed;z-index:60;right:22px;bottom:22px;display:inline-flex;align-items:center;gap:.65rem;padding:.82rem 1.05rem;border-radius:999px;background:#16834b;color:#fff;text-decoration:none;font:700 .9rem var(--body);box-shadow:0 12px 30px rgba(12,80,48,.25);transition:transform .2s,box-shadow .2s}
+.whatsapp-float:hover{transform:translateY(-3px);box-shadow:0 16px 34px rgba(12,80,48,.3)}
+.wa-icon{display:grid;place-items:center;width:27px;height:27px;border:1.5px solid rgba(255,255,255,.8);border-radius:50%;font-size:.85rem}
+@media(max-width:700px){.whatsapp-float{right:13px;bottom:13px;padding:.72rem .95rem;font-size:.84rem}.wa-icon{width:24px;height:24px}}
+
 </style>
 </head>
 <body>
 <header><nav class="wrap" aria-label="Navigation principale">
 <a class="brand" href="#top"><img class="brand-logo" src="assets/tym-services-logo.png" alt="Logo TYM Services"><span>TYM <span style="color:var(--blue)">SERVICES</span></span></a>
-<button class="menu-toggle" id="menuToggle" type="button" aria-label="Ouvrir le menu" aria-expanded="false"><span></span><span></span><span></span></button>
+
 <a class="l" href="#about" data-i="nAbout">Entreprise</a><a class="l" href="#skills" data-i="nSkills">Expertises</a><a class="l" href="#projects" data-i="nProjects">Réalisations</a><a class="l" href="#process">Notre méthode</a><a class="l" href="#contact" data-i="nContact">Contact</a>
 <button class="lang" id="lang" aria-label="Changer de langue">FR</button></nav></header>
 
@@ -240,6 +281,7 @@ dialog{background:#fff;border-color:#dce4ed}
 </div>
 </div></section>
 </main>
+<a class="whatsapp-float" href="https://wa.me/243808373717" target="_blank" rel="noopener noreferrer" aria-label="Discuter avec TYM Services sur WhatsApp"><span class="wa-icon" aria-hidden="true">◉</span><span>Discuter avec nous</span></a>
 <footer><div class="wrap footer-brand"><span>© 2026 TYM Services</span></div></footer>
 
 <dialog id="lb" aria-label="Image viewer">
