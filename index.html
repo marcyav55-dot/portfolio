@@ -44,6 +44,88 @@ dialog{width:min(900px,94vw);padding:0;border:1px solid var(--line);border-radiu
 @media(max-width:700px){.wrap{width:min(100% - 2rem,600px)}section{padding:3.6rem 0}nav{min-height:0;display:flex;flex-wrap:wrap;gap:.45rem .8rem;padding:.55rem 0}nav .brand{order:1;flex:1 0 calc(100% - 60px);margin:0}nav .lang{order:2;margin-left:auto}nav a.l{display:inline-block;order:3;font-size:.78rem;padding:.15rem 0}.brand-logo{width:38px;height:38px}.hero{padding:3.6rem 0}.hero-grid,.global-reach-grid,.founder-layout,.contact-layout{grid-template-columns:1fr}.hero h1{font-size:clamp(2.25rem,11vw,3.3rem)}.hero-visual{min-height:260px}.hero-visual img{min-height:260px}.company-grid,.skills,.projects{grid-template-columns:1fr}.service-head{align-items:start}.service-track{grid-auto-columns:minmax(245px,82%)}.process-grid{grid-template-columns:1fr 1fr}.global-reach-visual{grid-template-columns:1fr 1fr}.contact-form{grid-template-columns:1fr}.contact-form label.full,.contact-form .full{grid-column:auto}}
 @media(max-width:420px){.hero-actions,.founder-actions{display:grid;grid-template-columns:1fr}.hero-actions .btn,.founder-actions .btn{width:100%}.process-grid{grid-template-columns:1fr}.hero-capabilities{gap:.5rem}.hero-capability{padding:.7rem}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.reveal-item{opacity:1;transform:none;transition:none}.btn{transition:none}}
+
+/* TYM Services — premium ivory and blue visual direction */
+:root{
+ --ink:#142b4d;--muted:#66758a;--blue:#174b9b;--blue-dark:#10366f;
+ --blue-soft:#eaf1fa;--line:#e3e8ef;--surface:#f5f6f7;--white:#fbfaf7;
+}
+html{background:#fbfaf7}
+body{background:#fbfaf7;color:var(--ink)}
+header{background:rgba(251,250,247,.97);border-bottom:1px solid #e7e8e7;box-shadow:0 5px 24px rgba(16,42,78,.045)}
+nav{min-height:86px}
+.brand{font-size:1.16rem;letter-spacing:.035em;color:#173f7b}
+.brand-logo{width:48px;height:48px;border:0;border-radius:0;background:transparent;padding:0}
+nav a.l{color:#435875;font-weight:600}
+nav a.l:hover{color:#147b9a}
+.lang{border-radius:11px;background:#fff;border-color:#dce3ec;color:#173f7b}
+.btn{min-height:52px;border-radius:12px;padding:.82rem 1.35rem;font-size:.96rem}
+.btn.p{background:#174b9b;border-color:#174b9b;box-shadow:0 8px 20px rgba(23,75,155,.18)}
+.btn.p:hover{background:#10366f;border-color:#10366f}
+.hero{
+ position:relative;isolation:isolate;overflow:hidden;
+ padding:5.4rem 0 4.8rem;
+ color:#fff;
+ background:linear-gradient(118deg,#103879 0%,#174b9b 52%,#087c83 100%);
+ border:0;
+}
+.hero:before,.hero:after{content:"";position:absolute;z-index:-1;pointer-events:none;border:1px solid rgba(255,255,255,.12);border-radius:50%}
+.hero:before{width:760px;height:420px;right:-180px;bottom:-265px;transform:rotate(-12deg)}
+.hero:after{width:950px;height:520px;right:-280px;bottom:-335px;transform:rotate(-12deg)}
+.hero-grid{gap:3rem}
+.hero .tagline,.hero .eyebrow{color:#bcefe7}
+.hero .tagline:before{background:#70e0c2;width:10px;height:10px;border-radius:50%}
+.hero h1{color:#fff;font-size:clamp(2.7rem,5.3vw,4.5rem);letter-spacing:-.045em}
+.hero p:not(.tagline){color:rgba(255,255,255,.86);font-size:1.12rem}
+.hero-actions{gap:.85rem}
+.hero .btn.p{background:#fff;border-color:#fff;color:#173f7b;box-shadow:0 10px 26px rgba(5,23,54,.16)}
+.hero .btn.p:hover{background:#f0f5fb;border-color:#f0f5fb}
+.hero .btn:not(.p){background:rgba(255,255,255,.08);border-color:rgba(255,255,255,.5);color:#fff}
+.hero .btn:not(.p):hover{background:rgba(255,255,255,.16);border-color:#fff}
+.hero-visual{border:1px solid rgba(255,255,255,.32);border-radius:22px;background:#102b4e;box-shadow:0 24px 60px rgba(3,18,43,.28);transform:rotate(.5deg)}
+.hero-visual img{min-height:370px}
+.hero-visual:after{background:linear-gradient(transparent,rgba(4,17,39,.82))}
+.hero-visual figcaption{left:1.4rem;bottom:1.3rem}
+.hero-panel{border-radius:18px;box-shadow:0 18px 46px rgba(4,20,48,.16)}
+section{padding:5.2rem 0}
+section h2{color:#172b49;letter-spacing:-.04em}
+.eyebrow{color:#167a80}
+.eyebrow:before{background:#20a38c}
+#about{background:#fbfaf7}
+.company-card,.service-card,.process-card,.card,.box,.contact-panel,.founder-panel{
+ border-radius:16px;border-color:#e5e8eb;box-shadow:0 8px 26px rgba(22,43,72,.045)
+}
+.company-card{padding:1.45rem}
+.company-card .number,.process-card>span,.founder-step{border-radius:10px;background:#eaf1fa;color:#174b9b}
+#skills{background:#f1f4f7}
+.skill{background:#fff}
+.skill-photo-wrap{height:205px;background:#e8edf3}
+.skill-photo{object-fit:cover}
+.sb{padding:1.35rem}
+.tags li{border-radius:999px;background:#f1f4f7;border-color:#e6ebf1}
+.service-showcase,.global-reach,#journey{background:#f1f4f7;border-color:#e3e8ef}
+.service-card{background:#fff;border-radius:16px}
+.service-no,.status,.links a{color:#176b9a}
+.service-controls button{border-radius:11px;color:#174b9b}
+.projects .cover{background:#e9eef5}
+.global-tile{border-radius:15px;background:#fff}
+.contact-panel{border-radius:17px}
+.contact-form input,.contact-form select,.contact-form textarea{border-radius:10px;background:#fff}
+footer{background:#122f58;color:#d5e0ef;border:0}
+footer a{color:#fff}
+@media(max-width:700px){
+ nav{min-height:0;padding:.8rem 0;gap:.45rem .75rem}
+ .brand-logo{width:44px;height:44px}
+ .hero{padding:3.7rem 0 3.2rem}
+ .hero-grid{gap:2rem}
+ .hero h1{font-size:clamp(2.45rem,10.5vw,3.35rem)}
+ .hero-visual,.hero-visual img{min-height:285px}
+ .hero-visual{transform:none;border-radius:19px}
+ section{padding:4rem 0}
+ .skill-photo-wrap{height:220px}
+}
+@media(prefers-reduced-motion:reduce){.hero-visual{transform:none}}
+
 </style>
 </head>
 <body>
