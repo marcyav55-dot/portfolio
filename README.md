@@ -55,7 +55,7 @@ Hébergement statique compatible Vercel, Netlify ou GitHub Pages. Répertoire de
 - Politique de confidentialité publiée dans `politique-confidentialite.html` pour expliquer les champs du formulaire, son traitement via Formspree et les moyens de contact.
 - Référence canonique et métadonnée Open Graph de la page d’accueil configurées temporairement sur l’alias Vercel de production.
 - `robots.txt` et `sitemap.xml` ajoutés pour les pages publiques connues.
-- Le formulaire utilise Formspree (`xqpadgnd`). L’utilisateur confirme que l’envoi du formulaire fonctionne.
+- Le formulaire utilise Formspree (`xqpadgnd`) avec envoi asynchrone : après succès, une confirmation s’affiche directement sur la page sans redirection vers Formspree. L’utilisateur a confirmé que l’envoi fonctionne.
 - Avant lancement public, confirmer que le numéro WhatsApp/téléphone et l’adresse e-mail affichés sont bien les coordonnées officielles de l’entreprise.
 - Remplacer l’alias Vercel temporaire par le domaine définitif dans les URL canoniques, Open Graph, robots et sitemap lorsque le domaine personnalisé sera choisi.
 - Effectuer un contrôle navigateur réel des interactions et de l’affichage mobile ; une vérification du code source ne remplace pas ce test.
