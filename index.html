@@ -3,13 +3,13 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Marcus Yav — Full-Stack, Machine Learning & Intelligence artificielle</title>
-<meta name="description" content="Sites web professionnels, applications de gestion, maintenance et solutions numériques pour écoles, centres de santé et entreprises.">
-<meta name="theme-color" content="#0a1020">
+<title>TYM Services — Startup technologique et solutions numériques</title>
+<meta name="description" content="TYM Services est une startup technologique qui conçoit des sites web, applications, systèmes de gestion et solutions numériques pour les organisations.">
+<meta name="theme-color" content="#0c3472">
 <meta property="og:type" content="website">
-<meta property="og:title" content="TYM Services — Sites web et solutions numériques professionnelles">
-<meta property="og:description" content="Sites web professionnels, applications de gestion, bases de données, boutiques en ligne, maintenance et solutions numériques.">
-<meta property="og:url" content="https://mon-portfolio-six-teal.vercel.app/">
+<meta property="og:title" content="TYM Services — Startup technologique et solutions numériques">
+<meta property="og:description" content="Une startup technologique qui développe des solutions numériques utiles pour les entreprises, écoles et organisations.">
+<meta property="og:url" content="https://mon-portfolio-git-feature-tym-se-5f864b-marcyav55-dots-projects.vercel.app/">
 <meta name="twitter:card" content="summary_large_image">
 <meta property="og:image" content="https://mon-portfolio-six-teal.vercel.app/assets/tym-services-logo.png">
 <meta property="og:image:alt" content="Logo officiel de TYM Services">
@@ -19,247 +19,303 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
-:root{--bg:#0a1020;--surface:#101a33;--line:#1f2d52;--text:#e8edf8;--muted:#9aa8c7;--blue:#3b73ff;--cyan:#22d3ee;
---display:'Bricolage Grotesque','Segoe UI',system-ui,sans-serif;--body:'Instrument Sans','Segoe UI',system-ui,sans-serif}
-*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:72px}
-body{margin:0;background:var(--bg);color:var(--text);font:400 1.05rem/1.65 var(--body);overflow-x:hidden}
-a{color:inherit}h1,h2,h3{font-family:var(--display);line-height:1.1;margin:0}
-:focus-visible{outline:2px solid var(--cyan);outline-offset:3px}
-.wrap{width:min(1080px,100% - 2.5rem);margin-inline:auto}
-section{padding:5.5rem 0}
-h2{font-size:clamp(1.8rem,4vw,2.5rem);margin-bottom:2rem;font-weight:700}
-.muted{color:var(--muted)}
-header{position:sticky;top:0;z-index:20;background:rgba(10,16,32,.85);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
-nav{display:flex;align-items:center;gap:1.25rem;height:64px}
-.brand{display:flex;align-items:center;gap:.65rem;font:700 1.1rem var(--display);text-decoration:none;margin-right:auto}.brand-logo{width:38px;height:38px;object-fit:contain;background:#fff;border-radius:8px;padding:2px;flex:none}.footer-brand{display:flex;align-items:center;gap:.75rem}.footer-brand img{width:42px;height:42px;object-fit:contain;background:#fff;border-radius:8px;padding:2px}
-nav a.l{color:var(--muted);text-decoration:none;font-size:.95rem}nav a.l:hover{color:var(--text)}
-.lang{background:none;border:1px solid var(--line);color:var(--text);border-radius:8px;padding:.3rem .7rem;cursor:pointer;font:inherit;font-size:.85rem}
-@media(max-width:700px){nav a.l{display:none}}
-.btn{display:inline-block;padding:.75rem 1.4rem;border-radius:10px;font-weight:600;text-decoration:none;border:1px solid var(--line);transition:transform .15s,background .15s}
-.btn:hover{transform:translateY(-2px)}
-.btn.p{background:var(--blue);border-color:var(--blue);color:#fff}.btn.p:hover{background:#5688ff}
-.hero{position:relative;isolation:isolate;overflow:hidden;padding:clamp(5.5rem,10vw,9rem) 0 clamp(5rem,8vw,7rem);background-image:linear-gradient(90deg,rgba(5,10,22,.94) 0%,rgba(5,10,22,.78) 52%,rgba(5,10,22,.42) 100%),linear-gradient(0deg,rgba(5,10,22,.28),rgba(5,10,22,.28)),url('1793541020227.jpg');background-size:cover;background-position:center 42%;background-repeat:no-repeat}
-.hero-grid{position:relative;z-index:1;display:grid;gap:3rem;grid-template-columns:minmax(0,1fr);align-items:center;max-width:850px}
-@media(max-width:860px){.hero{background-position:58% center}.hero-grid{grid-template-columns:1fr}}
-.hero h1{font-size:clamp(2.4rem,7vw,4.4rem);font-weight:700;letter-spacing:-.02em;color:#fff;text-shadow:0 2px 18px rgba(0,0,0,.24)}
-.hero p{max-width:52ch;color:rgba(255,255,255,.88);margin:1.5rem 0 2rem}
-.hero .hero-photo{display:none}
-.hero .btn:not(.p){background:rgba(255,255,255,.08);border-color:rgba(255,255,255,.42);color:#fff;backdrop-filter:blur(8px)}
-.hero .btn:not(.p):hover{background:rgba(255,255,255,.16)}
-.cta{display:flex;flex-wrap:wrap;gap:.8rem}
-.chart{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:1rem}
-.chart svg{width:100%;height:auto;display:block}.chart img{width:100%;aspect-ratio:4/3;object-fit:cover;display:block;border-radius:10px}.chart figcaption{display:block;color:var(--muted);font-size:.85rem;padding:.55rem .4rem .1rem}.chart img{width:100%;aspect-ratio:4/3;object-fit:cover;display:block;border-radius:10px}.chart figcaption{display:block;color:var(--muted);font-size:.85rem;padding:.55rem .4rem .1rem}
-.chart small{display:block;color:var(--muted);font-size:.85rem;padding:.25rem .4rem 0}
-.contact-layout{display:grid;grid-template-columns:.8fr 1.2fr;gap:1.5rem;align-items:start}
-.contact-panel{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:1.4rem}
-.contact-form{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
-.contact-form label{display:grid;gap:.4rem;color:var(--muted);font-size:.92rem}
-.contact-form input,.contact-form select,.contact-form textarea{width:100%;padding:.8rem .9rem;border:1px solid var(--line);border-radius:9px;background:#0b1429;color:var(--text);font:inherit}
-.contact-form textarea{min-height:130px;resize:vertical}
-.contact-form .full{grid-column:1/-1}
-.contact-form button{cursor:pointer;font:inherit}
-.form-status{min-height:1.5rem;margin:0;color:var(--cyan);font-size:.92rem}
-@media(max-width:760px){.contact-layout{grid-template-columns:1fr}.contact-form{grid-template-columns:1fr}.contact-form .full{grid-column:auto}}
-.about{display:grid;gap:2rem;grid-template-columns:240px 1fr;align-items:start}
-.photo{margin:0;aspect-ratio:4/5;border-radius:16px;overflow:hidden;border:1px solid var(--line);background:var(--surface);display:grid;place-items:center;font:700 3rem var(--display);color:var(--blue)}.photo img{width:100%;height:100%;object-fit:cover}
-@media(max-width:760px){.photo{max-width:240px}}
-@media(max-width:760px){.about{grid-template-columns:1fr}}
-.skills{display:grid;gap:1rem;grid-template-columns:repeat(auto-fit,minmax(min(100%,230px),1fr))}
-.box{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:1.25rem}
-.box h3{font-size:1.05rem;margin-bottom:.7rem}
-.tags{display:flex;flex-wrap:wrap;gap:.45rem;padding:0;margin:0;list-style:none}
-.tags li{font-size:.85rem;padding:.2rem .65rem;border-radius:99px;border:1px solid var(--line);color:var(--muted)}
-.skills{grid-template-columns:repeat(auto-fit,minmax(min(100%,310px),1fr));gap:1.25rem}
-.skill{padding:0;overflow:hidden;display:flex;flex-direction:column}
-.skill svg{width:100%;height:auto;display:block;background:#0c1530;border-bottom:1px solid var(--line)}.skill-photo{width:100%;height:190px;display:block;object-fit:cover;border-bottom:1px solid var(--line)}.skill-photo{width:100%;height:190px;display:block;object-fit:cover;border-bottom:1px solid var(--line)}
-.skill .sb{padding:1.25rem;display:flex;flex-direction:column;gap:.8rem}
-.skill h4{margin:0;font-size:.95rem;color:var(--cyan);font-weight:600}
-.skill ul.can{margin:0;padding-left:1.1rem;color:var(--muted);font-size:.95rem}
-.skill ul.can li{margin:.25rem 0}
-.projects{display:grid;gap:1.5rem;grid-template-columns:repeat(auto-fit,minmax(min(100%,320px),1fr))}
-.card{background:var(--surface);border:1px solid var(--line);border-radius:16px;overflow:hidden;display:flex;flex-direction:column;box-shadow:0 8px 24px rgba(0,0,0,.25)}
-.card.main{grid-column:1/-1;border-color:var(--blue)}
-.cover{aspect-ratio:16/9;background:linear-gradient(135deg,#14224a,#0d1630);display:grid;place-items:center;font:700 1.6rem var(--display);color:var(--blue)}
-.cover img{width:100%;height:100%;object-fit:cover}
-.cbody{padding:1.4rem;display:flex;flex-direction:column;gap:.9rem;flex:1}
-.cbody h3{font-size:1.4rem}
-.status{font-size:.85rem;color:var(--cyan)}
-details summary{cursor:pointer;color:var(--muted);font-size:.95rem}
-details ul{margin:.6rem 0 0;padding-left:1.2rem;color:var(--muted);font-size:.95rem}
-.links{display:flex;gap:.7rem;flex-wrap:wrap;margin-top:auto}
-.links a{font-size:.95rem;font-weight:600;color:var(--text);text-decoration:underline;text-decoration-color:var(--blue);text-underline-offset:4px}
-.filters{display:flex;gap:.5rem;flex-wrap:wrap;margin-bottom:1.5rem}
-.filters button{background:none;color:var(--muted);border:1px solid var(--line);border-radius:99px;padding:.35rem 1rem;cursor:pointer;font:inherit;font-size:.9rem}
-.filters button[aria-pressed=true]{background:var(--blue);border-color:var(--blue);color:#fff}
-.gallery{display:grid;gap:1rem;grid-template-columns:repeat(auto-fill,minmax(min(100%,240px),1fr))}
-.gallery button{padding:0;border:1px solid var(--line);background:var(--surface);border-radius:12px;overflow:hidden;cursor:pointer;text-align:left;color:inherit;font:inherit}
-.gallery img{width:100%;aspect-ratio:4/3;object-fit:cover;display:block}
-.gallery span{display:block;padding:.6rem .8rem;font-size:.9rem}
-dialog{border:1px solid var(--line);background:var(--surface);color:var(--text);border-radius:16px;padding:1rem;width:min(960px,94vw);max-height:92vh}
-dialog::backdrop{background:rgba(3,6,15,.85)}
-dialog img{width:100%;max-height:68vh;object-fit:contain;display:block;border-radius:8px}
-.lbbar{display:flex;gap:.6rem;align-items:center;margin-top:.8rem}.lbbar p{margin:0 auto;font-size:.95rem}
-.lbbar button{background:var(--bg);color:var(--text);border:1px solid var(--line);border-radius:8px;padding:.4rem .9rem;cursor:pointer;font:inherit}
+:root{--ink:#14233d;--muted:#63738b;--blue:#245fc7;--blue-dark:#194b9e;--blue-soft:#edf4ff;--line:#e4eaf2;--surface:#f7f9fc;--white:#fff;--display:'Bricolage Grotesque','Segoe UI',system-ui,sans-serif;--body:'Instrument Sans','Segoe UI',system-ui,sans-serif}
+*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:88px}body{margin:0;background:#fff;color:var(--ink);font:400 1rem/1.65 var(--body);overflow-x:hidden}a{color:inherit}h1,h2,h3,h4{font-family:var(--display);line-height:1.15;margin:0;color:var(--ink)}p{margin:.65rem 0 0}:focus-visible{outline:3px solid #82aef3;outline-offset:3px}
+.wrap{width:min(1160px,100% - 3rem);margin-inline:auto}section{padding:5rem 0}section h2{font-size:clamp(1.8rem,3vw,2.45rem);letter-spacing:-.035em;margin-bottom:1rem}.muted{color:var(--muted)}
+.eyebrow,.tagline{display:inline-flex;align-items:center;gap:.55rem;color:var(--blue);font-size:.76rem;font-weight:700;letter-spacing:.11em;text-transform:uppercase}.eyebrow:before,.tagline:before{content:"";width:22px;height:2px;background:var(--blue)}
+header{position:sticky;top:0;z-index:20;background:rgba(255,255,255,.97);border-bottom:1px solid var(--line)}nav{display:flex;align-items:center;gap:1.35rem;min-height:76px}
+.brand{display:flex;align-items:center;gap:.7rem;font:700 1.08rem var(--display);text-decoration:none;margin-right:auto;white-space:nowrap}.brand-logo{width:42px;height:42px;object-fit:contain;background:#fff;border:1px solid var(--line);border-radius:10px;padding:3px;flex:none}
+nav a.l{color:#52637c;text-decoration:none;font-size:.9rem;font-weight:600;white-space:nowrap}nav a.l:hover{color:var(--blue)}.lang{background:#fff;border:1px solid var(--line);color:var(--ink);border-radius:8px;padding:.42rem .75rem;cursor:pointer;font:600 .85rem var(--body)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.55rem;min-height:46px;padding:.72rem 1.15rem;border-radius:8px;font:600 .92rem var(--body);text-decoration:none;border:1px solid #d7e0ed;background:#fff;color:var(--ink);transition:transform .2s cubic-bezier(.2,.7,.2,1),background .2s,border-color .2s}.btn:hover{transform:translateY(-2px);border-color:#9cb8e5;background:#f8fbff}.btn.p{background:var(--blue);border-color:var(--blue);color:#fff}.btn.p:hover{background:var(--blue-dark);border-color:var(--blue-dark)}
+.hero{padding:5.2rem 0 4.7rem;background:linear-gradient(180deg,#f5f8fd 0%,#fff 100%);border-bottom:1px solid var(--line)}.hero-grid{display:grid;grid-template-columns:minmax(0,1.12fr) minmax(330px,.88fr);gap:4rem;align-items:center}.hero h1{font-size:clamp(2.5rem,5vw,4.2rem);letter-spacing:-.055em;max-width:760px;margin:.95rem 0 1.1rem}.hero p:not(.tagline){font-size:1.08rem;line-height:1.75;color:#596b84;max-width:650px}.hero-actions{display:flex;flex-wrap:wrap;gap:.7rem;margin-top:1.65rem}.hero-visual{position:relative;margin:0;min-height:340px;overflow:hidden;border:1px solid #dfe7f1;border-radius:16px;background:#eef3fa;box-shadow:0 18px 48px rgba(24,49,86,.10)}.hero-visual img{display:block;width:100%;height:100%;min-height:340px;object-fit:cover}.hero-visual:after{content:"";position:absolute;inset:48% 0 0;background:linear-gradient(transparent,rgba(9,24,48,.72))}.hero-visual figcaption{position:absolute;z-index:1;left:1.2rem;right:1.2rem;bottom:1.15rem;display:flex;flex-direction:column;gap:.2rem;color:#fff}.hero-visual figcaption span{font-size:.8rem;color:rgba(255,255,255,.88)}.hero-visual figcaption strong{font:700 1.25rem var(--display);letter-spacing:.01em}
+.hero-panel{background:#fff;border:1px solid #e1e8f2;border-radius:14px;padding:1.35rem;box-shadow:0 14px 38px rgba(24,49,86,.06)}.hero-panel-head{display:flex;justify-content:space-between;align-items:center;padding:.1rem .1rem 1rem;border-bottom:1px solid var(--line);gap:1rem}.hero-panel-head strong{font:700 1.05rem var(--display)}.hero-panel-head span{font-size:.75rem;color:var(--muted)}.hero-capabilities{display:grid;grid-template-columns:1fr 1fr;gap:.7rem;margin-top:1rem}.hero-capability{min-height:94px;border:1px solid var(--line);border-radius:10px;padding:.85rem}.hero-capability b{display:block;color:var(--blue);font:700 .78rem var(--display);letter-spacing:.06em}.hero-capability span{display:block;margin-top:.35rem;font-size:.88rem;font-weight:600;color:#263a57}.hero-panel-foot{border-top:1px solid var(--line);margin-top:1rem;padding-top:.85rem;color:var(--muted);font-size:.8rem}
+.about-intro{max-width:800px;color:#586a82;font-size:1.04rem}.company-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin-top:2rem}.company-card,.service-card,.process-card,.card,.box,.contact-panel,.founder-panel{background:#fff;border:1px solid var(--line);border-radius:12px;box-shadow:0 5px 20px rgba(24,48,86,.035)}.company-card{padding:1.25rem}.company-card .number{display:inline-flex;width:34px;height:34px;align-items:center;justify-content:center;border-radius:8px;background:var(--blue-soft);color:var(--blue);font:700 .8rem var(--display)}.company-card h3{font-size:1.08rem;margin-top:1rem}.company-card p{color:var(--muted);font-size:.92rem;line-height:1.65}
+#skills{background:var(--surface)}.skills{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1rem}.skill{overflow:hidden}.skill-symbol{height:78px;display:flex;align-items:center;padding:1rem 1.25rem;background:#f1f6ff;border-bottom:1px solid var(--line);color:var(--blue);font:700 1.1rem var(--display);letter-spacing:.06em}.sb{padding:1.25rem}.sb h3{font-size:1.1rem;min-height:2.55rem}.sb h4{font-size:.88rem;margin:1.15rem 0 .5rem;color:#344965}.sb p{font-size:.9rem;line-height:1.65}.can{padding-left:1.1rem;margin:.5rem 0;color:#5d6e85;font-size:.87rem}.can li{margin:.35rem 0}.tags{list-style:none;padding:0;margin:1rem 0 0;display:flex;flex-wrap:wrap;gap:.4rem}.tags li{font-size:.74rem;color:#536781;background:#f3f6fa;border:1px solid #e8edf4;padding:.25rem .55rem;border-radius:5px}
+.service-showcase{background:var(--surface);border-block:1px solid var(--line)}.service-head{display:flex;justify-content:space-between;align-items:end;gap:1rem;margin-bottom:1.5rem}.service-head h2{margin-bottom:.25rem}.service-head p{color:var(--muted);margin:0}.service-controls{display:flex;gap:.5rem}.service-controls button{width:40px;height:40px;border:1px solid #dbe4ef;background:#fff;border-radius:8px;color:var(--blue);font-size:1.2rem;cursor:pointer}.service-track{display:grid;grid-auto-columns:minmax(245px,1fr);grid-auto-flow:column;gap:.85rem;overflow-x:auto;scroll-snap-type:x mandatory;padding:.2rem .1rem 1rem;scrollbar-width:thin}.service-card{padding:1.2rem;scroll-snap-align:start}.service-no{font-size:.74rem;letter-spacing:.08em;font-weight:700;color:var(--blue)}.service-card h3{font-size:1.05rem;margin-top:1rem}.service-card p{font-size:.9rem;color:var(--muted)}
+.projects{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1rem}.card{overflow:hidden}.cover{height:112px;display:flex;align-items:center;padding:1.2rem;background:#f0f5fd;color:var(--blue);font:700 1.25rem var(--display);border-bottom:1px solid var(--line)}.cover img{width:100%;height:100%;object-fit:cover}.cbody{padding:1.2rem}.status{display:inline-block;color:var(--blue);font-size:.75rem;font-weight:700}.cbody h3{font-size:1.1rem;margin:.45rem 0}.cbody .muted{font-size:.9rem;line-height:1.65}.links{display:flex;gap:1rem;margin-top:1rem;flex-wrap:wrap}.links a{color:var(--blue);font-size:.86rem;font-weight:600}
+.global-reach{background:var(--surface);border-block:1px solid var(--line)}.global-reach-grid{display:grid;grid-template-columns:1fr 1fr;gap:2rem;align-items:center}.global-reach-tag{font-size:.75rem;font-weight:700;color:var(--blue);letter-spacing:.1em}.global-reach-copy h2{margin:.7rem 0}.global-reach-copy p{color:var(--muted);max-width:600px}.global-reach-visual{display:grid;grid-template-columns:1fr 1fr;gap:.75rem}.global-tile{padding:1.1rem;border:1px solid #dfe7f1;border-radius:10px;background:#fff;min-height:110px}.global-tile strong{display:block;color:var(--blue);font:700 1.15rem var(--display)}.global-tile span{font-size:.85rem;color:var(--muted)}
+#process{background:#fff}.process-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:.85rem;margin-top:1.6rem}.process-card{padding:1.15rem}.process-card>span{display:inline-flex;width:34px;height:34px;align-items:center;justify-content:center;border-radius:8px;background:var(--blue-soft);color:var(--blue);font-weight:700;font-size:.8rem}.process-card h3{font-size:1rem;margin:1rem 0 .5rem}.process-card p{font-size:.87rem;color:var(--muted)}
+#journey{background:var(--surface);border-block:1px solid var(--line)}.founder-layout{display:grid;grid-template-columns:.8fr 1.2fr;gap:2rem;align-items:start}.founder-panel{padding:1.4rem}.founder-panel h3{font-size:1.25rem}.founder-panel p{color:var(--muted);font-size:.93rem}.founder-timeline{list-style:none;padding:0;margin:0;display:grid;gap:.75rem}.founder-timeline li{display:grid;grid-template-columns:36px 1fr;gap:.8rem;padding:1rem;background:#fff;border:1px solid var(--line);border-radius:10px}.founder-step{width:34px;height:34px;display:grid;place-items:center;border-radius:8px;background:var(--blue-soft);color:var(--blue);font-size:.78rem;font-weight:700}.founder-timeline strong{display:block;font-size:.95rem}.founder-timeline p{font-size:.86rem;color:var(--muted);margin:.25rem 0 0}.founder-actions{display:flex;flex-wrap:wrap;gap:.55rem;margin-top:1.1rem}.founder-actions .btn{font-size:.85rem}.founder-actions .whatsapp-link{border-color:#c8e4d4;color:#176b45;background:#f3fbf6}.founder-note{font-size:.76rem;color:var(--muted);margin-top:.65rem}
+#contact{background:#fff}#contact>div>p{max-width:720px}.contact-layout{display:grid;grid-template-columns:.75fr 1.25fr;gap:1rem;margin-top:1.5rem}.contact-panel{padding:1.4rem}.contact-panel h3{font-size:1.2rem}.contact-panel p{font-size:.9rem}.contact-form{display:grid;grid-template-columns:1fr 1fr;gap:1rem}.contact-form label{display:grid;gap:.35rem;font-size:.86rem;font-weight:600;color:#344965}.contact-form label.full,.contact-form .full{grid-column:1/-1}.contact-form input,.contact-form select,.contact-form textarea{width:100%;padding:.75rem .8rem;border:1px solid #dbe3ed;border-radius:7px;background:#fff;color:var(--ink);font:400 .9rem var(--body)}.contact-form textarea{min-height:125px;resize:vertical}.contact-form input:focus,.contact-form select:focus,.contact-form textarea:focus{outline:2px solid #a9c5f2;border-color:#7da5e5}.contact-form button:disabled{opacity:.6;cursor:wait}.form-status{min-height:1.4rem;font-size:.82rem;color:var(--muted)}
+.about-more{margin-top:1.35rem;font-size:.82rem}.about-more a{color:#71819a;text-decoration:underline;text-underline-offset:3px}.about-more a:hover{color:var(--blue)}.skill-photo-wrap{height:190px;overflow:hidden;background:#f2f6fc;border-bottom:1px solid var(--line)}.skill-photo{display:block;width:100%;height:100%;object-fit:cover;transition:transform .45s ease}.skill:hover .skill-photo{transform:scale(1.035)}.skill .sb{padding:1.25rem}.skill h3{min-height:2.55rem}.projects .cover{height:170px;padding:0;overflow:hidden}.projects .cover img{width:100%;height:100%;object-fit:cover}footer{padding:1.4rem 0;background:#f7f9fc;border-top:1px solid var(--line);color:#65758b;font-size:.85rem}.footer-brand{display:flex;align-items:center}
+dialog{width:min(900px,94vw);padding:0;border:1px solid var(--line);border-radius:12px;background:#fff;box-shadow:0 20px 70px rgba(15,35,70,.2)}dialog::backdrop{background:rgba(20,35,60,.55)}dialog>img{display:block;max-width:100%;max-height:75vh;margin:auto}.lbbar{display:flex;align-items:center;justify-content:space-between;gap:.6rem;padding:.75rem}.lbbar button{background:#f5f8fd;color:#334155;border:1px solid var(--line);border-radius:7px;padding:.5rem .75rem}.lbbar p{font-size:.85rem;margin:0}
+.reveal-item{opacity:0;transform:translateY(14px);transition:opacity .55s cubic-bezier(.2,.7,.2,1),transform .55s cubic-bezier(.2,.7,.2,1)}.reveal-item.is-visible{opacity:1;transform:translateY(0)}
+@media(max-width:980px){nav{gap:.8rem}.hero-grid{gap:2rem}.projects,.skills{grid-template-columns:repeat(2,minmax(0,1fr))}.process-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:700px){.wrap{width:min(100% - 2rem,600px)}section{padding:3.6rem 0}nav{min-height:0;display:flex;flex-wrap:wrap;gap:.45rem .8rem;padding:.55rem 0}nav .brand{order:1;flex:1 0 calc(100% - 60px);margin:0}nav .lang{order:2;margin-left:auto}nav a.l{display:inline-block;order:3;font-size:.78rem;padding:.15rem 0}.brand-logo{width:38px;height:38px}.hero{padding:3.6rem 0}.hero-grid,.global-reach-grid,.founder-layout,.contact-layout{grid-template-columns:1fr}.hero h1{font-size:clamp(2.25rem,11vw,3.3rem)}.hero-visual{min-height:260px}.hero-visual img{min-height:260px}.company-grid,.skills,.projects{grid-template-columns:1fr}.service-head{align-items:start}.service-track{grid-auto-columns:minmax(245px,82%)}.process-grid{grid-template-columns:1fr 1fr}.global-reach-visual{grid-template-columns:1fr 1fr}.contact-form{grid-template-columns:1fr}.contact-form label.full,.contact-form .full{grid-column:auto}}
+@media(max-width:420px){.hero-actions,.founder-actions{display:grid;grid-template-columns:1fr}.hero-actions .btn,.founder-actions .btn{width:100%}.process-grid{grid-template-columns:1fr}.hero-capabilities{gap:.5rem}.hero-capability{padding:.7rem}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.reveal-item{opacity:1;transform:none;transition:none}.btn{transition:none}}
 
-.process-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:1rem}
-.process-card{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:1.2rem}
-.process-card>span{display:inline-grid;place-items:center;width:2.2rem;height:2.2rem;border-radius:50%;background:rgba(59,115,255,.16);color:var(--cyan);font-weight:700;margin-bottom:.8rem}
-.process-card h3{font-size:1.05rem;margin-bottom:.55rem}
-.process-card p{margin:0;color:var(--muted);font-size:.94rem}
-@media(max-width:800px){.process-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
-@media(max-width:480px){.process-grid{grid-template-columns:1fr}}
-.journey{list-style:none;padding:0;margin:0;display:grid;gap:1rem;max-width:64ch}
-.journey li{padding-left:1.2rem;border-left:2px solid var(--blue)}
-.journey b{font-family:var(--display);font-size:1.1rem;display:block}
-footer{border-top:1px solid var(--line);padding:2rem 0;color:var(--muted);font-size:.9rem}
 
-/* Subtle scroll-reveal motion */
-.reveal-item{opacity:0;transform:translateY(16px);transition:opacity .55s ease,transform .55s ease}
-.reveal-item.is-visible{opacity:1;transform:translateY(0)}
-@media(prefers-reduced-motion:reduce){.reveal-item{opacity:1;transform:none;transition:none!important}*{scroll-behavior:auto!important}}
+/* Navigation rebuilt for reliable access on desktop and mobile */
+header{position:sticky;top:0;z-index:50}
+nav{display:flex;align-items:center;gap:1.1rem;min-height:78px;flex-wrap:nowrap}
+nav .brand{flex:0 0 auto;margin-right:auto}
+nav a.l{display:inline-flex!important;align-items:center;min-height:42px;padding:.35rem .1rem;text-decoration:none;white-space:nowrap;color:#435875;font-weight:650}
+nav a.l:hover{color:#087e83}
+nav .lang{display:inline-flex!important;align-items:center;justify-content:center;flex:0 0 auto;min-height:40px}
+.menu-toggle{display:none!important}
+html{scroll-padding-top:105px}
+main section{scroll-margin-top:100px}
+.reveal-item{opacity:1!important;transform:none!important;transition:none!important}
+@media(max-width:900px){
+ nav{gap:.75rem}
+ nav a.l{font-size:.84rem}
+}
+@media(max-width:700px){
+ header{position:sticky}
+ nav{min-height:0;display:flex;flex-wrap:wrap;gap:.25rem .9rem;padding:.65rem 0 .55rem;overflow:visible}
+ nav .brand{order:1;flex:1 1 calc(100% - 65px);min-width:0;margin:0 0 .25rem}
+ nav .lang{order:2;margin:0 0 .25rem auto}
+ nav a.l{order:3;display:inline-flex!important;flex:0 0 auto;min-height:34px;padding:.15rem 0;font-size:.8rem}
+ nav a.l:last-of-type{margin-right:.2rem}
+ html{scroll-padding-top:112px}
+ main section{scroll-margin-top:112px}
+ .hero{padding:3.2rem 0 3rem}
+ section{padding:3.35rem 0}
+ .company-grid,.skills,.projects{gap:.85rem}
+ .service-track{grid-auto-columns:minmax(255px,86%)}
+}
+@media(max-width:380px){
+ nav{column-gap:.65rem}
+ nav a.l{font-size:.76rem}
+}
 
-.cta{display:flex;flex-wrap:wrap;gap:.8rem;align-items:center}
-.cta .btn{min-height:46px;display:inline-flex;align-items:center;justify-content:center}
-.hero-actions .btn{min-width:150px}
+/* TYM SERVICES — unified premium visual system */
+:root{
+ --ink:#172b49;--muted:#65758b;--blue:#174b91;--blue-deep:#0d2850;
+ --blue-soft:#eaf0f7;--teal:#087e83;--green:#20a66b;--line:#e1e7ee;
+ --surface:#f2f4f6;--paper:#faf9f6;--display:'Bricolage Grotesque','Segoe UI',system-ui,sans-serif;
+ --body:'Instrument Sans','Segoe UI',system-ui,sans-serif;
+}
+html,body{background:var(--paper);color:var(--ink)}
+body{font-family:var(--body);line-height:1.68}
+.wrap{width:min(1160px,100% - 3rem)}
+header{background:rgba(250,249,246,.97);border-bottom:1px solid #e3e6e9;box-shadow:0 5px 24px rgba(14,38,70,.055);backdrop-filter:blur(14px)}
+nav{min-height:82px;gap:1.15rem}
+.brand{color:#173d70;font-size:1.15rem;letter-spacing:.035em}
+.brand-logo{width:48px;height:48px;object-fit:contain;background:#fff;border:1px solid #e7e9eb;border-radius:8px;padding:2px}
+nav a.l{color:#4e617a;font-weight:600}
+nav a.l:hover{color:var(--teal)}
+.lang{background:#fff;border:1px solid #d9e1e9;color:#183e70;border-radius:10px;padding:.5rem .8rem}
+.menu-toggle{display:none;width:48px;height:46px;border:1px solid #d8e1eb;border-radius:12px;background:#fff;align-items:center;justify-content:center;flex-direction:column;gap:5px;cursor:pointer}
+.menu-toggle span{display:block;width:22px;height:2.5px;border-radius:4px;background:#174b91}
+.btn{min-height:50px;border-radius:11px;padding:.78rem 1.25rem;font-weight:650;transition:transform .2s,box-shadow .2s,background .2s}
+.btn:hover{transform:translateY(-2px);box-shadow:0 8px 22px rgba(17,53,97,.12)}
+.btn.p{background:#174b91;border-color:#174b91;box-shadow:0 8px 20px rgba(23,75,145,.18)}
+.btn.p:hover{background:#10366d;border-color:#10366d}
+.hero{position:relative;isolation:isolate;overflow:hidden;padding:5.1rem 0 4.7rem;color:#fff;background:linear-gradient(118deg,#0c3472 0%,#174b91 54%,#087d7e 100%);border:0}
+.hero:before,.hero:after{content:"";position:absolute;z-index:-1;pointer-events:none;border:1px solid rgba(255,255,255,.13);border-radius:50%}
+.hero:before{width:820px;height:440px;right:-210px;bottom:-285px;transform:rotate(-10deg)}
+.hero:after{width:1050px;height:560px;right:-300px;bottom:-365px;transform:rotate(-10deg)}
+.hero-grid{gap:3rem}
+.hero .tagline{color:#d5e8ff}
+.hero .tagline:before{width:10px;height:10px;border-radius:50%;background:#65e3ad}
+.hero h1{color:#fff;font-size:clamp(2.65rem,5.1vw,4.35rem);letter-spacing:-.05em}
+.hero p:not(.tagline){color:rgba(244,248,255,.88);font-size:1.1rem}
+.hero .btn.p{background:#fff;border-color:#fff;color:#153d73;box-shadow:0 12px 26px rgba(3,18,43,.18)}
+.hero .btn:not(.p){background:rgba(255,255,255,.08);border-color:rgba(255,255,255,.48);color:#fff}
+.hero-visual{border:1px solid rgba(255,255,255,.34);border-radius:22px;background:#102a4a;box-shadow:0 24px 60px rgba(2,18,43,.3);transform:rotate(.35deg)}
+.hero-visual img{min-height:360px}
+.hero-visual:after{background:linear-gradient(transparent,rgba(5,19,39,.82))}
+.hero-panel{border-radius:18px;box-shadow:0 18px 44px rgba(5,22,49,.16)}
+section{padding:5rem 0}
+section h2{color:#172b49;letter-spacing:-.04em}
+.eyebrow{color:#087d78}
+.eyebrow:before{background:#20a66b}
+#about,#process,#contact{background:var(--paper)}
+.about-intro{color:#5e6e83}
+.company-card,.service-card,.process-card,.card,.box,.contact-panel,.founder-panel{border-radius:16px;border:1px solid #e1e7ee;background:#fff;box-shadow:0 8px 26px rgba(22,43,72,.045)}
+.company-card{padding:1.4rem}
+.company-card .number,.process-card>span,.founder-step{background:#eaf1fa;color:#174b91;border-radius:10px}
+.company-card p,.process-card p{color:#68788d}
+#skills,.service-showcase,.global-reach,#journey{background:#f0f3f6;border-color:#e2e7ec}
+.skill{background:#fff}
+.skill-photo-wrap{height:205px;background:#e5ebf1}
+.skill-photo{width:100%;height:100%;object-fit:cover}
+.sb h4{color:#344d6c}
+.can{color:#5e6f84}
+.tags li{background:#f2f5f8;border-color:#e3e8ee;color:#4c617c;border-radius:999px}
+.service-head p{color:#68788d}
+.service-track{grid-auto-columns:minmax(280px,1fr);gap:1rem}
+.service-card{overflow:hidden;padding:0;scroll-snap-align:start}
+.service-photo{height:215px;position:relative;overflow:hidden;background:#172e4d}
+.service-photo:after{content:"";position:absolute;inset:32% 0 0;background:linear-gradient(transparent,rgba(4,17,36,.88))}
+.service-photo img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .55s ease}
+.service-card:hover .service-photo img{transform:scale(1.045)}
+.service-photo .service-no{position:absolute;z-index:1;left:1.2rem;top:1.05rem;color:#e5efff;font-size:.76rem;letter-spacing:.12em}
+.service-photo strong{position:absolute;z-index:1;left:1.25rem;right:1.2rem;bottom:1.15rem;color:#fff;font:700 1.2rem var(--display)}
+.service-copy{padding:1.25rem}
+.service-copy h3{font-size:1.12rem;margin:0 0 .5rem;color:#172b49}
+.service-copy p{color:#65758b;font-size:.92rem}
+.service-copy a{display:inline-flex;margin-top:.85rem;color:#174b91;text-decoration:none;font-weight:700;font-size:.88rem;gap:.55rem}
+.service-controls button{background:#fff;border:1px solid #d8e1eb;color:#174b91;border-radius:10px}
+.projects .cover{background:#e7edf4}
+.status,.links a{color:#174b91}
+.global-reach{background:linear-gradient(118deg,#0d3471 0%,#174b91 58%,#087c7d 100%);color:#fff;border:0}
+.global-reach h2,.global-reach-copy h2{color:#fff}
+.global-reach-tag{color:#8ee7c1}
+.global-reach-copy p{color:#d7e4f5}
+.global-tile{background:rgba(255,255,255,.09);border:1px solid rgba(255,255,255,.22);border-radius:15px}
+.global-tile strong{color:#8fe9c2}
+.global-tile span{color:#e0eaf7}
+.process-card{background:#fff}
+.founder-timeline li{background:#fff;border-color:#e1e7ee}
+.founder-timeline p{color:#68788d}
+.contact-panel{background:#fff}
+.contact-form label{color:#344d6c}
+.contact-form input,.contact-form select,.contact-form textarea{background:#fbfcfd;border:1px solid #dbe3ec;color:#172b49;border-radius:10px}
+.contact-form input::placeholder,.contact-form textarea::placeholder{color:#8a97a8}
+.contact-form input:focus,.contact-form select:focus,.contact-form textarea:focus{outline:2px solid #9bbce6;border-color:#5e8fc9}
+footer{background:#0c2343;color:#c5d3e5;border:0}
+footer a{color:#fff}
+footer .muted{color:#aabbd0}
+dialog{background:#fff;border-color:#dce4ed}
+.lbbar{background:#fff}
+.lbbar p{color:#344d6c}
+.lbbar button{background:#f2f5f8;color:#344d6c;border-color:#dce4ed}
+@media(max-width:980px){nav{gap:.8rem}.hero-grid{gap:2rem}}
+@media(max-width:700px){
+ .wrap{width:min(100% - 2rem,600px)}
+ nav{position:relative;min-height:76px;display:flex;flex-wrap:wrap;padding:.65rem 0;gap:.5rem}
+ nav .brand{order:1;flex:1 1 auto;margin:0;min-width:0}
+ .brand-logo{width:44px;height:44px}
+ .menu-toggle{display:flex;order:2}
+ nav a.l,nav .lang{display:none}
+ nav.menu-open{padding-bottom:.9rem}
+ nav.menu-open a.l{display:block;order:3;flex:1 0 100%;padding:.78rem .35rem;border-top:1px solid #e5e9ee;font-size:.95rem}
+ nav.menu-open .lang{display:block;order:4;margin:.35rem 0 0 auto}
+ .hero{padding:3.7rem 0 3.25rem}
+ .hero-grid{gap:2rem}
+ .hero h1{font-size:clamp(2.45rem,10.5vw,3.4rem)}
+ .hero-visual,.hero-visual img{min-height:275px}
+ .hero-visual{transform:none;border-radius:19px}
+ section{padding:3.8rem 0}
+ .service-track{grid-auto-columns:minmax(275px,88%)}
+ .service-photo{height:195px}
+ .skill-photo-wrap{height:220px}
+ .contact-form{grid-template-columns:1fr}
+ .contact-form label.full,.contact-form .full{grid-column:auto}
+ .global-reach-grid,.founder-layout,.contact-layout{grid-template-columns:1fr}
+}
+@media(max-width:420px){.hero-actions,.founder-actions{display:grid;grid-template-columns:1fr}.hero-actions .btn,.founder-actions .btn{width:100%}.process-grid{grid-template-columns:1fr}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.reveal-item{opacity:1;transform:none;transition:none}.btn,.service-photo img{transition:none}}
 
-.service-showcase{padding:4rem 0;background:#0c152b;border-block:1px solid var(--line)}
-.service-head{display:flex;justify-content:space-between;gap:1rem;align-items:end;margin-bottom:1.5rem}.service-head p{max-width:54ch;margin:0;color:var(--muted)}
-.service-controls{display:flex;gap:.5rem;flex:none}.service-controls button{width:42px;height:42px;border-radius:50%;border:1px solid var(--line);background:var(--surface);color:var(--text);font-size:1.2rem;cursor:pointer}
-.service-track{display:flex;gap:1rem;overflow-x:auto;scroll-snap-type:x mandatory;scroll-behavior:smooth;padding:.25rem .1rem 1rem;scrollbar-width:thin}
-.service-card{flex:0 0 min(300px,82vw);scroll-snap-align:start;background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:1.35rem;min-height:180px}
-.service-no{color:var(--cyan);font-weight:700;font-size:.85rem}.service-card h3{margin:.75rem 0;font-size:1.2rem}.service-card p{color:var(--muted);margin:0;font-size:.95rem}
-.impact{background:linear-gradient(135deg,#101d3d,#0b1428);border-block:1px solid var(--line)}.impact-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1rem}
-.impact-card{padding:1.5rem;border:1px solid var(--line);border-radius:16px;background:rgba(10,16,32,.45)}
-.impact-number{font:700 clamp(2.4rem,6vw,3.6rem)/1 var(--display);color:var(--cyan);display:block;margin-bottom:.65rem}
-.impact-card p{color:var(--muted);margin:0}.testimonial-note{padding:1.3rem;border:1px dashed var(--line);border-radius:14px;color:var(--muted);max-width:70ch}
-@media(max-width:600px){.service-head{align-items:start}.impact-grid{grid-template-columns:1fr}.service-controls button{width:38px;height:38px}}
-@media(prefers-reduced-motion:reduce){.service-track{scroll-behavior:auto}}
 
-/* Real-world photography and business forecasting showcase */
-.skill-photo{width:100%;height:205px;display:block;object-fit:cover;object-position:center;border-bottom:1px solid var(--line)}
-.forecast{background:linear-gradient(145deg,#0c1730,#101d3b);border-block:1px solid var(--line)}
-.forecast-intro{max-width:72ch;color:var(--muted);margin:-.8rem 0 1.8rem}
-.forecast-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:1.2rem;align-items:stretch}
-.forecast-panel{background:#0b1429;border:1px solid #263858;border-radius:16px;padding:1.2rem;min-width:0}
-.forecast-panel h3{font-size:1.1rem;margin-bottom:.45rem}.forecast-panel p{color:var(--muted);font-size:.92rem;margin:.35rem 0 1rem}
-.forecast-kpis{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:.65rem;margin:1rem 0}
-.forecast-kpi{padding:.8rem;border-radius:10px;background:#121f37;border:1px solid #263858}.forecast-kpi small{display:block;color:var(--muted);font-size:.76rem}.forecast-kpi strong{display:block;color:#7dd3fc;font:700 1.1rem var(--display);margin-top:.25rem}
-.forecast-chart{width:100%;height:auto;display:block;background:#101d35;border-radius:10px}.forecast-legend{display:flex;gap:1rem;flex-wrap:wrap;color:var(--muted);font-size:.8rem;margin-top:.7rem}
-.forecast-legend span:before{content:"";display:inline-block;width:9px;height:9px;border-radius:3px;background:#3b82f6;margin-right:.4rem}.forecast-legend span:last-child:before{background:#22d3ee}
-.forecast-table{width:100%;border-collapse:collapse;font-size:.85rem}.forecast-table th,.forecast-table td{text-align:left;padding:.7rem .45rem;border-bottom:1px solid #263858}.forecast-table th{color:var(--muted);font-weight:500}.forecast-table td:last-child{color:#7dd3fc;font-weight:600}
-.forecast-note{font-size:.8rem!important;color:#aab9d2!important;padding:.8rem;border-left:3px solid var(--cyan);background:#101d35;border-radius:0 8px 8px 0;margin-top:1rem!important}
-@media(max-width:760px){.forecast-grid{grid-template-columns:1fr}.forecast-kpis{grid-template-columns:1fr 1fr}}
-/* Application-like dashboard previews with readable sample data and charts */
-.app-frame{padding:12px;background:linear-gradient(145deg,#0c1428,#111f3b);border-bottom:1px solid var(--line)}
-.app-preview{min-height:210px;border:1px solid #263858;border-radius:11px;background:#0c1529;padding:13px;color:#eaf1ff;font:500 11px/1.4 var(--body);overflow:hidden}
-.preview-top{display:flex;justify-content:space-between;align-items:center;gap:8px;padding-bottom:11px;border-bottom:1px solid #26334e;font-size:10px;letter-spacing:.5px}
-.preview-top span{color:#69d6a5;font-size:9px}
-.shop-hero{margin:12px 0 10px;padding:13px;border-radius:8px;background:linear-gradient(110deg,#183b66,#245d82);display:grid;gap:5px;min-height:95px}
-.shop-hero small,.question small,.coin small,.metric-row small{color:#9db3d3;font-size:8px}.shop-hero b{font-size:17px}.shop-hero span{font-size:9px;color:#aeeaff}
-.product-row{display:grid;grid-template-columns:repeat(3,1fr);gap:7px}.product-row b,.metric-row b{background:#121f37;padding:9px;border-radius:6px;font-size:9px}.product-row small{color:#9db3d3;font-size:8px}
-.api-route{display:flex;align-items:center;gap:8px;margin:14px 0;padding:10px;background:#121f37;border-radius:6px}.api-route em{font-style:normal;color:#65d8a4;font-weight:800}.api-route b{font-size:10px;flex:1}.api-route span{color:#65d8a4;font-size:9px}
-.metric-row{display:grid;grid-template-columns:repeat(3,1fr);gap:7px;margin:10px 0}.metric-row b{font-size:13px}.metric-row small{display:block;font-weight:400;margin-top:4px}.metric-row em,.coin em{font-style:normal;color:#61d6a0;font-size:8px}
-.app-preview pre{white-space:pre-wrap;background:#080f1e;border-radius:6px;padding:8px;color:#8fd9ff;font:9px/1.5 monospace}
-.chart-title{font-size:9px;color:#c9d7ed;margin:12px 0 4px}.app-preview svg{width:100%;height:80px;display:block;background:#111e35;border-radius:6px}.app-preview .area{fill:#3b73ff;opacity:.2}.app-preview .line{fill:none;stroke:#54a5ff;stroke-width:3;vector-effect:non-scaling-stroke}.disclaimer{display:block;color:#8398b8;font-size:7px;margin-top:6px}
-.question{display:grid;gap:6px;padding:12px;margin:12px 0 8px;background:#121f37;border-radius:7px}.question b{font-size:11px}.prediction{display:flex;justify-content:space-between;padding:10px 12px;border:1px solid #294a71;border-radius:7px;background:#102640}.prediction>div{display:grid;gap:3px}.prediction>div:last-child{text-align:right}.prediction small{font-size:8px;color:#94abc9}.prediction strong{font-size:19px;color:#6bd5ff}.bars{height:39px;display:flex;align-items:end;gap:8px;padding:8px 14px 0}.bars i{flex:1;border-radius:3px 3px 0 0;background:linear-gradient(#4f9fff,#2858a4);height:var(--h,65%)}.bars i:nth-child(2){height:48%}.bars i:nth-child(3){height:42%}.bars i:nth-child(4){height:62%}.bars i:nth-child(5){height:70%}.bars i:nth-child(6){height:86%}.bars i:nth-child(7){height:96%}
-.coin{display:flex;justify-content:space-between;align-items:center;padding:12px 2px 5px}.coin>div{display:grid;gap:4px}.coin strong{font-size:20px}.coin em{font-style:normal;color:#62d6a0;font-size:8px}.coin>b{width:34px;height:34px;border-radius:50%;display:grid;place-items:center;background:#f2a900;color:#171717;font-size:21px}.crypto-area{fill:#22d3ee;opacity:.2}.crypto-line{stroke:#22d3ee!important}.coin-list{display:grid;gap:5px;margin-top:8px}.coin-list span{display:grid;grid-template-columns:1fr auto auto;gap:8px;padding:6px;background:#121f37;border-radius:5px;font-size:8px}.coin-list em{font-style:normal;color:#62d6a0}
-.pipeline{display:flex;align-items:center;justify-content:space-between;gap:3px;margin:27px 0}.pipeline b{text-align:center;font-size:9px;color:#eaf1ff}.pipeline i{color:#6580a9;font-style:normal}.pipeline small{display:block;font-size:7px;color:#70d6a7;font-weight:400}.deploy-status{padding:10px;background:#121f37;border-radius:6px;color:#70d6a7;font-size:9px}
-@media(max-width:500px){.app-frame{padding:8px}.app-preview{padding:10px}.coin strong{font-size:17px}.pipeline{gap:2px}.pipeline b{font-size:8px}}
+.whatsapp-float{position:fixed;z-index:60;right:22px;bottom:22px;display:inline-flex;align-items:center;gap:.65rem;padding:.82rem 1.05rem;border-radius:999px;background:#16834b;color:#fff;text-decoration:none;font:700 .9rem var(--body);box-shadow:0 12px 30px rgba(12,80,48,.25);transition:transform .2s,box-shadow .2s}
+.whatsapp-float:hover{transform:translateY(-3px);box-shadow:0 16px 34px rgba(12,80,48,.3)}
+.wa-icon{display:grid;place-items:center;width:27px;height:27px;border:1.5px solid rgba(255,255,255,.8);border-radius:50%;font-size:.85rem}
+@media(max-width:700px){.whatsapp-float{right:13px;bottom:13px;padding:.72rem .95rem;font-size:.84rem}.wa-icon{width:24px;height:24px}}
 
-.global-reach{position:relative;overflow:hidden;background:linear-gradient(125deg,#08152b,#102b4b);border-block:1px solid var(--line)}
-.global-reach-grid{display:grid;grid-template-columns:1fr 1fr;gap:2rem;align-items:center}
-.global-reach-copy p{max-width:58ch;color:var(--muted);line-height:1.8}
-.global-reach-visual{position:relative;border:1px solid #294568;border-radius:18px;overflow:hidden;box-shadow:0 20px 55px #0006}
-.global-reach-visual img{display:block;width:100%;height:100%;min-height:280px;object-fit:cover}
-.global-reach-tag{display:inline-flex;padding:.45rem .75rem;border:1px solid #3977a5;border-radius:999px;color:#9be7ff;font-size:.8rem;margin-bottom:1rem}
-.global-reach-points{display:flex;gap:.6rem;flex-wrap:wrap;margin-top:1.2rem}
-.global-reach-points span{border:1px solid #294568;border-radius:9px;padding:.55rem .7rem;color:#c5d7ef;font-size:.82rem}
-.gallery button img{width:100%;height:240px;object-fit:cover;display:block}
-@media(max-width:760px){.global-reach-grid{grid-template-columns:1fr}.global-reach-visual img{min-height:210px}}
+
+/* Editorial photography and complete company footer */
+.hero-visual{aspect-ratio:1.12/1;min-height:0}
+.hero-visual img{min-height:0;object-position:center 48%}
+.service-photo{height:205px;aspect-ratio:16/10}
+.service-photo img{object-fit:cover;object-position:center}
+.service-card:nth-child(1) .service-photo img{object-position:center 48%}
+.service-card:nth-child(2) .service-photo img{object-position:center 42%}
+.service-card:nth-child(3) .service-photo img{object-position:center 50%}
+.service-card:nth-child(4) .service-photo img{object-position:center 45%}
+.service-card:nth-child(5) .service-photo img{object-position:center 50%}
+.service-card:nth-child(6) .service-photo img{object-position:center 45%}
+.skill-photo-wrap{height:205px}
+.skill-photo{object-fit:cover;object-position:center}
+.site-footer{padding:3.5rem 0 1.1rem;background:#0c2343;color:#c7d4e5;border-top:1px solid #19385e}
+.footer-grid{display:grid;grid-template-columns:1.35fr .85fr .75fr 1.15fr;gap:2rem;padding-bottom:2.5rem}
+.site-footer .footer-brand{display:inline-flex;align-items:center;gap:.7rem;color:#fff;text-decoration:none;font:700 1.12rem var(--display);letter-spacing:.02em}
+.site-footer .footer-brand img{width:43px;height:43px;object-fit:contain;padding:4px;background:#fff;border-radius:9px}
+.site-footer .footer-brand b{color:#91baff}
+.footer-about p,.footer-contact p{max-width:35ch;color:#b1c1d5;font-size:.9rem;line-height:1.75;margin:.95rem 0}
+.footer-note{display:block;color:#8fa8c7;font-size:.78rem;line-height:1.6;margin-top:1.1rem}
+.footer-col,.footer-contact{display:flex;flex-direction:column;align-items:flex-start;gap:.65rem}
+.site-footer h3{color:#fff;font:700 1rem var(--display);margin:.25rem 0 .55rem}
+.site-footer a:not(.footer-brand){color:#c7d4e5;text-decoration:none;font-size:.87rem;transition:color .2s}
+.site-footer a:not(.footer-brand):hover{color:#fff}
+.footer-contact p{margin:0 0 .25rem}
+.footer-contact-link{display:inline-flex;align-items:center;gap:.5rem;padding:.62rem .9rem;border:1px solid #4775a9;border-radius:8px;color:#fff!important;background:#173d68;margin:.15rem 0 .35rem}
+.footer-bottom{display:flex;justify-content:space-between;align-items:center;gap:1rem;padding-top:1.1rem;border-top:1px solid rgba(205,222,244,.16);color:#91a8c4;font-size:.78rem}
+.footer-bottom a{font-size:.78rem!important}
+.whatsapp-float{background:#16834b}
+.wa-icon{width:25px;height:25px;display:block;flex:none}
+@media(max-width:850px){.footer-grid{grid-template-columns:1fr 1fr;gap:2rem 1.5rem}}
+@media(max-width:700px){.hero-visual{aspect-ratio:4/3}.service-photo{height:190px}.footer-grid{grid-template-columns:1fr 1fr;gap:1.7rem 1rem}.footer-about,.footer-contact{grid-column:1/-1}.footer-about p,.footer-contact p{max-width:52ch}.footer-bottom{align-items:flex-start;flex-direction:column;gap:.45rem}}
+@media(max-width:420px){.footer-grid{grid-template-columns:1fr}.footer-about,.footer-contact{grid-column:auto}.footer-col{gap:.55rem}}
+
+
+.faq-list{display:grid;gap:.7rem;max-width:900px;margin-top:1.4rem}.faq-list details{padding:1rem 1.15rem;border:1px solid #e1e7ee;border-radius:12px;background:#fff}.faq-list summary{cursor:pointer;font-weight:650;color:#183e70;list-style:none;display:flex;justify-content:space-between;gap:1rem}.faq-list summary::-webkit-details-marker{display:none}.faq-list summary:after{content:"+";font-size:1.2rem;color:#087e83}.faq-list details[open] summary:after{content:"−"}.faq-list details p{color:#65758b;font-size:.92rem;max-width:75ch}.faq-intro{color:#65758b}.contact-quick-links{display:flex;flex-wrap:wrap;gap:.65rem;margin-top:1.1rem}.contact-quick-links a{display:inline-flex;align-items:center;justify-content:center;min-height:42px;padding:.6rem .85rem;border:1px solid #dce4ed;border-radius:9px;color:#174b91;text-decoration:none;font-weight:650;font-size:.86rem}.contact-quick-links a:hover{background:#f2f6fb}
+ /* Final responsive navigation override — keep every primary link visible */
+@media(max-width:700px){
+ header{position:sticky;top:0}
+ nav{min-height:0!important;display:flex!important;flex-wrap:wrap!important;align-items:center;gap:.25rem .85rem!important;padding:.6rem 0!important;overflow:visible}
+ nav .brand{order:1;flex:1 0 calc(100% - 58px)!important;min-width:0;margin:0!important}
+ nav .lang{order:2;display:inline-flex!important;margin:0 0 .2rem auto!important}
+ nav a.l{order:3;display:inline-flex!important;flex:0 0 auto!important;min-height:34px;padding:.2rem 0!important;font-size:.78rem!important;white-space:nowrap}
+ nav .menu-toggle,.menu-toggle{display:none!important}
+ html{scroll-padding-top:116px}
+ main section{scroll-margin-top:116px}
+}
+@media(max-width:390px){
+ nav{column-gap:.62rem!important;row-gap:.1rem!important}
+ nav a.l{font-size:.74rem!important}
+}
 </style>
 </head>
 <body>
-<header><nav class="wrap" aria-label="Main">
-<a class="brand" href="#top"><img class="brand-logo" src="assets/tym-services-logo.png" alt="Logo TYM Services"><span>TYM <span style="color:var(--cyan)">SERVICES</span></span></a>
-<a class="l" href="#about" data-i="nAbout"></a><a class="l" href="#skills" data-i="nSkills"></a><a class="l" href="#projects" data-i="nProjects"></a><a class="l" href="#process">Notre méthode</a><a class="l gl" href="#gallery" data-i="nGallery"></a><a class="l" href="#cv" data-i="nCV"></a><a class="l" href="#contact" data-i="nContact"></a>
-<button class="lang" id="lang" aria-label="Switch language">FR</button>
-</nav></header>
+<header><nav class="wrap" aria-label="Navigation principale">
+<a class="brand" href="#top"><img class="brand-logo" src="assets/tym-services-logo.png" alt="Logo TYM Services"><span>TYM <span style="color:var(--blue)">SERVICES</span></span></a>
+
+<a class="l" href="#about" data-i="nAbout">Entreprise</a><a class="l" href="#skills" data-i="nSkills">Expertises</a><a class="l" href="#projects" data-i="nProjects">Réalisations</a><a class="l" href="#process">Notre méthode</a><a class="l" href="#contact" data-i="nContact">Contact</a><a class="l" href="#faq" data-en="FAQ" data-fr="FAQ">FAQ</a>
+<button class="lang" id="lang" aria-label="Changer de langue">FR</button></nav></header>
 
 <main id="top">
-<section class="hero"><div class="wrap hero-grid">
-<div>
-<h1 data-i="h1"></h1>
-<p data-i="lead"></p>
-<div class="cta hero-actions"><a class="btn p" href="https://wa.me/243808373717" target="_blank" rel="noopener noreferrer">Discuter sur WhatsApp</a><a class="btn" href="tel:+243808373717">Appeler</a><a class="btn" href="#projects">Découvrir nos réalisations</a></div>
-</div>
-<figure class="chart hero-photo" style="margin:0" aria-label="Digital work and website development">
-<img src="https://images.unsplash.com/photo-1551650975-87deedd944c3?w=1400&q=90" alt="Environnement de travail consacré à la conception de solutions numériques" fetchpriority="high">
-<figcaption data-i="chartCap"></figcaption>
-</figure>
-</div></section>
+<section class="hero"><div class="wrap hero-grid"><div><p class="tagline" data-i="tagline"></p><h1 data-i="h1"></h1><p data-i="lead"></p>
+<div class="hero-actions"><a class="btn p" href="#contact" data-i="ctaContact">Demander une consultation</a><a class="btn" href="#projects" data-i="ctaProjects">Découvrir nos projets</a></div></div>
+<figure class="hero-visual"><img src="1793541020227.jpg" alt="Environnement informatique et matériel numérique utilisé pour concevoir des solutions technologiques" fetchpriority="high" decoding="async"><figcaption><span data-en="Technology built for real work" data-fr="La technologie au service de vos projets">La technologie au service de vos projets</span><strong>TYM Services</strong></figcaption></figure></div></section>
 
-<section id="about"><div class="wrap">
-<h2 data-i="nAbout"></h2>
-<div class="about"><figure class="photo" id="photoBox"><img id="photo" alt="TSHIJIKA YAV MARC, connu sous le nom de Marcus Yav"></figure><div><p data-i="about1"></p><p class="muted" data-i="about2"></p></div></div>
-</div></section>
+<section id="about"><div class="wrap"><span class="eyebrow" data-i="companyEyebrow">L’entreprise</span><h2 data-i="companyTitle">Une entreprise technologique tournée vers les solutions concrètes.</h2>
+<p class="about-intro" data-i="companyIntro">TYM Services accompagne les entreprises, écoles et organisations dans leur transformation numérique. Nous concevons des outils adaptés à leurs besoins, avec une attention particulière portée à la qualité, à la simplicité et à l’efficacité.</p>
+<div class="company-grid"><article class="company-card"><span class="number">01</span><h3 data-i="companyCard1Title">Comprendre vos besoins</h3><p data-i="companyCard1Text">Nous partons de votre réalité, de vos utilisateurs et de vos objectifs avant de proposer une solution.</p></article>
+<article class="company-card"><span class="number">02</span><h3 data-i="companyCard2Title">Concevoir avec méthode</h3><p data-i="companyCard2Text">Nous privilégions des interfaces claires, des systèmes fiables et des fonctionnalités réellement utiles.</p></article>
+<article class="company-card"><span class="number">03</span><h3 data-i="companyCard3Title">Vous accompagner</h3><p data-i="companyCard3Text">Nous restons attentifs à l’évolution de vos besoins après la livraison de votre solution.</p></article></div><p class="about-more"><a href="fondateur.html" data-i="aboutFounderLink">En savoir plus sur le fondateur</a></p></div></section>
 
 <section id="skills"><div class="wrap">
 <h2 data-i="nSkills"></h2>
 <div class="skills" id="skillsGrid"></div>
 </div></section>
 
-<section class="forecast" id="data-forecast"><div class="wrap">
-<h2>Data Science : anticiper pour mieux décider</h2>
-<p class="forecast-intro">Et si vous pouviez mieux préparer les cinq ou dix prochaines années de votre entreprise ? L’analyse des ventes, des clients, des coûts et du marché aide à repérer les tendances, tester des scénarios et prendre des décisions plus éclairées.</p>
-<div class="forecast-grid">
-<article class="forecast-panel"><h3>Tableau de bord prévisionnel</h3><p>Exemple illustratif : évolution possible du chiffre d’affaires selon les tendances observées.</p>
-<div class="forecast-kpis"><div class="forecast-kpi"><small>Horizon 5 ans</small><strong>Scénario A</strong></div><div class="forecast-kpi"><small>Horizon 10 ans</small><strong>Scénario B</strong></div><div class="forecast-kpi"><small>Indicateurs suivis</small><strong>Ventes · coûts</strong></div></div>
-<svg class="forecast-chart" viewBox="0 0 680 250" role="img" aria-label="Graphique illustratif de projection à cinq et dix ans"><g stroke="#263858" stroke-width="1"><path d="M55 35H650M55 85H650M55 135H650M55 185H650M55 220H650"/></g><g fill="#9aa8c7" font-size="12"><text x="12" y="39">100</text><text x="18" y="89">75</text><text x="18" y="139">50</text><text x="18" y="189">25</text><text x="58" y="241">Aujourd'hui</text><text x="330" y="241">5 ans</text><text x="610" y="241">10 ans</text></g><path d="M65 180 C150 170 230 150 330 125 S520 75 640 45" fill="none" stroke="#3b82f6" stroke-width="4" stroke-linecap="round"/><path d="M65 180 C160 166 235 142 330 112 S520 50 640 22" fill="none" stroke="#22d3ee" stroke-width="4" stroke-linecap="round" stroke-dasharray="8 7"/><g fill="#3b82f6"><circle cx="65" cy="180" r="5"/><circle cx="330" cy="125" r="5"/><circle cx="640" cy="45" r="5"/></g><g fill="#22d3ee"><circle cx="330" cy="112" r="5"/><circle cx="640" cy="22" r="5"/></g></svg>
-<div class="forecast-legend"><span>Scénario prudent</span><span>Scénario de croissance</span></div><p class="forecast-note">Courbes fictives de démonstration : ce ne sont ni une prédiction réelle ni une promesse de croissance.</p></article>
-<article class="forecast-panel"><h3>Les décisions que les données peuvent éclairer</h3><p>Un tableau de bord peut aider un dirigeant à suivre :</p><table class="forecast-table"><thead><tr><th>Indicateur</th><th>Question utile</th></tr></thead><tbody><tr><td>Chiffre d’affaires</td><td>Quelle tendance ?</td></tr><tr><td>Clients</td><td>Qui revient ?</td></tr><tr><td>Stock</td><td>Que faut-il prévoir ?</td></tr><tr><td>Dépenses</td><td>Où réduire les coûts ?</td></tr><tr><td>Demande</td><td>Que préparer demain ?</td></tr></tbody></table><p class="forecast-note">Une projection sérieuse s’appuie sur vos données historiques, leur qualité, des hypothèses explicites et les facteurs externes. Elle présente plusieurs scénarios et leurs limites.</p></article>
-</div></div></section>
 <section class="service-showcase" id="service-carousel"><div class="wrap"><div class="service-head"><div><h2>Nos domaines d’intervention</h2><p>Des solutions numériques adaptées aux besoins réels des organisations.</p></div><div class="service-controls"><button type="button" id="servicePrev" aria-label="Précédent">←</button><button type="button" id="serviceNext" aria-label="Suivant">→</button></div></div><div class="service-track" id="serviceTrack">
-<article class="service-card"><span class="service-no">01 / WEB</span><h3>Sites web professionnels</h3><p>Sites vitrines, pages professionnelles et plateformes responsives.</p></article>
-<article class="service-card"><span class="service-no">02 / APP</span><h3>Applications web et mobiles</h3><p>Applications utiles pour simplifier les opérations quotidiennes.</p></article>
-<article class="service-card"><span class="service-no">03 / DATA</span><h3>Gestion des données</h3><p>Bases de données, tableaux de bord et outils de suivi.</p></article>
-<article class="service-card"><span class="service-no">04 / IA</span><h3>Intelligence artificielle</h3><p>Automatisation et intégration de fonctionnalités intelligentes.</p></article>
-<article class="service-card"><span class="service-no">05 / E-COMMERCE</span><h3>Commerce et paiements en ligne</h3><p>Catalogues, commandes et parcours de transaction en ligne.</p></article>
-<article class="service-card"><span class="service-no">06 / SUPPORT</span><h3>Maintenance et assistance</h3><p>Améliorations, corrections et accompagnement technique.</p></article>
+<article class="service-card"><div class="service-photo"><img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=1100&q=88" alt="Poste de travail pour développement web" loading="lazy"><span class="service-no">01 / WEB</span><strong data-fr="Sites web professionnels" data-en="Professional websites">Sites web professionnels</strong></div><div class="service-copy"><h3 data-fr="Sites web professionnels" data-en="Professional websites">Sites web professionnels</h3><p data-fr="Sites vitrines, pages professionnelles et plateformes responsives." data-en="Showcase websites, professional pages and responsive platforms.">Sites vitrines, pages professionnelles et plateformes responsives.</p><a href="#contact">Discuter de votre projet <b>→</b></a></div></article>
+<article class="service-card"><div class="service-photo"><img src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9e?w=1100&q=88" alt="Application mobile sur smartphone" loading="lazy"><span class="service-no">02 / APP</span><strong data-fr="Applications web et mobiles" data-en="Web and mobile applications">Applications web et mobiles</strong></div><div class="service-copy"><h3 data-fr="Applications web et mobiles" data-en="Web and mobile applications">Applications web et mobiles</h3><p data-fr="Applications utiles pour simplifier les opérations quotidiennes." data-en="Useful applications that simplify everyday operations.">Applications utiles pour simplifier les opérations quotidiennes.</p><a href="#contact">Discuter de votre projet <b>→</b></a></div></article>
+<article class="service-card"><div class="service-photo"><img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1100&q=88" alt="Tableau de bord et visualisation de données" loading="lazy"><span class="service-no">03 / DATA</span><strong data-fr="Gestion des données" data-en="Data management">Gestion des données</strong></div><div class="service-copy"><h3 data-fr="Gestion des données" data-en="Data management">Gestion des données</h3><p data-fr="Bases de données, tableaux de bord et outils de suivi." data-en="Databases, dashboards and monitoring tools.">Bases de données, tableaux de bord et outils de suivi.</p><a href="#contact">Discuter de votre projet <b>→</b></a></div></article>
+<article class="service-card"><div class="service-photo"><img src="https://images.unsplash.com/photo-1677442136019-21780ecad995?w=1100&q=88" alt="Intelligence artificielle et technologie" loading="lazy"><span class="service-no">04 / IA</span><strong data-fr="Intelligence artificielle" data-en="Artificial intelligence">Intelligence artificielle</strong></div><div class="service-copy"><h3 data-fr="Intelligence artificielle" data-en="Artificial intelligence">Intelligence artificielle</h3><p data-fr="Automatisation et intégration de fonctionnalités intelligentes." data-en="Automation and integration of intelligent features.">Automatisation et intégration de fonctionnalités intelligentes.</p><a href="#contact">Discuter de votre projet <b>→</b></a></div></article>
+<article class="service-card"><div class="service-photo"><img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=1100&q=88" alt="Paiement et commerce en ligne" loading="lazy"><span class="service-no">05 / E-COMMERCE</span><strong data-fr="Commerce et paiements en ligne" data-en="E-commerce and online payments">Commerce et paiements en ligne</strong></div><div class="service-copy"><h3 data-fr="Commerce et paiements en ligne" data-en="E-commerce and online payments">Commerce et paiements en ligne</h3><p data-fr="Catalogues, commandes et parcours de transaction en ligne." data-en="Catalogues, orders and online transaction flows.">Catalogues, commandes et parcours de transaction en ligne.</p><a href="#contact">Discuter de votre projet <b>→</b></a></div></article>
+<article class="service-card"><div class="service-photo"><img src="https://images.unsplash.com/photo-1581092160562-40aa08e78837?w=1100&q=88" alt="Assistance technique et maintenance informatique" loading="lazy"><span class="service-no">06 / SUPPORT</span><strong data-fr="Maintenance et assistance" data-en="Maintenance and support">Maintenance et assistance</strong></div><div class="service-copy"><h3 data-fr="Maintenance et assistance" data-en="Maintenance and support">Maintenance et assistance</h3><p data-fr="Améliorations, corrections et accompagnement technique." data-en="Improvements, fixes and technical support.">Améliorations, corrections et accompagnement technique.</p><a href="#contact">Discuter de votre projet <b>→</b></a></div></article>
 </div></div></section><section id="projects"><div class="wrap">
 <h2 data-i="nProjects"></h2>
 <div class="projects" id="projectsGrid"></div>
 </div></section>
 
-<section class="global-reach"><div class="wrap global-reach-grid">
-<div class="global-reach-copy">
-<span class="global-reach-tag" data-en="GLOBAL DIGITAL REACH" data-fr="RAYONNEMENT NUMÉRIQUE MONDIAL">RAYONNEMENT NUMÉRIQUE MONDIAL</span>
-<h2 data-en="Your business, connected to the world" data-fr="Votre entreprise, connectée au monde">Votre entreprise, connectée au monde</h2>
-<p data-en="A digital platform can help a company communicate with customers, partners and teams wherever they are. Websites, mobile applications, digital solutions and data dashboards bring information and people together." data-fr="Une plateforme numérique peut aider une entreprise à communiquer avec ses clients, partenaires et équipes, où qu’ils se trouvent. Sites web, applications mobiles, solutions numériques et tableaux de bord rapprochent les informations et les personnes.">Une plateforme numérique peut aider une entreprise à communiquer avec ses clients, partenaires et équipes, où qu’ils se trouvent. Sites web, applications mobiles, solutions numériques et tableaux de bord rapprochent les informations et les personnes.</p>
-<div class="global-reach-points"><span data-en="Customers" data-fr="Clients">Clients</span><span data-en="Partners" data-fr="Partenaires">Partenaires</span><span data-en="Teams" data-fr="Équipes">Équipes</span><span data-en="Data & services" data-fr="Données et services">Données et services</span></div>
-</div>
-<div class="global-reach-visual"><img src="https://www.ey.com/adobe/dynamicmedia/deliver/dm-aid--dbcc664c-a68d-4db2-9029-a28356b0c709/ey-odi-report-banner.png?preferwebp=true&quality=85&width=1000" alt="Carte du monde illustrant les connexions numériques entre continents" loading="lazy"></div>
-</div></section>
-<section id="gallery" hidden><div class="wrap">
+<section class="global-reach" id="why-tym"><div class="wrap global-reach-grid"><div class="global-reach-copy"><span class="global-reach-tag" data-en="WHY TYM SERVICES" data-fr="POURQUOI TYM SERVICES">POURQUOI TYM SERVICES</span><h2 data-en="Technology designed around your organisation" data-fr="La technologie pensée autour de votre organisation">La technologie pensée autour de votre organisation</h2><p data-en="A digital solution should make work clearer, faster and easier to manage. We focus on understanding the context before choosing the technology." data-fr="Une solution numérique doit rendre le travail plus clair, plus rapide et plus facile à gérer. Nous cherchons à comprendre votre contexte avant de choisir la technologie.">Une solution numérique doit rendre le travail plus clair, plus rapide et plus facile à gérer. Nous cherchons à comprendre votre contexte avant de choisir la technologie.</p></div><div class="global-reach-visual"><article class="global-tile"><strong>01</strong><span data-en="Clear communication" data-fr="Communication claire">Communication claire</span></article><article class="global-tile"><strong>02</strong><span data-en="Practical solutions" data-fr="Solutions pratiques">Solutions pratiques</span></article><article class="global-tile"><strong>03</strong><span data-en="Reliable delivery" data-fr="Livraison fiable">Livraison fiable</span></article><article class="global-tile"><strong>04</strong><span data-en="Ongoing support" data-fr="Accompagnement">Accompagnement</span></article></div></div></section><section id="gallery" hidden><div class="wrap">
 <h2 data-i="nGallery"></h2>
 <div class="filters" id="filters"></div>
 <div class="gallery" id="galleryGrid"></div>
 </div></section>
 
 <section id="process"><div class="wrap">
-<h2>Comment nous travaillons</h2>
+<h2 data-fr="Comment nous travaillons" data-en="How we work">Comment nous travaillons</h2>
 <div class="process-grid">
-<article class="process-card"><span>01</span><h3>Comprendre votre besoin</h3><p>Nous échangeons avec vous pour comprendre votre activité, vos difficultés et vos objectifs.</p></article>
-<article class="process-card"><span>02</span><h3>Proposer une solution</h3><p>Nous définissons une approche adaptée, les fonctionnalités utiles et les étapes du projet.</p></article>
-<article class="process-card"><span>03</span><h3>Concevoir et tester</h3><p>Nous développons progressivement et vérifions le fonctionnement sur les appareils concernés.</p></article>
-<article class="process-card"><span>04</span><h3>Livrer et accompagner</h3><p>Nous présentons le résultat et convenons des modalités de suivi et de maintenance.</p></article>
+<article class="process-card"><span>01</span><h3>Comprendre votre besoin</h3><p data-fr="Nous échangeons avec vous pour comprendre votre activité, vos difficultés et vos objectifs." data-en="We talk with you to understand your organisation, challenges and goals.">Nous échangeons avec vous pour comprendre votre activité, vos difficultés et vos objectifs.</p></article>
+<article class="process-card"><span>02</span><h3>Proposer une solution</h3><p data-fr="Nous définissons une approche adaptée, les fonctionnalités utiles et les étapes du projet." data-en="We define an appropriate approach, useful features and project steps.">Nous définissons une approche adaptée, les fonctionnalités utiles et les étapes du projet.</p></article>
+<article class="process-card"><span>03</span><h3>Concevoir et tester</h3><p data-fr="Nous développons progressivement et vérifions le fonctionnement sur les appareils concernés." data-en="We build progressively and verify the solution on the relevant devices.">Nous développons progressivement et vérifions le fonctionnement sur les appareils concernés.</p></article>
+<article class="process-card"><span>04</span><h3>Livrer et accompagner</h3><p data-fr="Nous présentons le résultat et convenons des modalités de suivi et de maintenance." data-en="We present the result and agree on support and maintenance.">Nous présentons le résultat et convenons des modalités de suivi et de maintenance.</p></article>
 </div></div></section>
 
-<section class="impact" id="impact"><div class="wrap"><h2>Notre impact</h2><p class="muted">Quelques chiffres clés de notre accompagnement.</p><div class="impact-grid"><article class="impact-card"><span class="impact-number" data-count="110">+110</span><p>Personnes accompagnées</p></article><article class="impact-card"><span class="impact-number" data-count="50">+50</span><p>Personnes satisfaites</p></article></div><p class="muted" style="font-size:.82rem;margin-top:1rem">Chiffres communiqués par TYM Services.</p></div></section><section id="testimonials"><div class="wrap"><h2>Témoignages</h2><p class="testimonial-note">Les témoignages clients seront publiés ici après réception et avec l’autorisation des personnes concernées.</p></div></section><section id="journey"><div class="wrap">
-<h2 data-i="nJourney"></h2>
-<ul class="journey" id="journeyList"></ul>
-</div></section>
-
-<section id="cv"><div class="wrap"><h2 data-i="nCV"></h2><p class="muted" style="max-width:56ch;margin-bottom:1.5rem" data-i="cvText"></p><div class="cta"><a class="btn p" id="cvDl" data-i="cvDl"></a><a class="btn" id="cvView" target="_blank" data-i="cvView"></a></div></div></section>
+<section id="faq"><div class="wrap"><span class="eyebrow" data-fr="Questions fréquentes" data-en="Frequently asked questions">Questions fréquentes</span><h2 data-fr="Vous avez des questions ?" data-en="Have questions?">Vous avez des questions ?</h2><p class="faq-intro" data-fr="Quelques réponses pour mieux comprendre notre manière de travailler." data-en="A few answers to help you understand how we work.">Quelques réponses pour mieux comprendre notre manière de travailler.</p><div class="faq-list">
+<details><summary data-fr="Quels types de clients accompagnez-vous ?" data-en="What types of clients do you work with?">Quels types de clients accompagnez-vous ?</summary><p data-fr="Nous accompagnons les entreprises, écoles, commerces et organisations qui souhaitent développer ou améliorer leurs outils numériques." data-en="We work with businesses, schools, shops and organisations looking to build or improve their digital tools.">Nous accompagnons les entreprises, écoles, commerces et organisations qui souhaitent développer ou améliorer leurs outils numériques.</p></details>
+<details><summary data-fr="Comment demander un devis ?" data-en="How can I request a quote?">Comment demander un devis ?</summary><p data-fr="Décrivez votre besoin dans le formulaire de contact ou écrivez-nous sur WhatsApp. Nous pourrons ensuite échanger sur le périmètre et les prochaines étapes." data-en="Describe your needs in the contact form or message us on WhatsApp. We can then discuss the scope and next steps.">Décrivez votre besoin dans le formulaire de contact ou écrivez-nous sur WhatsApp. Nous pourrons ensuite échanger sur le périmètre et les prochaines étapes.</p></details>
+<details><summary data-fr="Proposez-vous un accompagnement après livraison ?" data-en="Do you provide support after delivery?">Proposez-vous un accompagnement après livraison ?</summary><p data-fr="Les possibilités de suivi et de maintenance sont définies selon la nature du projet et convenues avec le client." data-en="Follow-up and maintenance options are defined according to the project and agreed with the client.">Les possibilités de suivi et de maintenance sont définies selon la nature du projet et convenues avec le client.</p></details>
+<details><summary data-fr="Travaillez-vous à distance ?" data-en="Do you work remotely?">Travaillez-vous à distance ?</summary><p data-fr="Oui. Les échanges, la planification et le suivi peuvent être organisés à distance selon le projet." data-en="Yes. Discussions, planning and project follow-up can be handled remotely, depending on the project.">Oui. Les échanges, la planification et le suivi peuvent être organisés à distance selon le projet.</p></details>
+</div></div></section>
 
 <section id="contact"><div class="wrap">
 <h2 data-i="nContact"></h2>
@@ -268,7 +324,7 @@ footer{border-top:1px solid var(--line);padding:2rem 0;color:var(--muted);font-s
 <div class="contact-panel">
 <h3 data-i="contactAsideTitle">Parlons de votre projet</h3>
 <p class="muted" data-i="contactAsideText">Décrivez votre besoin. TYM Services vous répondra par e-mail pour discuter des prochaines étapes.</p>
-<div class="cta" id="contactLinks"></div>
+<div class="cta contact-quick-links" id="contactLinks"></div>
 </div>
 <div class="contact-panel">
 <form class="contact-form" id="contactForm" action="https://formspree.io/f/xqpadgnd" method="POST">
@@ -284,7 +340,22 @@ footer{border-top:1px solid var(--line);padding:2rem 0;color:var(--muted);font-s
 </div>
 </div></section>
 </main>
-<footer><div class="wrap footer-brand"><img src="assets/tym-services-logo.png" alt="Logo TYM Services"><span>© <span id="yr"></span> TYM Services · Fondé par TSHIJIKA YAV MARC, connu sous le nom de Marcus Yav</span></div></footer>
+<a class="whatsapp-float" href="https://wa.me/243808373717" target="_blank" rel="noopener noreferrer" aria-label="Ouvrir une conversation WhatsApp avec TYM Services">
+<svg class="wa-icon" viewBox="0 0 32 32" aria-hidden="true"><path d="M16 3.2A12.1 12.1 0 0 0 5.6 21.5L4 28l6.7-1.6A12.1 12.1 0 1 0 16 3.2Z" fill="none" stroke="currentColor" stroke-width="2.1" stroke-linejoin="round"/><path d="M12.1 10.3c-.3-.7-.7-.7-1-.7h-.8c-.3 0-.8.1-1.2.6s-1.5 1.5-1.5 3.6 1.5 4.1 1.7 4.4 2.9 4.6 7.1 6.2c3.5 1.4 4.2 1.1 5 .9s2.6-1.1 3-2.1.4-1.9.3-2.1-.4-.3-.9-.6-2.6-1.3-3-1.4-.7-.2-1 .3-1.1 1.4-1.3 1.7-.5.3-1 .1a11.7 11.7 0 0 1-3.5-2.2 13.2 13.2 0 0 1-2.4-3c-.3-.5 0-.8.2-1s.5-.6.7-.8.3-.5.5-.8.1-.6 0-.8-1-2.5-1.4-3.3Z" fill="currentColor" transform="translate(3 1) scale(.82)"/></svg>
+<span>Discuter sur WhatsApp</span></a>
+<footer class="site-footer">
+  <div class="wrap footer-grid">
+    <div class="footer-about">
+      <a class="footer-brand" href="#top"><img src="assets/tym-services-logo.png" alt="" loading="lazy"><span>TYM <b>SERVICES</b></span></a>
+      <p data-fr="Nous accompagnons les entreprises, écoles et organisations dans leurs projets numériques : conception web, applications, données et solutions intelligentes." data-en="We help businesses, schools and organisations with digital projects: web design, applications, data and intelligent solutions.">Nous accompagnons les entreprises, écoles et organisations dans leurs projets numériques : conception web, applications, données et solutions intelligentes.</p>
+      <span class="footer-note" data-fr="Des solutions numériques pensées pour vos besoins réels." data-en="Digital solutions designed around your real needs.">Des solutions numériques pensées pour vos besoins réels.</span>
+    </div>
+    <div class="footer-col"><h3>Nos services</h3><a href="#service-carousel">Sites web et applications</a><a href="#skills">Ingénierie logicielle</a><a href="#skills">Data Science & IA</a><a href="#projects">Nos réalisations</a></div>
+    <div class="footer-col"><h3>À propos</h3><a href="#about">L’entreprise</a><a href="#process">Notre méthode</a><a href="#faq">Questions fréquentes</a><a href="fondateur.html">Le fondateur</a><a href="#contact">Contact</a></div>
+    <div class="footer-contact"><h3 data-fr="Nous sommes à votre écoute" data-en="We are here to listen">Nous sommes à votre écoute</h3><p data-fr="Une question, une idée ou un projet ? Parlons-en. Notre équipe est disponible pour étudier votre besoin." data-en="A question, an idea or a project? Let’s talk. We are available to discuss your needs.">Une question, une idée ou un projet ? Parlons-en. Notre équipe est disponible pour étudier votre besoin.</p><a class="footer-contact-link" href="https://wa.me/243808373717" target="_blank" rel="noopener noreferrer"><span data-fr="Écrire sur WhatsApp" data-en="Message us on WhatsApp">Écrire sur WhatsApp</span> <span aria-hidden="true">↗</span></a><a href="mailto:marcyav55@gmail.com">marcyav55@gmail.com</a><a href="tel:+243808373717">+243 808 373 717</a><span>Kolwezi, Lualaba · RDC</span></div>
+  </div>
+  <div class="wrap footer-bottom"><span>© <span id="yr">2026</span> TYM Services. Tous droits réservés.</span><a href="#top" data-fr="Retour en haut ↑" data-en="Back to top ↑">Retour en haut ↑</a></div>
+</footer>
 
 <dialog id="lb" aria-label="Image viewer">
 <img id="lbImg" alt="">
@@ -304,20 +375,20 @@ const ART={
  git:`<svg viewBox="0 0 160 100" aria-hidden="true"><path d="M30 20v60M30 50c0-18 50-8 50-26M80 24v0c0 14 50 6 50 26" ${F}/><g fill="#0d1630" stroke="#3b73ff" stroke-width="3"><circle cx="30" cy="20" r="7"/><circle cx="30" cy="80" r="7"/><circle cx="80" cy="24" r="7"/></g><circle cx="130" cy="50" r="8" fill="#22d3ee"/></svg>`
 };
 const I18N = {
- en:{impactTitle:"Our impact & testimonials",demoBadge:"Visual simulation",impactIntro:"A preview of the counter that can later be connected to verified records.",peopleHelped:"People supported",impactDisclaimer:"Illustrative demo figure only; it does not represent actual beneficiaries.",reviewsDisclaimer:"Sample demo reviews — replace with genuine testimonials published with each person’s permission.",nAbout:"About the studio",nSkills:"Our services",nProjects:"Selected work",nGallery:"Gallery",nJourney:"Our approach",nContact:"Contact",
+ en:{impactTitle:"Our impact & testimonials",demoBadge:"Visual simulation",impactIntro:"A preview of the counter that can later be connected to verified records.",peopleHelped:"People supported",impactDisclaimer:"Illustrative demo figure only; it does not represent actual beneficiaries.",reviewsDisclaimer:"Sample demo reviews — replace with genuine testimonials published with each person’s permission.",aboutFounderLink:"Learn more about the founder",nAbout:"Company",tagline:"Technology for your ambitions.",nSkills:"Our expertise",nProjects:"Selected projects",nJourney:"Founder",nContact:"Contact",panelTitle:"Our expertise",panelLabel:"Digital solutions",panelWeb:"Websites and platforms",panelApp:"Business applications",panelData:"Data and systems",panelAI:"Artificial intelligence",panelFoot:"Your technology partner for important projects.",ctaContact:"Request a consultation",ctaProjects:"Explore our projects",companyEyebrow:"The company",companyTitle:"A technology company focused on practical solutions.",companyIntro:"TYM Services supports businesses, schools and organisations in their digital transformation. We work collaboratively to design tools around their needs, with a focus on quality, clarity and efficiency.",companyCard1Title:"Understand your needs",companyCard1Text:"We start with your context, users and goals before recommending a solution.",companyCard2Title:"Design with a clear method",companyCard2Text:"We favour clear interfaces, reliable systems and genuinely useful features.",companyCard3Title:"Support your progress",companyCard3Text:"We stay attentive to your needs as your organisation and solution evolve.",founderEyebrow:"Leadership",founderSectionTitle:"The founder",founderName:"TSHIJIKA YAV MARC",founderBio:"Founder of TYM Services, focused on software engineering and the development of useful digital solutions.",founderJourneyTitle:"The founder’s journey",founderStep1Title:"Software engineering studies",founderStep1Text:"Building a strong foundation in software design, programming and digital systems at the University of Kolwezi.",founderStep2Title:"Projects and practical experience",founderStep2Text:"Turning ideas into practical projects, including ML TRAIN, Grace Divine Multiservices and computer-vision experiments.",founderStep3Title:"Founding TYM Services",founderStep3Text:"Creating a technology startup focused on useful digital solutions for businesses, schools and organisations.",cvDownloadNote:"The PDF option opens the CV and the browser’s print window. Choose “Save as PDF” to keep a copy.",cvView:"View CV",cvDownload:"Download CV (PDF)",founderTalk:"Discuss with the founder",founderWhatsapp:"Chat on WhatsApp",nSkills:"Our services",nProjects:"Selected work",nGallery:"Gallery",nJourney:"Our approach",nContact:"Contact",
   h1:"Digital solutions that move your organisation forward.",
   lead:"TYM Services helps schools, healthcare organisations, shops and businesses build a professional online presence, organise their data and simplify everyday work with useful digital tools.",
   ctaProjects:"Explore our work",ctaContact:"Request a consultation",chartCap:"Websites, applications and digital systems designed around real needs.",
-  about1:"TYM Services is a digital studio founded by TSHIJIKA YAV MARC, also known as Marcus Yav. We work with organisations that want to modernise how they communicate, manage information and serve their customers.",
-  about2:"From the first discussion to delivery, the focus stays on your needs: clear proposals, practical solutions, accessible explanations and realistic project scope. Specialist security or regulated healthcare requirements are assessed before work begins.",
-  contactText:"Tell us what is slowing your organisation down or what you want to launch. We will discuss a practical digital solution and the next steps.",contactAsideTitle:"Let’s talk about your project",contactAsideText:"Describe what you need. TYM Services will reply by email to discuss the next steps.",fName:"Full name",fEmail:"Email address",fOrg:"Organisation (optional)",fService:"Service needed",fChoose:"Choose a service",fMessage:"Tell us about your project",fSend:"Send my request",all:"All",view:"View",code:"Code",demo:"Live demo",details:"Details",close:"Close",can:"What I can do",nCV:"CV",cvText:"An international-style CV with my photo, skills, projects and contact details. Open it, then save it as PDF.",cvView:"View CV",cvDl:"Download CV (PDF)"},
- fr:{impactTitle:"Notre impact et les témoignages",demoBadge:"Simulation visuelle",impactIntro:"Aperçu du compteur qui pourra ensuite être relié à des données vérifiées.",peopleHelped:"Personnes accompagnées",impactDisclaimer:"Chiffre fictif de démonstration ; il ne représente pas des bénéficiaires réels.",reviewsDisclaimer:"Avis fictifs de démonstration — à remplacer par des témoignages authentiques publiés avec l’accord des personnes concernées.",nAbout:"À propos du studio",nSkills:"Nos services",nProjects:"Réalisations",nGallery:"Galerie",nJourney:"Notre approche",nContact:"Contact",
+  about1:"I am TSHIJIKA YAV MARC, also known as Marcus Yav, software developer and founder of TYM Services. I enjoy turning practical needs into reliable digital products and building technology that helps organisations move forward.",
+  about2:"My work brings together software engineering, web application development, data and artificial intelligence. Through TYM Services, I aim to make useful, well-designed digital solutions accessible to businesses, schools and organisations.",
+  contactText:"Tell us what is slowing your organisation down or what you want to launch. We will discuss a practical digital solution and the next steps.",contactAsideTitle:"Let’s talk about your project",contactAsideText:"Use the contact form to describe your project. Our team will review your request and follow up.",fName:"Full name",fEmail:"Email address",fOrg:"Organisation (optional)",fService:"Service needed",fChoose:"Choose a service",fMessage:"Tell us about your project",fSend:"Send my request",all:"All",view:"View",code:"Code",demo:"Live demo",details:"Details",close:"Close",can:"What we do",nCV:"CV",cvText:"An international-style CV with my photo, skills, projects and contact details. Open it, then save it as PDF.",cvView:"View CV",cvDl:"Download CV (PDF)"},
+ fr:{impactTitle:"Notre impact et les témoignages",demoBadge:"Simulation visuelle",impactIntro:"Aperçu du compteur qui pourra ensuite être relié à des données vérifiées.",peopleHelped:"Personnes accompagnées",impactDisclaimer:"Chiffre fictif de démonstration ; il ne représente pas des bénéficiaires réels.",reviewsDisclaimer:"Avis fictifs de démonstration — à remplacer par des témoignages authentiques publiés avec l’accord des personnes concernées.",aboutFounderLink:"En savoir plus sur le fondateur",nAbout:"L’entreprise",tagline:"La technologie au service de vos ambitions.",nSkills:"Nos expertises",nProjects:"Projets sélectionnés",nJourney:"Fondateur",nContact:"Contact",panelTitle:"Nos expertises",panelLabel:"Solutions numériques",panelWeb:"Sites web et plateformes",panelApp:"Applications métier",panelData:"Données et systèmes",panelAI:"Intelligence artificielle",panelFoot:"Votre partenaire technologique pour vos projets.",ctaContact:"Demander une consultation",ctaProjects:"Découvrir nos projets",companyEyebrow:"L’entreprise",companyTitle:"Une entreprise technologique tournée vers les solutions concrètes.",companyIntro:"TYM Services accompagne les entreprises, écoles et organisations dans leur transformation numérique. Nous travaillons de manière collaborative pour concevoir des outils adaptés à leurs besoins, avec une attention particulière portée à la qualité, à la clarté et à l’efficacité.",companyCard1Title:"Comprendre vos besoins",companyCard1Text:"Nous partons de votre réalité, de vos utilisateurs et de vos objectifs avant de proposer une solution.",companyCard2Title:"Concevoir avec méthode",companyCard2Text:"Nous privilégions des interfaces claires, des systèmes fiables et des fonctionnalités réellement utiles.",companyCard3Title:"Vous accompagner",companyCard3Text:"Nous restons attentifs à l’évolution de vos besoins après la livraison de votre solution.",founderEyebrow:"Direction",founderSectionTitle:"Le fondateur",founderName:"TSHIJIKA YAV MARC",founderBio:"Fondateur de TYM Services, engagé dans l’ingénierie logicielle et la conception de solutions numériques utiles.",founderJourneyTitle:"Le parcours du fondateur",founderStep1Title:"Formation en génie logiciel",founderStep1Text:"Construire des bases solides en conception logicielle, programmation et systèmes numériques à l’Université de Kolwezi.",founderStep2Title:"Projets et expérience pratique",founderStep2Text:"Transformer des idées en projets concrets, notamment ML TRAIN, Grace Divine Multiservices et des expérimentations en vision par ordinateur.",founderStep3Title:"Création de TYM Services",founderStep3Text:"Lancer une startup technologique consacrée au développement de solutions numériques utiles aux entreprises, écoles et organisations.",cvDownloadNote:"Le téléchargement PDF ouvre le CV puis la fenêtre d’impression du navigateur. Choisis « Enregistrer au format PDF » pour conserver ton document.",cvView:"Voir le CV",cvDownload:"Télécharger le CV (PDF)",founderTalk:"Discuter avec le fondateur",founderWhatsapp:"Discuter sur WhatsApp",nSkills:"Nos services",nProjects:"Réalisations",nGallery:"Galerie",nJourney:"Notre approche",nContact:"Contact",
   h1:"Des solutions numériques qui font avancer votre organisation.",
   lead:"TYM Services accompagne les écoles, structures de santé, commerces et entreprises pour développer leur présence en ligne, organiser leurs données et simplifier leur travail quotidien grâce à des outils numériques utiles.",
   ctaProjects:"Découvrir nos réalisations",ctaContact:"Demander un devis",chartCap:"Sites web, applications et systèmes numériques conçus pour vos besoins réels.",
-  about1:"TYM Services est un studio numérique fondé par TSHIJIKA YAV MARC, souvent connu sous le nom de Marcus Yav. Nous accompagnons les organisations qui souhaitent moderniser leur communication, mieux gérer leurs informations et servir leurs clients.",
-  about2:"De la première discussion à la livraison, nous partons de vos besoins : propositions claires, solutions pratiques, explications accessibles et périmètre de travail réaliste. Les exigences de sécurité spécialisée ou de santé réglementée sont évaluées avant tout engagement.",
-  contactText:"Expliquez-nous ce qui ralentit votre organisation ou le projet que vous souhaitez lancer. Nous étudierons une solution numérique pratique et les prochaines étapes.",contactAsideTitle:"Parlons de votre projet",contactAsideText:"Décrivez votre besoin. TYM Services vous répondra par e-mail pour discuter des prochaines étapes.",fName:"Nom complet",fEmail:"Adresse e-mail",fOrg:"Organisation (facultatif)",fService:"Service souhaité",fChoose:"Choisir un service",fMessage:"Parlez-nous de votre projet",fSend:"Envoyer ma demande",all:"Tous",view:"Voir",code:"Code",demo:"Démo en ligne",details:"Détails",close:"Fermer",can:"Ce que je peux faire",nCV:"CV",cvText:"Un CV de format international avec ma photo, mes compétences, mes projets et mes coordonnées. Ouvre-le, puis enregistre-le en PDF.",cvView:"Voir le CV",cvDl:"Télécharger le CV (PDF)"}
+  about1:"Je suis TSHIJIKA YAV MARC, connu sous le nom de Marcus Yav, développeur logiciel et fondateur de TYM Services. J’aime transformer des besoins concrets en produits numériques fiables et créer des technologies qui font avancer les organisations.",
+  about2:"Mon parcours associe ingénierie logicielle, développement d’applications web, données et intelligence artificielle. Avec TYM Services, mon ambition est de rendre les solutions numériques utiles et bien conçues accessibles aux entreprises, écoles et organisations.",
+  contactText:"Expliquez-nous ce qui ralentit votre organisation ou le projet que vous souhaitez lancer. Nous étudierons une solution numérique pratique et les prochaines étapes.",contactAsideTitle:"Parlons de votre projet",contactAsideText:"Utilisez le formulaire pour présenter votre projet. Notre équipe étudiera votre demande et vous recontactera.",fName:"Nom complet",fEmail:"Adresse e-mail",fOrg:"Organisation (facultatif)",fService:"Service souhaité",fChoose:"Choisir un service",fMessage:"Parlez-nous de votre projet",fSend:"Envoyer ma demande",all:"Tous",view:"Voir",code:"Code",demo:"Démo en ligne",details:"Détails",close:"Fermer",can:"Ce que nous faisons",nCV:"CV",cvText:"Un CV de format international avec ma photo, mes compétences, mes projets et mes coordonnées. Ouvre-le, puis enregistre-le en PDF.",cvView:"Voir le CV",cvDl:"Télécharger le CV (PDF)"}
 };
 
 /* ================= App logic ================= */
@@ -333,33 +404,32 @@ function render(){
   document.querySelectorAll("[data-i]").forEach(e=>e.textContent=t(e.dataset.i));
   document.querySelectorAll("[data-en][data-fr]").forEach(e=>e.textContent=lang==="fr"?e.dataset.fr:e.dataset.en);
   $("#lang").textContent=lang==="en"?"FR":"EN";
-  $("#cvView").href="cv.html?lang="+lang;$("#cvDl").href="cv.html?lang="+lang+"&download=1";
   const preview=s=>{
 const photos={
-web:["https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=1000&q=85","Développement Full-Stack et environnement logiciel"],
-data:["https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1000&q=85","Analyse de données et Machine Learning"],
-ai:["https://images.unsplash.com/photo-1677442136019-21780ecad995?w=1000&q=85","Intelligence artificielle et modèles génératifs"]
+web:["file_000000008e5481f4ba7eda727c9834da.png",lang==="fr"?"Ordinateur et environnement de développement logiciel":"Computer and software development workspace"],
+data:["file_00000000e23481fd8904362950e6c4db.png",lang==="fr"?"Équipement informatique et outils numériques":"Computer equipment and digital tools"],
+ai:["https://images.unsplash.com/photo-1551650975-87deedd944c3?w=1400&q=90",lang==="fr"?"Poste de travail consacré aux solutions numériques":"Workstation for digital solutions"]
 };
 const p=photos[s.k]||photos.web;
-return '<img class="skill-photo" src="'+p[0]+'" alt="'+p[1]+'" loading="lazy" decoding="async">';
+return '<div class="skill-photo-wrap"><img class="skill-photo" src="'+p[0]+'" alt="'+p[1]+'" loading="lazy" decoding="async"></div>';
 };
 $("#skillsGrid").innerHTML=SKILLS.map(s=>'<article class="box skill">'+preview(s)+'<div class="sb"><h3>'+s.n[lang]+'</h3><p class="muted" style="margin:0">'+L(s.d)+'</p><h4>'+t("can")+'</h4><ul class="can">'+s.can[lang].map(x=>'<li>'+x+'</li>').join("")+'</ul><ul class="tags">'+s.tags.map(x=>'<li>'+x+'</li>').join("")+'</ul></div></article>').join("");
 
   $("#projectsGrid").innerHTML=PROJECTS.map(p=>`<article class="card${p.main?" main":""}" id="p-${p.id}">
-    <div class="cover">${p.cover?`<img src="${p.cover}" alt="${p.name}" loading="lazy">`:p.name}</div>
+    <div class="cover">${p.cover?`<img src="${p.cover}" alt="${p.name}" loading="lazy">`:`<img src="${({ "ml-train":"1793541020227.jpg","grace-divine":"file_000000008e5481f4ba7eda727c9834da.png","opencv":"file_00000000e23481fd8904362950e6c4db.png" })[p.id]||"1793541020227.jpg"}` alt="${p.name}" loading="lazy" decoding="async">`}</div>
     <div class="cbody"><span class="status">${L(p.status)}</span><h3>${p.name}</h3><p class="muted" style="margin:0">${L(p.desc)}</p>
     <ul class="tags">${p.tech.map(x=>`<li>${x}</li>`).join("")}</ul>
     ${p.details?`<details><summary>${t("details")}</summary><ul>${p.details[lang].map(d=>`<li>${d}</li>`).join("")}</ul></details>`:""}
     <div class="links">${p.code?`<a href="${p.code}" target="_blank" rel="noopener">${t("code")}</a>`:""}${p.demo?`<a href="${p.demo}" target="_blank" rel="noopener">${p.id==="grace-divine"?(lang==="fr"?"Déploiement Vercel (accès à confirmer)":"Vercel deployment (access to confirm)"):t("demo")}</a>`:""}</div></div></article>`).join("");
-  $("#journeyList").innerHTML=JOURNEY.map(j=>`<li><b>${L(j.t)}</b><span class="muted">${L(j.d)}</span></li>`).join("");
-  document.querySelectorAll("[data-count]").forEach(el=>{el.textContent="+"+Number(el.dataset.count).toLocaleString(lang==="fr"?"fr-FR":"en-US")});
-  const c=[`<a class="btn p" href="${SITE.whatsapp}" target="_blank" rel="noopener noreferrer">Discuter sur WhatsApp</a>`,`<a class="btn" href="tel:+243808373717">Appeler</a>`];
-  $("#contactLinks").innerHTML=c.join("");
+  $("#contactLinks").innerHTML='<a href="'+SITE.whatsapp+'" target="_blank" rel="noopener noreferrer">WhatsApp</a><a href="mailto:'+SITE.email+'">'+(lang==="fr"?"Envoyer un e-mail":"Send an email")+"</a>";
+  const founderWhatsapp=$("#founderWhatsapp");
+  if(founderWhatsapp&&SITE.whatsapp){founderWhatsapp.href=SITE.whatsapp;founderWhatsapp.hidden=false;}
+  else if(founderWhatsapp){founderWhatsapp.hidden=true;}
   renderGallery();
 }
 function renderGallery(){
-  const has=GALLERY.length>0;
-  $("#gallery").hidden=!has;document.querySelectorAll(".gl").forEach(a=>a.style.display=has?"":"none");
+  const has=false;
+  $("#gallery").hidden=true;document.querySelectorAll(".gl").forEach(a=>a.style.display="none");
   if(!has)return;
   const cats=["all",...new Set(GALLERY.map(g=>g.category).filter(Boolean))];
   $("#filters").innerHTML=cats.map(k=>`<button aria-pressed="${k===cat}" data-c="${k}">${k==="all"?t("all"):k}</button>`).join("");
@@ -379,11 +449,30 @@ $("#prev").onclick=()=>showLb(lbIdx-1);$("#next").onclick=()=>showLb(lbIdx+1);$(
 $("#lb").addEventListener("keydown",e=>{if(e.key==="ArrowLeft")showLb(lbIdx-1);if(e.key==="ArrowRight")showLb(lbIdx+1)});
 $("#lb").addEventListener("click",e=>{if(e.target===$("#lb"))$("#lb").close()});
 $("#lang").onclick=()=>{lang=lang==="en"?"fr":"en";try{localStorage.setItem("lang",lang)}catch(e){}render()};
-$("#yr").textContent=new Date().getFullYear();
-const serviceTrack=$("#serviceTrack");$("#servicePrev").onclick=()=>serviceTrack.scrollBy({left:-320,behavior:"smooth"});$("#serviceNext").onclick=()=>serviceTrack.scrollBy({left:320,behavior:"smooth"});
+const year=$("#yr");if(year)year.textContent=new Date().getFullYear();
+const serviceTrack=$("#serviceTrack");
+function moveServices(direction){const card=serviceTrack.querySelector(".service-card");const step=card?card.getBoundingClientRect().width+16:320;serviceTrack.scrollBy({left:direction*step,behavior:"smooth"});}
+$("#servicePrev").addEventListener("click",()=>moveServices(-1));
+$("#serviceNext").addEventListener("click",()=>moveServices(1));
 let serviceTimer=setInterval(()=>{if(serviceTrack.scrollLeft+serviceTrack.clientWidth>=serviceTrack.scrollWidth-8)serviceTrack.scrollTo({left:0,behavior:"smooth"});else serviceTrack.scrollBy({left:320,behavior:"smooth"})},4200);serviceTrack.addEventListener("mouseenter",()=>clearInterval(serviceTimer));serviceTrack.addEventListener("touchstart",()=>clearInterval(serviceTimer),{passive:true});
-(function(){const i=$("#photo"),b=$("#photoBox");i.onerror=()=>{b.textContent="MY"};if(SITE.photo)i.src=SITE.photo;else b.textContent="MY"})();
 render();
+
+const menuToggle=$("#menuToggle");
+if(menuToggle){
+ menuToggle.addEventListener("click",()=>{
+  const open=document.querySelector("nav").classList.toggle("menu-open");
+  menuToggle.setAttribute("aria-expanded",String(open));
+  menuToggle.setAttribute("aria-label",open?"Fermer le menu":"Ouvrir le menu");
+  menuToggle.innerHTML=open?"<span></span><span></span>":"<span></span><span></span><span></span>";
+ });
+ document.querySelectorAll("nav a.l").forEach(link=>link.addEventListener("click",()=>{
+  document.querySelector("nav").classList.remove("menu-open");
+  menuToggle.setAttribute("aria-expanded","false");
+  menuToggle.setAttribute("aria-label","Ouvrir le menu");
+  menuToggle.innerHTML="<span></span><span></span><span></span>";
+ }));
+}
+
 (function(){
   const targets=document.querySelectorAll('main section, .skill, .card, .process-card, .journey li');
   if(!('IntersectionObserver' in window)||window.matchMedia('(prefers-reduced-motion: reduce)').matches)return;
