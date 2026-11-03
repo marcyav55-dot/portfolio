@@ -15,7 +15,7 @@ Site web statique de TYM Services, une entreprise de solutions numériques. Le s
 - Grand bandeau d’accueil en dégradé bleu, typographie Bricolage Grotesque et Instrument Sans.
 - Photos intégrées dans les cartes de services et les expertises.
 - Navigation responsive avec menu mobile.
-- Langues française et anglaise prises en charge.
+- Contenu du site en français uniquement ; la traduction peut être proposée par la fonction de traduction du navigateur.
 - Présentation collective de l’entreprise ; les informations sur le fondateur restent sur une page distincte.
 
 ## Services présentés
@@ -55,7 +55,7 @@ Hébergement statique compatible Vercel, Netlify ou GitHub Pages. Répertoire de
 - Politique de confidentialité publiée dans `politique-confidentialite.html` pour expliquer les champs du formulaire, son traitement via Formspree et les moyens de contact.
 - Référence canonique et métadonnée Open Graph de la page d’accueil configurées temporairement sur l’alias Vercel de production.
 - `robots.txt` et `sitemap.xml` ajoutés pour les pages publiques connues.
-- Le formulaire utilise Formspree (`xqpadgnd`). La réception réelle d’un message doit encore être testée avec une demande de test autorisée.
+- Le formulaire utilise Formspree (`xqpadgnd`). L’utilisateur confirme que l’envoi du formulaire fonctionne.
 - Avant lancement public, confirmer que le numéro WhatsApp/téléphone et l’adresse e-mail affichés sont bien les coordonnées officielles de l’entreprise.
 - Remplacer l’alias Vercel temporaire par le domaine définitif dans les URL canoniques, Open Graph, robots et sitemap lorsque le domaine personnalisé sera choisi.
 - Effectuer un contrôle navigateur réel des interactions et de l’affichage mobile ; une vérification du code source ne remplace pas ce test.
