@@ -421,7 +421,7 @@ $("#skillsGrid").innerHTML=SKILLS.map(s=>'<article class="box skill">'+preview(s
     <ul class="tags">${p.tech.map(x=>`<li>${x}</li>`).join("")}</ul>
     ${p.details?`<details><summary>${t("details")}</summary><ul>${p.details[lang].map(d=>`<li>${d}</li>`).join("")}</ul></details>`:""}
     <div class="links">${p.code?`<a href="${p.code}" target="_blank" rel="noopener">${t("code")}</a>`:""}${p.demo?`<a href="${p.demo}" target="_blank" rel="noopener">${p.id==="grace-divine"?(lang==="fr"?"Déploiement Vercel (accès à confirmer)":"Vercel deployment (access to confirm)"):t("demo")}</a>`:""}</div></div></article>`).join("");
-  $("#contactLinks").innerHTML='<a href="https://wa.me/'+SITE.phone.replace(/\\D/g,"")+'" target="_blank" rel="noopener noreferrer">'+(lang==="fr"?"WhatsApp":"WhatsApp")+'</a><a href="mailto:'+SITE.email+'">'+(lang==="fr"?"Envoyer un e-mail":"Send an email")+'</a>';
+  $("#contactLinks").innerHTML='<a href="'+SITE.whatsapp+'"'" target="_blank" rel="noopener noreferrer">'+(lang==="fr"?"WhatsApp":"WhatsApp")+'</a><a href="mailto:'+SITE.email+'">'+(lang==="fr"?"Envoyer un e-mail":"Send an email")+'</a>';
   const founderWhatsapp=$("#founderWhatsapp");
   if(founderWhatsapp&&SITE.whatsapp){founderWhatsapp.href=SITE.whatsapp;founderWhatsapp.hidden=false;}
   else if(founderWhatsapp){founderWhatsapp.hidden=true;}
