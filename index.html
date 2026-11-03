@@ -328,7 +328,7 @@ dialog{background:#fff;border-color:#dce4ed}
 <div class="cta contact-quick-links" id="contactLinks"></div>
 </div>
 <div class="contact-panel">
-<form class="contact-form" id="contactForm" action="https://formspree.io/f/xqpadgnd" method="POST">
+<form class="contact-form" id="contactForm" data-endpoint="https://formspree.io/f/xqpadgnd">
 <input type="hidden" name="_subject" value="Nouvelle demande de contact — TYM Services">
 <label><span data-i="fName">Nom complet</span><input name="name" autocomplete="name" required maxlength="100" placeholder="Votre nom"></label>
 <label><span data-i="fEmail">Adresse e-mail</span><input type="email" name="email" autocomplete="email" required maxlength="160" placeholder="nom@exemple.com"></label>
@@ -491,9 +491,9 @@ if(contactForm){
     button.disabled=true;
     status.textContent=lang==="fr"?"Envoi en cours…":"Sending…";
     try{
-      const response=await fetch(contactForm.action,{method:"POST",body:new FormData(contactForm),headers:{Accept:"application/json"}});
+      const response=await fetch(contactForm.dataset.endpoint,{method:"POST",body:new FormData(contactForm),headers:{Accept:"application/json"}});
       if(!response.ok) throw new Error("form submission failed");
-      status.textContent=lang==="fr"?"Merci ! Votre demande a bien été envoyée.":"Thank you! Your request has been sent.";
+      status.textContent="Votre message a été reçu avec succès. Notre équipe vous répondra dans les meilleurs délais.";
       contactForm.reset();
     }catch(error){
       status.textContent=lang==="fr"?"L’envoi a échoué. Réessayez ou écrivez-nous directement par e-mail.":"Sending failed. Please try again or contact us by email.";
