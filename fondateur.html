@@ -13,7 +13,7 @@
 <style>
 :root{--ink:#14233d;--muted:#63738b;--blue:#245fc7;--soft:#edf4ff;--line:#e4eaf2;--surface:#f7f9fc;--display:'Bricolage Grotesque','Segoe UI',sans-serif;--body:'Instrument Sans','Segoe UI',sans-serif}
 *{box-sizing:border-box}body{margin:0;color:var(--ink);font:1rem/1.7 var(--body);background:#fff}a{color:inherit}.wrap{width:min(980px,calc(100% - 2.5rem));margin:auto}
-header{border-bottom:1px solid var(--line);background:#fff}.nav{min-height:76px;display:flex;align-items:center;gap:1rem}.brand{display:flex;align-items:center;gap:.7rem;margin-right:auto;text-decoration:none;font:700 1.05rem var(--display)}.brand img{width:40px;height:40px;object-fit:contain;border:1px solid var(--line);border-radius:9px;padding:3px}.brand span span{color:var(--blue)}.back{font-size:.9rem;color:var(--blue);font-weight:600;text-decoration:none}.lang{border:1px solid var(--line);background:#fff;border-radius:7px;padding:.45rem .7rem;font-weight:600;color:var(--ink)}
+header{border-bottom:1px solid var(--line);background:#fff}.nav{min-height:76px;display:flex;align-items:center;gap:1rem}.brand{display:flex;align-items:center;gap:.7rem;margin-right:auto;text-decoration:none;font:700 1.05rem var(--display)}.brand img{width:40px;height:40px;object-fit:contain;border:1px solid var(--line);border-radius:9px;padding:3px}.brand span span{color:var(--blue)}.back{font-size:.9rem;color:var(--blue);font-weight:600;text-decoration:none}
 main{padding:4.5rem 0 5rem}.eyebrow{font-size:.75rem;letter-spacing:.12em;font-weight:700;text-transform:uppercase;color:var(--blue)}h1,h2,h3{font-family:var(--display);line-height:1.18}h1{font-size:clamp(2.2rem,5vw,3.4rem);letter-spacing:-.045em;margin:.8rem 0 1rem}h2{font-size:1.55rem;margin:0 0 1rem}p{margin:.6rem 0;color:var(--muted)}.intro{max-width:720px;font-size:1.08rem}.profile{display:grid;grid-template-columns:.8fr 1.2fr;gap:1.25rem;margin-top:2.4rem}.panel{border:1px solid var(--line);border-radius:13px;background:#fff;padding:1.5rem;box-shadow:0 8px 26px rgba(24,48,86,.04)}.identity{background:var(--surface)}.monogram{width:62px;height:62px;display:grid;place-items:center;border-radius:13px;background:var(--soft);color:var(--blue);font:700 1.3rem var(--display)}.identity h2{margin-top:1.2rem}.role{font-weight:600;color:var(--blue);font-size:.9rem}.actions{display:grid;gap:.6rem;margin-top:1.35rem}.btn{display:inline-flex;justify-content:center;align-items:center;min-height:44px;padding:.65rem .9rem;border:1px solid #d7e0ed;border-radius:8px;background:#fff;text-decoration:none;font-size:.88rem;font-weight:600}.btn.primary{background:var(--blue);border-color:var(--blue);color:#fff}.btn.whatsapp{color:#176b45;background:#f3fbf6;border-color:#c8e4d4}.timeline{display:grid;gap:.75rem;margin-top:1.2rem}.step{display:grid;grid-template-columns:34px 1fr;gap:.8rem;padding:1rem;border:1px solid var(--line);border-radius:9px}.num{width:32px;height:32px;display:grid;place-items:center;background:var(--soft);color:var(--blue);border-radius:8px;font-size:.8rem;font-weight:700}.step strong{font-size:.95rem}.step p{font-size:.88rem;margin:.25rem 0 0}.note{margin-top:1.2rem;font-size:.82rem}.section{margin-top:2rem;padding-top:1.8rem;border-top:1px solid var(--line)}footer{border-top:1px solid var(--line);background:var(--surface);padding:1.2rem 0;color:#65758b;font-size:.85rem}
 @media(max-width:700px){main{padding:3rem 0}.profile{grid-template-columns:1fr}.nav{min-height:68px}.back{font-size:.8rem}}
 
@@ -24,7 +24,7 @@ header{background:rgba(250,249,246,.97);border-bottom-color:#e3e6e9;box-shadow:0
 .brand{color:#173d70}
 .brand img{border-radius:8px}
 .back{color:#174b91}
-.lang{border-radius:10px}
+
 .panel{border-radius:16px;border-color:#e1e7ee;box-shadow:0 8px 26px rgba(22,43,72,.045)}
 .identity{background:#f0f3f6}
 .monogram,.num{background:#eaf1fa;color:#174b91;border-radius:10px}
@@ -38,7 +38,7 @@ footer{background:#0c2343;color:#c5d3e5;border:0}
 </style>
 </head>
 <body>
-<header><div class="wrap nav"><a class="brand" href="index.html"><img src="assets/tym-services-logo.png" alt="TYM Services"><span>TYM <span>SERVICES</span></span></a><a class="back" href="index.html" data-en="← Back to TYM Services" data-fr="← Retour à TYM Services">← Retour à TYM Services</a><button class="lang" id="lang" type="button">EN</button></div></header>
+<header><div class="wrap nav"><a class="brand" href="index.html"><img src="assets/tym-services-logo.png" alt="TYM Services"><span>TYM <span>SERVICES</span></span></a><a class="back" href="index.html" data-en="← Back to TYM Services" data-fr="← Retour à TYM Services">← Retour à TYM Services</a></div></header>
 <main class="wrap">
 <span class="eyebrow" data-en="Company information" data-fr="Informations sur l’entreprise">Informations sur l’entreprise</span>
 <h1 data-en="Leadership and founder" data-fr="Direction et fondateur">Direction et fondateur</h1>
@@ -56,10 +56,6 @@ footer{background:#0c2343;color:#c5d3e5;border:0}
 <div class="section"><h2 data-en="A collective company" data-fr="Une entreprise collective">Une entreprise collective</h2><p data-en="The founder’s profile does not represent the whole company. TYM Services is presented and operated as a company, with projects and services developed through collaboration and the contribution of different skills." data-fr="Le profil du fondateur ne représente pas à lui seul toute l’entreprise. TYM Services se présente et fonctionne comme une entreprise, avec des projets et des services développés grâce à la collaboration et à la contribution de compétences diverses.">Le profil du fondateur ne représente pas à lui seul toute l’entreprise. TYM Services se présente et fonctionne comme une entreprise, avec des projets et des services développés grâce à la collaboration et à la contribution de compétences diverses.</p></div>
 </main>
 <footer><div class="wrap">© 2026 TYM Services</div></footer>
-<script>
-const langButton=document.getElementById("lang");
-let language="fr";
-langButton.addEventListener("click",()=>{language=language==="fr"?"en":"fr";document.documentElement.lang=language;document.querySelectorAll("[data-fr][data-en]").forEach(el=>el.textContent=el.dataset[language]);langButton.textContent=language==="fr"?"EN":"FR";});
-</script>
+
 </body>
 </html>
