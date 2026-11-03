@@ -47,67 +47,29 @@ dialog{width:min(900px,94vw);padding:0;border:1px solid var(--line);border-radiu
 </style>
 </head>
 <body>
-<header><nav class="wrap" aria-label="Main">
-<a class="brand" href="#top"><img class="brand-logo" src="assets/tym-services-logo.png" alt="Logo TYM Services"><span>TYM <span style="color:var(--cyan)">SERVICES</span></span></a>
-<a class="l" href="#about" data-i="nAbout"></a><a class="l" href="#skills" data-i="nSkills"></a><a class="l" href="#projects" data-i="nProjects"></a><a class="l" href="#process">Notre méthode</a><a class="l gl" href="#gallery" data-i="nGallery"></a><a class="l" href="#contact" data-i="nContact"></a>
-<button class="lang" id="lang" aria-label="Switch language">FR</button>
-</nav></header>
+<header><nav class="wrap" aria-label="Navigation principale">
+<a class="brand" href="#top"><img class="brand-logo" src="assets/tym-services-logo.png" alt="Logo TYM Services"><span>TYM <span style="color:var(--blue)">SERVICES</span></span></a>
+<a class="l" href="#about" data-i="nAbout">Entreprise</a><a class="l" href="#skills" data-i="nSkills">Expertises</a><a class="l" href="#projects" data-i="nProjects">Réalisations</a><a class="l" href="#process">Notre méthode</a><a class="l" href="#journey">Fondateur</a><a class="l" href="#contact" data-i="nContact">Contact</a>
+<button class="lang" id="lang" aria-label="Changer de langue">FR</button></nav></header>
 
 <main id="top">
-<section class="hero"><div class="wrap hero-grid">
-<div>
-<p class="tagline" data-i="tagline"></p>
-<h1 data-i="h1"></h1>
-<p data-i="lead"></p>
-<div class="cta hero-actions"><a class="btn p" href="#contact">Parler de votre projet</a><a class="btn" href="#projects">Découvrir nos réalisations</a></div>
-</div>
-<figure class="chart hero-photo" style="margin:0" aria-label="Digital work and website development">
-<img src="https://images.unsplash.com/photo-1551650975-87deedd944c3?w=1400&q=90" alt="Environnement de travail consacré à la conception de solutions numériques" fetchpriority="high">
-<figcaption data-i="chartCap"></figcaption>
-</figure>
-</div></section>
+<section class="hero"><div class="wrap hero-grid"><div><p class="tagline" data-i="tagline"></p><h1 data-i="h1"></h1><p data-i="lead"></p>
+<div class="hero-actions"><a class="btn p" href="#contact" data-i="ctaContact">Demander une consultation</a><a class="btn" href="#projects" data-i="ctaProjects">Découvrir nos projets</a></div></div>
+<aside class="hero-panel" aria-label="Aperçu des expertises de TYM Services"><div class="hero-panel-head"><strong data-i="panelTitle">Nos expertises</strong><span data-i="panelLabel">Solutions numériques</span></div>
+<div class="hero-capabilities"><div class="hero-capability"><b>01 / WEB</b><span data-i="panelWeb">Sites web et plateformes</span></div><div class="hero-capability"><b>02 / APP</b><span data-i="panelApp">Applications métier</span></div><div class="hero-capability"><b>03 / DATA</b><span data-i="panelData">Données et systèmes</span></div><div class="hero-capability"><b>04 / AI</b><span data-i="panelAI">Intelligence artificielle</span></div></div>
+<div class="hero-panel-foot" data-i="panelFoot">Votre partenaire technologique pour vos projets.</div></aside></div></section>
 
-<section id="about"><div class="wrap">
-<h2 data-i="nAbout"></h2>
-<div class="about">
-  <figure class="photo" id="photoBox"><img id="photo" alt="TSHIJIKA YAV MARC, fondateur de TYM Services"></figure>
-  <div class="founder-copy">
-    <p data-i="about1"></p>
-    <p class="muted" data-i="about2"></p>
-    <div class="founder-journey">
-      <h3 data-i="founderJourneyTitle"></h3>
-      <ol class="founder-timeline">
-        <li><span class="founder-step">01</span><div><strong data-i="founderStep1Title"></strong><p data-i="founderStep1Text"></p></div></li>
-        <li><span class="founder-step">02</span><div><strong data-i="founderStep2Title"></strong><p data-i="founderStep2Text"></p></div></li>
-        <li><span class="founder-step">03</span><div><strong data-i="founderStep3Title"></strong><p data-i="founderStep3Text"></p></div></li>
-      </ol>
-    </div>
-    <div class="founder-actions" aria-label="Actions concernant le fondateur">
-      <a class="btn p" href="cv.html" target="_blank" rel="noopener" data-i="cvView"></a>
-      <a class="btn" href="cv.html?download=1" target="_blank" rel="noopener" data-i="cvDownload"></a>
-      <a class="btn" href="#contact" data-i="founderTalk"></a>
-      <a class="btn whatsapp-link" id="founderWhatsapp" href="#" target="_blank" rel="noopener" data-i="founderWhatsapp" hidden></a>
-    </div>
-    <p class="founder-note" data-i="cvDownloadNote"></p>
-  </div>
-</div>
-</div></section>
+<section id="about"><div class="wrap"><span class="eyebrow" data-i="companyEyebrow">L’entreprise</span><h2 data-i="companyTitle">Une entreprise technologique tournée vers les solutions concrètes.</h2>
+<p class="about-intro" data-i="companyIntro">TYM Services accompagne les entreprises, écoles et organisations dans leur transformation numérique. Nous concevons des outils adaptés à leurs besoins, avec une attention particulière portée à la qualité, à la simplicité et à l’efficacité.</p>
+<div class="company-grid"><article class="company-card"><span class="number">01</span><h3 data-i="companyCard1Title">Comprendre vos besoins</h3><p data-i="companyCard1Text">Nous partons de votre réalité, de vos utilisateurs et de vos objectifs avant de proposer une solution.</p></article>
+<article class="company-card"><span class="number">02</span><h3 data-i="companyCard2Title">Concevoir avec méthode</h3><p data-i="companyCard2Text">Nous privilégions des interfaces claires, des systèmes fiables et des fonctionnalités réellement utiles.</p></article>
+<article class="company-card"><span class="number">03</span><h3 data-i="companyCard3Title">Vous accompagner</h3><p data-i="companyCard3Text">Nous restons attentifs à l’évolution de vos besoins après la livraison de votre solution.</p></article></div></div></section>
 
 <section id="skills"><div class="wrap">
 <h2 data-i="nSkills"></h2>
 <div class="skills" id="skillsGrid"></div>
 </div></section>
 
-<section class="forecast" id="data-forecast"><div class="wrap">
-<h2>Data Science : anticiper pour mieux décider</h2>
-<p class="forecast-intro">Et si vous pouviez mieux préparer les cinq ou dix prochaines années de votre entreprise ? L’analyse des ventes, des clients, des coûts et du marché aide à repérer les tendances, tester des scénarios et prendre des décisions plus éclairées.</p>
-<div class="forecast-grid">
-<article class="forecast-panel"><h3>Tableau de bord prévisionnel</h3><p>Exemple illustratif : évolution possible du chiffre d’affaires selon les tendances observées.</p>
-<div class="forecast-kpis"><div class="forecast-kpi"><small>Horizon 5 ans</small><strong>Scénario A</strong></div><div class="forecast-kpi"><small>Horizon 10 ans</small><strong>Scénario B</strong></div><div class="forecast-kpi"><small>Indicateurs suivis</small><strong>Ventes · coûts</strong></div></div>
-<svg class="forecast-chart" viewBox="0 0 680 250" role="img" aria-label="Graphique illustratif de projection à cinq et dix ans"><g stroke="#263858" stroke-width="1"><path d="M55 35H650M55 85H650M55 135H650M55 185H650M55 220H650"/></g><g fill="#9aa8c7" font-size="12"><text x="12" y="39">100</text><text x="18" y="89">75</text><text x="18" y="139">50</text><text x="18" y="189">25</text><text x="58" y="241">Aujourd'hui</text><text x="330" y="241">5 ans</text><text x="610" y="241">10 ans</text></g><path d="M65 180 C150 170 230 150 330 125 S520 75 640 45" fill="none" stroke="#3b82f6" stroke-width="4" stroke-linecap="round"/><path d="M65 180 C160 166 235 142 330 112 S520 50 640 22" fill="none" stroke="#22d3ee" stroke-width="4" stroke-linecap="round" stroke-dasharray="8 7"/><g fill="#3b82f6"><circle cx="65" cy="180" r="5"/><circle cx="330" cy="125" r="5"/><circle cx="640" cy="45" r="5"/></g><g fill="#22d3ee"><circle cx="330" cy="112" r="5"/><circle cx="640" cy="22" r="5"/></g></svg>
-<div class="forecast-legend"><span>Scénario prudent</span><span>Scénario de croissance</span></div><p class="forecast-note">Courbes fictives de démonstration : ce ne sont ni une prédiction réelle ni une promesse de croissance.</p></article>
-<article class="forecast-panel"><h3>Les décisions que les données peuvent éclairer</h3><p>Un tableau de bord peut aider un dirigeant à suivre :</p><table class="forecast-table"><thead><tr><th>Indicateur</th><th>Question utile</th></tr></thead><tbody><tr><td>Chiffre d’affaires</td><td>Quelle tendance ?</td></tr><tr><td>Clients</td><td>Qui revient ?</td></tr><tr><td>Stock</td><td>Que faut-il prévoir ?</td></tr><tr><td>Dépenses</td><td>Où réduire les coûts ?</td></tr><tr><td>Demande</td><td>Que préparer demain ?</td></tr></tbody></table><p class="forecast-note">Une projection sérieuse s’appuie sur vos données historiques, leur qualité, des hypothèses explicites et les facteurs externes. Elle présente plusieurs scénarios et leurs limites.</p></article>
-</div></div></section>
 <section class="service-showcase" id="service-carousel"><div class="wrap"><div class="service-head"><div><h2>Nos domaines d’intervention</h2><p>Des solutions numériques adaptées aux besoins réels des organisations.</p></div><div class="service-controls"><button type="button" id="servicePrev" aria-label="Précédent">←</button><button type="button" id="serviceNext" aria-label="Suivant">→</button></div></div><div class="service-track" id="serviceTrack">
 <article class="service-card"><span class="service-no">01 / WEB</span><h3>Sites web professionnels</h3><p>Sites vitrines, pages professionnelles et plateformes responsives.</p></article>
 <article class="service-card"><span class="service-no">02 / APP</span><h3>Applications web et mobiles</h3><p>Applications utiles pour simplifier les opérations quotidiennes.</p></article>
@@ -120,16 +82,7 @@ dialog{width:min(900px,94vw);padding:0;border:1px solid var(--line);border-radiu
 <div class="projects" id="projectsGrid"></div>
 </div></section>
 
-<section class="global-reach"><div class="wrap global-reach-grid">
-<div class="global-reach-copy">
-<span class="global-reach-tag" data-en="GLOBAL DIGITAL REACH" data-fr="RAYONNEMENT NUMÉRIQUE MONDIAL">RAYONNEMENT NUMÉRIQUE MONDIAL</span>
-<h2 data-en="Your business, connected to the world" data-fr="Votre entreprise, connectée au monde">Votre entreprise, connectée au monde</h2>
-<p data-en="A digital platform can help a company communicate with customers, partners and teams wherever they are. Websites, mobile applications, digital solutions and data dashboards bring information and people together." data-fr="Une plateforme numérique peut aider une entreprise à communiquer avec ses clients, partenaires et équipes, où qu’ils se trouvent. Sites web, applications mobiles, solutions numériques et tableaux de bord rapprochent les informations et les personnes.">Une plateforme numérique peut aider une entreprise à communiquer avec ses clients, partenaires et équipes, où qu’ils se trouvent. Sites web, applications mobiles, solutions numériques et tableaux de bord rapprochent les informations et les personnes.</p>
-<div class="global-reach-points"><span data-en="Customers" data-fr="Clients">Clients</span><span data-en="Partners" data-fr="Partenaires">Partenaires</span><span data-en="Teams" data-fr="Équipes">Équipes</span><span data-en="Data & services" data-fr="Données et services">Données et services</span></div>
-</div>
-<div class="global-reach-visual"><img src="https://www.ey.com/adobe/dynamicmedia/deliver/dm-aid--dbcc664c-a68d-4db2-9029-a28356b0c709/ey-odi-report-banner.png?preferwebp=true&quality=85&width=1000" alt="Carte du monde illustrant les connexions numériques entre continents" loading="lazy"></div>
-</div></section>
-<section id="gallery" hidden><div class="wrap">
+<section class="global-reach" id="why-tym"><div class="wrap global-reach-grid"><div class="global-reach-copy"><span class="global-reach-tag" data-en="WHY TYM SERVICES" data-fr="POURQUOI TYM SERVICES">POURQUOI TYM SERVICES</span><h2 data-en="Technology designed around your organisation" data-fr="La technologie pensée autour de votre organisation">La technologie pensée autour de votre organisation</h2><p data-en="A digital solution should make work clearer, faster and easier to manage. We focus on understanding the context before choosing the technology." data-fr="Une solution numérique doit rendre le travail plus clair, plus rapide et plus facile à gérer. Nous cherchons à comprendre votre contexte avant de choisir la technologie.">Une solution numérique doit rendre le travail plus clair, plus rapide et plus facile à gérer. Nous cherchons à comprendre votre contexte avant de choisir la technologie.</p></div><div class="global-reach-visual"><article class="global-tile"><strong>01</strong><span data-en="Clear communication" data-fr="Communication claire">Communication claire</span></article><article class="global-tile"><strong>02</strong><span data-en="Practical solutions" data-fr="Solutions pratiques">Solutions pratiques</span></article><article class="global-tile"><strong>03</strong><span data-en="Reliable delivery" data-fr="Livraison fiable">Livraison fiable</span></article><article class="global-tile"><strong>04</strong><span data-en="Ongoing support" data-fr="Accompagnement">Accompagnement</span></article></div></div></section><section id="gallery" hidden><div class="wrap">
 <h2 data-i="nGallery"></h2>
 <div class="filters" id="filters"></div>
 <div class="gallery" id="galleryGrid"></div>
@@ -144,12 +97,11 @@ dialog{width:min(900px,94vw);padding:0;border:1px solid var(--line);border-radiu
 <article class="process-card"><span>04</span><h3>Livrer et accompagner</h3><p>Nous présentons le résultat et convenons des modalités de suivi et de maintenance.</p></article>
 </div></div></section>
 
-<section class="impact" id="impact"><div class="wrap"><h2>Notre impact</h2><p class="muted">Quelques chiffres clés de notre accompagnement.</p><div class="impact-grid"><article class="impact-card"><span class="impact-number" data-count="110">+110</span><p>Personnes accompagnées</p></article><article class="impact-card"><span class="impact-number" data-count="50">+50</span><p>Personnes satisfaites</p></article></div><p class="muted" style="font-size:.82rem;margin-top:1rem">Chiffres communiqués par TYM Services.</p></div></section><section id="testimonials"><div class="wrap"><h2>Témoignages</h2><p class="testimonial-note">Les témoignages clients seront publiés ici après réception et avec l’autorisation des personnes concernées.</p></div></section><section id="journey"><div class="wrap">
-<h2 data-i="nJourney"></h2>
-<ul class="journey" id="journeyList"></ul>
-</div></section>
-
-<section id="contact"><div class="wrap">
+<section id="journey"><div class="wrap"><span class="eyebrow" data-i="founderEyebrow">Direction</span><h2 data-i="founderSectionTitle">Le fondateur</h2><div class="founder-layout">
+<article class="founder-panel"><h3 data-i="founderName">TSHIJIKA YAV MARC</h3><p data-i="founderBio">Fondateur de TYM Services, engagé dans la conception de solutions logicielles et numériques.</p>
+<div class="founder-actions"><a class="btn p" href="cv.html" target="_blank" rel="noopener" data-i="cvView">Voir le CV</a><a class="btn" href="cv.html?download=1" target="_blank" rel="noopener" data-i="cvDownload">Télécharger le CV (PDF)</a><a class="btn" href="#contact" data-i="founderTalk">Discuter avec le fondateur</a><a class="btn whatsapp-link" id="founderWhatsapp" href="#" target="_blank" rel="noopener" data-i="founderWhatsapp" hidden>WhatsApp</a></div>
+<p class="founder-note" data-i="cvDownloadNote">Le CV peut être enregistré en PDF depuis la fenêtre d'impression.</p></article>
+<div><h3 data-i="founderJourneyTitle">Le parcours du fondateur</h3><ol class="founder-timeline"><li><span class="founder-step">01</span><div><strong data-i="founderStep1Title"></strong><p data-i="founderStep1Text"></p></div></li><li><span class="founder-step">02</span><div><strong data-i="founderStep2Title"></strong><p data-i="founderStep2Text"></p></div></li><li><span class="founder-step">03</span><div><strong data-i="founderStep3Title"></strong><p data-i="founderStep3Text"></p></div></li></ol></div></div></div></section><section id="contact"><div class="wrap">
 <h2 data-i="nContact"></h2>
 <p class="muted" style="max-width:60ch;margin-bottom:1.5rem" data-i="contactText"></p>
 <div class="contact-layout">
@@ -192,14 +144,14 @@ const ART={
  git:`<svg viewBox="0 0 160 100" aria-hidden="true"><path d="M30 20v60M30 50c0-18 50-8 50-26M80 24v0c0 14 50 6 50 26" ${F}/><g fill="#0d1630" stroke="#3b73ff" stroke-width="3"><circle cx="30" cy="20" r="7"/><circle cx="30" cy="80" r="7"/><circle cx="80" cy="24" r="7"/></g><circle cx="130" cy="50" r="8" fill="#22d3ee"/></svg>`
 };
 const I18N = {
- en:{impactTitle:"Our impact & testimonials",demoBadge:"Visual simulation",impactIntro:"A preview of the counter that can later be connected to verified records.",peopleHelped:"People supported",impactDisclaimer:"Illustrative demo figure only; it does not represent actual beneficiaries.",reviewsDisclaimer:"Sample demo reviews — replace with genuine testimonials published with each person’s permission.",nAbout:"About the founder",tagline:"Technology for your ambitions.",founderJourneyTitle:"The founder’s journey",founderStep1Title:"Software engineering studies",founderStep1Text:"Building a strong foundation in software design, programming and digital systems at the University of Kolwezi.",founderStep2Title:"Projects and practical experience",founderStep2Text:"Turning ideas into practical projects, including ML TRAIN, Grace Divine Multiservices and computer-vision experiments.",founderStep3Title:"Founding TYM Services",founderStep3Text:"Creating a technology startup focused on useful digital solutions for businesses, schools and organisations.",cvDownloadNote:"The PDF option opens the CV and the browser’s print window. Choose “Save as PDF” to keep a copy.",cvView:"View CV",cvDownload:"Download CV (PDF)",founderTalk:"Discuss with the founder",founderWhatsapp:"Chat on WhatsApp",nSkills:"Our services",nProjects:"Selected work",nGallery:"Gallery",nJourney:"Our approach",nContact:"Contact",
+ en:{impactTitle:"Our impact & testimonials",demoBadge:"Visual simulation",impactIntro:"A preview of the counter that can later be connected to verified records.",peopleHelped:"People supported",impactDisclaimer:"Illustrative demo figure only; it does not represent actual beneficiaries.",reviewsDisclaimer:"Sample demo reviews — replace with genuine testimonials published with each person’s permission.",nAbout:"Company",tagline:"Technology for your ambitions.",nSkills:"Our expertise",nProjects:"Selected projects",nJourney:"Founder",nContact:"Contact",panelTitle:"Our expertise",panelLabel:"Digital solutions",panelWeb:"Websites and platforms",panelApp:"Business applications",panelData:"Data and systems",panelAI:"Artificial intelligence",panelFoot:"Your technology partner for important projects.",ctaContact:"Request a consultation",ctaProjects:"Explore our projects",companyEyebrow:"The company",companyTitle:"A technology company focused on practical solutions.",companyIntro:"TYM Services supports businesses, schools and organisations in their digital transformation. We design tools around their needs, with a focus on quality, clarity and efficiency.",companyCard1Title:"Understand your needs",companyCard1Text:"We start with your context, users and goals before recommending a solution.",companyCard2Title:"Design with a clear method",companyCard2Text:"We favour clear interfaces, reliable systems and genuinely useful features.",companyCard3Title:"Support your progress",companyCard3Text:"We stay attentive to your needs as your organisation and solution evolve.",founderEyebrow:"Leadership",founderSectionTitle:"The founder",founderName:"TSHIJIKA YAV MARC",founderBio:"Founder of TYM Services, focused on software engineering and the development of useful digital solutions.",founderJourneyTitle:"The founder’s journey",founderStep1Title:"Software engineering studies",founderStep1Text:"Building a strong foundation in software design, programming and digital systems at the University of Kolwezi.",founderStep2Title:"Projects and practical experience",founderStep2Text:"Turning ideas into practical projects, including ML TRAIN, Grace Divine Multiservices and computer-vision experiments.",founderStep3Title:"Founding TYM Services",founderStep3Text:"Creating a technology startup focused on useful digital solutions for businesses, schools and organisations.",cvDownloadNote:"The PDF option opens the CV and the browser’s print window. Choose “Save as PDF” to keep a copy.",cvView:"View CV",cvDownload:"Download CV (PDF)",founderTalk:"Discuss with the founder",founderWhatsapp:"Chat on WhatsApp",nSkills:"Our services",nProjects:"Selected work",nGallery:"Gallery",nJourney:"Our approach",nContact:"Contact",
   h1:"Digital solutions that move your organisation forward.",
   lead:"TYM Services helps schools, healthcare organisations, shops and businesses build a professional online presence, organise their data and simplify everyday work with useful digital tools.",
   ctaProjects:"Explore our work",ctaContact:"Request a consultation",chartCap:"Websites, applications and digital systems designed around real needs.",
   about1:"I am TSHIJIKA YAV MARC, also known as Marcus Yav, software developer and founder of TYM Services. I enjoy turning practical needs into reliable digital products and building technology that helps organisations move forward.",
   about2:"My work brings together software engineering, web application development, data and artificial intelligence. Through TYM Services, I aim to make useful, well-designed digital solutions accessible to businesses, schools and organisations.",
   contactText:"Tell us what is slowing your organisation down or what you want to launch. We will discuss a practical digital solution and the next steps.",contactAsideTitle:"Let’s talk about your project",contactAsideText:"Use the contact form to describe your project. Our team will review your request and follow up.",fName:"Full name",fEmail:"Email address",fOrg:"Organisation (optional)",fService:"Service needed",fChoose:"Choose a service",fMessage:"Tell us about your project",fSend:"Send my request",all:"All",view:"View",code:"Code",demo:"Live demo",details:"Details",close:"Close",can:"What I can do",nCV:"CV",cvText:"An international-style CV with my photo, skills, projects and contact details. Open it, then save it as PDF.",cvView:"View CV",cvDl:"Download CV (PDF)"},
- fr:{impactTitle:"Notre impact et les témoignages",demoBadge:"Simulation visuelle",impactIntro:"Aperçu du compteur qui pourra ensuite être relié à des données vérifiées.",peopleHelped:"Personnes accompagnées",impactDisclaimer:"Chiffre fictif de démonstration ; il ne représente pas des bénéficiaires réels.",reviewsDisclaimer:"Avis fictifs de démonstration — à remplacer par des témoignages authentiques publiés avec l’accord des personnes concernées.",nAbout:"À propos du fondateur",tagline:"La technologie au service de vos ambitions.",founderJourneyTitle:"Le parcours du fondateur",founderStep1Title:"Formation en génie logiciel",founderStep1Text:"Construire des bases solides en conception logicielle, programmation et systèmes numériques à l’Université de Kolwezi.",founderStep2Title:"Projets et expérience pratique",founderStep2Text:"Transformer des idées en projets concrets, notamment ML TRAIN, Grace Divine Multiservices et des expérimentations en vision par ordinateur.",founderStep3Title:"Création de TYM Services",founderStep3Text:"Lancer une startup technologique consacrée au développement de solutions numériques utiles aux entreprises, écoles et organisations.",cvDownloadNote:"Le téléchargement PDF ouvre le CV puis la fenêtre d’impression du navigateur. Choisis « Enregistrer au format PDF » pour conserver ton document.",cvView:"Voir le CV",cvDownload:"Télécharger le CV (PDF)",founderTalk:"Discuter avec le fondateur",founderWhatsapp:"Discuter sur WhatsApp",nSkills:"Nos services",nProjects:"Réalisations",nGallery:"Galerie",nJourney:"Notre approche",nContact:"Contact",
+ fr:{impactTitle:"Notre impact et les témoignages",demoBadge:"Simulation visuelle",impactIntro:"Aperçu du compteur qui pourra ensuite être relié à des données vérifiées.",peopleHelped:"Personnes accompagnées",impactDisclaimer:"Chiffre fictif de démonstration ; il ne représente pas des bénéficiaires réels.",reviewsDisclaimer:"Avis fictifs de démonstration — à remplacer par des témoignages authentiques publiés avec l’accord des personnes concernées.",nAbout:"L’entreprise",tagline:"La technologie au service de vos ambitions.",nSkills:"Nos expertises",nProjects:"Projets sélectionnés",nJourney:"Fondateur",nContact:"Contact",panelTitle:"Nos expertises",panelLabel:"Solutions numériques",panelWeb:"Sites web et plateformes",panelApp:"Applications métier",panelData:"Données et systèmes",panelAI:"Intelligence artificielle",panelFoot:"Votre partenaire technologique pour vos projets.",ctaContact:"Demander une consultation",ctaProjects:"Découvrir nos projets",companyEyebrow:"L’entreprise",companyTitle:"Une entreprise technologique tournée vers les solutions concrètes.",companyIntro:"TYM Services accompagne les entreprises, écoles et organisations dans leur transformation numérique. Nous concevons des outils adaptés à leurs besoins, avec une attention particulière portée à la qualité, à la clarté et à l’efficacité.",companyCard1Title:"Comprendre vos besoins",companyCard1Text:"Nous partons de votre réalité, de vos utilisateurs et de vos objectifs avant de proposer une solution.",companyCard2Title:"Concevoir avec méthode",companyCard2Text:"Nous privilégions des interfaces claires, des systèmes fiables et des fonctionnalités réellement utiles.",companyCard3Title:"Vous accompagner",companyCard3Text:"Nous restons attentifs à l’évolution de vos besoins après la livraison de votre solution.",founderEyebrow:"Direction",founderSectionTitle:"Le fondateur",founderName:"TSHIJIKA YAV MARC",founderBio:"Fondateur de TYM Services, engagé dans l’ingénierie logicielle et la conception de solutions numériques utiles.",founderJourneyTitle:"Le parcours du fondateur",founderStep1Title:"Formation en génie logiciel",founderStep1Text:"Construire des bases solides en conception logicielle, programmation et systèmes numériques à l’Université de Kolwezi.",founderStep2Title:"Projets et expérience pratique",founderStep2Text:"Transformer des idées en projets concrets, notamment ML TRAIN, Grace Divine Multiservices et des expérimentations en vision par ordinateur.",founderStep3Title:"Création de TYM Services",founderStep3Text:"Lancer une startup technologique consacrée au développement de solutions numériques utiles aux entreprises, écoles et organisations.",cvDownloadNote:"Le téléchargement PDF ouvre le CV puis la fenêtre d’impression du navigateur. Choisis « Enregistrer au format PDF » pour conserver ton document.",cvView:"Voir le CV",cvDownload:"Télécharger le CV (PDF)",founderTalk:"Discuter avec le fondateur",founderWhatsapp:"Discuter sur WhatsApp",nSkills:"Nos services",nProjects:"Réalisations",nGallery:"Galerie",nJourney:"Notre approche",nContact:"Contact",
   h1:"Des solutions numériques qui font avancer votre organisation.",
   lead:"TYM Services accompagne les écoles, structures de santé, commerces et entreprises pour développer leur présence en ligne, organiser leurs données et simplifier leur travail quotidien grâce à des outils numériques utiles.",
   ctaProjects:"Découvrir nos réalisations",ctaContact:"Demander un devis",chartCap:"Sites web, applications et systèmes numériques conçus pour vos besoins réels.",
@@ -221,15 +173,7 @@ function render(){
   document.querySelectorAll("[data-i]").forEach(e=>e.textContent=t(e.dataset.i));
   document.querySelectorAll("[data-en][data-fr]").forEach(e=>e.textContent=lang==="fr"?e.dataset.fr:e.dataset.en);
   $("#lang").textContent=lang==="en"?"FR":"EN";
-  const preview=s=>{
-const photos={
-web:["https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=1000&q=85","Développement Full-Stack et environnement logiciel"],
-data:["https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1000&q=85","Analyse de données et Machine Learning"],
-ai:["https://images.unsplash.com/photo-1677442136019-21780ecad995?w=1000&q=85","Intelligence artificielle et modèles génératifs"]
-};
-const p=photos[s.k]||photos.web;
-return '<img class="skill-photo" src="'+p[0]+'" alt="'+p[1]+'" loading="lazy" decoding="async">';
-};
+  const preview=s=>'<div class="skill-symbol" aria-hidden="true">'+({web:"01 / SOFTWARE",data:"02 / DATA",ai:"03 / AI"}[s.k]||"TYM SERVICES")+'</div>';
 $("#skillsGrid").innerHTML=SKILLS.map(s=>'<article class="box skill">'+preview(s)+'<div class="sb"><h3>'+s.n[lang]+'</h3><p class="muted" style="margin:0">'+L(s.d)+'</p><h4>'+t("can")+'</h4><ul class="can">'+s.can[lang].map(x=>'<li>'+x+'</li>').join("")+'</ul><ul class="tags">'+s.tags.map(x=>'<li>'+x+'</li>').join("")+'</ul></div></article>').join("");
 
   $("#projectsGrid").innerHTML=PROJECTS.map(p=>`<article class="card${p.main?" main":""}" id="p-${p.id}">
@@ -239,16 +183,15 @@ $("#skillsGrid").innerHTML=SKILLS.map(s=>'<article class="box skill">'+preview(s
     ${p.details?`<details><summary>${t("details")}</summary><ul>${p.details[lang].map(d=>`<li>${d}</li>`).join("")}</ul></details>`:""}
     <div class="links">${p.code?`<a href="${p.code}" target="_blank" rel="noopener">${t("code")}</a>`:""}${p.demo?`<a href="${p.demo}" target="_blank" rel="noopener">${p.id==="grace-divine"?(lang==="fr"?"Déploiement Vercel (accès à confirmer)":"Vercel deployment (access to confirm)"):t("demo")}</a>`:""}</div></div></article>`).join("");
   $("#journeyList").innerHTML=JOURNEY.map(j=>`<li><b>${L(j.t)}</b><span class="muted">${L(j.d)}</span></li>`).join("");
-  document.querySelectorAll("[data-count]").forEach(el=>{el.textContent="+"+Number(el.dataset.count).toLocaleString(lang==="fr"?"fr-FR":"en-US")});
   $("#contactLinks").innerHTML="";
   const founderWhatsapp=$("#founderWhatsapp");
-  if(SITE.whatsapp){founderWhatsapp.href=SITE.whatsapp;founderWhatsapp.hidden=false;}
-  else{founderWhatsapp.hidden=true;}
+  if(founderWhatsapp&&SITE.whatsapp){founderWhatsapp.href=SITE.whatsapp;founderWhatsapp.hidden=false;}
+  else if(founderWhatsapp){founderWhatsapp.hidden=true;}
   renderGallery();
 }
 function renderGallery(){
-  const has=GALLERY.length>0;
-  $("#gallery").hidden=!has;document.querySelectorAll(".gl").forEach(a=>a.style.display=has?"":"none");
+  const has=false;
+  $("#gallery").hidden=true;document.querySelectorAll(".gl").forEach(a=>a.style.display="none");
   if(!has)return;
   const cats=["all",...new Set(GALLERY.map(g=>g.category).filter(Boolean))];
   $("#filters").innerHTML=cats.map(k=>`<button aria-pressed="${k===cat}" data-c="${k}">${k==="all"?t("all"):k}</button>`).join("");
@@ -268,10 +211,9 @@ $("#prev").onclick=()=>showLb(lbIdx-1);$("#next").onclick=()=>showLb(lbIdx+1);$(
 $("#lb").addEventListener("keydown",e=>{if(e.key==="ArrowLeft")showLb(lbIdx-1);if(e.key==="ArrowRight")showLb(lbIdx+1)});
 $("#lb").addEventListener("click",e=>{if(e.target===$("#lb"))$("#lb").close()});
 $("#lang").onclick=()=>{lang=lang==="en"?"fr":"en";try{localStorage.setItem("lang",lang)}catch(e){}render()};
-$("#yr").textContent=new Date().getFullYear();
+const year=$("#yr");if(year)year.textContent=new Date().getFullYear();
 const serviceTrack=$("#serviceTrack");$("#servicePrev").onclick=()=>serviceTrack.scrollBy({left:-320,behavior:"smooth"});$("#serviceNext").onclick=()=>serviceTrack.scrollBy({left:320,behavior:"smooth"});
 let serviceTimer=setInterval(()=>{if(serviceTrack.scrollLeft+serviceTrack.clientWidth>=serviceTrack.scrollWidth-8)serviceTrack.scrollTo({left:0,behavior:"smooth"});else serviceTrack.scrollBy({left:320,behavior:"smooth"})},4200);serviceTrack.addEventListener("mouseenter",()=>clearInterval(serviceTimer));serviceTrack.addEventListener("touchstart",()=>clearInterval(serviceTimer),{passive:true});
-(function(){const i=$("#photo"),b=$("#photoBox");i.onerror=()=>{b.textContent="MY"};if(SITE.photo)i.src=SITE.photo;else b.textContent="MY"})();
 render();
 (function(){
   const targets=document.querySelectorAll('main section, .skill, .card, .process-card, .journey li');
