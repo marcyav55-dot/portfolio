@@ -500,7 +500,34 @@ nav a.l.active{color:var(--blue);font-weight:700}
 .ad-fallback-copy p{color:#7a899b;font-size:.8rem;line-height:1.55;margin:.45rem 0 .8rem}
 .ad-fallback-copy a{color:#1766b1;font-size:.8rem;font-weight:800;text-decoration:none}
 @media(max-width:760px){.ad-slot,.ad-fallback{min-height:230px}.ad-fallback{grid-template-rows:105px 1fr}.ad-fallback img{height:105px}}
-</style></head>
+<style>
+/* Desktop TechNews atmosphere — visual depth without adding another content block */
+@media(min-width:761px){
+  .tech-news-ads{position:relative;isolation:isolate;overflow:hidden;background:
+    radial-gradient(circle at 8% 18%,rgba(23,75,145,.09),transparent 28%),
+    radial-gradient(circle at 92% 78%,rgba(8,126,131,.08),transparent 26%),
+    linear-gradient(180deg,#f5f8fc 0%,#eef4fa 100%)}
+  .tech-news-ads:before{
+    content:"";position:absolute;inset:0;z-index:-2;opacity:.42;pointer-events:none;
+    background-image:linear-gradient(rgba(23,75,145,.055) 1px,transparent 1px),linear-gradient(90deg,rgba(23,75,145,.055) 1px,transparent 1px);
+    background-size:34px 34px;animation:techGridMove 18s linear infinite}
+  .tech-news-ads:after{
+    content:"";position:absolute;width:620px;height:620px;right:-250px;top:80px;z-index:-1;border:1px solid rgba(23,75,145,.12);
+    border-radius:50%;box-shadow:0 0 0 70px rgba(23,75,145,.025),0 0 0 140px rgba(23,75,145,.018);
+    animation:techOrbit 12s ease-in-out infinite alternate;pointer-events:none}
+  .tech-news-head{position:relative}
+  .tech-news-head:after{
+    content:"LIVE TECH FEED";position:absolute;right:0;top:0;padding:.45rem .7rem;border:1px solid #d7e3f0;border-radius:999px;
+    background:rgba(255,255,255,.72);backdrop-filter:blur(8px);color:#6f8299;font:800 .62rem/1 var(--body);letter-spacing:.12em}
+  .tech-news-card{box-shadow:0 8px 30px rgba(17,53,97,.045)}
+  .smart-ad-zone{background:rgba(255,255,255,.9);backdrop-filter:blur(10px)}
+}
+@keyframes techGridMove{from{background-position:0 0,0 0}to{background-position:34px 34px,34px 34px}}
+@keyframes techOrbit{from{transform:translate3d(0,0,0) rotate(0deg)}to{transform:translate3d(-18px,16px,0) rotate(7deg)}}
+@media(prefers-reduced-motion:reduce){
+  .tech-news-ads:before,.tech-news-ads:after{animation:none}
+}
+</style></style></head>
 <body>
 <header><nav class="wrap" aria-label="Navigation principale">
 <a class="brand" href="#top"><img class="brand-logo" src="assets/tym-services-logo.png" alt="Logo TYM Services"><span>TYM <span style="color:var(--blue)">SERVICES</span></span></a>
@@ -954,17 +981,32 @@ if(contactForm){
   const esc=s=>String(s||"").replace(/[&<>"']/g,m=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[m]));
   const relative=t=>{const d=Math.max(0,Date.now()-t*1000),h=Math.floor(d/36e5);return h<1?"il y a moins d’une heure":h<24?"il y a "+h+" h":"il y a "+Math.floor(h/24)+" j"};
   const wikiImages={ai:"artificial intelligence technology",cyber:"cybersecurity computer",cloud:"cloud computing server",robot:"robotics technology",hardware:"computer chip processor",dev:"software developer coding"};
+  const fallbackImages=[
+    "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=82",
+    "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=1200&q=82",
+    "https://images.unsplash.com/photo-1484417894907-623942c8ee29?auto=format&fit=crop&w=1200&q=82",
+    "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?auto=format&fit=crop&w=1200&q=82",
+    "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=1200&q=82",
+    "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=1200&q=82"
+  ];
   const imageCache={};
-  async function getImage(term){
+  const usedImages=new Set();
+  async function getImage(term,fallback){
     if(imageCache[term]) return imageCache[term];
     try{
-      const u="https://commons.wikimedia.org/w/api.php?action=query&generator=search&gsrsearch="+encodeURIComponent(term)+"&gsrnamespace=6&gsrlimit=3&prop=imageinfo&iiprop=url&iiurlwidth=900&format=json&origin=*";
+      const u="https://commons.wikimedia.org/w/api.php?action=query&generator=search&gsrsearch="+encodeURIComponent(term)+"&gsrnamespace=6&gsrlimit=8&prop=imageinfo&iiprop=url&iiurlwidth=1000&format=json&origin=*";
       const data=await fetch(u).then(r=>r.json());
       const pages=Object.values(data.query?.pages||{});
-      const img=pages.find(p=>p.imageinfo?.[0]?.thumburl)?.imageinfo?.[0]?.thumburl||pages.find(p=>p.imageinfo?.[0]?.url)?.imageinfo?.[0]?.url;
-      imageCache[term]=img||"";
+      const candidates=pages.map(p=>p.imageinfo?.[0]?.thumburl||p.imageinfo?.[0]?.url).filter(Boolean);
+      const img=candidates.find(url=>!usedImages.has(url));
+      imageCache[term]=img||fallback||"";
+      if(imageCache[term]) usedImages.add(imageCache[term]);
       return imageCache[term];
-    }catch(e){return "";}
+    }catch(e){
+      imageCache[term]=fallback||"";
+      if(imageCache[term]) usedImages.add(imageCache[term]);
+      return imageCache[term];
+    }
   }
   function category(title){
     const t=title.toLowerCase();
@@ -982,7 +1024,7 @@ if(contactForm){
       const keywords=/ai|artificial intelligence|machine learning|software|cyber|security|cloud|robot|robotics|python|javascript|rust|linux|computer|chip|gpu|data|database|developer|programming|web|mobile|quantum|semiconductor|technology|tech/i;
       const tech=items.filter(x=>x&&x.type==="story"&&x.title&&keywords.test(x.title)).slice(0,6);
       if(!tech.length) throw new Error("no stories");
-      const imgs=await Promise.all(tech.map(x=>getImage(wikiImages[category(x.title)])));
+      const imgs=await Promise.all(tech.map((x,i)=>getImage(wikiImages[category(x.title)]+" "+x.title, fallbackImages[i%fallbackImages.length])));
       feed.innerHTML=tech.map((x,i)=>{
         const featured=i===0, img=imgs[i], term=category(x.title);
         const image=img?'<img class="news-image" src="'+esc(img)+'" alt="" loading="lazy">':'<div class="news-image" role="img" aria-label="Illustration technologique"></div>';
