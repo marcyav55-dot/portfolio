@@ -5,7 +5,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>TYM Services — Startup technologique et solutions numériques</title>
 <meta name="description" content="TYM Services est une startup technologique qui conçoit des sites web, applications, systèmes de gestion et solutions numériques pour les organisations.">
-<meta name="theme-color" content="#174b91">\n<link rel="canonical" href="https://tymservices.com/">\n<meta name="robots" content="index,follow,max-image-preview:large">
+<meta name="theme-color" content="#174b91">
+<link rel="canonical" href="https://tymservices.com/">
+<meta name="robots" content="index,follow,max-image-preview:large">
 <meta property="og:type" content="website">
 <meta property="og:title" content="TYM Services — Startup technologique et solutions numériques">
 <meta property="og:description" content="Une startup technologique qui développe des solutions numériques utiles pour les entreprises, écoles et organisations.">
@@ -14,7 +16,8 @@
 <meta property="og:image" content="https://mon-portfolio-six-teal.vercel.app/assets/tym-services-logo.png">
 <meta property="og:image:alt" content="Logo officiel de TYM Services">
 <meta name="twitter:image" content="https://mon-portfolio-six-teal.vercel.app/assets/tym-services-logo.png">
-<link rel="icon" type="image/png" href="assets/tym-services-logo.png">\n<script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"TYM Services","url":"https://tymservices.com/","logo":"https://tymservices.com/assets/tym-services-logo.png","description":"Startup technologique congolaise spécialisée dans les solutions numériques, le logiciel, la data, l’intelligence artificielle, le cloud et l’automatisation.","founder":{"@type":"Person","name":"TSHIJIKA YAV MARC"},"address":{"@type":"PostalAddress","addressLocality":"Kolwezi","addressRegion":"Lualaba","addressCountry":"CD"},"sameAs":["https://github.com/marcyav55-dot","https://www.linkedin.com/in/marc-yav"]}</script>
+<link rel="icon" type="image/png" href="assets/tym-services-logo.png">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"TYM Services","url":"https://tymservices.com/","logo":"https://tymservices.com/assets/tym-services-logo.png","description":"Startup technologique congolaise spécialisée dans les solutions numériques, le logiciel, la data, l’intelligence artificielle, le cloud et l’automatisation.","founder":{"@type":"Person","name":"TSHIJIKA YAV MARC"},"address":{"@type":"PostalAddress","addressLocality":"Kolwezi","addressRegion":"Lualaba","addressCountry":"CD"},"sameAs":["https://github.com/marcyav55-dot","https://www.linkedin.com/in/marc-yav"]}</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
@@ -258,6 +261,35 @@ dialog{background:#fff;border-color:#dce4ed}
  nav{column-gap:.62rem!important;row-gap:.1rem!important}
  nav a.l{font-size:.74rem!important}
 }
+
+/* TYM capability showcase + calm rotating hero */
+.hero-visual{overflow:hidden}
+.hero-visual img{transition:opacity .9s ease,transform 1.4s ease}
+.hero-visual.hero-fading img{opacity:.05;transform:scale(1.018)}
+.hero-visual figcaption{transition:opacity .8s ease,transform .8s ease}
+.hero-visual.hero-fading figcaption{opacity:.08;transform:translateY(8px)}
+.hero-visual figcaption small{font-size:.76rem;color:rgba(255,255,255,.78);margin-top:.12rem;letter-spacing:.06em;text-transform:uppercase}
+.capability-showcase{background:#fff;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.showcase-head{display:flex;justify-content:space-between;align-items:flex-end;gap:2rem;margin-bottom:1.5rem}
+.showcase-head h2{max-width:780px;margin:.55rem 0 .6rem}
+.showcase-head p{max-width:760px;color:var(--muted);margin:0}
+.showcase-controls{display:flex;gap:.5rem;flex:none}
+.showcase-controls button{width:42px;height:42px;border:1px solid #d8e1eb;background:#fff;color:var(--blue);border-radius:11px;cursor:pointer;font-size:1.15rem}
+.capability-track{display:grid;grid-auto-flow:column;grid-auto-columns:minmax(300px,1fr);gap:1rem;overflow-x:auto;scroll-snap-type:x mandatory;padding:.2rem .1rem 1rem;scrollbar-width:thin}
+.capability-card{position:relative;min-height:320px;border-radius:18px;overflow:hidden;background:#0e284b;scroll-snap-align:start;border:1px solid #dce5ef;box-shadow:0 12px 32px rgba(20,43,73,.08)}
+.capability-card img{width:100%;height:100%;min-height:320px;object-fit:cover;display:block;transition:transform .65s ease}
+.capability-card:after{content:"";position:absolute;inset:35% 0 0;background:linear-gradient(transparent,rgba(4,17,36,.92))}
+.capability-card:hover img{transform:scale(1.04)}
+.capability-card-content{position:absolute;z-index:2;left:1.2rem;right:1.2rem;bottom:1.15rem;color:#fff}
+.capability-card-content span{display:block;color:#9be7c4;font-size:.72rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;margin-bottom:.35rem}
+.capability-card-content h3{color:#fff;font-size:1.25rem;margin:0}
+.capability-card-content p{color:#dce8f6;font-size:.88rem;line-height:1.55;margin:.35rem 0 0}
+@media(max-width:700px){
+ .showcase-head{align-items:flex-start;gap:1rem}
+ .showcase-controls{margin-top:.2rem}
+ .capability-track{grid-auto-columns:minmax(270px,88%)}
+ .capability-card,.capability-card img{min-height:300px}
+}
 </style>
 </head>
 <body>
@@ -270,7 +302,7 @@ dialog{background:#fff;border-color:#dce4ed}
 <main id="top">
 <section class="hero"><div class="wrap hero-grid"><div><p class="tagline" data-i="tagline"></p><h1 data-i="h1"></h1><p data-i="lead"></p>
 <div class="hero-actions"><a class="btn p" href="#contact" data-i="ctaContact">Demander une consultation</a><a class="btn" href="#projects" data-i="ctaProjects">Découvrir nos projets</a></div></div>
-<figure class="hero-visual"><img src="1793541020227.jpg" alt="Environnement informatique et matériel numérique utilisé pour concevoir des solutions technologiques" fetchpriority="high" decoding="async"><figcaption><span data-en="Technology built for real work" data-fr="La technologie au service de vos projets">La technologie au service de vos projets</span><strong>TYM Services</strong></figcaption></figure></div></section>
+<figure class="hero-visual" id="heroCapability"><img id="heroCapabilityImage" src="1793541020227.jpg" alt="Environnement informatique et matériel numérique utilisé pour concevoir des solutions technologiques" fetchpriority="high" decoding="async"><figcaption><span id="heroCapabilityKicker">La technologie au service de vos projets</span><strong id="heroCapabilityTitle">TYM Services</strong><small id="heroCapabilityDomain">Solutions numériques</small></figcaption></figure></div></section>
 
 <section id="about"><div class="wrap"><span class="eyebrow" data-i="companyEyebrow">L’entreprise</span><h2 data-i="companyTitle">Une entreprise technologique tournée vers les solutions concrètes.</h2>
 <p class="about-intro" data-i="companyIntro">TYM Services accompagne les entreprises, écoles et organisations dans leur transformation numérique. Nous concevons des outils adaptés à leurs besoins, avec une attention particulière portée à la qualité, à la simplicité et à l’efficacité.</p>
@@ -290,7 +322,24 @@ dialog{background:#fff;border-color:#dce4ed}
 <article class="service-card"><div class="service-photo"><img src="https://images.unsplash.com/photo-1677442136019-21780ecad995?w=1100&q=88" alt="Intelligence artificielle et technologie" loading="lazy"><span class="service-no">04 / IA</span><strong data-fr="Intelligence artificielle" data-en="Artificial intelligence">Intelligence artificielle</strong></div><div class="service-copy"><h3 data-fr="Intelligence artificielle" data-en="Artificial intelligence">Intelligence artificielle</h3><p data-fr="Automatisation et intégration de fonctionnalités intelligentes." data-en="Automation and integration of intelligent features.">Automatisation et intégration de fonctionnalités intelligentes.</p><a href="#contact">Discuter de votre projet <b>→</b></a></div></article>
 <article class="service-card"><div class="service-photo"><img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=1100&q=88" alt="Paiement et commerce en ligne" loading="lazy"><span class="service-no">05 / E-COMMERCE</span><strong data-fr="Commerce et paiements en ligne" data-en="E-commerce and online payments">Commerce et paiements en ligne</strong></div><div class="service-copy"><h3 data-fr="Commerce et paiements en ligne" data-en="E-commerce and online payments">Commerce et paiements en ligne</h3><p data-fr="Catalogues, commandes et parcours de transaction en ligne." data-en="Catalogues, orders and online transaction flows.">Catalogues, commandes et parcours de transaction en ligne.</p><a href="#contact">Discuter de votre projet <b>→</b></a></div></article>
 <article class="service-card"><div class="service-photo"><img src="https://images.unsplash.com/photo-1581092160562-40aa08e78837?w=1100&q=88" alt="Assistance technique et maintenance informatique" loading="lazy"><span class="service-no">06 / SUPPORT</span><strong data-fr="Maintenance et assistance" data-en="Maintenance and support">Maintenance et assistance</strong></div><div class="service-copy"><h3 data-fr="Maintenance et assistance" data-en="Maintenance and support">Maintenance et assistance</h3><p data-fr="Améliorations, corrections et accompagnement technique." data-en="Improvements, fixes and technical support.">Améliorations, corrections et accompagnement technique.</p><a href="#contact">Discuter de votre projet <b>→</b></a></div></article>
-</div></div></section><section id="projects"><div class="wrap">
+</div></div></section>
+<section class="capability-showcase" id="capabilities">
+  <div class="wrap">
+    <div class="showcase-head">
+      <div>
+        <span class="eyebrow">Ce que nous pouvons créer</span>
+        <h2>Des idées qui deviennent des espaces, des systèmes et des expériences.</h2>
+        <p>Explorez quelques exemples visuels de ce que TYM Services peut concevoir : architecture, intérieur, domotique, modélisation 3D, interfaces et systèmes intelligents.</p>
+      </div>
+      <div class="showcase-controls" aria-label="Contrôles de la galerie">
+        <button type="button" id="capPrev" aria-label="Précédent">←</button>
+        <button type="button" id="capNext" aria-label="Suivant">→</button>
+      </div>
+    </div>
+    <div class="capability-track" id="capabilityTrack"></div>
+  </div>
+</section>
+<section id="projects"><div class="wrap">
 <h2 data-i="nProjects"></h2>
 <div class="projects" id="projectsGrid"></div>
 </div></section>
@@ -404,7 +453,13 @@ function render(){
   document.querySelectorAll("[data-i]").forEach(e=>e.textContent=t(e.dataset.i));
   document.querySelectorAll("[data-en][data-fr]").forEach(e=>e.textContent=lang==="fr"?e.dataset.fr:e.dataset.en);
   $("#lang").textContent=lang==="en"?"FR":"EN";
-  const preview=s=>{\nconst fallback="file_000000008e5481f4ba7eda727c9834da.png";\nconst alt=lang==="fr"?s.n.fr:s.n.en;\nconst src=s.image||fallback;\nreturn '<div class="skill-photo-wrap"><img class="skill-photo" src="'+src+'" alt="'+alt+'" loading="lazy" decoding="async" onerror="this.onerror=null;this.src=\''+fallback+'\'"></div>';\n};\n$("#skillsGrid").innerHTML=SKILLS.map(s=>'<article class="box skill" style="--domain:'+s.color+'">'+preview(s)+'<div class="sb"><h3>'+s.n[lang]+'</h3><p class="muted" style="margin:0">'+L(s.d)+'</p><h4>'+t("can")+'</h4><ul class="can">'+s.can[lang].map(x=>'<li>'+x+'</li>').join("")+'</ul><ul class="tags">'+s.tags.map(x=>'<li>'+x+'</li>').join("")+'</ul></div></article>').join("");
+  const preview=s=>{
+const fallback="file_000000008e5481f4ba7eda727c9834da.png";
+const alt=lang==="fr"?s.n.fr:s.n.en;
+const src=s.image||fallback;
+return '<div class="skill-photo-wrap"><img class="skill-photo" src="'+src+'" alt="'+alt+'" loading="lazy" decoding="async" onerror="this.onerror=null;this.src=\''+fallback+'\'"></div>';
+};
+$("#skillsGrid").innerHTML=SKILLS.map(s=>'<article class="box skill" style="--domain:'+s.color+'">'+preview(s)+'<div class="sb"><h3>'+s.n[lang]+'</h3><p class="muted" style="margin:0">'+L(s.d)+'</p><h4>'+t("can")+'</h4><ul class="can">'+s.can[lang].map(x=>'<li>'+x+'</li>').join("")+'</ul><ul class="tags">'+s.tags.map(x=>'<li>'+x+'</li>').join("")+'</ul></div></article>').join("");
 
   $("#projectsGrid").innerHTML=PROJECTS.map(p=>`<article class="card${p.main?" main":""}" id="p-${p.id}">
     <div class="cover">${p.cover?`<img src="${p.cover}" alt="${p.name}" loading="lazy">`:`<img src="${({ "ml-train":"1793541020227.jpg","grace-divine":"file_000000008e5481f4ba7eda727c9834da.png","opencv":"file_00000000e23481fd8904362950e6c4db.png" })[p.id]||"1793541020227.jpg"}` alt="${p.name}" loading="lazy" decoding="async">`}</div>
@@ -417,6 +472,8 @@ function render(){
   if(founderWhatsapp&&SITE.whatsapp){founderWhatsapp.href=SITE.whatsapp;founderWhatsapp.hidden=false;}
   else if(founderWhatsapp){founderWhatsapp.hidden=true;}
   renderGallery();
+  renderCapabilityShowcase();
+  startHeroCapabilityRotation();
 }
 function renderGallery(){
   const has=false;
@@ -474,6 +531,51 @@ if(menuToggle){
   },{threshold:.12,rootMargin:'0px 0px -35px 0px'});
   targets.forEach((el,i)=>{el.classList.add('reveal-item');el.style.transitionDelay=(i%4)*65+'ms';observer.observe(el)});
 })();
+
+const capabilityData=[
+ {k:"Architecture & habitat",cat:"Architecture",src:"https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1400&q=88",title:{fr:"Maisons & espaces intérieurs",en:"Homes & interior spaces"},desc:{fr:"Visualisation d’espaces extérieurs et intérieurs pensés pour le confort, l’esthétique et la fonctionnalité.",en:"Exterior and interior spaces designed for comfort, aesthetics and functionality."}},
+ {k:"Domotique",cat:"IoT",src:"https://images.unsplash.com/photo-1558008258-3256797b43f3?auto=format&fit=crop&w=1400&q=88",title:{fr:"Maison intelligente & domotique",en:"Smart home & automation"},desc:{fr:"Éclairage, sécurité, capteurs, contrôle à distance et automatisation des équipements.",en:"Lighting, security, sensors, remote control and home automation."}},
+ {k:"Modélisation 3D",cat:"3D",src:"https://images.unsplash.com/photo-1618005198919-d3d4b5a92ead?auto=format&fit=crop&w=1400&q=88",title:{fr:"Modélisation 3D & simulation",en:"3D modeling & simulation"},desc:{fr:"Modèles 3D, vues éclatées, concepts techniques et visualisation de systèmes.",en:"3D models, exploded views, technical concepts and system visualization."}},
+ {k:"Design numérique",cat:"UI / Design",src:"https://images.unsplash.com/photo-1558655146-d09347e92766?auto=format&fit=crop&w=1400&q=88",title:{fr:"Interfaces & expériences numériques",en:"Digital interfaces & experiences"},desc:{fr:"Interfaces web et mobiles, prototypes interactifs et expériences numériques modernes.",en:"Web and mobile interfaces, interactive prototypes and modern digital experiences."}},
+ {k:"Systèmes intelligents",cat:"AI / IoT",src:"https://images.unsplash.com/photo-1485827404703-89b55fcc595e?auto=format&fit=crop&w=1400&q=88",title:{fr:"Robotique & systèmes intelligents",en:"Robotics & intelligent systems"},desc:{fr:"Capteurs, vision, automatisation et logiciels qui permettent aux systèmes d’interagir avec le monde réel.",en:"Sensors, vision, automation and software that let systems interact with the physical world."}},
+ {k:"Architecture numérique",cat:"Digital Twin",src:"https://images.unsplash.com/photo-1531058020387-3be344556be6?auto=format&fit=crop&w=1400&q=88",title:{fr:"Jumeaux numériques & visualisation",en:"Digital twins & visualization"},desc:{fr:"Représentation numérique de bâtiments, produits ou processus pour mieux comprendre et simuler.",en:"Digital representations of buildings, products or processes for understanding and simulation."}}
+];
+
+function renderCapabilityShowcase(){
+  const track=$("#capabilityTrack"); if(!track)return;
+  track.innerHTML=capabilityData.map(x=>`<article class="capability-card">
+    <img src="${x.src}" alt="${x.title[lang]}" loading="lazy" decoding="async">
+    <div class="capability-card-content"><span>${x.cat}</span><h3>${x.title[lang]}</h3><p>${x.desc[lang]}</p></div>
+  </article>`).join("");
+  const move=(dir)=>track.scrollBy({left:dir*Math.min(track.clientWidth*.82,430),behavior:"smooth"});
+  $("#capPrev")?.addEventListener("click",()=>move(-1));
+  $("#capNext")?.addEventListener("click",()=>move(1));
+  let timer=setInterval(()=>move(1),5200);
+  track.addEventListener("mouseenter",()=>clearInterval(timer));
+  track.addEventListener("touchstart",()=>clearInterval(timer),{passive:true});
+}
+
+function startHeroCapabilityRotation(){
+  const box=$("#heroCapability"),img=$("#heroCapabilityImage"),title=$("#heroCapabilityTitle"),domain=$("#heroCapabilityDomain"),kicker=$("#heroCapabilityKicker");
+  if(!box||!img||!title||!domain||!kicker)return;
+  const items=[
+   {img:"1793541020227.jpg",title:"TYM Services",domain:lang==="fr"?"Solutions numériques":"Digital solutions",kicker:lang==="fr"?"La technologie au service de vos projets":"Technology built for real work"},
+   {img:"https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1400&q=88",title:lang==="fr"?"Architecture & habitat":"Architecture & habitat",domain:lang==="fr"?"Maisons & espaces":"Homes & spaces",kicker:lang==="fr"?"Conception, visualisation et innovation":"Design, visualization and innovation"},
+   {img:"https://images.unsplash.com/photo-1558008258-3256797b43f3?auto=format&fit=crop&w=1400&q=88",title:lang==="fr"?"Domotique":"Smart Home",domain:lang==="fr"?"IoT & automatisation":"IoT & automation",kicker:lang==="fr"?"Des espaces plus intelligents":"Smarter spaces"},
+   {img:"https://images.unsplash.com/photo-1618005198919-d3d4b5a92ead?auto=format&fit=crop&w=1400&q=88",title:lang==="fr"?"Modélisation 3D":"3D Modeling",domain:lang==="fr"?"Simulation & jumeaux numériques":"Simulation & digital twins",kicker:lang==="fr"?"Voir, comprendre, simuler":"See, understand, simulate"},
+   {img:"https://images.unsplash.com/photo-1485827404703-89b55fcc595e?auto=format&fit=crop&w=1400&q=88",title:lang==="fr"?"Robotique":"Robotics",domain:lang==="fr"?"Systèmes intelligents":"Intelligent systems",kicker:lang==="fr"?"Logiciel + capteurs + contrôle":"Software + sensors + control"}
+  ];
+  let i=0;
+  setInterval(()=>{
+    box.classList.add("hero-fading");
+    setTimeout(()=>{
+      i=(i+1)%items.length;
+      const x=items[i];
+      img.src=x.img; img.alt=x.title; title.textContent=x.title; domain.textContent=x.domain; kicker.textContent=x.kicker;
+      box.classList.remove("hero-fading");
+    },850);
+  },5200);
+}
 
 const contactForm=$("#contactForm");
 if(contactForm){
