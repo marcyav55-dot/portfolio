@@ -290,14 +290,29 @@ dialog{background:#fff;border-color:#dce4ed}
  .capability-track{grid-auto-columns:minmax(270px,88%)}
  .capability-card,.capability-card img{min-height:300px}
 }
+
+/* Final mobile navigation: compact header + intentional menu */
+.nav-links{display:flex;align-items:center;gap:1.15rem}
+@media(max-width:700px){
+  nav{display:flex!important;align-items:center!important;flex-wrap:nowrap!important;min-height:72px!important;padding:.55rem 0!important;gap:.55rem!important}
+  nav .brand{flex:1 1 auto!important;margin:0!important}
+  .nav-links{display:none;position:absolute;left:0;right:0;top:100%;padding:.45rem 1rem .8rem;background:rgba(255,255,255,.98);border-top:1px solid #e4e8ed;border-bottom:1px solid #dfe5ec;box-shadow:0 16px 30px rgba(20,43,73,.09);flex-direction:column;align-items:stretch;gap:0}
+  nav.menu-open .nav-links{display:flex}
+  .nav-links a.l{display:flex!important;min-height:44px;align-items:center;padding:.55rem .25rem!important;border-bottom:1px solid #edf0f4;font-size:.9rem!important}
+  .nav-links a.l:last-child{border-bottom:0}
+  nav .lang{display:inline-flex!important;flex:0 0 auto;margin:0!important}
+  nav .menu-toggle{display:flex!important;flex:0 0 auto}
+  html{scroll-padding-top:88px}
+  main section{scroll-margin-top:88px}
+}
 </style>
 </head>
 <body>
 <header><nav class="wrap" aria-label="Navigation principale">
 <a class="brand" href="#top"><img class="brand-logo" src="assets/tym-services-logo.png" alt="Logo TYM Services"><span>TYM <span style="color:var(--blue)">SERVICES</span></span></a>
 
-<a class="l" href="#about" data-i="nAbout">Entreprise</a><a class="l" href="#skills" data-i="nSkills">Expertises</a><a class="l" href="#projects" data-i="nProjects">Réalisations</a><a class="l" href="#process">Notre méthode</a><a class="l" href="#contact" data-i="nContact">Contact</a><a class="l" href="#faq" data-en="FAQ" data-fr="FAQ">FAQ</a>
-<button class="lang" id="lang" aria-label="Changer de langue">FR</button></nav></header>
+<div class="nav-links" id="primaryNav"><a class="l" href="#about" data-i="nAbout">Entreprise</a><a class="l" href="#skills" data-i="nSkills">Expertises</a><a class="l" href="#projects" data-i="nProjects">Réalisations</a><a class="l" href="#process">Notre méthode</a><a class="l" href="#contact" data-i="nContact">Contact</a><a class="l" href="#faq" data-en="FAQ" data-fr="FAQ">FAQ</a></div>
+<button class="lang" id="lang" aria-label="Changer de langue">FR</button><button class="menu-toggle" id="menuToggle" aria-label="Ouvrir le menu" aria-expanded="false"><span></span><span></span><span></span></button></nav></header>
 
 <main id="top">
 <section class="hero"><div class="wrap hero-grid"><div><p class="tagline" data-i="tagline"></p><h1 data-i="h1"></h1><p data-i="lead"></p>
@@ -508,19 +523,19 @@ render();
 const menuToggle=$("#menuToggle");
 if(menuToggle){
  menuToggle.addEventListener("click",()=>{
-  const open=document.querySelector("nav").classList.toggle("menu-open");
+  const nav=document.querySelector("nav");
+  const open=nav.classList.toggle("menu-open");
   menuToggle.setAttribute("aria-expanded",String(open));
   menuToggle.setAttribute("aria-label",open?"Fermer le menu":"Ouvrir le menu");
   menuToggle.innerHTML=open?"<span></span><span></span>":"<span></span><span></span><span></span>";
  });
- document.querySelectorAll("nav a.l").forEach(link=>link.addEventListener("click",()=>{
+ document.querySelectorAll("#primaryNav a.l").forEach(link=>link.addEventListener("click",()=>{
   document.querySelector("nav").classList.remove("menu-open");
   menuToggle.setAttribute("aria-expanded","false");
   menuToggle.setAttribute("aria-label","Ouvrir le menu");
   menuToggle.innerHTML="<span></span><span></span><span></span>";
  }));
 }
-
 (function(){
   const targets=document.querySelectorAll('main section, .skill, .card, .process-card, .journey li');
   if(!('IntersectionObserver' in window)||window.matchMedia('(prefers-reduced-motion: reduce)').matches)return;
