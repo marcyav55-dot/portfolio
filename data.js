@@ -7,8 +7,6 @@
 const SITE = {
   github: "https://github.com/marcyav55-dot",
   linkedin: "https://www.linkedin.com/in/marc-yav",
-  email: "marcyav55@gmail.com",
-  phone: "080 83 73 717",
   whatsapp: "https://wa.me/243808373717",
   location: "Kolwezi, Lualaba, RDC",
   photo: "profile.jpg"
