@@ -11,9 +11,9 @@
 <meta property="og:type" content="website">
 <meta property="og:title" content="TYM Services — Startup technologique et solutions numériques">
 <meta property="og:description" content="Une startup technologique qui développe des solutions numériques utiles pour les entreprises, écoles et organisations.">
-<meta property="og:url" content="https://mon-portfolio-git-feature-tym-se-5f864b-marcyav55-dots-projects.vercel.app/">
+<meta property="og:url" content="https://tymservices.com/">
 <meta name="twitter:card" content="summary_large_image">
-<meta property="og:image" content="https://mon-portfolio-six-teal.vercel.app/assets/tym-services-logo.png">
+<meta property="og:image" content="https://tymservices.com/assets/tym-services-logo.png">
 <meta property="og:image:alt" content="Logo officiel de TYM Services">
 <meta name="twitter:image" content="https://mon-portfolio-six-teal.vercel.app/assets/tym-services-logo.png">
 <link rel="icon" type="image/png" href="assets/tym-services-logo.png">
@@ -503,7 +503,6 @@ function render(){
   document.documentElement.lang=lang;
   document.querySelectorAll("[data-i]").forEach(e=>e.textContent=t(e.dataset.i));
   document.querySelectorAll("[data-en][data-fr]").forEach(e=>e.textContent=lang==="fr"?e.dataset.fr:e.dataset.en);
-  $("#lang").textContent=lang==="en"?"FR":"EN";
   const preview=s=>{
 const fallback="file_000000008e5481f4ba7eda727c9834da.png";
 const alt=lang==="fr"?s.n.fr:s.n.en;
@@ -518,7 +517,7 @@ $("#skillsGrid").innerHTML=SKILLS.map(s=>'<article class="box skill" style="--do
     <ul class="tags">${p.tech.map(x=>`<li>${x}</li>`).join("")}</ul>
     ${p.details?`<details><summary>${t("details")}</summary><ul>${p.details[lang].map(d=>`<li>${d}</li>`).join("")}</ul></details>`:""}
     <div class="links">${p.code?`<a href="${p.code}" target="_blank" rel="noopener">${t("code")}</a>`:""}${p.demo?`<a href="${p.demo}" target="_blank" rel="noopener">${p.id==="grace-divine"?(lang==="fr"?"Déploiement Vercel (accès à confirmer)":"Vercel deployment (access to confirm)"):t("demo")}</a>`:""}</div></div></article>`).join("");
-  $("#contactLinks").innerHTML='<a href="'+SITE.whatsapp+'" target="_blank" rel="noopener noreferrer">WhatsApp</a><a href="mailto:'+SITE.email+'">'+(lang==="fr"?"Envoyer un e-mail":"Send an email")+"</a>";
+  $("#contactLinks").innerHTML=SITE.whatsapp?'<a href="'+SITE.whatsapp+'" target="_blank" rel="noopener noreferrer">WhatsApp</a>':"";
   const founderWhatsapp=$("#founderWhatsapp");
   if(founderWhatsapp&&SITE.whatsapp){founderWhatsapp.href=SITE.whatsapp;founderWhatsapp.hidden=false;}
   else if(founderWhatsapp){founderWhatsapp.hidden=true;}
@@ -547,7 +546,6 @@ $("#galleryGrid").addEventListener("click",e=>{const b=e.target.closest("button"
 $("#prev").onclick=()=>showLb(lbIdx-1);$("#next").onclick=()=>showLb(lbIdx+1);$("#close").onclick=()=>$("#lb").close();
 $("#lb").addEventListener("keydown",e=>{if(e.key==="ArrowLeft")showLb(lbIdx-1);if(e.key==="ArrowRight")showLb(lbIdx+1)});
 $("#lb").addEventListener("click",e=>{if(e.target===$("#lb"))$("#lb").close()});
-$("#lang").onclick=()=>{lang=lang==="en"?"fr":"en";try{localStorage.setItem("lang",lang)}catch(e){}render()};
 const year=$("#yr");if(year)year.textContent=new Date().getFullYear();
 const serviceTrack=$("#serviceTrack");
 function moveServices(direction){const card=serviceTrack.querySelector(".service-card");const step=card?card.getBoundingClientRect().width+16:320;serviceTrack.scrollBy({left:direction*step,behavior:"smooth"});}
@@ -644,7 +642,7 @@ if(contactForm){
       status.textContent=lang==="fr"?"Merci ! Votre demande a bien été envoyée.":"Thank you! Your request has been sent.";
       contactForm.reset();
     }catch(error){
-      status.textContent=lang==="fr"?"L’envoi a échoué. Réessayez ou écrivez-nous directement par e-mail.":"Sending failed. Please try again or contact us by email.";
+      status.textContent=lang==="fr"?"L’envoi a échoué. Réessayez ou contactez-nous sur WhatsApp.":"Sending failed. Please try again or contact us on WhatsApp.";
     }finally{button.disabled=false;}
   });
 }
