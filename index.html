@@ -342,16 +342,13 @@ nav a.l.active{color:var(--blue);font-weight:700}
   .ads-section{background:#0b0f15!important;color:#fff!important;padding:3.5rem 0!important}
   .ads-section .wrap{padding-left:1.25rem;padding-right:1.25rem}
   .ads-grid{display:grid;grid-template-columns:1fr!important;gap:1.5rem}
-  .ads-copy h2{font-size:clamp(2rem,10vw,3rem);line-height:1.05;margin:.7rem 0 1rem}
-  .ads-copy p{font-size:1rem;line-height:1.65}
+  .ads-copy h2{font-size:clamp(2rem,10vw,3rem);line-height:1.05;margin:.7rem 0 1rem;color:#fff!important}
+  .ads-copy p{font-size:1rem;line-height:1.65;color:#d7dee8!important}
   .ads-points{display:grid;grid-template-columns:1fr!important;gap:.65rem}
   .ads-point{padding:.85rem}
-  .ads-point strong{display:block;margin-bottom:.2rem}
-  .ads-point span{display:block}
-  .ads-card{padding:1.2rem}
-  .service-picker{width:100%}
-  .service-picker-trigger{min-height:54px;background:#fff!important;color:#172235!important;border:1px solid #cfd8e3!important}
-  .service-picker-menu{max-height:58vh;overflow-y:auto}
+  .ads-point strong{display:block;margin-bottom:.2rem;color:#fff!important}
+  .ads-point span{display:block;color:#aeb8c7!important}
+  .ads-card{padding:1.2rem}.ads-card h3{color:#fff!important}.ads-card p{color:#aeb8c7!important}
 }
 @media (min-width:701px){
   .ads-section{background:#0b0f15!important;color:#fff!important}
@@ -394,6 +391,14 @@ nav a.l.active{color:var(--blue);font-weight:700}
  .explanation-label span{font-size:1.5rem}
  .explanation-points{grid-template-columns:1fr}
 }
+</style><style>
+/* Restore clean legacy service select */
+.contact-form select{width:100%;min-height:54px;padding:.85rem 1rem;border:1px solid #d5dee9;border-radius:12px;background:#fff;color:#182a40;font:inherit;cursor:pointer;appearance:auto}
+.contact-form select:focus{outline:3px solid rgba(24,105,190,.14);border-color:#1767b7}
+@media(max-width:700px){.contact-form select{min-height:52px;font-size:1rem}}
+.ads-section{background:#090d14!important;color:#fff}
+.ads-section .ads-copy h2{color:#fff!important}
+.ads-section .ads-copy p{color:#d5dde7!important}
 </style></head>
 <body>
 <header><nav class="wrap" aria-label="Navigation principale">
@@ -558,24 +563,19 @@ nav a.l.active{color:var(--blue);font-weight:700}
 <label><span data-i="fName">Nom complet</span><input name="name" autocomplete="name" required maxlength="100" placeholder="Votre nom"></label>
 <label><span data-i="fEmail">Adresse e-mail</span><input type="email" name="email" autocomplete="email" required maxlength="160" placeholder="nom@exemple.com"></label>
 <label><span data-i="fOrg">Organisation (facultatif)</span><input name="organisation" autocomplete="organization" maxlength="140" placeholder="École, entreprise…"></label>
-<label class="service-picker-label"><span data-i="fService">Service souhaité</span>
-<div class="service-picker" id="servicePicker">
-  <input type="hidden" name="service" id="serviceValue" required>
-  <button class="service-picker-trigger" type="button" id="servicePickerTrigger" aria-haspopup="listbox" aria-expanded="false">
-    <span id="servicePickerLabel">Choisir un service</span><span class="service-chevron">⌄</span>
-  </button>
-  <div class="service-picker-menu" id="servicePickerMenu" role="listbox" aria-label="Services">
-    <button type="button" role="option" data-value="Site web responsive">Site web responsive</button>
-    <button type="button" role="option" data-value="Application de gestion">Application de gestion</button>
-    <button type="button" role="option" data-value="Application mobile / web">Application mobile / web</button>
-    <button type="button" role="option" data-value="Boutique en ligne">Boutique en ligne</button>
-    <button type="button" role="option" data-value="Base de données">Base de données</button>
-    <button type="button" role="option" data-value="IA et automatisation">IA et automatisation</button>
-    <button type="button" role="option" data-value="Maintenance et assistance">Maintenance et assistance</button>
-    <button type="button" role="option" data-value="Publicité en ligne & acquisition">Publicité en ligne & acquisition</button>
-    <button type="button" role="option" data-value="Autre demande">Autre demande</button>
-  </div>
-</div></label>
+<label><span data-i="fService">Service souhaité</span>
+<select name="service" required>
+<option value="" data-i="fChoose">Choisir un service</option>
+<option>Site web responsive</option>
+<option>Application de gestion</option>
+<option>Application mobile / web</option>
+<option>Boutique en ligne</option>
+<option>Base de données</option>
+<option>IA et automatisation</option>
+<option>Maintenance et assistance</option>
+<option>Autre demande</option>
+</select>
+</label>
 <label class="full"><span data-i="fMessage">Parlez-nous de votre projet</span><textarea name="message" required minlength="10" maxlength="4000" placeholder="Décrivez brièvement votre besoin…"></textarea></label>
 <div class="full"><button class="btn p" type="submit" data-i="fSend">Envoyer ma demande</button><p class="form-status" id="formStatus" role="status" aria-live="polite"></p></div>
 </form>
