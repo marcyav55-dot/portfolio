@@ -315,6 +315,7 @@ dialog{background:#fff;border-color:#dce4ed}
 .service-card .service-copy p{color:#596a7d}
 .service-card .service-copy a{font-weight:700;color:var(--blue)}
 @media(max-width:700px){.service-head{align-items:flex-start}.service-card{box-shadow:0 8px 22px rgba(16,37,63,.06)}}
+</style>
 <style>
 /* Navigation active state + premium loading skeleton */
 nav a.l{position:relative;transition:color .2s ease}
@@ -334,8 +335,28 @@ nav a.l.active{color:var(--blue);font-weight:700}
 @media(max-width:850px){.skeleton-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:560px){.skeleton-grid{grid-template-columns:1fr}nav a.l:after{bottom:-4px}}
 @media(prefers-reduced-motion:reduce){.skeleton{animation:none}.service-picker-menu{transition:none}nav a.l:after{transition:none}}
-</style></style>
-</head>
+</style>
+<style>
+/* Mobile layout fixes */
+@media (max-width: 700px){
+  .ads-section{background:#0b0f15!important;color:#fff!important;padding:3.5rem 0!important}
+  .ads-section .wrap{padding-left:1.25rem;padding-right:1.25rem}
+  .ads-grid{display:grid;grid-template-columns:1fr!important;gap:1.5rem}
+  .ads-copy h2{font-size:clamp(2rem,10vw,3rem);line-height:1.05;margin:.7rem 0 1rem}
+  .ads-copy p{font-size:1rem;line-height:1.65}
+  .ads-points{display:grid;grid-template-columns:1fr!important;gap:.65rem}
+  .ads-point{padding:.85rem}
+  .ads-point strong{display:block;margin-bottom:.2rem}
+  .ads-point span{display:block}
+  .ads-card{padding:1.2rem}
+  .service-picker{width:100%}
+  .service-picker-trigger{min-height:54px;background:#fff!important;color:#172235!important;border:1px solid #cfd8e3!important}
+  .service-picker-menu{max-height:58vh;overflow-y:auto}
+}
+@media (min-width:701px){
+  .ads-section{background:#0b0f15!important;color:#fff!important}
+}
+</style></head>
 <body>
 <header><nav class="wrap" aria-label="Navigation principale">
 <a class="brand" href="#top"><img class="brand-logo" src="assets/tym-services-logo.png" alt="Logo TYM Services"><span>TYM <span style="color:var(--blue)">SERVICES</span></span></a>
