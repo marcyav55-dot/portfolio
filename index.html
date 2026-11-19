@@ -390,7 +390,12 @@ dialog{background:#fff;border-color:#dce4ed}
 <div class="service-copy"><h3>Design numérique & interfaces</h3><p>Interfaces web et mobiles, prototypes interactifs, design produit et expériences numériques.</p><a href="#contact">Discuter de votre projet <b>→</b></a></div>
 </article>
 </div></div></section>
-<section id="projects"><div class="wrap">
+<section class="ads-section" id="ads"><div class="wrap ads-grid">
+<div class="ads-copy"><span class="eyebrow">PUBLICITÉ EN LIGNE</span><h2>Faites connaître votre activité au bon public.</h2><p>TYM Services peut vous aider à structurer votre présence publicitaire en ligne : création des visuels, pages de campagne, intégration des formulaires et mise en place d’un parcours simple vers WhatsApp ou votre site.</p>
+<div class="ads-points"><div class="ads-point"><strong>Visibilité</strong><span>Présentez clairement votre offre.</span></div><div class="ads-point"><strong>Acquisition</strong><span>Transformez les visiteurs en prospects.</span></div><div class="ads-point"><strong>Création</strong><span>Visuels et pages adaptés à votre campagne.</span></div><div class="ads-point"><strong>Suivi</strong><span>Structurez les demandes reçues.</span></div></div>
+<a class="btn p" href="#contact">Parler d’une campagne</a></div>
+<div class="ads-card"><span class="service-no">TYM / ADS</span><h3>Une campagne pensée comme un produit numérique.</h3><p>De l’idée au clic, nous pouvons construire l’écosystème autour de votre publicité : landing page, formulaire, WhatsApp, suivi et automatisation.</p><a class="btn" href="https://wa.me/243808373717" target="_blank" rel="noopener noreferrer">Discuter sur WhatsApp →</a></div>
+</div></section><section id="projects"><div class="wrap">
 <h2 data-i="nProjects"></h2>
 <div class="projects" id="projectsGrid"></div>
 </div></section>
@@ -432,7 +437,24 @@ dialog{background:#fff;border-color:#dce4ed}
 <label><span data-i="fName">Nom complet</span><input name="name" autocomplete="name" required maxlength="100" placeholder="Votre nom"></label>
 <label><span data-i="fEmail">Adresse e-mail</span><input type="email" name="email" autocomplete="email" required maxlength="160" placeholder="nom@exemple.com"></label>
 <label><span data-i="fOrg">Organisation (facultatif)</span><input name="organisation" autocomplete="organization" maxlength="140" placeholder="École, entreprise…"></label>
-<label><span data-i="fService">Service souhaité</span><select name="service" required><option value="" data-i="fChoose">Choisir un service</option><option>Site web responsive</option><option>Application de gestion</option><option>Application mobile / web</option><option>Boutique en ligne</option><option>Base de données</option><option>IA et automatisation</option><option>Maintenance et assistance</option><option>Autre demande</option></select></label>
+<label class="service-picker-label"><span data-i="fService">Service souhaité</span>
+<div class="service-picker" id="servicePicker">
+  <input type="hidden" name="service" id="serviceValue" required>
+  <button class="service-picker-trigger" type="button" id="servicePickerTrigger" aria-haspopup="listbox" aria-expanded="false">
+    <span id="servicePickerLabel">Choisir un service</span><span class="service-chevron">⌄</span>
+  </button>
+  <div class="service-picker-menu" id="servicePickerMenu" role="listbox" aria-label="Services">
+    <button type="button" role="option" data-value="Site web responsive">Site web responsive</button>
+    <button type="button" role="option" data-value="Application de gestion">Application de gestion</button>
+    <button type="button" role="option" data-value="Application mobile / web">Application mobile / web</button>
+    <button type="button" role="option" data-value="Boutique en ligne">Boutique en ligne</button>
+    <button type="button" role="option" data-value="Base de données">Base de données</button>
+    <button type="button" role="option" data-value="IA et automatisation">IA et automatisation</button>
+    <button type="button" role="option" data-value="Maintenance et assistance">Maintenance et assistance</button>
+    <button type="button" role="option" data-value="Publicité en ligne & acquisition">Publicité en ligne & acquisition</button>
+    <button type="button" role="option" data-value="Autre demande">Autre demande</button>
+  </div>
+</div></label>
 <label class="full"><span data-i="fMessage">Parlez-nous de votre projet</span><textarea name="message" required minlength="10" maxlength="4000" placeholder="Décrivez brièvement votre besoin…"></textarea></label>
 <div class="full"><button class="btn p" type="submit" data-i="fSend">Envoyer ma demande</button><p class="form-status" id="formStatus" role="status" aria-live="polite"></p></div>
 </form>
