@@ -423,6 +423,41 @@ nav a.l.active{color:var(--blue);font-weight:700}
  .ad-monetization-cta{align-items:stretch;flex-direction:column}
  .ad-monetization-cta .btn{width:100%}
 }
+</style><style>
+/* TYM Tech News + non-intrusive advertising */
+.tech-news-ads{padding:5.5rem 0;background:#f6f9fc;border-top:1px solid #e4eaf2}
+.tech-news-head{display:grid;grid-template-columns:1fr .72fr;gap:3rem;align-items:end;margin-bottom:2rem}
+.tech-news-head h2{max-width:15ch;margin:.65rem 0 0;color:#142a49;font-size:clamp(2rem,4vw,3.2rem);line-height:1.05}
+.tech-news-head p{margin:0;color:#63758b;line-height:1.75}
+.tech-news-layout{display:grid;grid-template-columns:minmax(0,1.35fr) minmax(280px,.65fr);gap:1.2rem;align-items:start}
+.tech-feed{display:grid;gap:.8rem}
+.news-loading{display:grid;gap:.8rem}
+.news-loading span{height:92px;border-radius:16px;background:linear-gradient(90deg,#e8eef5 25%,#f8fafc 50%,#e8eef5 75%);background-size:200% 100%;animation:newsShimmer 1.2s infinite}
+@keyframes newsShimmer{to{background-position:-200% 0}}
+.tech-news-card{display:grid;grid-template-columns:1fr auto;gap:1rem;padding:1.15rem 1.25rem;border:1px solid #dfe7f0;border-radius:16px;background:#fff;text-decoration:none;transition:transform .22s,box-shadow .22s,border-color .22s}
+.tech-news-card:hover{transform:translateY(-3px);border-color:#a8c2e1;box-shadow:0 14px 35px rgba(19,53,91,.09)}
+.tech-news-card h3{margin:.3rem 0 .45rem;color:#142a49;font-size:1rem;line-height:1.35}
+.tech-news-card p{margin:0;color:#68798e;font-size:.86rem;line-height:1.5}
+.news-meta{color:#1766b1;font-size:.7rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase}
+.news-arrow{align-self:center;color:#1766b1;font-size:1.35rem}
+.smart-ad-zone{position:sticky;top:90px;min-height:280px;border:1px solid #dbe4ef;border-radius:18px;background:#fff;padding:.8rem;box-shadow:0 10px 28px rgba(20,46,76,.05)}
+.ad-zone-label{font-size:.68rem;font-weight:800;letter-spacing:.13em;color:#8493a5;padding:.2rem .35rem .7rem}
+.ad-slot{min-height:235px;border-radius:12px;background:#f8fafc;display:grid;place-items:center;overflow:hidden}
+.ad-fallback{text-align:center;max-width:240px;padding:1.2rem}
+.ad-dot{display:block;width:8px;height:8px;margin:0 auto .8rem;border-radius:50%;background:#20b486}
+.ad-fallback strong{display:block;color:#173d70}
+.ad-fallback p{color:#7a899b;font-size:.8rem;line-height:1.55;margin:.45rem 0 .8rem}
+.ad-fallback a{color:#1766b1;font-size:.8rem;font-weight:800;text-decoration:none}
+.ad-slot.adsense-active{background:transparent;min-height:0}
+@media(max-width:760px){
+ .tech-news-ads{padding:4rem 0}
+ .tech-news-head{grid-template-columns:1fr;gap:1rem}
+ .tech-news-layout{grid-template-columns:1fr}
+ .smart-ad-zone{position:static;min-height:220px}
+ .ad-slot{min-height:175px}
+ .tech-news-card{grid-template-columns:1fr}
+ .news-arrow{display:none}
+}
 </style></head>
 <body>
 <header><nav class="wrap" aria-label="Navigation principale">
@@ -546,21 +581,33 @@ nav a.l.active{color:var(--blue);font-weight:700}
 <a class="btn p" href="#contact">Parler d’une campagne</a></div>
 <div class="ads-card"><span class="service-no">TYM / ADS</span><h3>Une campagne pensée comme un produit numérique.</h3><p>De l’idée au clic, nous pouvons construire l’écosystème autour de votre publicité : landing page, formulaire, WhatsApp, suivi et automatisation.</p><a class="btn" href="https://wa.me/243808373717" target="_blank" rel="noopener noreferrer">Discuter sur WhatsApp →</a></div>
 </div></section>
-<!-- TYM DIRECT AD INVENTORY -->
-<section class="ad-monetization" id="publicite">
+<!-- TYM NEWS + ADS -->
+<section class="tech-news-ads" id="tech-news">
 <div class="wrap">
-  <div class="ad-monetization-head">
-    <div><span class="eyebrow">ESPACE PUBLICITAIRE</span><h2>Votre marque peut être visible sur TYM Services.</h2></div>
-    <p>Nous ouvrons des emplacements publicitaires premium pour les entreprises, startups, écoles, services numériques et marques qui souhaitent toucher une audience orientée technologie et innovation.</p>
+  <div class="tech-news-head">
+    <div>
+      <span class="eyebrow">TECHNOLOGIE · ACTUALITÉS</span>
+      <h2>Les nouveautés informatiques, directement sur TYM Services.</h2>
+    </div>
+    <p>Une sélection actualisée de sujets tech issus de Hacker News. Les articles restent accessibles depuis leur source originale.</p>
   </div>
-  <div class="ad-inventory">
-    <article class="ad-inventory-card featured"><span class="ad-label">01 · VISIBILITÉ</span><div class="ad-slot-preview">BANNER 970 × 250</div><h3>Bannière principale</h3><p>Un emplacement très visible pour une campagne, un lancement ou une offre.</p></article>
-    <article class="ad-inventory-card"><span class="ad-label">02 · CONTENU</span><div class="ad-slot-preview compact">DISPLAY 300 × 250</div><h3>Bloc sponsorisé</h3><p>Un format compact intégré naturellement dans l’expérience du site.</p></article>
-    <article class="ad-inventory-card"><span class="ad-label">03 · PARTENARIAT</span><div class="ad-slot-preview compact">SPONSOR</div><h3>Partenariat de marque</h3><p>Une présence personnalisée pour les partenaires et campagnes à long terme.</p></article>
-  </div>
-  <div class="ad-monetization-cta">
-    <div><strong>Vous souhaitez diffuser une publicité ?</strong><span>Demandez les formats et disponibilités de TYM Services.</span></div>
-    <a class="btn p" href="https://wa.me/243808373717" target="_blank" rel="noopener noreferrer">Proposer une publicité →</a>
+
+  <div class="tech-news-layout">
+    <div class="tech-feed" id="techNewsFeed" aria-live="polite">
+      <div class="news-loading"><span></span><span></span><span></span></div>
+    </div>
+
+    <aside class="smart-ad-zone" aria-label="Espace publicitaire">
+      <div class="ad-zone-label">ESPACE PUBLICITAIRE</div>
+      <div class="ad-slot" id="adsenseSlot">
+        <div class="ad-fallback">
+          <span class="ad-dot"></span>
+          <strong>Votre publicité ici</strong>
+          <p>Un espace disponible pour Google AdSense ou une campagne partenaire TYM Services.</p>
+          <a href="https://wa.me/243808373717" target="_blank" rel="noopener noreferrer">Proposer une campagne →</a>
+        </div>
+      </div>
+    </aside>
   </div>
 </div>
 </section>
@@ -856,5 +903,27 @@ if(contactForm){
  initial();
 })();
 </script></script>
-</body>
+<script>
+(function(){
+  const feed=document.getElementById("techNewsFeed");
+  if(!feed) return;
+  const esc=s=>String(s||"").replace(/[&<>"']/g,m=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[m]));
+  const relative=t=>{
+    const d=Math.max(0,Date.now()-t*1000),h=Math.floor(d/36e5);
+    return h<1?"il y a moins d’une heure":h<24?"il y a "+h+" h":"il y a "+Math.floor(h/24)+" j";
+  };
+  const load=async()=>{
+    try{
+      const ids=await fetch("https://hacker-news.firebaseio.com/v0/newstories.json").then(r=>r.json());
+      const items=await Promise.all(ids.slice(0,18).map(id=>fetch("https://hacker-news.firebaseio.com/v0/item/"+id+".json").then(r=>r.json())));
+      const keywords=/ai|artificial intelligence|machine learning|software|cyber|security|cloud|robot|robotics|python|javascript|rust|linux|computer|chip|gpu|data|database|developer|programming|web|mobile|quantum|semiconductor|technology|tech/i;
+      const tech=items.filter(x=>x&&x.type==="story"&&x.title&&keywords.test(x.title)).slice(0,6);
+      feed.innerHTML=tech.length?tech.map(x=>'<a class="tech-news-card" href="'+esc(x.url||("https://news.ycombinator.com/item?id="+x.id))+'" target="_blank" rel="noopener noreferrer"><div><span class="news-meta">TECH · '+relative(x.time)+'</span><h3>'+esc(x.title)+'</h3><p>'+esc(x.by?"Publié sur Hacker News · "+x.score+" points":"Source Hacker News")+'</p></div><span class="news-arrow">→</span></a>').join(""):'<div class="tech-news-card"><div><span class="news-meta">TECH</span><h3>Aucune actualité informatique disponible pour le moment.</h3><p>Le flux sera réessayé automatiquement.</p></div></div>';
+    }catch(e){
+      feed.innerHTML='<div class="tech-news-card"><div><span class="news-meta">TECH</span><h3>Actualités temporairement indisponibles.</h3><p>Le site continue de fonctionner normalement.</p></div></div>';
+    }
+  };
+  load();
+})();
+</script></body>
 </html>
