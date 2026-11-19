@@ -527,7 +527,31 @@ nav a.l.active{color:var(--blue);font-weight:700}
 @media(prefers-reduced-motion:reduce){
   .tech-news-ads:before,.tech-news-ads:after{animation:none}
 }
-</style></style></head>
+</style><style>
+.hero{position:relative;overflow:hidden;background:linear-gradient(125deg,#082b63 0%,#174b91 52%,#087e83 100%);color:#fff;padding:5.8rem 0 5rem}
+.hero:before{content:"";position:absolute;width:760px;height:760px;right:-330px;top:-330px;border:1px solid rgba(255,255,255,.12);border-radius:50%;box-shadow:0 0 0 90px rgba(255,255,255,.025),0 0 0 180px rgba(255,255,255,.018);pointer-events:none}
+.hero:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(7,35,79,.18),transparent 55%,rgba(8,126,131,.12));pointer-events:none}
+.hero .wrap{position:relative;z-index:1}.hero-grid{grid-template-columns:minmax(0,1.08fr) minmax(390px,.92fr);gap:3.8rem}.hero-copy{max-width:760px}
+.hero .tagline{color:#a9d9ff}.hero .tagline:before{background:#4fd6c4}
+.hero h1{color:#fff;font-size:clamp(2.8rem,6vw,5rem);line-height:.98;letter-spacing:-.06em;max-width:760px;margin:1rem 0 1.25rem}
+.hero p:not(.tagline){color:rgba(255,255,255,.82);font-size:1.08rem;line-height:1.72;max-width:690px}
+.hero .btn.p{background:#fff;border-color:#fff;color:#123b76;box-shadow:0 12px 30px rgba(0,0,0,.16)}.hero .btn.p:hover{background:#f3f8ff;border-color:#f3f8ff}
+.hero-secondary{background:rgba(255,255,255,.06);border-color:rgba(255,255,255,.4);color:#fff}.hero-secondary:hover{background:rgba(255,255,255,.13);border-color:#fff;color:#fff}
+.hero-trust{display:flex;flex-wrap:wrap;gap:.6rem;margin-top:1.55rem}.hero-trust span{display:inline-flex;align-items:center;gap:.45rem;padding:.42rem .65rem;border:1px solid rgba(255,255,255,.16);border-radius:999px;background:rgba(255,255,255,.07);color:rgba(255,255,255,.78);font-size:.72rem}.hero-trust b{color:#fff}
+.hero-visual{position:relative;min-height:455px;border:1px solid rgba(255,255,255,.22);border-radius:28px;background:linear-gradient(145deg,rgba(255,255,255,.13),rgba(4,25,58,.25));box-shadow:0 30px 80px rgba(0,20,55,.3);overflow:hidden;backdrop-filter:blur(8px)}
+.hero-visual:before{content:"";position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.055) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.055) 1px,transparent 1px);background-size:28px 28px;opacity:.55}
+.hero-visual-top,.hero-visual-bottom{position:absolute;left:1.2rem;right:1.2rem;display:flex;justify-content:space-between;gap:1rem;z-index:2;font-size:.64rem;font-weight:800;letter-spacing:.12em;color:rgba(255,255,255,.68)}.hero-visual-top{top:1.1rem}.hero-visual-bottom{bottom:1rem}.hero-visual-bottom b{color:#8ff0d7}
+.hero-status{display:flex;align-items:center;gap:.4rem}.hero-status i{width:6px;height:6px;border-radius:50%;background:#55e0b6;box-shadow:0 0 12px #55e0b6}
+.hero-core{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:190px;height:190px;border-radius:50%;display:grid;place-items:center;background:radial-gradient(circle,rgba(24,106,194,.75),rgba(8,31,70,.12) 62%,transparent 63%);text-align:center}
+.hero-core-ring{position:absolute;inset:8px;border:1px solid rgba(111,224,255,.48);border-radius:50%;box-shadow:0 0 45px rgba(67,211,255,.18);animation:heroPulse 4s ease-in-out infinite}.hero-core-ring:after{content:"";position:absolute;inset:25px;border:1px dashed rgba(255,255,255,.28);border-radius:50%;animation:heroSpin 18s linear infinite}
+.hero-core-mark{position:relative;font:700 2.1rem var(--display);letter-spacing:.08em;color:#fff;text-shadow:0 0 24px rgba(90,218,255,.45)}.hero-core small{position:absolute;bottom:16px;white-space:nowrap;color:rgba(255,255,255,.6);font-size:.48rem;letter-spacing:.12em}
+.hero-float{position:absolute;z-index:3;display:flex;flex-direction:column;gap:.15rem;padding:.75rem .85rem;border:1px solid rgba(255,255,255,.2);border-radius:14px;background:rgba(5,25,57,.62);box-shadow:0 12px 30px rgba(0,0,0,.16);backdrop-filter:blur(12px);animation:heroFloat 5s ease-in-out infinite}.hero-float strong{font:700 .9rem var(--display);color:#fff}.hero-float span{font-size:.63rem;color:rgba(255,255,255,.65)}
+.hero-float-a{top:22%;left:7%;animation-delay:-1s}.hero-float-b{right:6%;top:35%;animation-delay:-2.4s}.hero-float-c{left:13%;bottom:18%;animation-delay:-3.2s}
+.hero-lines{position:absolute;inset:0;background:radial-gradient(circle at 50% 50%,transparent 0 22%,rgba(88,222,255,.08) 22.2% 22.5%,transparent 22.7% 100%);pointer-events:none}
+@keyframes heroFloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}}@keyframes heroPulse{0%,100%{transform:scale(.98);opacity:.65}50%{transform:scale(1.04);opacity:1}}@keyframes heroSpin{to{transform:rotate(360deg)}}
+@media(max-width:760px){.hero{padding:3.8rem 0 3.6rem}.hero-grid{grid-template-columns:1fr;gap:2rem}.hero h1{font-size:clamp(2.65rem,13vw,4rem);line-height:.98}.hero p:not(.tagline){font-size:1rem}.hero-actions{display:grid;grid-template-columns:1fr;gap:.65rem}.hero-actions .btn{width:100%;min-height:58px}.hero-trust{gap:.45rem}.hero-trust span{font-size:.66rem}.hero-visual{min-height:330px;border-radius:22px}.hero-core{width:145px;height:145px}.hero-core-mark{font-size:1.7rem}.hero-float{padding:.58rem .65rem}.hero-float span{font-size:.55rem}.hero-float-a{top:18%;left:4%}.hero-float-b{top:30%;right:3%}.hero-float-c{bottom:14%;left:7%}}
+@media(prefers-reduced-motion:reduce){.hero-core-ring,.hero-core-ring:after,.hero-float{animation:none}}
+</style></head>
 <body>
 <header><nav class="wrap" aria-label="Navigation principale">
 <a class="brand" href="#top"><img class="brand-logo" src="assets/tym-services-logo.png" alt="Logo TYM Services"><span>TYM <span style="color:var(--blue)">SERVICES</span></span></a>
@@ -536,9 +560,24 @@ nav a.l.active{color:var(--blue);font-weight:700}
 <button class="menu-toggle" id="menuToggle" aria-label="Ouvrir le menu" aria-expanded="false"><span></span><span></span><span></span></button></nav></header>
 
 <main id="top">
-<section class="hero"><div class="wrap hero-grid"><div><p class="tagline" data-i="tagline"></p><h1 data-i="h1"></h1><p data-i="lead"></p>
-<div class="hero-actions"><a class="btn p" href="#contact" data-i="ctaContact">Demander une consultation</a><a class="btn" href="#projects" data-i="ctaProjects">Découvrir nos projets</a></div></div>
-<figure class="hero-visual" id="heroCapability"><div class="skeleton skeleton-hero" aria-hidden="true"></div><img id="heroCapabilityImage" src="1793541020227.jpg" alt="Environnement informatique et matériel numérique utilisé pour concevoir des solutions technologiques" fetchpriority="high" decoding="async"><figcaption><span id="heroCapabilityKicker">La technologie au service de vos projets</span><strong id="heroCapabilityTitle">TYM Services</strong><small id="heroCapabilityDomain">Solutions numériques</small></figcaption></figure></div></section>
+<section class="hero"><div class="wrap hero-grid">
+<div class="hero-copy">
+<p class="tagline" data-i="tagline">La technologie au service de vos ambitions.</p>
+<h1 data-en="Digital solutions that move your organisation forward." data-fr="Des solutions numériques qui font avancer votre organisation.">Des solutions numériques qui font avancer votre organisation.</h1>
+<p data-en="TYM Services transforms real business needs into modern websites, applications, intelligent systems and digital experiences." data-fr="TYM Services transforme les besoins réels des organisations en sites web, applications, systèmes intelligents et expériences numériques modernes.">TYM Services transforme les besoins réels des organisations en sites web, applications, systèmes intelligents et expériences numériques modernes.</p>
+<div class="hero-actions"><a class="btn p" href="#contact" data-i="ctaContact">Demander une consultation</a><a class="btn hero-secondary" href="#projects" data-i="ctaProjects">Découvrir nos réalisations</a></div>
+<div class="hero-trust"><span><b>01</b> Logiciel & Web</span><span><b>02</b> IA & Data</span><span><b>03</b> Cloud & Cybersécurité</span></div>
+</div>
+<div class="hero-visual" id="heroCapability" aria-label="Aperçu des domaines technologiques de TYM Services">
+<div class="hero-orb orb-a"></div><div class="hero-orb orb-b"></div>
+<div class="hero-visual-top"><span>TYM SERVICES</span><span class="hero-status"><i></i> DIGITAL STUDIO</span></div>
+<div class="hero-core"><div class="hero-core-ring"></div><div class="hero-core-mark">TYM</div><small>TECHNOLOGY · METHOD · RESULT</small></div>
+<div class="hero-float hero-float-a"><strong>AI</strong><span>Intelligence artificielle</span></div>
+<div class="hero-float hero-float-b"><strong>WEB</strong><span>Applications & plateformes</span></div>
+<div class="hero-float hero-float-c"><strong>IoT</strong><span>Automation & systèmes</span></div>
+<div class="hero-lines"></div>
+<div class="hero-visual-bottom"><span>BUILD · CONNECT · AUTOMATE</span><b>13+ domaines</b></div>
+</div></div></section>
 
 <section id="about" class="tym-about">
 <div class="wrap">
@@ -976,65 +1015,21 @@ if(contactForm){
 </script>
 <script>
 (function(){
-  const feed=document.getElementById("techNewsFeed");
-  if(!feed) return;
-  const esc=s=>String(s||"").replace(/[&<>"']/g,m=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[m]));
-  const relative=t=>{const d=Math.max(0,Date.now()-t*1000),h=Math.floor(d/36e5);return h<1?"il y a moins d’une heure":h<24?"il y a "+h+" h":"il y a "+Math.floor(h/24)+" j"};
-  const wikiImages={ai:"artificial intelligence technology",cyber:"cybersecurity computer",cloud:"cloud computing server",robot:"robotics technology",hardware:"computer chip processor",dev:"software developer coding"};
-  const fallbackImages=[
-    "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=82",
-    "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=1200&q=82",
-    "https://images.unsplash.com/photo-1484417894907-623942c8ee29?auto=format&fit=crop&w=1200&q=82",
-    "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?auto=format&fit=crop&w=1200&q=82",
-    "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=1200&q=82",
-    "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=1200&q=82"
-  ];
-  const imageCache={};
-  const usedImages=new Set();
-  async function getImage(term,fallback){
-    if(imageCache[term]) return imageCache[term];
-    try{
-      const u="https://commons.wikimedia.org/w/api.php?action=query&generator=search&gsrsearch="+encodeURIComponent(term)+"&gsrnamespace=6&gsrlimit=8&prop=imageinfo&iiprop=url&iiurlwidth=1000&format=json&origin=*";
-      const data=await fetch(u).then(r=>r.json());
-      const pages=Object.values(data.query?.pages||{});
-      const candidates=pages.map(p=>p.imageinfo?.[0]?.thumburl||p.imageinfo?.[0]?.url).filter(Boolean);
-      const img=candidates.find(url=>!usedImages.has(url));
-      imageCache[term]=img||fallback||"";
-      if(imageCache[term]) usedImages.add(imageCache[term]);
-      return imageCache[term];
-    }catch(e){
-      imageCache[term]=fallback||"";
-      if(imageCache[term]) usedImages.add(imageCache[term]);
-      return imageCache[term];
-    }
-  }
-  function category(title){
-    const t=title.toLowerCase();
-    if(/ai|artificial intelligence|machine learning|model|llm|openai|gemini/.test(t)) return "ai";
-    if(/cyber|security|hack|malware|vulnerability/.test(t)) return "cyber";
-    if(/cloud|aws|azure|server/.test(t)) return "cloud";
-    if(/robot|robotics|autonomous/.test(t)) return "robot";
-    if(/chip|gpu|cpu|nvidia|amd|intel|processor|hardware/.test(t)) return "hardware";
-    return "dev";
-  }
-  async function load(){
-    try{
-      const ids=await fetch("https://hacker-news.firebaseio.com/v0/newstories.json").then(r=>r.json());
-      const items=await Promise.all(ids.slice(0,24).map(id=>fetch("https://hacker-news.firebaseio.com/v0/item/"+id+".json").then(r=>r.json()).catch(()=>null)));
-      const keywords=/ai|artificial intelligence|machine learning|software|cyber|security|cloud|robot|robotics|python|javascript|rust|linux|computer|chip|gpu|data|database|developer|programming|web|mobile|quantum|semiconductor|technology|tech/i;
-      const tech=items.filter(x=>x&&x.type==="story"&&x.title&&keywords.test(x.title)).slice(0,6);
-      if(!tech.length) throw new Error("no stories");
-      const imgs=await Promise.all(tech.map((x,i)=>getImage(wikiImages[category(x.title)]+" "+x.title, fallbackImages[i%fallbackImages.length])));
-      feed.innerHTML=tech.map((x,i)=>{
-        const featured=i===0, img=imgs[i], term=category(x.title);
-        const image=img?'<img class="news-image" src="'+esc(img)+'" alt="" loading="lazy">':'<div class="news-image" role="img" aria-label="Illustration technologique"></div>';
-        return '<a class="tech-news-card '+(featured?"featured":"")+'" href="'+esc(x.url||("https://news.ycombinator.com/item?id="+x.id))+'" target="_blank" rel="noopener noreferrer">'+image+'<div class="news-body"><span class="news-meta">TECH · '+term.toUpperCase()+'</span><h3>'+esc(x.title)+'</h3><p>'+esc(x.text?x.text.replace(/<[^>]+>/g,"").slice(0,170)+"…":"Une actualité technologique sélectionnée pour TYM Services.")+'</p><div class="news-source"><span>'+relative(x.time)+'</span><span>Source : Hacker News →</span></div></div></a>';
-      }).join("");
-    }catch(e){
-      feed.innerHTML='<div class="tech-news-card featured"><div class="news-image"></div><div class="news-body"><span class="news-meta">TECH NEWS</span><h3>Les nouveautés informatiques arrivent ici.</h3><p>Le flux actualisé sera disponible dès que la source distante répondra.</p></div></div>';
-    }
-  }
-  load();
+ const feed=document.getElementById("techNewsFeed"); if(!feed)return;
+ const esc=s=>String(s||"").replace(/[&<>"']/g,m=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[m]));
+ const relative=d=>{const h=Math.floor(Math.max(0,Date.now()-new Date(d).getTime())/36e5);return h<1?"il y a moins d’une heure":h<24?"il y a "+h+" h":"il y a "+Math.floor(h/24)+" j"};
+ const tags=["technology","ai","javascript","devops","cybersecurity","data"];
+ async function getArticles(tag){try{const r=await fetch("https://dev.to/api/articles?tag="+encodeURIComponent(tag)+"&per_page=12&top=30",{headers:{"Accept":"application/json"}});if(!r.ok)throw 0;return await r.json()}catch(e){return[]}}
+ async function load(){
+  try{
+   const groups=await Promise.all(tags.map(getArticles)),seen=new Set(),articles=[];
+   groups.flat().forEach(a=>{const image=a&& (a.cover_image||a.social_image);if(a&&a.id&&a.title&&image&&!seen.has(a.id)){seen.add(a.id);articles.push({...a,__image:image})}});
+   articles.sort((a,b)=>new Date(b.published_at)-new Date(a.published_at));
+   const tech=articles.slice(0,6); if(!tech.length)throw 0;
+   feed.innerHTML=tech.map((x,i)=>{const featured=i===0,summary=x.description||"Une actualité technologique publiée sur DEV.";return '<a class="tech-news-card '+(featured?"featured":"")+'" href="'+esc(x.url)+'" target="_blank" rel="noopener noreferrer"><img class="news-image" src="'+esc(x.__image)+'" alt="'+esc(x.title)+'" loading="'+(featured?"eager":"lazy")+'" decoding="async"><div class="news-body"><span class="news-meta">TECH · '+esc((x.tag_list||[]).slice(0,2).join(" · ")||"DEV COMMUNITY")+'</span><h3>'+esc(x.title)+'</h3><p>'+esc(summary.slice(0,180)+(summary.length>180?"…":""))+'</p><div class="news-source"><span>'+relative(x.published_at)+'</span><span>Source : DEV →</span></div></div></a>'}).join("");
+  }catch(e){feed.innerHTML='<div class="tech-news-card featured"><div class="news-body"><span class="news-meta">TECH NEWS</span><h3>Les actualités technologiques sont temporairement indisponibles.</h3><p>Le flux sera réessayé au prochain chargement.</p></div></div>'}
+ }
+ load();
 })();
 </script><script>
 (function(){
