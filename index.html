@@ -479,6 +479,27 @@ nav a.l.active{color:var(--blue);font-weight:700}
  .featured .news-image{height:210px}
  .news-image{height:175px}
 }
+</style><style>
+/* Mobile navigation reliability */
+@media(max-width:700px){
+  header{z-index:1000!important}
+  header nav{position:relative!important}
+  nav .menu-toggle{display:flex!important;position:relative!important;z-index:1003!important;width:48px;height:48px;align-items:center;justify-content:center;cursor:pointer;touch-action:manipulation;border:1px solid #d9e2ed;border-radius:12px;background:#fff}
+  nav.menu-open .menu-toggle{background:#f4f8fc;border-color:#1766b1}
+  nav.menu-open .nav-links{z-index:1002!important}
+  nav.menu-open .menu-toggle span{transition:transform .2s,opacity .2s}
+}
+</style><style>
+.smart-ad-zone{min-height:0}
+.ad-slot{min-height:280px;background:#f8fafc;display:block}
+.ad-fallback{min-height:280px;max-width:none;padding:0;display:grid;grid-template-rows:125px 1fr;text-align:left}
+.ad-fallback img{width:100%;height:125px;object-fit:cover;display:block}
+.ad-fallback-copy{padding:1rem 1.05rem}
+.ad-fallback-copy .ad-dot{margin:0 0 .65rem}
+.ad-fallback-copy strong{display:block;color:#173d70;line-height:1.3}
+.ad-fallback-copy p{color:#7a899b;font-size:.8rem;line-height:1.55;margin:.45rem 0 .8rem}
+.ad-fallback-copy a{color:#1766b1;font-size:.8rem;font-weight:800;text-decoration:none}
+@media(max-width:760px){.ad-slot,.ad-fallback{min-height:230px}.ad-fallback{grid-template-rows:105px 1fr}.ad-fallback img{height:105px}}
 </style></head>
 <body>
 <header><nav class="wrap" aria-label="Navigation principale">
@@ -620,12 +641,15 @@ nav a.l.active{color:var(--blue);font-weight:700}
 
     <aside class="smart-ad-zone" aria-label="Espace publicitaire">
       <div class="ad-zone-label">ESPACE PUBLICITAIRE</div>
-      <div class="ad-slot" id="adsenseSlot">
-        <div class="ad-fallback">
-          <span class="ad-dot"></span>
-          <strong>Votre publicité ici</strong>
-          <p>Un espace disponible pour Google AdSense ou une campagne partenaire TYM Services.</p>
-          <a href="https://wa.me/243808373717" target="_blank" rel="noopener noreferrer">Proposer une campagne →</a>
+      <div class="ad-slot" id="adsenseSlot" data-ad-client="" data-ad-slot="">
+        <div class="ad-fallback" id="adFallback">
+          <img id="fallbackAdImage" src="https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=900&q=80" alt="Équipe professionnelle travaillant sur un projet numérique" loading="lazy">
+          <div class="ad-fallback-copy">
+            <span class="ad-dot"></span>
+            <strong id="fallbackAdTitle">TYM Services · Solutions numériques</strong>
+            <p id="fallbackAdText">Développez votre présence digitale, automatisez votre activité et transformez vos idées en produits numériques.</p>
+            <a id="fallbackAdCta" href="#contact">Découvrir TYM Services →</a>
+          </div>
         </div>
       </div>
     </aside>
@@ -903,7 +927,6 @@ if(contactForm){
   });
 }
 
-<script>
 (function(){
  const links=[...document.querySelectorAll("#primaryNav a.l")];
  const sections=links.map(a=>({link:a,section:document.querySelector(a.getAttribute("href"))})).filter(x=>x.section);
@@ -923,7 +946,7 @@ if(contactForm){
  window.addEventListener("hashchange",initial);
  initial();
 })();
-</script></script>
+</script>
 <script>
 (function(){
   const feed=document.getElementById("techNewsFeed");
@@ -970,6 +993,39 @@ if(contactForm){
     }
   }
   load();
+})();
+</script><script>
+(function(){
+  const slot=document.getElementById("adsenseSlot");
+  if(!slot)return;
+  const ads=[
+    {image:"https://images.unsplash.com/photo-1558655146-d09347e92766?auto=format&fit=crop&w=900&q=80",title:"Interfaces web & mobiles",text:"Concevez une expérience numérique claire, rapide et adaptée à vos utilisateurs.",cta:"Parler de votre projet →",href:"#contact"},
+    {image:"https://images.unsplash.com/photo-1558008258-3256797b43f3?auto=format&fit=crop&w=900&q=80",title:"Domotique & IoT",text:"Connectez vos équipements et automatisez vos espaces avec des solutions intelligentes.",cta:"Découvrir nos solutions →",href:"#skills"},
+    {image:"https://images.unsplash.com/photo-1485827404703-89b55fcc595e?auto=format&fit=crop&w=900&q=80",title:"IA & systèmes intelligents",text:"Explorez des solutions d'automatisation, d'analyse et d'intelligence artificielle.",cta:"Découvrir TYM Services →",href:"#about"}
+  ];
+  let i=0;
+  const showFallback=()=>{
+    const a=ads[i%ads.length];
+    const img=document.getElementById("fallbackAdImage"),title=document.getElementById("fallbackAdTitle"),txt=document.getElementById("fallbackAdText"),cta=document.getElementById("fallbackAdCta");
+    if(!img||!title||!txt||!cta)return;
+    img.src=a.image; title.textContent=a.title; txt.textContent=a.text; cta.textContent=a.cta; cta.href=a.href; i++;
+  };
+  showFallback();
+  setInterval(showFallback,7000);
+
+  const client=slot.dataset.adClient, adSlot=slot.dataset.adSlot;
+  if(client&&adSlot){
+    const script=document.createElement("script");
+    script.async=true;
+    script.src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client="+encodeURIComponent(client);
+    script.crossOrigin="anonymous";
+    script.onload=()=>{
+      slot.innerHTML='<ins class="adsbygoogle" style="display:block" data-ad-client="'+client+'" data-ad-slot="'+adSlot+'" data-ad-format="auto" data-full-width-responsive="true"></ins>';
+      slot.classList.add("adsense-active");
+      (window.adsbygoogle=window.adsbygoogle||[]).push({});
+    };
+    document.head.appendChild(script);
+  }
 })();
 </script></body>
 </html>
