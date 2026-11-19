@@ -458,12 +458,33 @@ nav a.l.active{color:var(--blue);font-weight:700}
  .tech-news-card{grid-template-columns:1fr}
  .news-arrow{display:none}
 }
+</style><style>
+/* TechNews editorial layout */
+.tech-news-head{margin-bottom:2.4rem}
+.tech-news-layout{grid-template-columns:minmax(0,1.5fr) minmax(300px,.7fr)}
+.tech-feed{grid-template-columns:1.35fr .65fr;gap:1rem}
+.tech-news-card{overflow:hidden;padding:0;display:flex;flex-direction:column}
+.tech-news-card.featured{grid-row:span 2}
+.news-image{width:100%;height:150px;object-fit:cover;background:linear-gradient(135deg,#0d315f,#0a7885);display:block}
+.featured .news-image{height:260px}
+.news-body{padding:1.05rem 1.15rem}
+.tech-news-card h3{font-size:1rem}
+.featured h3{font-size:1.35rem;line-height:1.25}
+.news-source{display:flex;align-items:center;justify-content:space-between;gap:.6rem;margin-top:.7rem;color:#8190a3;font-size:.7rem}
+.news-source a{color:#1766b1;font-weight:800;text-decoration:none}
+@media(max-width:760px){
+ .tech-news-layout{grid-template-columns:1fr}
+ .tech-feed{grid-template-columns:1fr}
+ .tech-news-card.featured{grid-row:auto}
+ .featured .news-image{height:210px}
+ .news-image{height:175px}
+}
 </style></head>
 <body>
 <header><nav class="wrap" aria-label="Navigation principale">
 <a class="brand" href="#top"><img class="brand-logo" src="assets/tym-services-logo.png" alt="Logo TYM Services"><span>TYM <span style="color:var(--blue)">SERVICES</span></span></a>
 
-<div class="nav-links" id="primaryNav"><a class="l" href="#about" data-i="nAbout">Entreprise</a><a class="l" href="#skills" data-i="nSkills">Expertises</a><a class="l" href="#projects" data-i="nProjects">Réalisations</a><a class="l" href="#process">Notre méthode</a><a class="l" href="#contact" data-i="nContact">Contact</a><a class="l" href="#faq" data-en="FAQ" data-fr="FAQ">FAQ</a></div>
+<div class="nav-links" id="primaryNav"><a class="l" href="#about" data-i="nAbout">Entreprise</a><a class="l" href="#skills" data-i="nSkills">Expertises</a><a class="l" href="#projects" data-i="nProjects">Réalisations</a><a class="l" href="#tech-news">TechNews</a><a class="l" href="#process">Notre méthode</a><a class="l" href="#contact" data-i="nContact">Contact</a><a class="l" href="#faq" data-en="FAQ" data-fr="FAQ">FAQ</a></div>
 <button class="menu-toggle" id="menuToggle" aria-label="Ouvrir le menu" aria-expanded="false"><span></span><span></span><span></span></button></nav></header>
 
 <main id="top">
@@ -908,21 +929,46 @@ if(contactForm){
   const feed=document.getElementById("techNewsFeed");
   if(!feed) return;
   const esc=s=>String(s||"").replace(/[&<>"']/g,m=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[m]));
-  const relative=t=>{
-    const d=Math.max(0,Date.now()-t*1000),h=Math.floor(d/36e5);
-    return h<1?"il y a moins d’une heure":h<24?"il y a "+h+" h":"il y a "+Math.floor(h/24)+" j";
-  };
-  const load=async()=>{
+  const relative=t=>{const d=Math.max(0,Date.now()-t*1000),h=Math.floor(d/36e5);return h<1?"il y a moins d’une heure":h<24?"il y a "+h+" h":"il y a "+Math.floor(h/24)+" j"};
+  const wikiImages={ai:"artificial intelligence technology",cyber:"cybersecurity computer",cloud:"cloud computing server",robot:"robotics technology",hardware:"computer chip processor",dev:"software developer coding"};
+  const imageCache={};
+  async function getImage(term){
+    if(imageCache[term]) return imageCache[term];
+    try{
+      const u="https://commons.wikimedia.org/w/api.php?action=query&generator=search&gsrsearch="+encodeURIComponent(term)+"&gsrnamespace=6&gsrlimit=3&prop=imageinfo&iiprop=url&iiurlwidth=900&format=json&origin=*";
+      const data=await fetch(u).then(r=>r.json());
+      const pages=Object.values(data.query?.pages||{});
+      const img=pages.find(p=>p.imageinfo?.[0]?.thumburl)?.imageinfo?.[0]?.thumburl||pages.find(p=>p.imageinfo?.[0]?.url)?.imageinfo?.[0]?.url;
+      imageCache[term]=img||"";
+      return imageCache[term];
+    }catch(e){return "";}
+  }
+  function category(title){
+    const t=title.toLowerCase();
+    if(/ai|artificial intelligence|machine learning|model|llm|openai|gemini/.test(t)) return "ai";
+    if(/cyber|security|hack|malware|vulnerability/.test(t)) return "cyber";
+    if(/cloud|aws|azure|server/.test(t)) return "cloud";
+    if(/robot|robotics|autonomous/.test(t)) return "robot";
+    if(/chip|gpu|cpu|nvidia|amd|intel|processor|hardware/.test(t)) return "hardware";
+    return "dev";
+  }
+  async function load(){
     try{
       const ids=await fetch("https://hacker-news.firebaseio.com/v0/newstories.json").then(r=>r.json());
-      const items=await Promise.all(ids.slice(0,18).map(id=>fetch("https://hacker-news.firebaseio.com/v0/item/"+id+".json").then(r=>r.json())));
+      const items=await Promise.all(ids.slice(0,24).map(id=>fetch("https://hacker-news.firebaseio.com/v0/item/"+id+".json").then(r=>r.json()).catch(()=>null)));
       const keywords=/ai|artificial intelligence|machine learning|software|cyber|security|cloud|robot|robotics|python|javascript|rust|linux|computer|chip|gpu|data|database|developer|programming|web|mobile|quantum|semiconductor|technology|tech/i;
       const tech=items.filter(x=>x&&x.type==="story"&&x.title&&keywords.test(x.title)).slice(0,6);
-      feed.innerHTML=tech.length?tech.map(x=>'<a class="tech-news-card" href="'+esc(x.url||("https://news.ycombinator.com/item?id="+x.id))+'" target="_blank" rel="noopener noreferrer"><div><span class="news-meta">TECH · '+relative(x.time)+'</span><h3>'+esc(x.title)+'</h3><p>'+esc(x.by?"Publié sur Hacker News · "+x.score+" points":"Source Hacker News")+'</p></div><span class="news-arrow">→</span></a>').join(""):'<div class="tech-news-card"><div><span class="news-meta">TECH</span><h3>Aucune actualité informatique disponible pour le moment.</h3><p>Le flux sera réessayé automatiquement.</p></div></div>';
+      if(!tech.length) throw new Error("no stories");
+      const imgs=await Promise.all(tech.map(x=>getImage(wikiImages[category(x.title)])));
+      feed.innerHTML=tech.map((x,i)=>{
+        const featured=i===0, img=imgs[i], term=category(x.title);
+        const image=img?'<img class="news-image" src="'+esc(img)+'" alt="" loading="lazy">':'<div class="news-image" role="img" aria-label="Illustration technologique"></div>';
+        return '<a class="tech-news-card '+(featured?"featured":"")+'" href="'+esc(x.url||("https://news.ycombinator.com/item?id="+x.id))+'" target="_blank" rel="noopener noreferrer">'+image+'<div class="news-body"><span class="news-meta">TECH · '+term.toUpperCase()+'</span><h3>'+esc(x.title)+'</h3><p>'+esc(x.text?x.text.replace(/<[^>]+>/g,"").slice(0,170)+"…":"Une actualité technologique sélectionnée pour TYM Services.")+'</p><div class="news-source"><span>'+relative(x.time)+'</span><span>Source : Hacker News →</span></div></div></a>';
+      }).join("");
     }catch(e){
-      feed.innerHTML='<div class="tech-news-card"><div><span class="news-meta">TECH</span><h3>Actualités temporairement indisponibles.</h3><p>Le site continue de fonctionner normalement.</p></div></div>';
+      feed.innerHTML='<div class="tech-news-card featured"><div class="news-image"></div><div class="news-body"><span class="news-meta">TECH NEWS</span><h3>Les nouveautés informatiques arrivent ici.</h3><p>Le flux actualisé sera disponible dès que la source distante répondra.</p></div></div>';
     }
-  };
+  }
   load();
 })();
 </script></body>
