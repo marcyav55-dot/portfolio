@@ -305,6 +305,9 @@ dialog{background:#fff;border-color:#dce4ed}
   html{scroll-padding-top:88px}
   main section{scroll-margin-top:88px}
 }
+
+.service-photo{height:180px;position:relative;overflow:hidden;border-radius:10px;background:#eaf0f7;margin-bottom:1rem}.service-photo img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .6s ease}.service-card:hover .service-photo img{transform:scale(1.035)}.service-photo:after{content:"";position:absolute;inset:45% 0 0;background:linear-gradient(transparent,rgba(7,22,43,.72));pointer-events:none}.service-photo strong{position:absolute;z-index:2;left:.9rem;right:.9rem;bottom:.75rem;color:#fff;font:700 1rem var(--display);text-shadow:0 1px 12px rgba(0,0,0,.25)}.service-photo .service-no{position:absolute;z-index:2;top:.7rem;left:.7rem;color:#fff;background:rgba(8,29,56,.72);border:1px solid rgba(255,255,255,.25);padding:.25rem .45rem;border-radius:5px;font-size:.66rem}.service-copy{padding:0 .05rem}.service-copy h3{margin-top:.15rem}.capability-card{min-height:340px}.capability-card img{filter:saturate(.96) contrast(1.02)}
+@media(max-width:700px){.service-track{grid-auto-columns:minmax(275px,88%)}.service-photo{height:190px}.capability-track{grid-auto-columns:minmax(280px,88%)}}
 </style>
 </head>
 <body>
@@ -332,28 +335,52 @@ dialog{background:#fff;border-color:#dce4ed}
 
 <section class="service-showcase" id="service-carousel"><div class="wrap"><div class="service-head"><div><h2>Nos domaines d’intervention</h2><p>Des solutions numériques adaptées aux besoins réels des organisations.</p></div><div class="service-controls"><button type="button" id="servicePrev" aria-label="Précédent">←</button><button type="button" id="serviceNext" aria-label="Suivant">→</button></div></div><div class="service-track" id="serviceTrack">
 <article class="service-card">
-<div class="service-photo"><img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1400&q=88" alt="Maisons & architecture" loading="lazy" decoding="async"><span class="service-no">01 / ARCHITECTURE</span><strong>Maisons & architecture</strong></div>
-<div class="service-copy"><h3>Maisons & architecture</h3><p>Conception et visualisation de maisons, façades, espaces extérieurs et projets architecturaux.</p><a href="#contact">Discuter de votre projet <b>→</b></a></div>
+<div class="service-photo"><img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1400&q=90" alt="Sites web professionnels" loading="lazy" decoding="async"><span class="service-no">01 / WEB</span><strong>Sites web professionnels</strong></div>
+<div class="service-copy"><h3>Sites web professionnels</h3><p>Sites vitrines, plateformes web et produits SaaS conçus pour être rapides, clairs et crédibles.</p><a href="#contact">Discuter de votre projet <b>→</b></a></div>
 </article>
 <article class="service-card">
-<div class="service-photo"><img src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=1400&q=88" alt="Aménagement intérieur" loading="lazy" decoding="async"><span class="service-no">02 / INTÉRIEUR</span><strong>Aménagement intérieur</strong></div>
-<div class="service-copy"><h3>Aménagement intérieur</h3><p>Visualisation d’espaces intérieurs, matériaux, mobilier et ambiance avant réalisation.</p><a href="#contact">Discuter de votre projet <b>→</b></a></div>
+<div class="service-photo"><img src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9e?auto=format&fit=crop&w=1400&q=90" alt="Applications web & mobiles" loading="lazy" decoding="async"><span class="service-no">02 / MOBILE</span><strong>Applications web & mobiles</strong></div>
+<div class="service-copy"><h3>Applications web & mobiles</h3><p>Applications Android, iOS et multiplateformes avec une expérience cohérente et professionnelle.</p><a href="#contact">Discuter de votre projet <b>→</b></a></div>
 </article>
 <article class="service-card">
-<div class="service-photo"><img src="https://images.unsplash.com/photo-1558008258-3256797b43f3?auto=format&fit=crop&w=1400&q=88" alt="Maison intelligente" loading="lazy" decoding="async"><span class="service-no">03 / DOMOTIQUE</span><strong>Maison intelligente</strong></div>
-<div class="service-copy"><h3>Maison intelligente</h3><p>Automatisation, éclairage, sécurité, capteurs et contrôle intelligent des équipements.</p><a href="#contact">Discuter de votre projet <b>→</b></a></div>
+<div class="service-photo"><img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1400&q=90" alt="Data Science & Analytics" loading="lazy" decoding="async"><span class="service-no">03 / DATA</span><strong>Data Science & Analytics</strong></div>
+<div class="service-copy"><h3>Data Science & Analytics</h3><p>Données, tableaux de bord, visualisations et outils d’aide à la décision.</p><a href="#contact">Discuter de votre projet <b>→</b></a></div>
 </article>
 <article class="service-card">
-<div class="service-photo"><img src="https://images.unsplash.com/photo-1618005198919-d3d4b5a92ead?auto=format&fit=crop&w=1400&q=88" alt="Modélisation & simulation 3D" loading="lazy" decoding="async"><span class="service-no">04 / 3D</span><strong>Modélisation & simulation 3D</strong></div>
-<div class="service-copy"><h3>Modélisation & simulation 3D</h3><p>Modèles 3D, concepts techniques, visualisation et simulation de solutions complexes.</p><a href="#contact">Discuter de votre projet <b>→</b></a></div>
+<div class="service-photo"><img src="https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&w=1400&q=90" alt="Intelligence artificielle" loading="lazy" decoding="async"><span class="service-no">04 / IA</span><strong>Intelligence artificielle</strong></div>
+<div class="service-copy"><h3>Intelligence artificielle</h3><p>IA générative, assistants, automatisation intelligente et intégration de modèles.</p><a href="#contact">Discuter de votre projet <b>→</b></a></div>
 </article>
 <article class="service-card">
-<div class="service-photo"><img src="https://images.unsplash.com/photo-1485827404703-89b55fcc595e?auto=format&fit=crop&w=1400&q=88" alt="Robotique & systèmes intelligents" loading="lazy" decoding="async"><span class="service-no">05 / ROBOTIQUE</span><strong>Robotique & systèmes intelligents</strong></div>
-<div class="service-copy"><h3>Robotique & systèmes intelligents</h3><p>Capteurs, contrôle, vision, automatisation et systèmes capables d’interagir avec leur environnement.</p><a href="#contact">Discuter de votre projet <b>→</b></a></div>
+<div class="service-photo"><img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&w=1400&q=90" alt="Commerce & paiements" loading="lazy" decoding="async"><span class="service-no">05 / E-COMMERCE</span><strong>Commerce & paiements</strong></div>
+<div class="service-copy"><h3>Commerce & paiements</h3><p>Catalogues, commandes, paiements et parcours numériques pensés pour la conversion.</p><a href="#contact">Discuter de votre projet <b>→</b></a></div>
 </article>
 <article class="service-card">
-<div class="service-photo"><img src="https://images.unsplash.com/photo-1558655146-d09347e92766?auto=format&fit=crop&w=1400&q=88" alt="Interfaces & produits numériques" loading="lazy" decoding="async"><span class="service-no">06 / DIGITAL</span><strong>Interfaces & produits numériques</strong></div>
-<div class="service-copy"><h3>Interfaces & produits numériques</h3><p>Applications web et mobiles, interfaces modernes, prototypes et expériences numériques.</p><a href="#contact">Discuter de votre projet <b>→</b></a></div>
+<div class="service-photo"><img src="https://images.unsplash.com/photo-1581092160562-40aa08e78837?auto=format&fit=crop&w=1400&q=90" alt="Maintenance & assistance" loading="lazy" decoding="async"><span class="service-no">06 / SUPPORT</span><strong>Maintenance & assistance</strong></div>
+<div class="service-copy"><h3>Maintenance & assistance</h3><p>Maintenance, optimisation, sécurité et accompagnement technique dans la durée.</p><a href="#contact">Discuter de votre projet <b>→</b></a></div>
+</article>
+<article class="service-card">
+<div class="service-photo"><img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1400&q=90" alt="Maisons & architecture" loading="lazy" decoding="async"><span class="service-no">07 / ARCHITECTURE</span><strong>Maisons & architecture</strong></div>
+<div class="service-copy"><h3>Maisons & architecture</h3><p>Visualisation de maisons, façades, espaces extérieurs et concepts architecturaux.</p><a href="#contact">Discuter de votre projet <b>→</b></a></div>
+</article>
+<article class="service-card">
+<div class="service-photo"><img src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=1400&q=90" alt="Aménagement intérieur" loading="lazy" decoding="async"><span class="service-no">08 / INTÉRIEUR</span><strong>Aménagement intérieur</strong></div>
+<div class="service-copy"><h3>Aménagement intérieur</h3><p>Conception visuelle d’espaces intérieurs, mobilier, matériaux et ambiances.</p><a href="#contact">Discuter de votre projet <b>→</b></a></div>
+</article>
+<article class="service-card">
+<div class="service-photo"><img src="https://images.unsplash.com/photo-1558008258-3256797b43f3?auto=format&fit=crop&w=1400&q=90" alt="Maison intelligente" loading="lazy" decoding="async"><span class="service-no">09 / DOMOTIQUE</span><strong>Maison intelligente</strong></div>
+<div class="service-copy"><h3>Maison intelligente</h3><p>Éclairage, sécurité, capteurs, contrôle à distance et automatisation des équipements.</p><a href="#contact">Discuter de votre projet <b>→</b></a></div>
+</article>
+<article class="service-card">
+<div class="service-photo"><img src="https://gbc-engineers.com/Data/Sites/1/News/3884/structural-engineering-tools-new-thumbnail-%281%29.png" alt="Modélisation & simulation 3D" loading="lazy" decoding="async"><span class="service-no">10 / 3D</span><strong>Modélisation & simulation 3D</strong></div>
+<div class="service-copy"><h3>Modélisation & simulation 3D</h3><p>Modélisation technique, vues éclatées, simulation et visualisation de systèmes complexes.</p><a href="#contact">Discuter de votre projet <b>→</b></a></div>
+</article>
+<article class="service-card">
+<div class="service-photo"><img src="https://assets.akad.de/content/files/images/bachelor/mechatronik-robotik-und-automatisierung-beng-1016-762.webp" alt="Robotique & systèmes intelligents" loading="lazy" decoding="async"><span class="service-no">11 / ROBOTIQUE</span><strong>Robotique & systèmes intelligents</strong></div>
+<div class="service-copy"><h3>Robotique & systèmes intelligents</h3><p>Robotique, capteurs, automatisation, contrôle et systèmes intelligents connectés au monde réel.</p><a href="#contact">Discuter de votre projet <b>→</b></a></div>
+</article>
+<article class="service-card">
+<div class="service-photo"><img src="https://images.unsplash.com/photo-1558655146-d09347e92766?auto=format&fit=crop&w=1400&q=90" alt="Design numérique & interfaces" loading="lazy" decoding="async"><span class="service-no">12 / DESIGN</span><strong>Design numérique & interfaces</strong></div>
+<div class="service-copy"><h3>Design numérique & interfaces</h3><p>Interfaces web et mobiles, prototypes interactifs, design produit et expériences numériques.</p><a href="#contact">Discuter de votre projet <b>→</b></a></div>
 </article>
 </div></div></section>
 <section class="capability-showcase" id="capabilities">
@@ -371,33 +398,38 @@ dialog{background:#fff;border-color:#dce4ed}
     </div>
     <div class="capability-track" id="capabilityTrack">
 <article class="capability-card">
-<img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1400&q=88" alt="Maisons & architecture" loading="lazy" decoding="async">
-<div class="capability-card-content"><span>01 / ARCHITECTURE</span><h3>Maisons & architecture</h3><p>Conception et visualisation de maisons, façades, espaces extérieurs et projets architecturaux.</p></div>
+<img src="https://images.unsplash.com/photo-1600607688969-a5bfcd646154?auto=format&fit=crop&w=1400&q=90" alt="Maisons modernes & visualisation" loading="lazy" decoding="async">
+<div class="capability-card-content"><span>ARCHITECTURE</span><h3>Maisons modernes & visualisation</h3><p>Voir le projet avant de construire : volumes, matériaux, lumière et environnement.</p></div>
 </article>
 <article class="capability-card">
-<img src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=1400&q=88" alt="Aménagement intérieur" loading="lazy" decoding="async">
-<div class="capability-card-content"><span>02 / INTÉRIEUR</span><h3>Aménagement intérieur</h3><p>Visualisation d’espaces intérieurs, matériaux, mobilier et ambiance avant réalisation.</p></div>
+<img src="https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?auto=format&fit=crop&w=1400&q=90" alt="Espaces intérieurs" loading="lazy" decoding="async">
+<div class="capability-card-content"><span>INTÉRIEUR</span><h3>Espaces intérieurs</h3><p>Cuisine, salon, bureau et espaces de vie visualisés avec une approche réaliste.</p></div>
 </article>
 <article class="capability-card">
-<img src="https://images.unsplash.com/photo-1558008258-3256797b43f3?auto=format&fit=crop&w=1400&q=88" alt="Maison intelligente" loading="lazy" decoding="async">
-<div class="capability-card-content"><span>03 / DOMOTIQUE</span><h3>Maison intelligente</h3><p>Automatisation, éclairage, sécurité, capteurs et contrôle intelligent des équipements.</p></div>
+<img src="https://knx-domotique.lu/images/services/programmation-hero.jpg" alt="Maison connectée" loading="lazy" decoding="async">
+<div class="capability-card-content"><span>DOMOTIQUE</span><h3>Maison connectée</h3><p>Contrôle de l’éclairage, sécurité, énergie et équipements depuis un système centralisé.</p></div>
 </article>
 <article class="capability-card">
-<img src="https://images.unsplash.com/photo-1618005198919-d3d4b5a92ead?auto=format&fit=crop&w=1400&q=88" alt="Modélisation & simulation 3D" loading="lazy" decoding="async">
-<div class="capability-card-content"><span>04 / 3D</span><h3>Modélisation & simulation 3D</h3><p>Modèles 3D, concepts techniques, visualisation et simulation de solutions complexes.</p></div>
+<img src="https://gbc-engineers.com/Data/Sites/1/News/3884/structural-engineering-tools-new-thumbnail-%281%29.png" alt="Conception technique" loading="lazy" decoding="async">
+<div class="capability-card-content"><span>3D / CAD</span><h3>Conception technique</h3><p>Modèles 3D et représentations techniques pour comprendre les composants et systèmes.</p></div>
 </article>
 <article class="capability-card">
-<img src="https://images.unsplash.com/photo-1485827404703-89b55fcc595e?auto=format&fit=crop&w=1400&q=88" alt="Robotique & systèmes intelligents" loading="lazy" decoding="async">
-<div class="capability-card-content"><span>05 / ROBOTIQUE</span><h3>Robotique & systèmes intelligents</h3><p>Capteurs, contrôle, vision, automatisation et systèmes capables d’interagir avec leur environnement.</p></div>
+<img src="https://www.qualitymag.com/ext/resources/Issues/2024/August/Features/QM0824-FEAT-Manage-Quality4_0-p1FT-GettyImages-1500686570.webp?t=1720038192" alt="Automatisation industrielle" loading="lazy" decoding="async">
+<div class="capability-card-content"><span>ROBOTIQUE</span><h3>Automatisation industrielle</h3><p>Des systèmes où logiciel, capteurs et machines travaillent ensemble.</p></div>
 </article>
 <article class="capability-card">
-<img src="https://images.unsplash.com/photo-1558655146-d09347e92766?auto=format&fit=crop&w=1400&q=88" alt="Interfaces & produits numériques" loading="lazy" decoding="async">
-<div class="capability-card-content"><span>06 / DIGITAL</span><h3>Interfaces & produits numériques</h3><p>Applications web et mobiles, interfaces modernes, prototypes et expériences numériques.</p></div>
+<img src="https://images.unsplash.com/photo-1558655146-d09347e92766?auto=format&fit=crop&w=1400&q=90" alt="Produits numériques" loading="lazy" decoding="async">
+<div class="capability-card-content"><span>SOFTWARE</span><h3>Produits numériques</h3><p>Interfaces, applications et produits numériques construits avec une exigence professionnelle.</p></div>
 </article>
-</div>
-  </div>
-</section>
-<section id="projects"><div class="wrap">
+<article class="capability-card">
+<img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=1400&q=90" alt="Infrastructure & cloud" loading="lazy" decoding="async">
+<div class="capability-card-content"><span>CLOUD</span><h3>Infrastructure & cloud</h3><p>Infrastructure, déploiement, données et services conçus pour fonctionner de manière fiable.</p></div>
+</article>
+<article class="capability-card">
+<img src="https://images.unsplash.com/photo-1563013544-824ae1b704d3?auto=format&fit=crop&w=1400&q=90" alt="Sécurité numérique" loading="lazy" decoding="async">
+<div class="capability-card-content"><span>CYBERSÉCURITÉ</span><h3>Sécurité numérique</h3><p>Protection des applications, identités, réseaux et données dès la conception.</p></div>
+</article>
+</div>><div class="wrap">
 <h2 data-i="nProjects"></h2>
 <div class="projects" id="projectsGrid"></div>
 </div></section>
@@ -659,3 +691,4 @@ if(contactForm){
 </script>
 </body>
 </html>
+<section id="projects"
