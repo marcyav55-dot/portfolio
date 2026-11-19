@@ -399,6 +399,30 @@ nav a.l.active{color:var(--blue);font-weight:700}
 .ads-section{background:#090d14!important;color:#fff}
 .ads-section .ads-copy h2{color:#fff!important}
 .ads-section .ads-copy p{color:#d5dde7!important}
+</style><style>
+/* Monetization: direct advertising inventory */
+.ad-monetization{background:#fff;padding:5.2rem 0;border-top:1px solid #e2e8f0}
+.ad-monetization-head{display:grid;grid-template-columns:1fr .8fr;gap:3rem;align-items:end}
+.ad-monetization-head h2{max-width:14ch;margin:.7rem 0 0;color:#172b49}
+.ad-monetization-head p{color:#61738a;line-height:1.8;margin:0}
+.ad-inventory{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin-top:2rem}
+.ad-inventory-card{border:1px solid #dfe7ef;border-radius:18px;padding:1rem;background:#fff;box-shadow:0 10px 30px rgba(16,37,63,.055);transition:transform .25s,box-shadow .25s,border-color .25s}
+.ad-inventory-card:hover{transform:translateY(-5px);border-color:#8db1df;box-shadow:0 18px 42px rgba(16,37,63,.1)}
+.ad-inventory-card.featured{border-color:#245fc7}
+.ad-label{font-size:.7rem;font-weight:800;letter-spacing:.12em;color:#245fc7}
+.ad-slot-preview{margin:1rem 0;height:100px;border:1px dashed #9eb7d5;border-radius:12px;background:linear-gradient(135deg,#f1f6fd,#fbfcfe);display:grid;place-items:center;color:#5e7ea7;font:700 .78rem var(--display);letter-spacing:.08em}
+.ad-slot-preview.compact{height:82px}
+.ad-inventory-card h3{font-size:1.08rem;margin:.2rem 0 .35rem}
+.ad-inventory-card p{color:#66778d;font-size:.88rem;line-height:1.6;margin:0}
+.ad-monetization-cta{margin-top:1.5rem;padding:1.15rem 1.25rem;border-radius:16px;background:#f2f7fd;border:1px solid #dbe7f5;display:flex;align-items:center;justify-content:space-between;gap:1rem}
+.ad-monetization-cta strong{display:block;color:#173d70}.ad-monetization-cta span{display:block;color:#66778d;font-size:.85rem;margin-top:.2rem}
+@media(max-width:760px){
+ .ad-monetization{padding:4rem 0}
+ .ad-monetization-head{grid-template-columns:1fr;gap:1rem}
+ .ad-inventory{grid-template-columns:1fr}
+ .ad-monetization-cta{align-items:stretch;flex-direction:column}
+ .ad-monetization-cta .btn{width:100%}
+}
 </style></head>
 <body>
 <header><nav class="wrap" aria-label="Navigation principale">
@@ -521,7 +545,26 @@ nav a.l.active{color:var(--blue);font-weight:700}
 <div class="ads-points"><div class="ads-point"><strong>Visibilité</strong><span>Présentez clairement votre offre.</span></div><div class="ads-point"><strong>Acquisition</strong><span>Transformez les visiteurs en prospects.</span></div><div class="ads-point"><strong>Création</strong><span>Visuels et pages adaptés à votre campagne.</span></div><div class="ads-point"><strong>Suivi</strong><span>Structurez les demandes reçues.</span></div></div>
 <a class="btn p" href="#contact">Parler d’une campagne</a></div>
 <div class="ads-card"><span class="service-no">TYM / ADS</span><h3>Une campagne pensée comme un produit numérique.</h3><p>De l’idée au clic, nous pouvons construire l’écosystème autour de votre publicité : landing page, formulaire, WhatsApp, suivi et automatisation.</p><a class="btn" href="https://wa.me/243808373717" target="_blank" rel="noopener noreferrer">Discuter sur WhatsApp →</a></div>
-</div></section><section id="projects"><div class="wrap">
+</div></section>
+<!-- TYM DIRECT AD INVENTORY -->
+<section class="ad-monetization" id="publicite">
+<div class="wrap">
+  <div class="ad-monetization-head">
+    <div><span class="eyebrow">ESPACE PUBLICITAIRE</span><h2>Votre marque peut être visible sur TYM Services.</h2></div>
+    <p>Nous ouvrons des emplacements publicitaires premium pour les entreprises, startups, écoles, services numériques et marques qui souhaitent toucher une audience orientée technologie et innovation.</p>
+  </div>
+  <div class="ad-inventory">
+    <article class="ad-inventory-card featured"><span class="ad-label">01 · VISIBILITÉ</span><div class="ad-slot-preview">BANNER 970 × 250</div><h3>Bannière principale</h3><p>Un emplacement très visible pour une campagne, un lancement ou une offre.</p></article>
+    <article class="ad-inventory-card"><span class="ad-label">02 · CONTENU</span><div class="ad-slot-preview compact">DISPLAY 300 × 250</div><h3>Bloc sponsorisé</h3><p>Un format compact intégré naturellement dans l’expérience du site.</p></article>
+    <article class="ad-inventory-card"><span class="ad-label">03 · PARTENARIAT</span><div class="ad-slot-preview compact">SPONSOR</div><h3>Partenariat de marque</h3><p>Une présence personnalisée pour les partenaires et campagnes à long terme.</p></article>
+  </div>
+  <div class="ad-monetization-cta">
+    <div><strong>Vous souhaitez diffuser une publicité ?</strong><span>Demandez les formats et disponibilités de TYM Services.</span></div>
+    <a class="btn p" href="https://wa.me/243808373717" target="_blank" rel="noopener noreferrer">Proposer une publicité →</a>
+  </div>
+</div>
+</section>
+<section id="projects"><div class="wrap">
 <h2 data-i="nProjects"></h2>
 <div class="projects" id="projectsGrid"></div>
 </div></section>
