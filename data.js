@@ -15,8 +15,8 @@ const NAME = "TSHIJIKA YAV MARC";
 const KNOWN_AS = "Marcus Yav";
 const TITLE = {en:"Full-Stack Software Developer · Machine Learning · Artificial Intelligence",fr:"Développeur Full-Stack · Machine Learning · Intelligence artificielle"};
 const SUMMARY = {
-  en:"Software developer and founder of TYM Services, working across full-stack engineering, Machine Learning and artificial intelligence. I design and build web applications, data-driven solutions and intelligent software integrations.",
-  fr:"Développeur logiciel et fondateur de TYM Services, intervenant en développement Full-Stack, Machine Learning et intelligence artificielle. Je conçois et développe des applications web, des solutions orientées données et des intégrations logicielles intelligentes."
+  en:"Software developer and founder of TYM Africa, working across full-stack engineering, Machine Learning and artificial intelligence. I design and build web applications, data-driven solutions and intelligent software integrations.",
+  fr:"Développeur logiciel et fondateur de TYM Africa, intervenant en développement Full-Stack, Machine Learning et intelligence artificielle. Je conçois et développe des applications web, des solutions orientées données et des intégrations logicielles intelligentes."
 };
 /* Shown on the CV only when filled. Real data only. */
 const EDUCATION = [
