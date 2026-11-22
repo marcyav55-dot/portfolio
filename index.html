@@ -749,7 +749,7 @@ nav a.l.active{color:var(--blue);font-weight:700}
       <span class="eyebrow">TECHNOLOGIE · ACTUALITÉS</span>
       <h2>Les nouveautés informatiques, directement sur TYM Africa.</h2>
     </div>
-    <p>Une sélection actualisée de sujets tech issus de Hacker News. Les articles restent accessibles depuis leur source originale.</p>
+    <p>Une sélection actualisée de l’actualité technologique africaine, issue de médias spécialisés. Chaque article reste accessible depuis sa source originale.</p>
   </div>
 
   <div class="tech-news-layout">
@@ -1099,20 +1099,30 @@ if(contactForm){
  const feed=document.getElementById("techNewsFeed"); if(!feed)return;
  const esc=s=>String(s||"").replace(/[&<>"']/g,m=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[m]));
  const relative=d=>{const h=Math.floor(Math.max(0,Date.now()-new Date(d).getTime())/36e5);return h<1?"il y a moins d’une heure":h<24?"il y a "+h+" h":"il y a "+Math.floor(h/24)+" j"};
- const tags=["technology","ai","javascript","devops","cybersecurity","data"];
- async function getArticles(tag){try{const r=await fetch("https://dev.to/api/articles?tag="+encodeURIComponent(tag)+"&per_page=12&top=30",{headers:{"Accept":"application/json"}});if(!r.ok)throw 0;return await r.json()}catch(e){return[]}}
+ const fallback=[{title:"Les actualités tech africaines arrivent ici.",description:"Le flux éditorial TYM Africa rassemble des publications consacrées à l’innovation, à l’IA, à la cybersécurité, aux startups et à la transformation numérique en Afrique.",source:"TYM Africa"}];
  async function load(){
   try{
-   const groups=await Promise.all(tags.map(getArticles)),seen=new Set(),articles=[];
-   groups.flat().forEach(a=>{const image=a&& (a.cover_image||a.social_image);if(a&&a.id&&a.title&&image&&!seen.has(a.id)){seen.add(a.id);articles.push({...a,__image:image})}});
-   articles.sort((a,b)=>new Date(b.published_at)-new Date(a.published_at));
-   const tech=articles.slice(0,6); if(!tech.length)throw 0;
-   feed.innerHTML=tech.map((x,i)=>{const featured=i===0,summary=x.description||"Une actualité technologique publiée sur DEV.";return '<a class="tech-news-card '+(featured?"featured":"")+'" href="'+esc(x.url)+'" target="_blank" rel="noopener noreferrer"><img class="news-image" src="'+esc(x.__image)+'" alt="'+esc(x.title)+'" loading="'+(featured?"eager":"lazy")+'" decoding="async"><div class="news-body"><span class="news-meta">TECH · '+esc((x.tag_list||[]).slice(0,2).join(" · ")||"DEV COMMUNITY")+'</span><h3>'+esc(x.title)+'</h3><p>'+esc(summary.slice(0,180)+(summary.length>180?"…":""))+'</p><div class="news-source"><span>'+relative(x.published_at)+'</span><span>Source : DEV →</span></div></div></a>'}).join("");
-  }catch(e){feed.innerHTML='<div class="tech-news-card featured"><div class="news-body"><span class="news-meta">TECH NEWS</span><h3>Les actualités technologiques sont temporairement indisponibles.</h3><p>Le flux sera réessayé au prochain chargement.</p></div></div>'}
+   const r=await fetch("/api/africa-tech-news",{headers:{"Accept":"application/json"}});
+   if(!r.ok)throw 0;
+   const data=await r.json(),articles=(data.articles||[]).slice(0,6);
+   if(!articles.length)throw 0;
+   feed.innerHTML=articles.map((x,i)=>{
+    const featured=i===0;
+    const summary=(x.description||"Actualité technologique africaine.").slice(0,180);
+    const image=x.image||"https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80";
+    return '<a class="tech-news-card '+(featured?"featured":"")+'" href="'+esc(x.url)+'" target="_blank" rel="noopener noreferrer">'+
+      '<img class="news-image" src="'+esc(image)+'" alt="'+esc(x.title)+'" loading="'+(featured?"eager":"lazy")+'" decoding="async">'+
+      '<div class="news-body"><span class="news-meta">AFRIQUE · '+esc(x.source)+'</span><h3>'+esc(x.title)+'</h3><p>'+esc(summary+(x.description&&x.description.length>180?"…":""))+'</p>'+
+      '<div class="news-source"><span>'+relative(x.publishedAt)+'</span><span>Source : '+esc(x.source)+' →</span></div></div></a>';
+   }).join("");
+  }catch(e){
+   const x=fallback[0];
+   feed.innerHTML='<div class="tech-news-card featured"><div class="news-body"><span class="news-meta">AFRIQUE · TECH</span><h3>'+esc(x.title)+'</h3><p>'+esc(x.description)+'</p></div></div>';
+  }
  }
  load();
 })();
-</script><script>
+</script></script><script>
 (function(){
   const slot=document.getElementById("adsenseSlot");
   if(!slot)return;
