@@ -696,6 +696,112 @@ section h2{
   .skill,.service-card,.projects .card{transition:none}
 }
 </style>
+
+<style>
+:root{--ta-navy:#061a33;--ta-blue:#174b91;--ta-cyan:#32c6d8;--ta-mint:#65e3ad;--ta-text:#102a43;--ta-muted:#63758b;--ta-line:#dfe7ef}
+.ta-shell{width:min(1160px,calc(100% - 2.5rem));margin:auto}
+.ta-topbar{position:sticky;top:0;z-index:100;background:rgba(255,255,255,.94);border-bottom:1px solid var(--ta-line);backdrop-filter:blur(14px)}
+.ta-nav{min-height:76px;display:flex;align-items:center;gap:1.5rem}.ta-brand{display:flex;align-items:center;gap:.55rem;text-decoration:none;color:#173d70;font:800 1.1rem 'Bricolage Grotesque',sans-serif;margin-right:auto}.ta-brand-mark{display:grid;place-items:center;width:40px;height:40px;border-radius:10px;background:var(--ta-navy);color:#fff;font-size:.72rem;letter-spacing:.05em}.ta-main-nav{display:flex;gap:1.35rem}.ta-main-nav a{color:#50647d;text-decoration:none;font-weight:650;font-size:.86rem}.ta-main-nav a:hover{color:var(--ta-blue)}.ta-nav-cta{padding:.62rem .9rem;border-radius:9px;background:var(--ta-blue);color:#fff;text-decoration:none;font-weight:700;font-size:.82rem}
+.ta-hero{position:relative;overflow:hidden;background:linear-gradient(120deg,#061a33 0%,#0d376e 58%,#087e83 100%);color:#fff;padding:clamp(4rem,8vw,7rem) 0 5rem}.ta-hero:before{content:"";position:absolute;width:720px;height:720px;right:-320px;top:-300px;border:1px solid rgba(116,220,255,.16);border-radius:50%;box-shadow:0 0 0 80px rgba(116,220,255,.025),0 0 0 160px rgba(116,220,255,.018)}.ta-hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:clamp(2rem,6vw,6rem);align-items:center;position:relative;z-index:1}.ta-kicker{display:inline-flex;align-items:center;gap:.55rem;color:#72e3cc;font-size:.68rem;font-weight:900;letter-spacing:.16em}.ta-kicker:before{content:"";width:8px;height:8px;border-radius:50%;background:currentColor;box-shadow:0 0 14px currentColor}.ta-kicker-dark{color:#087e83}.ta-hero h1{font:800 clamp(3rem,6.5vw,6rem)/.92 'Bricolage Grotesque',sans-serif;letter-spacing:-.06em;margin:1rem 0 1.3rem;max-width:9ch;color:#fff}.ta-hero p{max-width:620px;color:rgba(239,246,255,.78);font-size:1.05rem;line-height:1.75}.ta-actions{display:flex;gap:.7rem;flex-wrap:wrap;margin-top:1.8rem}.ta-btn{display:inline-flex;align-items:center;justify-content:center;min-height:50px;padding:.75rem 1rem;border-radius:10px;text-decoration:none;font-weight:750;font-size:.86rem}.ta-btn-primary{background:var(--ta-mint);color:#062d25;box-shadow:0 12px 28px rgba(39,199,154,.16)}.ta-btn-ghost{border:1px solid rgba(255,255,255,.3);color:#fff;background:rgba(255,255,255,.06)}
+.ta-hero-card{position:relative;min-height:450px;border:1px solid rgba(151,218,255,.22);border-radius:24px;background:rgba(5,25,50,.45);overflow:hidden;box-shadow:0 28px 70px rgba(0,0,0,.28)}.ta-hero-gridline{position:absolute;inset:0;background-image:linear-gradient(rgba(150,220,255,.045) 1px,transparent 1px),linear-gradient(90deg,rgba(150,220,255,.045) 1px,transparent 1px);background-size:28px 28px}.ta-hero-label{position:absolute;top:1.2rem;left:1.2rem;color:rgba(224,240,252,.55);font-size:.62rem;font-weight:900;letter-spacing:.15em}.ta-orbit{position:absolute;inset:0;display:grid;place-items:center}.ta-orbit-ring{position:absolute;border:1px solid rgba(91,209,255,.35);border-radius:50%;transform:rotate(-20deg)}.ta-ring-one{width:235px;height:235px}.ta-ring-two{width:340px;height:160px;border-color:rgba(101,227,173,.3);transform:rotate(28deg)}.ta-core{width:145px;height:145px;border-radius:50%;display:grid;place-items:center;align-content:center;text-align:center;background:radial-gradient(circle at 35% 30%,#2474ca,#061a33 70%);border:1px solid rgba(124,224,255,.55);box-shadow:0 0 55px rgba(55,201,255,.18);font:800 1.8rem/.9 'Bricolage Grotesque',sans-serif;color:#fff}.ta-core small{font-size:.48rem;letter-spacing:.25em;color:#72e3cc;margin-top:.35rem}.ta-floating{position:absolute;padding:.65rem .75rem;border:1px solid rgba(147,210,244,.17);border-radius:11px;background:rgba(3,17,36,.72);backdrop-filter:blur(10px)}.ta-floating b{display:block;color:#72e3cc;font-size:.9rem}.ta-floating span{display:block;color:rgba(231,242,251,.55);font-size:.62rem;margin-top:.1rem}.ta-float-a{top:25%;left:7%}.ta-float-b{top:38%;right:7%}.ta-float-c{bottom:15%;left:11%}
+.ta-domains{padding:5.2rem 0;background:#f5f8fb;border-block:1px solid #e4eaf1}.ta-section-head{display:grid;grid-template-columns:1.1fr .9fr;gap:3rem;align-items:end}.ta-section-head h2,.ta-about h2,.ta-contact h2{font:800 clamp(2rem,4vw,3.4rem)/1.02 'Bricolage Grotesque',sans-serif;letter-spacing:-.045em;color:var(--ta-text);margin:.7rem 0 0}.ta-section-head p{color:var(--ta-muted);max-width:560px;margin:0;line-height:1.75}.ta-domain-carousel{display:grid;grid-template-columns:42px minmax(0,1fr) 42px;gap:.8rem;align-items:center;margin-top:2.2rem}.ta-domain-viewport{overflow:hidden}.ta-domain-track{display:flex;gap:1rem;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;padding:.2rem .1rem 1rem}.ta-domain-track::-webkit-scrollbar{display:none}.ta-domain-card{position:relative;flex:0 0 calc((100% - 2rem)/3);min-height:390px;overflow:hidden;border-radius:20px;background:#071a33;scroll-snap-align:start;border:1px solid #dbe5ef;box-shadow:0 14px 35px rgba(16,42,67,.09);text-decoration:none}.ta-domain-card img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .55s ease}.ta-domain-card:after{content:"";position:absolute;inset:35% 0 0;background:linear-gradient(transparent,rgba(3,13,28,.94))}.ta-domain-card:hover img{transform:scale(1.045)}.ta-domain-content{position:absolute;z-index:2;left:1.25rem;right:1.25rem;bottom:1.2rem;color:#fff}.ta-domain-number{display:inline-flex;padding:.3rem .5rem;border:1px solid rgba(255,255,255,.22);border-radius:999px;background:rgba(5,22,42,.58);font-size:.63rem;font-weight:900;letter-spacing:.12em;color:#a9dcff}.ta-domain-content h3{font:800 1.55rem/1.05 'Bricolage Grotesque',sans-serif;color:#fff;margin:.65rem 0 .4rem}.ta-domain-content p{color:rgba(236,244,252,.75);font-size:.82rem;line-height:1.5;margin:0;max-width:40ch}.ta-domain-tags{display:flex;flex-wrap:wrap;gap:.35rem;margin-top:.75rem}.ta-domain-tags span{font-size:.63rem;padding:.25rem .45rem;border-radius:999px;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.12);color:#dbe9f8}.ta-carousel-btn{width:42px;height:42px;border:1px solid #d7e1eb;background:#fff;color:var(--ta-blue);border-radius:11px;font-size:1.6rem;cursor:pointer;box-shadow:0 7px 18px rgba(16,42,67,.06)}.ta-carousel-btn:hover{background:#f0f5fb}.ta-domain-dots{display:flex;justify-content:center;gap:.45rem;margin-top:.6rem}.ta-domain-dots button{width:7px;height:7px;padding:0;border:0;border-radius:50%;background:#c6d3e1;cursor:pointer}.ta-domain-dots button.active{width:22px;border-radius:999px;background:var(--ta-blue)}
+.ta-about{padding:5.2rem 0;background:#fff}.ta-about-grid{display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:end}.ta-about p{color:var(--ta-muted);font-size:1.03rem;line-height:1.85;margin:0}.ta-contact{padding:4rem 0;background:#f5f8fb}.ta-contact-card{display:flex;align-items:center;justify-content:space-between;gap:2rem;padding:2.1rem 2.2rem;border:1px solid #dce6f0;border-radius:20px;background:#fff}.ta-contact-card h2{margin:.5rem 0}.ta-contact-card p{color:var(--ta-muted);margin:0}.ta-contact-card .ta-btn{flex:0 0 auto}
+@media(max-width:900px){.ta-main-nav{display:none}.ta-hero-grid,.ta-section-head,.ta-about-grid{grid-template-columns:1fr}.ta-hero-card{min-height:380px}.ta-domain-card{flex-basis:calc((100% - 1rem)/2)}.ta-contact-card{align-items:flex-start;flex-direction:column}}
+@media(max-width:600px){.ta-shell{width:min(100% - 1.25rem,600px)}.ta-nav{min-height:66px}.ta-nav-cta{font-size:.75rem;padding:.55rem .7rem}.ta-hero{padding:3.5rem 0 3.2rem}.ta-hero h1{font-size:clamp(2.8rem,14vw,4.2rem)}.ta-hero-card{min-height:320px;border-radius:18px}.ta-core{width:115px;height:115px;font-size:1.45rem}.ta-ring-one{width:185px;height:185px}.ta-ring-two{width:270px;height:130px}.ta-floating{padding:.5rem}.ta-floating span{display:none}.ta-domain-carousel{grid-template-columns:34px minmax(0,1fr) 34px;gap:.45rem}.ta-domain-card{flex-basis:88%;min-height:390px}.ta-section-head h2,.ta-about h2,.ta-contact h2{font-size:2.25rem}.ta-contact-card{padding:1.4rem}.ta-domain-content h3{font-size:1.35rem}}
+</style>
+
+</head>
+<body>
+<header class="ta-topbar">
+  <div class="ta-shell ta-nav">
+    <a class="ta-brand" href="#tymafrica-top" aria-label="TYM Africa">
+      <span class="ta-brand-mark">TYM</span><span>Africa</span>
+    </a>
+    <nav class="ta-main-nav" aria-label="Navigation principale">
+      <a href="#tymafrica-top">Accueil</a>
+      <a href="#tymafrica-domains">Domaines</a>
+      <a href="#tymafrica-about">À propos</a>
+      <a href="#tymafrica-contact">Contact</a>
+    </nav>
+    <a class="ta-nav-cta" href="#tymafrica-contact">Parlons projet</a>
+  </div>
+</header>
+
+<main id="tymafrica-top">
+<section class="ta-hero">
+  <div class="ta-shell ta-hero-grid">
+    <div class="ta-hero-copy">
+      <span class="ta-kicker">TYM AFRICA · TECHNOLOGY & INNOVATION</span>
+      <h1>La technologie au service de vos ambitions.</h1>
+      <p>TYM Africa développe des solutions numériques, intelligentes et connectées pour transformer des idées concrètes en systèmes utiles.</p>
+      <div class="ta-actions">
+        <a class="ta-btn ta-btn-primary" href="#tymafrica-domains">Découvrir nos domaines</a>
+        <a class="ta-btn ta-btn-ghost" href="#tymafrica-contact">Démarrer un projet</a>
+      </div>
+    </div>
+    <div class="ta-hero-card" aria-label="Domaines technologiques TYM Africa">
+      <div class="ta-hero-glow"></div>
+      <div class="ta-hero-gridline"></div>
+      <span class="ta-hero-label">TECHNOLOGY SYSTEM</span>
+      <div class="ta-orbit">
+        <div class="ta-orbit-ring ta-ring-one"></div>
+        <div class="ta-orbit-ring ta-ring-two"></div>
+        <div class="ta-core">TYM<br><small>AFRICA</small></div>
+      </div>
+      <div class="ta-floating ta-float-a"><b>04</b><span>grands domaines</span></div>
+      <div class="ta-floating ta-float-b"><b>AI</b><span>intelligent systems</span></div>
+      <div class="ta-floating ta-float-c"><b>IoT</b><span>connected world</span></div>
+    </div>
+  </div>
+</section>
+
+<section id="tymafrica-domains" class="ta-domains">
+  <div class="ta-shell">
+    <div class="ta-section-head">
+      <div>
+        <span class="ta-kicker ta-kicker-dark">NOS GRANDS DOMAINES</span>
+        <h2>Quatre expertises qui définissent TYM Africa.</h2>
+      </div>
+      <p>Chaque domaine correspond à un axe technologique de TYM Africa, avec sa propre identité visuelle et ses technologies clés.</p>
+    </div>
+
+    <div class="ta-domain-carousel">
+      <button class="ta-carousel-btn" id="taDomainPrev" type="button" aria-label="Domaine précédent">‹</button>
+      <div class="ta-domain-viewport">
+        <div class="ta-domain-track" id="taDomainTrack"></div>
+      </div>
+      <button class="ta-carousel-btn" id="taDomainNext" type="button" aria-label="Domaine suivant">›</button>
+    </div>
+    <div class="ta-domain-dots" id="taDomainDots" aria-label="Navigation des domaines"></div>
+  </div>
+</section>
+
+<section id="tymafrica-about" class="ta-about">
+  <div class="ta-shell ta-about-grid">
+    <div><span class="ta-kicker ta-kicker-dark">UNE VISION</span><h2>Construire des technologies utiles, pas seulement des produits.</h2></div>
+    <p>TYM Africa réunit ingénierie logicielle, intelligence artificielle, cybersécurité, cryptographie, IoT et domotique pour créer des solutions adaptées aux besoins réels des organisations et des utilisateurs.</p>
+  </div>
+</section>
+
+<section id="tymafrica-contact" class="ta-contact">
+  <div class="ta-shell ta-contact-card">
+    <div><span class="ta-kicker">PARLONS TECHNOLOGIE</span><h2>Vous avez un projet ?</h2><p>Présentez votre besoin et construisons ensemble une solution numérique adaptée.</p></div>
+    <a class="ta-btn ta-btn-primary" href="mailto:contact@tymafrica.com">Nous contacter</a>
+  </div>
+</section>
+
+<!-- Compatibility targets used by the existing portfolio scripts. -->
+<div hidden aria-hidden="true">
+  <div id="skillsGrid"></div><div id="projectsGrid"></div><div id="contactLinks"></div>
+  <div id="gallery"></div><div id="filters"></div><div id="galleryGrid"></div>
+  <button id="prev" type="button"></button><button id="next" type="button"></button><button id="close" type="button"></button>
+  <dialog id="lb"><img id="lbImg" alt=""><p id="lbCap"></p></dialog>
+  <div id="serviceTrack"></div><button id="servicePrev" type="button"></button><button id="serviceNext" type="button"></button>
+  <div id="capabilityTrack"></div><div id="heroCapability"><img id="heroCapabilityImage" alt=""><strong id="heroCapabilityTitle"></strong><span id="heroCapabilityDomain"></span><span id="heroCapabilityKicker"></span></div>
+  <form id="contactForm" action="" method="post"><input name="email"><button type="submit"></button><div id="formStatus"></div></form>
+  <span id="yr"></span>
+</div>
+</main>
 <script src="data.js"></script>
 <script>
 const F='fill="none" stroke="#3b73ff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"',C='stroke="#22d3ee"';
@@ -1008,5 +1114,28 @@ if(contactForm){
     }
   });
 })();
-</script></body>
+</script>
+<script>
+(function(){
+ const domains=[
+  {title:"Cybersécurité",desc:"Sécuriser les applications, réseaux, identités et données.",image:"tym-lab-2.webp",tags:["OWASP","Linux","IAM"]},
+  {title:"Cryptographie",desc:"Protéger les données et communications avec des mécanismes cryptographiques solides.",image:"tym-lab-1.webp",tags:["AES","RSA","TLS"]},
+  {title:"Machine Learning",desc:"Transformer les données en modèles prédictifs et systèmes intelligents.",image:"tym-lab-3.webp",tags:["Python","Scikit-learn","TensorFlow"]},
+  {title:"Domotique",desc:"Connecter capteurs, appareils et logiciels pour automatiser les espaces.",image:"tym-lab-4.webp",tags:["ESP32","MQTT","IoT"]}
+ ];
+ const track=document.getElementById("taDomainTrack"),dots=document.getElementById("taDomainDots");
+ if(!track||!dots)return;
+ track.innerHTML=domains.map((d,i)=>'<article class="ta-domain-card"><img src="'+d.image+'" alt="'+d.title+'" loading="'+(i<2?'eager':'lazy')+'"><div class="ta-domain-content"><span class="ta-domain-number">0'+(i+1)+' · TYM AFRICA</span><h3>'+d.title+'</h3><p>'+d.desc+'</p><div class="ta-domain-tags">'+d.tags.map(t=>'<span>'+t+'</span>').join('')+'</div></div></article>').join('');
+ dots.innerHTML=domains.map((_,i)=>'<button type="button" aria-label="Afficher le domaine '+(i+1)+'"></button>').join('');
+ const cards=[...track.children], dotButtons=[...dots.children];
+ const go=i=>{i=(i+domains.length)%domains.length;cards[i].scrollIntoView({behavior:'smooth',block:'nearest',inline:'start'});dotButtons.forEach((b,j)=>b.classList.toggle('active',j===i));};
+ dotButtons.forEach((b,i)=>b.addEventListener('click',()=>go(i)));
+ document.getElementById("taDomainPrev")?.addEventListener('click',()=>go(Math.max(0,(cards.findIndex(x=>Math.abs(x.getBoundingClientRect().left-track.getBoundingClientRect().left)<20)||0)-1)));
+ document.getElementById("taDomainNext")?.addEventListener('click',()=>go((cards.findIndex(x=>Math.abs(x.getBoundingClientRect().left-track.getBoundingClientRect().left)<20)||0)+1));
+ go(0);
+ let timer=setInterval(()=>{const current=dotButtons.findIndex(b=>b.classList.contains('active'));go(current+1)},6000);
+ track.addEventListener('mouseenter',()=>clearInterval(timer));track.addEventListener('touchstart',()=>clearInterval(timer),{passive:true});
+})();
+</script>
+</body>
 </html>
