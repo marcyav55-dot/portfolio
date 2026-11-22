@@ -954,5 +954,59 @@ if(contactForm){
     document.head.appendChild(script);
   }
 })();
+</script><style>
+.newsletter-float{position:fixed;right:22px;bottom:86px;z-index:30;border:1px solid #245fc7;background:#245fc7;color:#fff;border-radius:999px;padding:.78rem 1rem;font:600 .88rem 'Instrument Sans','Segoe UI',sans-serif;box-shadow:0 10px 28px rgba(20,55,110,.22);cursor:pointer}
+.newsletter-float:hover{background:#194b9e}
+.newsletter-modal{width:min(520px,92vw);padding:0;border:1px solid #dbe5f1;border-radius:16px;background:#fff;box-shadow:0 24px 80px rgba(15,35,70,.22)}
+.newsletter-modal::backdrop{background:rgba(9,25,48,.58)}
+.newsletter-inner{padding:1.5rem}.newsletter-inner h2{font-size:1.55rem}.newsletter-inner p{color:#63738b;margin:.6rem 0 1.1rem}
+.newsletter-form{display:grid;gap:.75rem}.newsletter-form input{width:100%;padding:.78rem .85rem;border:1px solid #d5dfeb;border-radius:9px;font:400 .95rem 'Instrument Sans','Segoe UI',sans-serif}
+.newsletter-form input:focus{outline:0;border-color:#4d86c9;box-shadow:0 0 0 3px rgba(23,75,145,.1)}
+.newsletter-actions{display:flex;justify-content:flex-end;gap:.6rem;margin-top:.25rem}.newsletter-actions button{border:1px solid #d5dfeb;border-radius:8px;padding:.68rem .9rem;background:#fff;color:#18324f;cursor:pointer}.newsletter-actions .primary{background:#245fc7;border-color:#245fc7;color:#fff}
+.newsletter-status{min-height:1.3rem;font-size:.82rem;color:#63738b}
+@media(max-width:700px){.newsletter-float{right:14px;bottom:78px;font-size:.8rem;padding:.7rem .9rem}}
+</style>
+<button id="newsletterButton" class="newsletter-float" type="button">S'abonner à la newsletter</button>
+<dialog id="newsletterDialog" class="newsletter-modal" aria-labelledby="newsletterTitle">
+  <div class="newsletter-inner">
+    <h2 id="newsletterTitle">Recevez les actualités de TYM Africa</h2>
+    <p>Inscrivez votre adresse e-mail pour recevoir les nouveautés, projets et actualités technologiques de TYM Africa.</p>
+    <form id="newsletterForm" class="newsletter-form">
+      <label for="newsletterEmail">Adresse e-mail</label>
+      <input id="newsletterEmail" name="email" type="email" autocomplete="email" placeholder="vous@example.com" required>
+      <div id="newsletterStatus" class="newsletter-status" aria-live="polite"></div>
+      <div class="newsletter-actions">
+        <button type="button" id="newsletterClose">Annuler</button>
+        <button type="submit" class="primary">S'abonner</button>
+      </div>
+    </form>
+  </div>
+</dialog>
+<script>
+(function(){
+  const button=document.getElementById("newsletterButton");
+  const dialog=document.getElementById("newsletterDialog");
+  const form=document.getElementById("newsletterForm");
+  const close=document.getElementById("newsletterClose");
+  const status=document.getElementById("newsletterStatus");
+  if(!button||!dialog||!form)return;
+  button.addEventListener("click",()=>dialog.showModal());
+  close.addEventListener("click",()=>dialog.close());
+  dialog.addEventListener("click",e=>{if(e.target===dialog)dialog.close()});
+  form.addEventListener("submit",e=>{
+    e.preventDefault();
+    const email=form.email.value.trim().toLowerCase();
+    if(!email){status.textContent="Veuillez saisir une adresse e-mail.";return}
+    try{
+      const list=JSON.parse(localStorage.getItem("tymAfricaNewsletter")||"[]");
+      if(!list.includes(email))list.push(email);
+      localStorage.setItem("tymAfricaNewsletter",JSON.stringify(list));
+      status.textContent="Votre demande d'abonnement a été enregistrée sur cet appareil.";
+      form.reset();
+    }catch(error){
+      status.textContent="Impossible d'enregistrer l'abonnement sur cet appareil.";
+    }
+  });
+})();
 </script></body>
 </html>
