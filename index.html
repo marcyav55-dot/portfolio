@@ -297,8 +297,7 @@ dialog{background:#fff;border-color:#dce4ed}
   nav{display:flex!important;align-items:center!important;flex-wrap:nowrap!important;min-height:72px!important;padding:.55rem 0!important;gap:.55rem!important}
   nav .brand{flex:1 1 auto!important;margin:0!important}
   .nav-links{display:none;position:absolute;left:0;right:0;top:100%;padding:.45rem 1rem .8rem;background:rgba(255,255,255,.98);border-top:1px solid #e4e8ed;border-bottom:1px solid #dfe5ec;box-shadow:0 16px 30px rgba(20,43,73,.09);flex-direction:column;align-items:stretch;gap:0}
-  nav.menu-open .nav-links{display:flex}
-  .nav-links a.l{display:flex!important;min-height:44px;align-items:center;padding:.55rem .25rem!important;border-bottom:1px solid #edf0f4;font-size:.9rem!important}
+  nav.menu-open .nav-links{display:flex}  .nav-links a.l{display:flex!important;min-height:44px;align-items:center;padding:.55rem .25rem!important;border-bottom:1px solid #edf0f4;font-size:.9rem!important}
   .nav-links a.l:last-child{border-bottom:0}
   nav .lang{display:inline-flex!important;flex:0 0 auto;margin:0!important}
   nav .menu-toggle{display:flex!important;flex:0 0 auto}
@@ -597,8 +596,7 @@ h1,h2,h3,h4,.brand,.nav a,.btn,.eyebrow,.tagline,.hero-core-mark,.hero-visual-to
   content:"";position:absolute;inset:auto 0 0;height:48%;background:linear-gradient(transparent,rgba(3,14,31,.9));pointer-events:none;
 }
 .hero-visual-top,.hero-visual-bottom{
-  left:1.2rem;right:1.2rem;z-index:4;color:rgba(231,243,252,.62);font:700 .62rem/1 "Bricolage Grotesque",sans-serif;letter-spacing:.14em
-}
+  left:1.2rem;right:1.2rem;z-index:4;color:rgba(231,243,252,.62);font:700 .62rem/1 "Bricolage Grotesque",sans-serif;letter-spacing:.14em}
 .hero-status i{background:var(--ta-mint);box-shadow:0 0 12px var(--ta-mint)}
 .hero-core{width:210px;height:210px;background:radial-gradient(circle,rgba(26,113,206,.82),rgba(7,34,69,.12) 62%,transparent 64%)}
 .hero-core-ring{border-color:rgba(105,222,255,.55);box-shadow:0 0 50px rgba(67,211,255,.22)}
@@ -710,6 +708,24 @@ section h2{
 @media(max-width:600px){.ta-shell{width:min(100% - 1.25rem,600px)}.ta-nav{min-height:66px}.ta-nav-cta{font-size:.75rem;padding:.55rem .7rem}.ta-hero{padding:3.5rem 0 3.2rem}.ta-hero h1{font-size:clamp(2.8rem,14vw,4.2rem)}.ta-hero-card{min-height:320px;border-radius:18px}.ta-core{width:115px;height:115px;font-size:1.45rem}.ta-ring-one{width:185px;height:185px}.ta-ring-two{width:270px;height:130px}.ta-floating{padding:.5rem}.ta-floating span{display:none}.ta-domain-carousel{grid-template-columns:34px minmax(0,1fr) 34px;gap:.45rem}.ta-domain-card{flex-basis:88%;min-height:390px}.ta-section-head h2,.ta-about h2,.ta-contact h2{font-size:2.25rem}.ta-contact-card{padding:1.4rem}.ta-domain-content h3{font-size:1.35rem}}
 </style>
 
+
+<style>
+/* Google AdSense — dedicated, responsive inventory */
+.ta-adsense-space{padding:3.2rem 0;background:#fff;border-block:1px solid #e4eaf1}
+.ta-adsense-inner{display:grid;grid-template-columns:minmax(0,.85fr) minmax(320px,1.15fr);gap:2rem;align-items:center}
+.ta-adsense-inner h2{font:800 clamp(1.8rem,3.5vw,2.7rem)/1.05 'Bricolage Grotesque',sans-serif;letter-spacing:-.04em;color:#102a43;margin:.65rem 0 .7rem}
+.ta-adsense-inner p{color:#63758b;line-height:1.7;max-width:58ch;margin:0}
+.ta-adsense-slot{min-height:180px;border:1px dashed #cbd9e8;border-radius:16px;background:#f8fafc;display:grid;place-items:center;padding:1rem}
+.ta-adsense-placeholder{text-align:center;color:#7890aa}
+.ta-adsense-placeholder span{display:block;font-size:.62rem;font-weight:900;letter-spacing:.16em;color:#174b91;margin-bottom:.45rem}
+.ta-adsense-placeholder strong{display:block;font:700 1rem 'Bricolage Grotesque',sans-serif;color:#536b87}
+.ta-adsense-placeholder small{display:block;margin-top:.25rem;font-size:.72rem;color:#8798aa}
+@media(max-width:760px){
+ .ta-adsense-space{padding:2.7rem 0}
+ .ta-adsense-inner{grid-template-columns:1fr;gap:1rem}
+ .ta-adsense-slot{min-height:150px}
+}
+</style>
 </head>
 <body>
 <header class="ta-topbar">
@@ -773,6 +789,29 @@ section h2{
       <button class="ta-carousel-btn" id="taDomainNext" type="button" aria-label="Domaine suivant">›</button>
     </div>
     <div class="ta-domain-dots" id="taDomainDots" aria-label="Navigation des domaines"></div>
+  </div>
+</section>
+
+<section id="adsense-space" class="ta-adsense-space" aria-label="Espace publicitaire Google AdSense">
+  <div class="ta-shell ta-adsense-inner">
+    <div>
+      <span class="ta-kicker ta-kicker-dark">ESPACE PUBLICITAIRE</span>
+      <h2>Votre publicité peut apparaître ici.</h2>
+      <p>Zone réservée aux annonces Google AdSense. Elle est volontairement intégrée au contenu sans masquer les informations principales de TYM Africa.</p>
+    </div>
+    <div class="ta-adsense-slot" data-adsense-slot>
+      <!--
+        Google AdSense:
+        1. Remplacez CLIENT_ID par votre identifiant ca-pub-XXXXXXXXXXXXXXX.
+        2. Remplacez SLOT_ID par l'identifiant de l'unité publicitaire.
+        3. Ne publiez les annonces réelles qu'après validation du site par Google AdSense.
+      -->
+      <div class="ta-adsense-placeholder">
+        <span>PUBLICITÉ</span>
+        <strong>Google AdSense</strong>
+        <small>Espace disponible</small>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -897,8 +936,7 @@ render();
 const menuToggle=$("#menuToggle");
 if(menuToggle){
  menuToggle.addEventListener("click",()=>{
-  const nav=document.querySelector("nav");
-  const open=nav.classList.toggle("menu-open");
+  const nav=document.querySelector("nav");  const open=nav.classList.toggle("menu-open");
   menuToggle.setAttribute("aria-expanded",String(open));
   menuToggle.setAttribute("aria-label",open?"Fermer le menu":"Ouvrir le menu");
   menuToggle.innerHTML=open?"<span></span><span></span>":"<span></span><span></span><span></span>";
