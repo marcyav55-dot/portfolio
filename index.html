@@ -568,12 +568,27 @@ nav a.l.active{color:var(--blue);font-weight:700}
 @keyframes heroFloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}}@keyframes heroPulse{0%,100%{transform:scale(.98);opacity:.65}50%{transform:scale(1.04);opacity:1}}@keyframes heroSpin{to{transform:rotate(360deg)}}
 @media(max-width:760px){.hero{padding:3.8rem 0 3.6rem}.hero-grid{grid-template-columns:1fr;gap:2rem}.hero h1{font-size:clamp(2.65rem,13vw,4rem);line-height:.98}.hero p:not(.tagline){font-size:1rem}.hero-actions{display:grid;grid-template-columns:1fr;gap:.65rem}.hero-actions .btn{width:100%;min-height:58px}.hero-trust{gap:.45rem}.hero-trust span{font-size:.66rem}.hero-visual{min-height:330px;border-radius:22px}.hero-core{width:145px;height:145px}.hero-core-mark{font-size:1.7rem}.hero-float{padding:.58rem .65rem}.hero-float span{font-size:.55rem}.hero-float-a{top:18%;left:4%}.hero-float-b{top:30%;right:3%}.hero-float-c{bottom:14%;left:7%}}
 @media(prefers-reduced-motion:reduce){.hero-core-ring,.hero-core-ring:after,.hero-float{animation:none}}
-</style></head>
+</style><style>
+.tym-blog{background:#fff;border-top:1px solid #e5eaf0}
+.blog-heading{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(260px,.85fr);gap:2rem;align-items:end;margin-bottom:2rem}
+.blog-heading p{color:#718197;line-height:1.8;margin:0}
+.blog-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1.2rem}
+.blog-card{overflow:hidden;background:#fff;border:1px solid #e1e7ee;border-radius:18px;box-shadow:0 10px 28px rgba(16,37,63,.06)}
+.blog-card img{display:block;width:100%;height:190px;object-fit:cover}
+.blog-card-body{padding:1.15rem}
+.blog-card-body span{font-size:.7rem;font-weight:800;letter-spacing:.12em;color:#1766b1}
+.blog-card-body h3{margin:.55rem 0 .65rem;color:#173d70;font-size:1.2rem;line-height:1.3}
+.blog-card-body p{color:#66778d;line-height:1.7;font-size:.92rem}
+.blog-card-body a{display:inline-block;margin-top:.35rem;color:#1766b1;font-weight:800;text-decoration:none}
+.blog-footer{margin-top:1.5rem}
+@media(max-width:800px){.blog-heading{grid-template-columns:1fr}.blog-grid{grid-template-columns:1fr}.blog-card img{height:210px}}
+</style>
+</head>
 <body>
 <header><nav class="wrap" aria-label="Navigation principale">
 <a class="brand" href="#top"><img class="brand-logo" src="assets/tym-services-logo.png" alt="Logo TYM Africa"><span>TYM <span style="color:var(--blue)">AFRICA</span></span></a>
 
-<div class="nav-links" id="primaryNav"><a class="l" href="#about" data-i="nAbout">Entreprise</a><a class="l" href="#skills" data-i="nSkills">Expertises</a><a class="l" href="#projects" data-i="nProjects">Réalisations</a><a class="l" href="#tech-news">TechNews</a><a class="l" href="#process">Notre méthode</a><a class="l" href="#contact" data-i="nContact">Contact</a><a class="l" href="#faq" data-en="FAQ" data-fr="FAQ">FAQ</a></div>
+<div class="nav-links" id="primaryNav"><a class="l" href="#about" data-i="nAbout">Entreprise</a><a class="l" href="#skills" data-i="nSkills">Expertises</a><a class="l" href="#domains">Domaines</a><a class="l" href="#projects" data-i="nProjects">Réalisations</a><a class="l" href="#tym-labs">TYM Labs</a><a class="l" href="#blog">Blog</a><a class="l" href="#tech-news">TechNews</a><a class="l" href="#process">Notre méthode</a><a class="l" href="#contact" data-i="nContact">Contact</a><a class="l" href="#faq" data-en="FAQ" data-fr="FAQ">FAQ</a></div>
 <button class="menu-toggle" id="menuToggle" aria-label="Ouvrir le menu" aria-expanded="false"><span></span><span></span><span></span></button></nav></header>
 
 <main id="top">
@@ -759,6 +774,27 @@ nav a.l.active{color:var(--blue);font-weight:700}
   </div>
 </div>
 </section>
+<section id="blog" class="tym-blog"><div class="wrap">
+<div class="blog-heading">
+  <div><span class="eyebrow">TYM AFRICA · BLOG</span><h2>Technologie, innovation et numérique en Afrique.</h2></div>
+  <p>Des publications originales pour comprendre les technologies qui transforment les entreprises, les villes et les communautés africaines.</p>
+</div>
+<div class="blog-grid">
+<article class="blog-card">
+  <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=88" alt="Technologie et innovation numérique en Afrique" loading="lazy" decoding="async">
+  <div class="blog-card-body"><span>IA · INNOVATION</span><h3>L’intelligence artificielle et les nouvelles opportunités en Afrique</h3><p>Comprendre les cas d’usage de l’IA et les compétences nécessaires pour construire des solutions adaptées aux réalités africaines.</p><a href="#contact">Lire la publication →</a></div>
+</article>
+<article class="blog-card">
+  <img src="https://images.unsplash.com/photo-1563013544-824ae1b704d3?auto=format&fit=crop&w=1200&q=88" alt="Cybersécurité et protection des entreprises" loading="lazy" decoding="async">
+  <div class="blog-card-body"><span>CYBERSÉCURITÉ</span><h3>Pourquoi la cybersécurité devient stratégique pour les organisations africaines</h3><p>Risques, protection des données, contrôle des accès et bonnes pratiques pour renforcer une infrastructure numérique.</p><a href="#contact">Lire la publication →</a></div>
+</article>
+<article class="blog-card">
+  <img src="https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=1200&q=88" alt="Transformation numérique des organisations africaines" loading="lazy" decoding="async">
+  <div class="blog-card-body"><span>TRANSFORMATION DIGITALE</span><h3>Construire une transformation digitale réellement utile</h3><p>Pourquoi la technologie doit partir du problème métier, des utilisateurs et du contexte local avant de choisir les outils.</p><a href="#contact">Lire la publication →</a></div>
+</article>
+</div>
+<div class="blog-footer"><a class="btn" href="#contact">Proposer un sujet ou collaborer →</a></div>
+</div></section>
 <section id="projects"><div class="wrap">
 <h2 data-i="nProjects"></h2>
 <div class="projects" id="projectsGrid"></div>
@@ -945,19 +981,22 @@ render();
 
 const menuToggle=$("#menuToggle");
 if(menuToggle){
- menuToggle.addEventListener("click",()=>{
   const nav=document.querySelector("nav");
-  const open=nav.classList.toggle("menu-open");
-  menuToggle.setAttribute("aria-expanded",String(open));
-  menuToggle.setAttribute("aria-label",open?"Fermer le menu":"Ouvrir le menu");
-  menuToggle.innerHTML=open?"<span></span><span></span>":"<span></span><span></span><span></span>";
- });
- document.querySelectorAll("#primaryNav a.l").forEach(link=>link.addEventListener("click",()=>{
-  document.querySelector("nav").classList.remove("menu-open");
-  menuToggle.setAttribute("aria-expanded","false");
-  menuToggle.setAttribute("aria-label","Ouvrir le menu");
-  menuToggle.innerHTML="<span></span><span></span><span></span>";
- }));
+  const closeMenu=()=>{
+    nav.classList.remove("menu-open");
+    menuToggle.setAttribute("aria-expanded","false");
+    menuToggle.setAttribute("aria-label","Ouvrir le menu");
+    menuToggle.innerHTML="<span></span><span></span><span></span>";
+  };
+  menuToggle.addEventListener("click",()=>{
+    const open=nav.classList.toggle("menu-open");
+    menuToggle.setAttribute("aria-expanded",String(open));
+    menuToggle.setAttribute("aria-label",open?"Fermer le menu":"Ouvrir le menu");
+    menuToggle.innerHTML=open?"<span></span><span></span>":"<span></span><span></span><span></span>";
+  });
+  document.querySelectorAll("#primaryNav a.l").forEach(link=>{
+    link.addEventListener("click",closeMenu);
+  });
 }
 (function(){
   const targets=document.querySelectorAll('main section, .skill, .card, .process-card, .journey li');
