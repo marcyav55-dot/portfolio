@@ -1,6 +1,6 @@
-# TYM Services — site vitrine
+# TYM Africa — site vitrine
 
-Site web statique de TYM Services, une entreprise de solutions numériques. Le site est conçu en HTML, CSS et JavaScript, sans étape de compilation.
+Site web statique de TYM Africa, une startup technologique congolaise spécialisée dans les solutions numériques. Le site est conçu en HTML, CSS et JavaScript, sans étape de compilation.
 
 ## Pages et fichiers
 - `index.html` — page d’accueil de l’entreprise, expertises, services illustrés, projets, méthode et contact.
@@ -26,7 +26,7 @@ Site web statique de TYM Services, une entreprise de solutions numériques. Le s
 - Commerce et paiements en ligne.
 - Maintenance et assistance technique.
 
-Les photos distantes sont actuellement chargées depuis Unsplash. Pour la version définitive, privilégier les photos originales de TYM Services ou des visuels dont les droits d’utilisation sont confirmés.
+Les photos distantes sont actuellement chargées depuis Unsplash. Pour la version définitive, privilégier les photos originales de TYM Africa ou des visuels dont les droits d’utilisation sont confirmés.
 
 ## Projets présentés
 - ML TRAIN — plateforme éducative dédiée à la programmation et à l’IA/ML.
